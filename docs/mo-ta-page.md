@@ -11,10 +11,10 @@
 2. Mỗi ngày một thông điệp đẹp cho cuộc sống.
 3. Nơi bạn tìm thấy sự bình an và động lực sống tốt hơn.
 
-## Mô tả đầy đủ (phần "Giới thiệu" / About)
-> Sống Tốt là nơi chia sẻ những câu chuyện, thông điệp và góc nhìn tích cực về cuộc sống.
-> Chúng mình tin rằng mỗi ngày trôi qua đều là cơ hội để sống tử tế hơn, biết ơn hơn và hạnh phúc hơn.
-> Theo dõi để mỗi ngày nhận một điều tốt lành nhé! 💛
+## Mô tả đầy đủ (phần "Giới thiệu" / About) — ✅ BẢN CHỐT
+> 🌱 Sống Tốt — nơi chia sẻ những câu chuyện hay và đáng suy ngẫm trong cuộc sống.
+> Để mỗi ngày, ta có cái nhìn tích cực hơn, sống vui hơn, sống ý nghĩa hơn.
+> Theo dõi để mỗi ngày nhận một điều tốt lành 💛
 
 ## Câu chốt / Call-to-action dùng lại
 - "Nếu thấy hay, hãy chia sẻ để lan toả điều tốt đẹp nhé."

@@ -1,35 +1,51 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
   <defs>
-    <radialGradient id="bg" cx="50%" cy="42%" r="65%">
-      <stop offset="0%" stop-color="#3C7A62"/>
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#3F8065"/>
       <stop offset="100%" stop-color="#2E5D4B"/>
     </radialGradient>
-    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="10" stdDeviation="18" flood-color="#12332699" flood-opacity="0.35"/>
+    <linearGradient id="leafA" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#EAF5E8"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <linearGradient id="leafB" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#8DC38A"/>
+      <stop offset="100%" stop-color="#B7DEB2"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0E2A1F" flood-opacity="0.30"/>
     </filter>
   </defs>
 
-  <!-- Nền tròn (Facebook cắt tròn) -->
+  <!-- Nền tròn -->
   <circle cx="540" cy="540" r="540" fill="url(#bg)"/>
-  <circle cx="540" cy="540" r="486" fill="none" stroke="#7BAE7F" stroke-width="6" opacity="0.5"/>
+  <circle cx="540" cy="540" r="484" fill="none" stroke="#7BAE7F" stroke-width="5" opacity="0.45"/>
 
-  <!-- Mầm cây: hai lá + giọt (biểu tượng sinh trưởng, tử tế) -->
-  <g filter="url(#soft)" transform="translate(540 452)">
+  <!-- MẦM CÂY -->
+  <g filter="url(#soft)">
+    <!-- Thân mầm cong nhẹ -->
+    <path d="M540,690 C 528,600 528,560 540,505" fill="none" stroke="#6FAF72" stroke-width="16" stroke-linecap="round"/>
+
     <!-- Lá trái -->
-    <path d="M0,120 C -95,60 -95,-150 -14,-232 C -6,-190 -18,-70 0,120 Z"
-          fill="#F7FAF5" transform="rotate(-16)"/>
+    <g transform="translate(540 512) rotate(-30)">
+      <path d="M0,0 C -60,-55 -60,-150 0,-206 C 60,-150 60,-55 0,0 Z" fill="url(#leafA)"/>
+      <path d="M0,-8 C -6,-70 -6,-140 0,-196" fill="none" stroke="#CFE6CB" stroke-width="5" opacity="0.7"/>
+    </g>
     <!-- Lá phải -->
-    <path d="M0,120 C 95,60 95,-150 14,-232 C 6,-190 18,-70 0,120 Z"
-          fill="#A9D4A6" transform="rotate(16)"/>
-    <!-- Thân mầm -->
-    <path d="M0,150 C -6,60 -6,20 0,-40 C 6,20 6,60 0,150 Z" fill="#E9C46A"/>
+    <g transform="translate(540 512) rotate(30)">
+      <path d="M0,0 C -60,-55 -60,-150 0,-206 C 60,-150 60,-55 0,0 Z" fill="url(#leafB)"/>
+      <path d="M0,-8 C -6,-70 -6,-140 0,-196" fill="none" stroke="#5E9E74" stroke-width="5" opacity="0.6"/>
+    </g>
+
+    <!-- Giọt sương nhấn vàng -->
+    <circle cx="600" cy="470" r="12" fill="#E9C46A"/>
   </g>
 
   <!-- Tên thương hiệu -->
   <text x="540" y="812" text-anchor="middle"
         font-family="'Be Vietnam Pro','Montserrat','Segoe UI',Arial,sans-serif"
-        font-size="150" font-weight="800" fill="#F7FAF5" letter-spacing="2">Sống Tốt</text>
-  <text x="540" y="892" text-anchor="middle"
+        font-size="152" font-weight="800" fill="#F7FAF5" letter-spacing="1">Sống Tốt</text>
+  <text x="540" y="890" text-anchor="middle"
         font-family="'Be Vietnam Pro','Montserrat','Segoe UI',Arial,sans-serif"
-        font-size="44" font-weight="500" fill="#E9C46A" letter-spacing="10">MỖI NGÀY MỘT ĐIỀU TỐT LÀNH</text>
+        font-size="42" font-weight="500" fill="#E9C46A" letter-spacing="11">MỖI NGÀY MỘT ĐIỀU TỐT LÀNH</text>
 </svg>
