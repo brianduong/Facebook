@@ -8,9 +8,22 @@ Lan toả những thông điệp tích cực, tử tế và có ích cho cuộc 
 ## Tên & nhận diện
 - **Tên Page:** Sống Tốt
 - **Đường dẫn:** https://www.facebook.com/songtot.in
-- **Slogan:** _(chưa có)_
-- **Màu chủ đạo:** _(chưa có)_
-- **Font:** _(chưa có)_
+- **Slogan:** Mỗi ngày một điều tốt lành
+- **Màu chủ đạo:** Tông xanh "Trong lành – Bình an"
+- **Font gợi ý:** Be Vietnam Pro (hoặc Montserrat / Nunito) — hỗ trợ tiếng Việt tốt
+
+### Bảng màu (Palette)
+| Vai trò | Tên | Mã HEX | Dùng cho |
+|---------|-----|--------|----------|
+| Chính (đậm) | Xanh rừng | `#2E5D4B` | Nền chính, chữ tiêu đề |
+| Chính (vừa) | Xanh lá | `#7BAE7F` | Điểm nhấn, nền phụ |
+| Sáng | Trắng ngà | `#F7FAF5` | Nền sáng, chữ trên nền đậm |
+| Nhấn ấm | Vàng nắng | `#E9C46A` | Nút, chi tiết nổi bật (CTA) |
+
+### Định dạng
+- **Video:** Vuông 1:1 (1080×1080)
+- **Ảnh đại diện:** 1080×1080 (Facebook cắt tròn)
+- **Ảnh bìa:** 1640×856 (vùng an toàn ở giữa)
 
 ## Khán giả mục tiêu
 _(Chưa xác định)_

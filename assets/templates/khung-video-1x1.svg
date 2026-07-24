@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="vbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2E5D4B"/>
+      <stop offset="100%" stop-color="#3C7A62"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Nền (thay bằng ảnh/video của anh) -->
+  <rect width="1080" height="1080" fill="url(#vbg)"/>
+
+  <!-- Dải tối phía dưới để chữ dễ đọc -->
+  <rect x="0" y="620" width="1080" height="460" fill="#123326" opacity="0.55"/>
+
+  <!-- Logo + tên góc trên -->
+  <g transform="translate(60 70)">
+    <g transform="scale(0.28)">
+      <path d="M0,60 C -48,30 -48,-75 -7,-116 C -3,-95 -9,-35 0,60 Z" fill="#F7FAF5" transform="rotate(-16)"/>
+      <path d="M0,60 C 48,30 48,-75 7,-116 C 3,-95 9,-35 0,60 Z" fill="#A9D4A6" transform="rotate(16)"/>
+    </g>
+    <text x="52" y="18" font-family="'Be Vietnam Pro','Montserrat',Arial,sans-serif"
+          font-size="42" font-weight="800" fill="#F7FAF5">Sống Tốt</text>
+  </g>
+
+  <!-- KHU VỰC THÔNG ĐIỆP (chèn câu quote vào đây) -->
+  <text x="540" y="770" text-anchor="middle"
+        font-family="'Be Vietnam Pro','Montserrat',Arial,sans-serif"
+        font-size="72" font-weight="800" fill="#F7FAF5">Tử tế không bao giờ</text>
+  <text x="540" y="858" text-anchor="middle"
+        font-family="'Be Vietnam Pro','Montserrat',Arial,sans-serif"
+        font-size="72" font-weight="800" fill="#F7FAF5">là điều lãng phí.</text>
+
+  <!-- Vạch nhấn vàng -->
+  <rect x="480" y="905" width="120" height="8" rx="4" fill="#E9C46A"/>
+
+  <!-- Call-to-action dưới cùng -->
+  <text x="540" y="1000" text-anchor="middle"
+        font-family="'Be Vietnam Pro','Montserrat',Arial,sans-serif"
+        font-size="34" font-weight="500" fill="#E9C46A" letter-spacing="4">theo dõi để sống tốt mỗi ngày</text>
+</svg>
