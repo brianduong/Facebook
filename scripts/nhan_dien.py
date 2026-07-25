@@ -17,9 +17,9 @@ REPO = Path(__file__).resolve().parent.parent
 
 # Bảng màu chốt trong docs/dinh-huong-kenh.md
 TONES = {
-    "sang": ("#3C7A62", "#2E5D4B", "#123326", 0.62),   # tươi — nội dung nhẹ nhàng
-    "vua": ("#2E5D4B", "#7BAE7F", "#123326", 0.68),    # mặc định
-    "tram": ("#1E4437", "#2E5D4B", "#0E2A1F", 0.60),   # dịu — nội dung an ủi
+    "sang": ("#57A184", "#3C765D", "#16382A", 0.55),   # tươi — nội dung nhẹ nhàng
+    "vua": ("#3C765D", "#8FC293", "#16382A", 0.58),    # mặc định
+    "tram": ("#2A5B49", "#3C765D", "#123326", 0.55),   # dịu — nội dung an ủi
 }
 KEM = "#F7FAF5"       # trắng ngà — chữ chính
 VANG = "#E9C46A"      # vàng nắng — điểm nhấn
@@ -174,8 +174,8 @@ def tao_the_video(
   <defs>
     <clipPath id="vung-hinh"><rect x="0" y="0" width="1080" height="{vc}"/></clipPath>
     <linearGradient id="chuyen-vung" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#0B2118" stop-opacity="0"/>
-      <stop offset="100%" stop-color="#0B2118" stop-opacity="0.9"/>
+      <stop offset="0%" stop-color="#1E5140" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#1E5140" stop-opacity="0.9"/>
     </linearGradient>
   </defs>
 
@@ -187,11 +187,11 @@ def tao_the_video(
   <!-- chuyển tiếp mềm giữa hai vùng, cho khỏi thành đường cắt gắt -->
   <rect x="0" y="{vc - 90}" width="1080" height="90" fill="url(#chuyen-vung)"/>
   <!-- VÙNG CHỮ: nền phủ kín, không có chi tiết cảnh nào lọt vào -->
-  <rect x="0" y="{vc}" width="1080" height="{1080 - vc}" fill="#0B2118"/>
+  <rect x="0" y="{vc}" width="1080" height="{1080 - vc}" fill="#1E5140"/>
   <rect x="0" y="{vc}" width="1080" height="4" fill="{VANG}" opacity="0.75"/>
 
   <!-- nền mờ sau logo để đọc được cả trên cảnh trời sáng -->
-  <rect x="34" y="34" width="300" height="76" rx="38" fill="#0B2118" opacity="0.45"/>
+  <rect x="34" y="34" width="300" height="76" rx="38" fill="#1E5140" opacity="0.45"/>
 {LOGO}
 
 {khoi_chu}

@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#3C7A62"/>
-      <stop offset="100%" stop-color="#2E5D4B"/>
+      <stop offset="0%" stop-color="#57A184"/>
+      <stop offset="100%" stop-color="#3C765D"/>
     </linearGradient>
     <linearGradient id="fade" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#123326" stop-opacity="0"/>
-      <stop offset="100%" stop-color="#123326" stop-opacity="0.62"/>
+      <stop offset="0%" stop-color="#16382A" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#16382A" stop-opacity="0.55"/>
     </linearGradient>
   </defs>
 

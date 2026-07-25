@@ -58,14 +58,14 @@ def canh_sang_cua_so() -> str:
     return f"""
   <defs>
     <linearGradient id="s1tuong" x1="0%" y1="0%" x2="20%" y2="100%">
-      <stop offset="0%" stop-color="#43836A"/><stop offset="100%" stop-color="#2A5645"/>
+      <stop offset="0%" stop-color="#5AA487"/><stop offset="100%" stop-color="#407F66"/>
     </linearGradient>
     <linearGradient id="s1troi" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#D9EDDF"/><stop offset="60%" stop-color="#F1E6C4"/>
       <stop offset="100%" stop-color="#EBD9A9"/>
     </linearGradient>
     <linearGradient id="s1san" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#8A6A4A"/><stop offset="100%" stop-color="#6B5039"/>
+      <stop offset="0%" stop-color="#AD8B62"/><stop offset="100%" stop-color="#8C6C4C"/>
     </linearGradient>
     <linearGradient id="s1nang" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="{VANG}" stop-opacity="0.5"/>
@@ -118,10 +118,10 @@ def canh_ban_tra() -> str:
     return f"""
   <defs>
     <linearGradient id="s2tuong" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#3C7A62"/><stop offset="100%" stop-color="#27503F"/>
+      <stop offset="0%" stop-color="#549C7E"/><stop offset="100%" stop-color="#3C765D"/>
     </linearGradient>
     <linearGradient id="s2ban" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#9A7250"/><stop offset="100%" stop-color="#6E5038"/>
+      <stop offset="0%" stop-color="#BA8F66"/><stop offset="100%" stop-color="#93704E"/>
     </linearGradient>
     <radialGradient id="s2den" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="{VANG}" stop-opacity="0.55"/>
@@ -176,7 +176,7 @@ def canh_duong_cay() -> str:
       <stop offset="0%" stop-color="#8FBBA2"/><stop offset="100%" stop-color="#7BAE93"/>
     </linearGradient>
     <linearGradient id="s3co" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#5E9878"/><stop offset="100%" stop-color="#3E7359"/>
+      <stop offset="0%" stop-color="#72AE8B"/><stop offset="100%" stop-color="#528C6E"/>
     </linearGradient>
     <linearGradient id="s3loi" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#E2D3AE"/><stop offset="100%" stop-color="#C9B58C"/>
@@ -227,10 +227,10 @@ def canh_ben_mua() -> str:
     return f"""
   <defs>
     <linearGradient id="s4troi" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#2C4A56"/><stop offset="100%" stop-color="#43706A"/>
+      <stop offset="0%" stop-color="#446A78"/><stop offset="100%" stop-color="#43706A"/>
     </linearGradient>
     <linearGradient id="s4duong" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#3D5A55"/><stop offset="100%" stop-color="#2A423E"/>
+      <stop offset="0%" stop-color="#52736C"/><stop offset="100%" stop-color="#3D5A54"/>
     </linearGradient>
     <filter id="s4mo" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="16"/></filter>
     <filter id="s4mo2" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="6"/></filter>
@@ -275,7 +275,7 @@ def canh_bep() -> str:
     return f"""
   <defs>
     <linearGradient id="s5tuong" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#3A7660"/><stop offset="100%" stop-color="#28533F"/>
+      <stop offset="0%" stop-color="#51937A"/><stop offset="100%" stop-color="#28533F"/>
     </linearGradient>
     <linearGradient id="s5ban" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#E6E1D4"/><stop offset="100%" stop-color="#C9C3B4"/>
@@ -325,8 +325,8 @@ def canh_dem_sao() -> str:
     return f"""
   <defs>
     <linearGradient id="s6troi" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#0E2739"/><stop offset="60%" stop-color="#183B44"/>
-      <stop offset="100%" stop-color="#22493D"/>
+      <stop offset="0%" stop-color="#1B3F55"/><stop offset="60%" stop-color="#255460"/>
+      <stop offset="100%" stop-color="#316552"/>
     </linearGradient>
     <filter id="s6mo" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="20"/></filter>
     <filter id="s6mo2" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="7"/></filter>
@@ -340,12 +340,12 @@ def canh_dem_sao() -> str:
 
   <!-- mái nhà lớp xa rồi lớp gần -->
   <g opacity="0.5">
-    <path d="M0,520 L120,452 L240,520 L240,{CHAN_TROI} L0,{CHAN_TROI} Z" fill="#12303A"/>
-    <path d="M860,540 L980,470 L1080,540 L1080,{CHAN_TROI} L860,{CHAN_TROI} Z" fill="#12303A"/>
+    <path d="M0,520 L120,452 L240,520 L240,{CHAN_TROI} L0,{CHAN_TROI} Z" fill="#1D4451"/>
+    <path d="M860,540 L980,470 L1080,540 L1080,{CHAN_TROI} L860,{CHAN_TROI} Z" fill="#1D4451"/>
   </g>
-  <path d="M60,570 L230,470 L400,570 L400,{CHAN_TROI} L60,{CHAN_TROI} Z" fill="#122E2A"/>
+  <path d="M60,570 L230,470 L400,570 L400,{CHAN_TROI} L60,{CHAN_TROI} Z" fill="#1E4239"/>
   <rect x="150" y="524" width="52" height="44" rx="6" fill="{VANG}" opacity="0.8"/>
-  <rect x="0" y="{CHAN_TROI}" width="1080" height="{VUNG_CHU - CHAN_TROI}" fill="#0F2822"/>
+  <rect x="0" y="{CHAN_TROI}" width="1080" height="{VUNG_CHU - CHAN_TROI}" fill="#1B3E34"/>
   <ellipse cx="200" cy="{CHAN_TROI + 30}" rx="230" ry="30" fill="{VANG}" opacity="0.1" filter="url(#s6mo2)"/>
 """
 

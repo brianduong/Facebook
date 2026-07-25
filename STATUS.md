@@ -38,6 +38,15 @@ Giọng hiện tại là giọng máy (Linh của macOS) → nên thu lại bằ
 - `schedule/calendar.md` — lịch 2 video/tuần (Ba & Sáu 20:00) + bảng ghi số liệu.
 - `content/ideas/kho-y-tuong.md` — 13 ý tưởng, 6 đã thành kịch bản.
 
+## Chốt ngày 25/07
+- **Nhịp đăng: mỗi ngày 1 video, 20:00** (đổi từ 2 video/tuần).
+- **Không tự render trước** — chỉ render khi anh yêu cầu.
+- VD-001 đã kiểm tra kỹ và **đăng ngày 25/07**: 1080×1080, 30fps, h264 + AAC, 70,4s,
+  độ to trung bình −15,8 dB, đỉnh −0,8 dB (không vỡ tiếng), không có đoạn lặng chết.
+- Có nhân vật kể (chị), 3 cảnh nền, giọng có ngữ điệu, nhạc nền gốc `nen-am-ap`.
+- Đã có lời đọc cho VD-007 → VD-012 (chưa có caption/ảnh quote/video).
+- Page ID: `315460902683557` đã ghi trong `.env`; còn thiếu token.
+
 ## Đang chờ anh ⏳
 1. **Xem 6 file `video/exports/VD-00X-nhap.mp4`** → duyệt hoặc nói em sửa (chữ, nhịp, tone nền).
 2. **Dán mô tả mới** vào phần Giới thiệu của Page (nội dung sẵn ở `docs/mo-ta-page.md`) — nếu chưa làm.

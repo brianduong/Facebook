@@ -234,6 +234,7 @@ def main() -> int:
         "fps=30,"
         "zoompan=z='min(1+0.00003*on,1.06)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)'"
         ":d=1:s=1080x1080:fps=30,"
+        "eq=brightness=0.03:contrast=1.05:saturation=1.10,"   # nâng sáng nhẹ cho dễ xem trên điện thoại
         "fade=t=in:st=0:d=0.5,"
         f"fade=t=out:st={max(tong - 0.9, 0.1):.2f}:d=0.9,"
         "format=yuv420p"
