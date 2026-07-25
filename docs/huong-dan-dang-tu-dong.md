@@ -20,7 +20,22 @@ Cách nhanh (token ngắn hạn, ~2 tháng — đủ để thử):
    - `pages_show_list`
 5. Bấm **Generate Access Token** → copy chuỗi dài đó.
 
-Muốn token **không hết hạn** thì cần đổi sang token dài hạn — khi nào anh cần em hướng dẫn tiếp bước đó.
+### Đổi sang token dùng lâu dài (nên làm ngay)
+
+Token copy từ Explorer chỉ sống 1–2 giờ, lấy lại mỗi lần rất mệt. Chạy script này một lần là xong:
+
+```bash
+python3 scripts/lay-token-dai-han.py --app-id <App ID của anh>
+```
+
+Script sẽ hỏi **App Secret** (lấy ở app → *Cài đặt → Cơ bản*) và **User Token ngắn hạn** vừa copy — anh dán vào, chữ không hiện ra màn hình và không lưu vào history của shell. Nó làm hai bước Facebook yêu cầu:
+
+1. Đổi token ngắn hạn → token người dùng dài hạn (~60 ngày)
+2. Gọi `/me/accounts` bằng token dài hạn → lấy **token của Page**, loại này không hết hạn (miễn là anh không đổi mật khẩu, không thu hồi quyền, app không bị vô hiệu hoá)
+
+Rồi tự ghi `FB_PAGE_ID` + `FB_PAGE_TOKEN` vào `.env` với quyền chỉ mình anh đọc được.
+
+Kiểm tra: `python3 scripts/dang-video-fb.py kiem-tra`
 
 ### Điền vào đâu
 Tạo file `.env` ở gốc repo (copy từ `.env.example`):

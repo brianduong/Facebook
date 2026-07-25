@@ -37,7 +37,7 @@ CHU_MOI_DONG = 26        # ký tự tối đa mỗi dòng
 KHOANG_LANG = 0.34       # giây nghỉ sau mỗi thẻ (nói chuyện thì nghỉ ngắn)
 GIU_QUOTE = 3.0          # giây giữ ảnh quote cuối video
 NHIP_MIENG = 0.16        # giây mỗi lần mở/đóng miệng
-AM_LUONG_NHAC = 0.14     # nhạc nền so với giọng đọc
+AM_LUONG_NHAC = 0.5      # nhạc nền so với giọng đọc (nhạc đã chuẩn hoá ở mức thấp sẵn)
 CANH_MAC_DINH = "sang-cua-so,ban-tra,duong-cay"
 
 
@@ -221,8 +221,10 @@ def main() -> int:
         # Nhạc lặp vô hạn rồi cắt theo độ dài giọng đọc
         cmd += ["-stream_loop", "-1", "-i", str(nhac),
                 "-filter_complex",
+                # normalize=0: không cho amix chia đôi âm lượng, nếu không giọng đọc bị tụt
                 f"[2:a]volume={AM_LUONG_NHAC}[nhac];"
-                "[1:a][nhac]amix=inputs=2:duration=first:dropout_transition=0[am]",
+                "[1:a][nhac]amix=inputs=2:duration=first:dropout_transition=0:normalize=0,"
+                "alimiter=limit=0.95[am]",
                 "-map", "0:v", "-map", "[am]"]
     else:
         cmd += ["-map", "0:v", "-map", "1:a"]

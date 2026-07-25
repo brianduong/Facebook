@@ -51,6 +51,8 @@ Facebook/
 | `python3 scripts/render-video-nhap.py VD-001 --nhan-vat chi --canh ban-tra` | **Render cả video nháp 1:1** — nhân vật kể, cảnh nền, chữ khớp giọng đọc |
 | `python3 scripts/xem-thu.py` | Xem thử 4 nhân vật + 6 cảnh nền trước khi render |
 | `python3 scripts/so-sanh-giong.py VD-001` | Nghe so sánh giọng đọc đều vs giọng có ngữ điệu |
+| `python3 scripts/tao-nhac-nen.py` | Tự tổng hợp nhạc nền **gốc** của kênh (3 kiểu, không lo bản quyền) |
+| `python3 scripts/lay-token-dai-han.py --app-id ...` | Đổi token Facebook ngắn hạn thành token Page dùng lâu dài |
 | `./scripts/tao-giong-doc.sh VD-001 138` | Chỉ tạo giọng đọc **nháp** + đo thời lượng (cảnh báo nếu dưới 60s) |
 | `python3 scripts/dang-video-fb.py kiem-tra` | Kiểm tra Page Access Token |
 | `python3 scripts/dang-video-fb.py video <file> --ma VD-001 --dang-that` | Đăng video + caption lên Page |
