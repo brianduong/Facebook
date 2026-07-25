@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2E5D4B"/><stop offset="100%" stop-color="#1E4437"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <text x="540" y="110" text-anchor="middle" font-family="'Be Vietnam Pro','Montserrat',Arial,sans-serif" font-size="52"
+        font-weight="800" fill="#F7FAF5">Nhân vật kênh Sống Tốt</text>
+  <text x="540" y="162" text-anchor="middle" font-family="'Be Vietnam Pro','Montserrat',Arial,sans-serif" font-size="30"
+        font-weight="500" fill="#E9C46A">vẽ vector — không lo bản quyền hình người thật</text>
+  <g transform="translate(270 500) scale(0.72)"><g>
+    
+    <!-- chân -->
+    <rect x="-34" y="-124" width="27" height="124" rx="13" fill="#2B4A3C"/>
+    <rect x="7" y="-124" width="27" height="124" rx="13" fill="#2B4A3C"/>
+    <!-- thân -->
+    <path d="M-54,-240 C -54,-268 -30,-284 0,-284 C 30,-284 54,-268 54,-240 L 54,-118 L -54,-118 Z" fill="#F7FAF5"/>
+    <!-- tay -->
+    <rect x="-76" y="-248" width="25" height="112" rx="12" fill="#F7FAF5" transform="rotate(7 -63 -248)"/>
+    <rect x="51" y="-248" width="25" height="112" rx="12" fill="#F7FAF5" transform="rotate(-7 63 -248)"/>
+    <circle cx="-70" cy="-134" r="13" fill="#E9BE97"/>
+    <circle cx="70" cy="-134" r="13" fill="#E9BE97"/>
+    <!-- cổ + đầu -->
+    <rect x="-14" y="-292" width="28" height="26" fill="#D9A87F"/>
+    <circle cx="0" cy="-330" r="47" fill="#E9BE97"/>
+    <path d="M-47,-334 C -46,-384 46,-384 47,-334 C 24,-352 -24,-352 -47,-334 Z" fill="#2B2B2B"/>
+    <circle cx="-17" cy="-332" r="5" fill="#2B3A33"/>
+    <circle cx="17" cy="-332" r="5" fill="#2B3A33"/>
+    
+    <path d="M-11,-301 Q0,-293 11,-301" stroke="#8A4A44" stroke-width="5" fill="none" stroke-linecap="round"/>
+  </g></g><text x="270" y="556" text-anchor="middle" font-family="'Be Vietnam Pro','Montserrat',Arial,sans-serif" font-size="34" font-weight="800" fill="#F7FAF5">anh — đàn ông trẻ</text><g transform="translate(810 500) scale(0.72)"><g>
+    <path d="M-52,-330 C -60,-250 -50,-215 -40,-205 L 40,-205 C 50,-215 60,-250 52,-330 Z" fill="#3A2E28"/>
+    <!-- chân -->
+    <rect x="-34" y="-124" width="27" height="124" rx="13" fill="#2B4A3C"/>
+    <rect x="7" y="-124" width="27" height="124" rx="13" fill="#2B4A3C"/>
+    <!-- thân -->
+    <path d="M-54,-240 C -54,-268 -30,-284 0,-284 C 30,-284 54,-268 54,-240 L 54,-118 L -54,-118 Z" fill="#A9D4A6"/>
+    <!-- tay -->
+    <rect x="-76" y="-248" width="25" height="112" rx="12" fill="#A9D4A6" transform="rotate(7 -63 -248)"/>
+    <rect x="51" y="-248" width="25" height="112" rx="12" fill="#A9D4A6" transform="rotate(-7 63 -248)"/>
+    <circle cx="-70" cy="-134" r="13" fill="#E9BE97"/>
+    <circle cx="70" cy="-134" r="13" fill="#E9BE97"/>
+    <!-- cổ + đầu -->
+    <rect x="-14" y="-292" width="28" height="26" fill="#D9A87F"/>
+    <circle cx="0" cy="-330" r="47" fill="#E9BE97"/>
+    <path d="M-47,-336 C -44,-382 44,-382 47,-336 C 30,-360 -30,-360 -47,-336 Z" fill="#3A2E28"/>
+    <circle cx="-17" cy="-332" r="5" fill="#2B3A33"/>
+    <circle cx="17" cy="-332" r="5" fill="#2B3A33"/>
+    
+    <path d="M-11,-301 Q0,-293 11,-301" stroke="#8A4A44" stroke-width="5" fill="none" stroke-linecap="round"/>
+  </g></g><text x="810" y="556" text-anchor="middle" font-family="'Be Vietnam Pro','Montserrat',Arial,sans-serif" font-size="34" font-weight="800" fill="#F7FAF5">chị — phụ nữ trẻ</text><g transform="translate(270 960) scale(0.72)"><g>
+    
+    <!-- chân -->
+    <rect x="-34" y="-124" width="27" height="124" rx="13" fill="#3A3A3A"/>
+    <rect x="7" y="-124" width="27" height="124" rx="13" fill="#3A3A3A"/>
+    <!-- thân -->
+    <path d="M-54,-240 C -54,-268 -30,-284 0,-284 C 30,-284 54,-268 54,-240 L 54,-118 L -54,-118 Z" fill="#A9D4A6"/>
+    <!-- tay -->
+    <rect x="-76" y="-248" width="25" height="112" rx="12" fill="#A9D4A6" transform="rotate(7 -63 -248)"/>
+    <rect x="51" y="-248" width="25" height="112" rx="12" fill="#A9D4A6" transform="rotate(-7 63 -248)"/>
+    <circle cx="-70" cy="-134" r="13" fill="#E9BE97"/>
+    <circle cx="70" cy="-134" r="13" fill="#E9BE97"/>
+    <!-- cổ + đầu -->
+    <rect x="-14" y="-292" width="28" height="26" fill="#D9A87F"/>
+    <circle cx="0" cy="-330" r="47" fill="#E9BE97"/>
+    <path d="M-47,-334 C -46,-384 46,-384 47,-334 C 24,-352 -24,-352 -47,-334 Z" fill="#C9CFCB"/>
+    <circle cx="-17" cy="-332" r="5" fill="#2B3A33"/>
+    <circle cx="17" cy="-332" r="5" fill="#2B3A33"/>
+    <g stroke="#2B3A33" stroke-width="4" fill="none"><circle cx="-17" cy="-329" r="15"/><circle cx="17" cy="-329" r="15"/><path d="M-2,-329 H2"/><path d="M-32,-332 H-42"/><path d="M32,-332 H42"/></g>
+    <path d="M-11,-301 Q0,-293 11,-301" stroke="#8A4A44" stroke-width="5" fill="none" stroke-linecap="round"/>
+  </g></g><text x="270" y="1016" text-anchor="middle" font-family="'Be Vietnam Pro','Montserrat',Arial,sans-serif" font-size="34" font-weight="800" fill="#F7FAF5">chú — đàn ông lớn tuổi</text><g transform="translate(810 960) scale(0.72)"><g>
+    <circle cx="0" cy="-378" r="22" fill="#C9CFCB"/>
+    <!-- chân -->
+    <rect x="-34" y="-124" width="27" height="124" rx="13" fill="#3A3A3A"/>
+    <rect x="7" y="-124" width="27" height="124" rx="13" fill="#3A3A3A"/>
+    <!-- thân -->
+    <path d="M-54,-240 C -54,-268 -30,-284 0,-284 C 30,-284 54,-268 54,-240 L 54,-118 L -54,-118 Z" fill="#F7FAF5"/>
+    <!-- tay -->
+    <rect x="-76" y="-248" width="25" height="112" rx="12" fill="#F7FAF5" transform="rotate(7 -63 -248)"/>
+    <rect x="51" y="-248" width="25" height="112" rx="12" fill="#F7FAF5" transform="rotate(-7 63 -248)"/>
+    <circle cx="-70" cy="-134" r="13" fill="#E9BE97"/>
+    <circle cx="70" cy="-134" r="13" fill="#E9BE97"/>
+    <!-- cổ + đầu -->
+    <rect x="-14" y="-292" width="28" height="26" fill="#D9A87F"/>
+    <circle cx="0" cy="-330" r="47" fill="#E9BE97"/>
+    <path d="M-46,-338 C -42,-378 42,-378 46,-338 C 26,-356 -26,-356 -46,-338 Z" fill="#C9CFCB"/>
+    <circle cx="-17" cy="-332" r="5" fill="#2B3A33"/>
+    <circle cx="17" cy="-332" r="5" fill="#2B3A33"/>
+    <g stroke="#2B3A33" stroke-width="4" fill="none"><circle cx="-17" cy="-329" r="15"/><circle cx="17" cy="-329" r="15"/><path d="M-2,-329 H2"/><path d="M-32,-332 H-42"/><path d="M32,-332 H42"/></g>
+    <path d="M-11,-301 Q0,-293 11,-301" stroke="#8A4A44" stroke-width="5" fill="none" stroke-linecap="round"/>
+  </g></g><text x="810" y="1016" text-anchor="middle" font-family="'Be Vietnam Pro','Montserrat',Arial,sans-serif" font-size="34" font-weight="800" fill="#F7FAF5">cô — phụ nữ lớn tuổi</text>
+</svg>

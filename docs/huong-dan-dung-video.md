@@ -5,15 +5,33 @@
 ## Cách nhanh nhất: render bản nháp bằng script
 
 ```bash
-python3 scripts/render-video-nhap.py VD-001 --tone sang
+python3 scripts/render-video-nhap.py VD-001 --nhan-vat chi --canh sang-cua-so,ban-tra,duong-cay
 ```
 
 Script tự làm hết: cắt lời đọc thành từng thẻ chữ, đọc bằng giọng máy tiếng Việt, khớp thời gian chữ với tiếng, ghép ảnh quote ở cuối, xuất `video/exports/VD-001-nhap.mp4` (1080×1080, 30fps).
 
-- Câu hook luôn đứng riêng một thẻ (3 giây đầu).
-- Có zoom vào rất chậm + mờ dần đầu/cuối cho khỏi tĩnh cứng.
-- Thêm nhạc: `--tone vua --nhac assets/music/ten-file.mp3` (chỉ dùng nhạc được phép thương mại).
-- Tone nền: `sang` (nhẹ nhàng) · `vua` (mặc định) · `tram` (an ủi).
+**Nhân vật kể** (`--nhan-vat`) — vẽ vector nên không lo bản quyền hình người thật. Xem bảng mặt ở `assets/images/nhan-vat-mau.png`:
+
+| Mã | Nhân vật |
+|----|----------|
+| `anh` | đàn ông trẻ |
+| `chi` | phụ nữ trẻ (mặc định) |
+| `chu` | đàn ông lớn tuổi |
+| `co` | phụ nữ lớn tuổi |
+| `khong` | không có người trong hình |
+
+Miệng nhân vật mở/đóng theo nhịp → trông như đang nói, không phải hình tĩnh.
+
+**Cảnh nền** (`--canh`, cách nhau bởi dấu phẩy — video sẽ đổi cảnh theo từng khúc):
+`sang-cua-so` (nắng qua cửa sổ) · `ban-tra` (ly nước ấm) · `duong-cay` (đường đi bộ) · `ben-mua` (trạm chờ mưa) · `bep` (bồn rửa bát) · `dem-sao` (trời đêm) · `trong` (nền gradient trơn).
+
+Xem thử nhân vật và cảnh trước khi render cả video: `python3 scripts/xem-thu.py`
+
+**Các lựa chọn khác**
+- `--toc-do 155` — tốc độ đọc, mặc định 155 từ/phút (nghe như nói chuyện). Hạ xuống 138 nếu muốn chậm rãi hơn.
+- `--nhac assets/music/ten-file.mp3` — trộn nhạc nền (chỉ dùng nhạc được phép thương mại).
+- Câu hook luôn đứng riêng một thẻ (3 giây đầu), có zoom vào rất chậm + mờ dần đầu/cuối.
+- ⚠️ Đọc nhanh làm video ngắn lại. Script in ra tổng thời lượng và **cảnh báo nếu dưới 60 giây** — dưới mốc đó là mất tiêu chí quảng cáo trong luồng.
 
 **Bản nháp dùng được để đăng ngay**, nhưng nên nâng cấp dần:
 1. Thu lại **giọng thật của anh** thay giọng máy → thu vào `content/scripts/loi-doc/` đọc theo, rồi ghép trong CapCut.

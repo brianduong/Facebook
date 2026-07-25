@@ -48,7 +48,8 @@ Facebook/
 | Lệnh | Làm gì |
 |------|--------|
 | `python3 scripts/tao-anh-quote.py VD-007 "Dòng 1" "Dòng 2"` | Tạo ảnh quote 1:1 đúng nhận diện kênh (SVG + PNG) |
-| `python3 scripts/render-video-nhap.py VD-001 --tone sang` | **Render cả video nháp 1:1** — chữ chạy khớp giọng đọc, đăng được ngay |
+| `python3 scripts/render-video-nhap.py VD-001 --nhan-vat chi --canh ban-tra` | **Render cả video nháp 1:1** — nhân vật kể, cảnh nền, chữ khớp giọng đọc |
+| `python3 scripts/xem-thu.py` | Xem thử 4 nhân vật + 6 cảnh nền trước khi render |
 | `./scripts/tao-giong-doc.sh VD-001 138` | Chỉ tạo giọng đọc **nháp** + đo thời lượng (cảnh báo nếu dưới 60s) |
 | `python3 scripts/dang-video-fb.py kiem-tra` | Kiểm tra Page Access Token |
 | `python3 scripts/dang-video-fb.py video <file> --ma VD-001 --dang-that` | Đăng video + caption lên Page |

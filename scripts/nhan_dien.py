@@ -129,6 +129,57 @@ def tao_svg(
 """
 
 
+def tao_the_video(
+    dong: list[str],
+    canh: str,
+    nhan_vat: str | None = None,
+    mieng_mo: bool = False,
+) -> str:
+    """Dựng một thẻ chữ cho video: cảnh nền + nhân vật đứng + dải chữ phía dưới.
+
+    dong      : các dòng chữ (đã ngắt sẵn, nên ≤ 5 dòng)
+    canh      : tên cảnh trong canh_nen.CANH
+    nhan_vat  : 'anh' | 'chi' | 'chu' | 'co' | None (không có người)
+    mieng_mo  : True/False — hai trạng thái này đổi qua lại tạo cảm giác đang nói
+    """
+    import canh_nen
+    import nhan_vat as nv
+
+    nen = canh_nen.ve_canh(canh)
+    nguoi = ""
+    if nhan_vat:
+        # Đứng lệch phải, chân đặt trên đường sàn của cảnh
+        nguoi = (
+            f'  <g transform="translate(824 {canh_nen.SAN + 30}) scale(1.16)">'
+            f"{nv.ve_nhan_vat(nhan_vat, mieng_mo)}</g>"
+        )
+
+    co = co_chu(dong)
+    buoc = int(co * 1.34)
+    tam = 862  # giữa dải chữ
+    dau_khoi = tam - (len(dong) - 1) * buoc // 2
+    khoi_chu = "\n".join(
+        f'  <text x="540" y="{dau_khoi + i * buoc}" text-anchor="middle" '
+        f'font-family="{FONT}" font-size="{co}" font-weight="800" fill="{KEM}">{escape(d)}</text>'
+        for i, d in enumerate(dong)
+    )
+
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+{nen}
+{nguoi}
+  <!-- dải tối để chữ luôn đọc được, bất kể cảnh sáng hay tối -->
+  <rect x="0" y="694" width="1080" height="386" fill="#0E2A1F" opacity="0.82"/>
+  <rect x="0" y="690" width="1080" height="6" fill="{VANG}" opacity="0.85"/>
+
+  <!-- nền mờ sau logo để đọc được cả trên cảnh trời sáng -->
+  <rect x="34" y="34" width="300" height="76" rx="38" fill="#0E2A1F" opacity="0.42"/>
+{LOGO}
+
+{khoi_chu}
+</svg>
+"""
+
+
 def xuat_png(svg: Path, png: Path) -> bool:
     """Xuất PNG 1080x1080 từ SVG. Trả về False nếu máy chưa có rsvg-convert."""
     if not shutil.which("rsvg-convert"):

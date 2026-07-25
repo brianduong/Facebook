@@ -1,18 +1,19 @@
 #!/usr/bin/env python3
-"""Render VIDEO NHÁP 1:1 từ lời đọc — chữ chạy theo giọng, không cần quay gì.
+"""Render VIDEO NHÁP 1:1 từ lời đọc — có nhân vật kể, cảnh nền, chữ khớp giọng.
 
-Video ra sẽ đăng được ngay, nhưng đây là bản NHÁP:
-  - giọng là giọng máy (Linh của macOS) → nên thu lại bằng giọng thật của anh
-  - nền là gradient thương hiệu → nên thay bằng b-roll khi có
-Mục đích: có video đăng đều tay ngay từ tuần này, không chờ dựng tay.
+Video ra đăng được ngay. Vẫn gọi là NHÁP vì giọng là giọng máy (Linh của macOS)
+→ nên thu lại bằng giọng thật của anh khi có thời gian.
 
 Dùng:
     python3 scripts/render-video-nhap.py VD-001
-    python3 scripts/render-video-nhap.py VD-001 --tone sang --toc-do 132
-    python3 scripts/render-video-nhap.py VD-001 --nhac assets/music/nen-nhe.mp3
+    python3 scripts/render-video-nhap.py VD-001 --nhan-vat chu --canh ben-mua,duong-cay
+    python3 scripts/render-video-nhap.py VD-001 --toc-do 160 --nhac assets/music/nen.mp3
+    python3 scripts/render-video-nhap.py VD-001 --nhan-vat khong --canh trong   # nền gradient trơn
+
+Nhân vật: anh (đàn ông trẻ) · chi (phụ nữ trẻ) · chu (đàn ông lớn tuổi) · co (phụ nữ lớn tuổi)
+Cảnh nền: sang-cua-so · ban-tra · duong-cay · ben-mua · bep · dem-sao
 
 Kết quả: video/exports/VD-001-nhap.mp4  (ngoài GitHub)
-
 Cần: ffmpeg, rsvg-convert, giọng Linh của macOS.
 """
 
@@ -26,12 +27,17 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import canh_nen  # noqa: E402
 import nhan_dien as nd  # noqa: E402
+import nhan_vat as nv  # noqa: E402
 
-TOI_DA_MOI_THE = 120     # số ký tự tối đa mỗi thẻ chữ
-KHOANG_LANG = 0.45       # giây nghỉ sau mỗi thẻ
-GIU_QUOTE = 3.0          # giây giữ ảnh quote ở cuối
+TOI_DA_MOI_THE = 120     # ký tự tối đa mỗi thẻ chữ
+CHU_MOI_DONG = 28        # ký tự tối đa mỗi dòng
+KHOANG_LANG = 0.34       # giây nghỉ sau mỗi thẻ (nói chuyện thì nghỉ ngắn)
+GIU_QUOTE = 3.0          # giây giữ ảnh quote cuối video
+NHIP_MIENG = 0.16        # giây mỗi lần mở/đóng miệng
 AM_LUONG_NHAC = 0.14     # nhạc nền so với giọng đọc
+CANH_MAC_DINH = "sang-cua-so,ban-tra,duong-cay"
 
 
 def chay(cmd: list[str]) -> str:
@@ -83,8 +89,14 @@ def do_dai(f: Path) -> float:
 def main() -> int:
     p = argparse.ArgumentParser(description="Render video nháp 1:1 cho kênh Sống Tốt")
     p.add_argument("ma_so", help="Mã video, vd VD-001")
-    p.add_argument("--tone", choices=sorted(nd.TONES), default="vua", help="Sắc nền")
-    p.add_argument("--toc-do", type=int, default=138, help="Tốc độ đọc (từ/phút), mặc định 138")
+    p.add_argument("--nhan-vat", default="chi",
+                   choices=[*nv.KIEU, "khong"], help="Nhân vật kể (mặc định: chi)")
+    p.add_argument("--canh", default=CANH_MAC_DINH,
+                   help=f"Danh sách cảnh cách nhau bởi dấu phẩy, hoặc 'trong'. Có: {', '.join(canh_nen.CANH)}")
+    p.add_argument("--tone", choices=sorted(nd.TONES), default="vua",
+                   help="Sắc nền khi dùng --canh trong")
+    p.add_argument("--toc-do", type=int, default=155,
+                   help="Tốc độ đọc (từ/phút). 138 = đọc, 155 = nói chuyện (mặc định)")
     p.add_argument("--nhac", help="File nhạc nền (phải là nhạc được phép dùng thương mại)")
     a = p.parse_args()
 
@@ -98,6 +110,12 @@ def main() -> int:
         sys.exit(f"❌ Không thấy ảnh quote {quote.relative_to(nd.REPO)}\n"
                  f"   Tạo bằng: python3 scripts/tao-anh-quote.py {a.ma_so} \"Dòng 1\" \"Dòng 2\"")
 
+    nhan_vat = None if a.nhan_vat == "khong" else a.nhan_vat
+    canh_list = [] if a.canh.strip() == "trong" else [c.strip() for c in a.canh.split(",") if c.strip()]
+    for c in canh_list:
+        if c not in canh_nen.CANH:
+            sys.exit(f"❌ Không có cảnh '{c}'. Chọn: {', '.join(canh_nen.CANH)}")
+
     lam_viec = nd.REPO / "video" / "edit" / f"{a.ma_so}-nhap"
     if lam_viec.exists():
         shutil.rmtree(lam_viec)
@@ -106,36 +124,53 @@ def main() -> int:
     ra.parent.mkdir(parents=True, exist_ok=True)
 
     the = tach_doan(loi_doc.read_text(encoding="utf-8"))
-    print(f"📝 {len(the)} thẻ chữ")
+    print(f"📝 {len(the)} thẻ chữ · nhân vật: {nhan_vat or 'không'} · "
+          f"cảnh: {', '.join(canh_list) or 'nền trơn'} · tốc độ: {a.toc_do} từ/phút")
 
     wavs: list[Path] = []
     thoi_luong: list[float] = []
+    hinh: list[tuple[Path, Path | None]] = []   # (miệng đóng, miệng mở)
+
     for i, doan in enumerate(the):
         txt = lam_viec / f"{i:02d}.txt"
         aiff = lam_viec / f"{i:02d}.aiff"
         wav = lam_viec / f"{i:02d}.wav"
-        svg = lam_viec / f"{i:02d}.svg"
-        png = lam_viec / f"{i:02d}.png"
 
-        # Giọng đọc từng thẻ → thẻ chữ và tiếng khớp nhau chính xác
+        # Giọng đọc từng thẻ → lấy đúng thời lượng tiếng làm thời lượng hình
         txt.write_text(doan, encoding="utf-8")
         chay(["say", "-v", "Linh", "-r", str(a.toc_do), "-f", str(txt), "-o", str(aiff)])
         chay(["ffmpeg", "-y", "-loglevel", "error", "-i", str(aiff),
               "-af", f"apad=pad_dur={KHOANG_LANG}", "-ar", "44100", "-ac", "1", str(wav)])
 
-        svg.write_text(
-            nd.tao_svg(nd.boc_dong(doan, 26), tone=a.tone, cta=False, giua=True),
-            encoding="utf-8",
-        )
-        nd.xuat_png(svg, png)
+        dong = nd.boc_dong(doan, CHU_MOI_DONG)
+        bo_hinh: list[Path] = []
+        # Cảnh đổi theo từng khúc video cho đỡ đơn điệu
+        canh = canh_list[i * len(canh_list) // len(the)] if canh_list else None
+
+        for ten, mo in (("a", False), ("b", True)):
+            svg = lam_viec / f"{i:02d}-{ten}.svg"
+            png = lam_viec / f"{i:02d}-{ten}.png"
+            if canh:
+                svg.write_text(
+                    nd.tao_the_video(dong, canh, nhan_vat=nhan_vat, mieng_mo=mo), encoding="utf-8"
+                )
+            else:
+                svg.write_text(
+                    nd.tao_svg(dong, tone=a.tone, cta=False, giua=True), encoding="utf-8"
+                )
+            nd.xuat_png(svg, png)
+            bo_hinh.append(png)
+            if not (canh and nhan_vat):
+                break   # không có người thì khỏi cần khung miệng mở
 
         giay = do_dai(wav)
         wavs.append(wav)
         thoi_luong.append(giay)
+        hinh.append((bo_hinh[0], bo_hinh[1] if len(bo_hinh) > 1 else None))
         print(f"   {i + 1:2d}. {giay:5.1f}s  {doan[:52]}{'…' if len(doan) > 52 else ''}")
 
     tong = sum(thoi_luong) + GIU_QUOTE
-    print(f"⏱  Tổng: {tong:.0f}s", "✅ trên 60s" if tong > 60 else "⚠️  DƯỚI 60s")
+    print(f"⏱  Tổng: {tong:.0f}s", "✅ trên 60s" if tong > 60 else "⚠️  DƯỚI 60s — cần đọc chậm lại hoặc thêm nội dung")
 
     # Ghép giọng đọc + 3 giây lặng cho ảnh quote cuối
     ds_am = lam_viec / "am-thanh.txt"
@@ -144,14 +179,23 @@ def main() -> int:
     chay(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", str(ds_am),
           "-af", f"apad=pad_dur={GIU_QUOTE}", "-c:a", "pcm_s16le", str(giong)])
 
-    # Danh sách hình: mỗi thẻ giữ đúng thời lượng tiếng của nó, cuối là ảnh quote
-    dong_hinh = "".join(
-        f"file '{lam_viec / f'{i:02d}.png'}'\nduration {t:.3f}\n"
-        for i, t in enumerate(thoi_luong)
-    )
-    dong_hinh += f"file '{quote}'\nduration {GIU_QUOTE}\nfile '{quote}'\n"
+    # Danh sách hình: mỗi thẻ giữ đúng thời lượng tiếng của nó.
+    # Có nhân vật thì đổi qua lại hai khung miệng đóng/mở → trông như đang nói.
+    dong_hinh: list[str] = []
+    for (dong_png, mo_png), giay in zip(hinh, thoi_luong):
+        if mo_png is None:
+            dong_hinh.append(f"file '{dong_png}'\nduration {giay:.3f}\n")
+            continue
+        con_lai = giay
+        dang_mo = False
+        while con_lai > 0.001:
+            khuc = min(NHIP_MIENG, con_lai)
+            dong_hinh.append(f"file '{mo_png if dang_mo else dong_png}'\nduration {khuc:.3f}\n")
+            dang_mo = not dang_mo
+            con_lai -= khuc
+    dong_hinh.append(f"file '{quote}'\nduration {GIU_QUOTE}\nfile '{quote}'\n")
     ds_hinh = lam_viec / "hinh.txt"
-    ds_hinh.write_text(dong_hinh, encoding="utf-8")
+    ds_hinh.write_text("".join(dong_hinh), encoding="utf-8")
 
     cmd = ["ffmpeg", "-y", "-loglevel", "error",
            "-f", "concat", "-safe", "0", "-i", str(ds_hinh),
@@ -172,7 +216,7 @@ def main() -> int:
     else:
         cmd += ["-map", "0:v", "-map", "1:a"]
 
-    # Zoom vào cực chậm cho video khỏi tĩnh cứng + mờ dần ở đầu và cuối
+    # Zoom vào cực chậm cho khung hình khỏi tĩnh + mờ dần ở đầu và cuối
     hinh_anh = (
         "fps=30,"
         "zoompan=z='min(1+0.00003*on,1.06)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)'"
@@ -189,7 +233,7 @@ def main() -> int:
 
     print(f"✅ {ra.relative_to(nd.REPO)}  ({ra.stat().st_size / 1e6:.1f} MB, {do_dai(ra):.0f}s)")
     print(f"   File trung gian giữ ở {lam_viec.relative_to(nd.REPO)} (xoá được).")
-    print("👉 Đây là bản NHÁP: nên thu lại giọng thật và thay nền b-roll khi có.")
+    print("👉 Đây là bản NHÁP: nên thu lại giọng thật khi có thời gian.")
     return 0
 
 
