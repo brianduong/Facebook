@@ -8,7 +8,7 @@
 
 | Ngày | Mã số | Tên video | Nhân vật | Trạng thái |
 |------|-------|-----------|----------|-----------|
-| 25/07 | VD-001 | Ba điều biết ơn mỗi sáng | chị | 🟢 Đang đăng |
+| 25/07 | VD-001 | Ba điều biết ơn mỗi sáng | chị | ✅ Đã đăng (post, không Reel) |
 | 26/07 | VD-002 | Tử tế không bao giờ là điều lãng phí | chú | ⬜ Chưa render |
 | 27/07 | VD-003 | Hôm nay chỉ cần làm được một việc | cô | ⬜ Chưa render |
 | 28/07 | VD-004 | Cảm ơn phải nói rõ lý do | anh | ⬜ Chưa render |
