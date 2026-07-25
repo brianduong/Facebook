@@ -1,42 +1,32 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
   <defs>
-    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#1E4437"/>
       <stop offset="100%" stop-color="#2E5D4B"/>
     </linearGradient>
-    <linearGradient id="fade3" x1="0%" y1="0%" x2="0%" y2="100%">
+    <linearGradient id="fade" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#0E2A1F" stop-opacity="0"/>
       <stop offset="100%" stop-color="#0E2A1F" stop-opacity="0.6"/>
     </linearGradient>
   </defs>
 
-  <rect width="1080" height="1080" fill="url(#bg3)"/>
-  <rect x="0" y="520" width="1080" height="560" fill="url(#fade3)"/>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="0" y="520" width="1080" height="560" fill="url(#fade)"/>
 
   <g transform="translate(60 70)">
     <g transform="scale(0.28)">
       <path d="M0,60 C -48,30 -48,-75 -7,-116 C -3,-95 -9,-35 0,60 Z" fill="#F7FAF5" transform="rotate(-16)"/>
       <path d="M0,60 C 48,30 48,-75 7,-116 C 3,-95 9,-35 0,60 Z" fill="#A9D4A6" transform="rotate(16)"/>
     </g>
-    <text x="52" y="18" font-family="'Be Vietnam Pro','Montserrat',Arial,sans-serif"
-          font-size="42" font-weight="800" fill="#F7FAF5">Sống Tốt</text>
+    <text x="52" y="18" font-family="'Be Vietnam Pro','Montserrat',Arial,sans-serif" font-size="42" font-weight="800" fill="#F7FAF5">Sống Tốt</text>
   </g>
 
-  <!-- Điểm nhớ của video: MỘT VIỆC -->
-  <text x="540" y="470" text-anchor="middle"
-        font-family="'Be Vietnam Pro','Montserrat',Arial,sans-serif"
-        font-size="120" font-weight="800" fill="#E9C46A" letter-spacing="6">MỘT VIỆC</text>
+  <text x="540" y="470" text-anchor="middle" font-family="'Be Vietnam Pro','Montserrat',Arial,sans-serif" font-size="120" font-weight="800" fill="#E9C46A" letter-spacing="6">MỘT VIỆC</text>
 
-  <text x="540" y="700" text-anchor="middle"
-        font-family="'Be Vietnam Pro','Montserrat',Arial,sans-serif"
-        font-size="70" font-weight="800" fill="#F7FAF5">Ngày mệt, làm một việc.</text>
-  <text x="540" y="790" text-anchor="middle"
-        font-family="'Be Vietnam Pro','Montserrat',Arial,sans-serif"
-        font-size="70" font-weight="800" fill="#F7FAF5">Một việc là đủ.</text>
+  <text x="540" y="674" text-anchor="middle" font-family="'Be Vietnam Pro','Montserrat',Arial,sans-serif" font-size="70" font-weight="800" fill="#F7FAF5">Ngày mệt, làm một việc.</text>
+  <text x="540" y="767" text-anchor="middle" font-family="'Be Vietnam Pro','Montserrat',Arial,sans-serif" font-size="70" font-weight="800" fill="#F7FAF5">Một việc là đủ.</text>
 
-  <rect x="480" y="855" width="120" height="8" rx="4" fill="#E9C46A"/>
+  <rect x="480" y="833" width="120" height="8" rx="4" fill="#E9C46A"/>
 
-  <text x="540" y="1000" text-anchor="middle"
-        font-family="'Be Vietnam Pro','Montserrat',Arial,sans-serif"
-        font-size="34" font-weight="500" fill="#E9C46A" letter-spacing="4">theo dõi để sống tốt mỗi ngày</text>
+  <text x="540" y="1000" text-anchor="middle" font-family="'Be Vietnam Pro','Montserrat',Arial,sans-serif" font-size="34" font-weight="500" fill="#E9C46A" letter-spacing="4">theo dõi để sống tốt mỗi ngày</text>
 </svg>

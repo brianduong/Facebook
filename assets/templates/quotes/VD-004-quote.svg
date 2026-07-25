@@ -13,7 +13,6 @@
   <rect width="1080" height="1080" fill="url(#bg)"/>
   <rect x="0" y="520" width="1080" height="560" fill="url(#fade)"/>
 
-  <!-- Logo mầm cây + tên kênh -->
   <g transform="translate(60 70)">
     <g transform="scale(0.28)">
       <path d="M0,60 C -48,30 -48,-75 -7,-116 C -3,-95 -9,-35 0,60 Z" fill="#F7FAF5" transform="rotate(-16)"/>
@@ -24,11 +23,10 @@
 
   <text x="540" y="490" text-anchor="middle" font-family="Georgia,serif" font-size="200" fill="#E9C46A" opacity="0.35">“</text>
 
-  <text x="540" y="676" text-anchor="middle" font-family="'Be Vietnam Pro','Montserrat',Arial,sans-serif" font-size="70" font-weight="800" fill="#F7FAF5">Cảm ơn có chữ "vì"</text>
-  <text x="540" y="765" text-anchor="middle" font-family="'Be Vietnam Pro','Montserrat',Arial,sans-serif" font-size="70" font-weight="800" fill="#F7FAF5">mới tới được người ta.</text>
+  <text x="540" y="674" text-anchor="middle" font-family="'Be Vietnam Pro','Montserrat',Arial,sans-serif" font-size="70" font-weight="800" fill="#F7FAF5">Cảm ơn có chữ "vì"</text>
+  <text x="540" y="767" text-anchor="middle" font-family="'Be Vietnam Pro','Montserrat',Arial,sans-serif" font-size="70" font-weight="800" fill="#F7FAF5">mới tới được người ta.</text>
 
-  <rect x="480" y="831" width="120" height="8" rx="4" fill="#E9C46A"/>
+  <rect x="480" y="833" width="120" height="8" rx="4" fill="#E9C46A"/>
 
-  <text x="540" y="1000" text-anchor="middle" font-family="'Be Vietnam Pro','Montserrat',Arial,sans-serif"
-        font-size="34" font-weight="500" fill="#E9C46A" letter-spacing="4">theo dõi để sống tốt mỗi ngày</text>
+  <text x="540" y="1000" text-anchor="middle" font-family="'Be Vietnam Pro','Montserrat',Arial,sans-serif" font-size="34" font-weight="500" fill="#E9C46A" letter-spacing="4">theo dõi để sống tốt mỗi ngày</text>
 </svg>

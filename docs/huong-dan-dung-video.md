@@ -1,6 +1,27 @@
-# Hướng dẫn dựng video (CapCut / Canva) — khung 1:1
+# Hướng dẫn dựng video — khung 1:1
 
 > Mục tiêu: mỗi video ~60–75 giây, vuông 1080×1080, đúng tông xanh của kênh. Video **dài trên 1 phút** mới đủ tiêu chí quảng cáo trong luồng (xem `docs/ke-hoach-kiem-tien.md`).
+
+## Cách nhanh nhất: render bản nháp bằng script
+
+```bash
+python3 scripts/render-video-nhap.py VD-001 --tone sang
+```
+
+Script tự làm hết: cắt lời đọc thành từng thẻ chữ, đọc bằng giọng máy tiếng Việt, khớp thời gian chữ với tiếng, ghép ảnh quote ở cuối, xuất `video/exports/VD-001-nhap.mp4` (1080×1080, 30fps).
+
+- Câu hook luôn đứng riêng một thẻ (3 giây đầu).
+- Có zoom vào rất chậm + mờ dần đầu/cuối cho khỏi tĩnh cứng.
+- Thêm nhạc: `--tone vua --nhac assets/music/ten-file.mp3` (chỉ dùng nhạc được phép thương mại).
+- Tone nền: `sang` (nhẹ nhàng) · `vua` (mặc định) · `tram` (an ủi).
+
+**Bản nháp dùng được để đăng ngay**, nhưng nên nâng cấp dần:
+1. Thu lại **giọng thật của anh** thay giọng máy → thu vào `content/scripts/loi-doc/` đọc theo, rồi ghép trong CapCut.
+2. Thay nền gradient bằng **b-roll thật** theo mục "Hình ảnh/B-roll" trong kịch bản.
+
+Giọng thật + b-roll thật luôn hiệu quả hơn bản nháp — bản nháp là để kênh không bị trống bài trong lúc anh chuẩn bị.
+
+## Cách kỹ hơn: dựng tay trong CapCut / Canva
 
 ## Chuẩn bị trước khi mở app
 - Kịch bản: `content/scripts/VD-00X-*.md` (có sẵn hook, nội dung, CTA, mốc thời gian).

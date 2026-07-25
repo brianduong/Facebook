@@ -18,12 +18,18 @@ _Cập nhật: 2026-07-25_
 | VD-005 | Người bạn lâu không hỏi thăm | 64s |
 | VD-006 | Đường của bạn không cùng vạch với ai | 72s |
 
-Mỗi video có: kịch bản (`content/scripts/`), lời đọc thuần văn bản (`content/scripts/loi-doc/`), caption + hashtag (`content/captions/`), ảnh quote 1:1 (`assets/templates/quotes/`), và **giọng đọc nháp** đã render sẵn ở `video/raw/VD-00X-giong-nhap.aiff` (ngoài GitHub).
+Mỗi video có: kịch bản (`content/scripts/`), lời đọc thuần văn bản (`content/scripts/loi-doc/`), caption + hashtag (`content/captions/`), ảnh quote 1:1 (`assets/templates/quotes/`).
 Tất cả đều **trên 60 giây** → đủ tiêu chí quảng cáo trong luồng.
 
+**✅ 6 file MP4 nháp đã render xong** — `video/exports/VD-00X-nhap.mp4` (1080×1080, 30fps, ngoài GitHub).
+Chữ chạy khớp giọng đọc, hook đứng riêng 3 giây đầu, zoom chậm, ảnh quote ở cuối. **Đăng được ngay.**
+Giọng hiện tại là giọng máy (Linh của macOS) → nên thu lại bằng giọng thật của anh khi có thời gian.
+
 **Công cụ tự động (`scripts/`)**
-- `tao-anh-quote.py` — tạo ảnh quote 1:1 đúng nhận diện, chỉ cần gõ câu chữ.
-- `tao-giong-doc.sh` — tạo giọng đọc nháp tiếng Việt + đo thời lượng, cảnh báo nếu dưới 60s.
+- `render-video-nhap.py` — render cả video 1:1 từ lời đọc: cắt thẻ chữ, đọc, khớp thời gian, ghép quote cuối.
+- `nhan_dien.py` — nơi duy nhất định nghĩa màu/font/logo; đổi ở đây là ảnh và video đổi theo.
+- `tao-anh-quote.py` — tạo ảnh quote 1:1, chỉ cần gõ câu chữ.
+- `tao-giong-doc.sh` — chỉ tạo giọng nháp + đo thời lượng, cảnh báo nếu dưới 60s.
 - `dang-video-fb.py` — đăng video/ảnh + caption lên Page qua Graph API (mặc định chạy thử, phải thêm `--dang-that`).
 
 **Tài liệu**
@@ -33,17 +39,17 @@ Tất cả đều **trên 60 giây** → đủ tiêu chí quảng cáo trong lu�
 - `content/ideas/kho-y-tuong.md` — 13 ý tưởng, 6 đã thành kịch bản.
 
 ## Đang chờ anh ⏳
-1. **Dán mô tả mới** vào phần Giới thiệu của Page (nội dung sẵn ở `docs/mo-ta-page.md`) — nếu chưa làm.
-2. **Dựng VD-001** theo `docs/huong-dan-dung-video.md` → đăng 28/07, 20:00.
-3. **Nguồn nhạc nền dùng được thương mại** (thư viện nhạc trong Meta Business Suite là an toàn nhất).
+1. **Xem 6 file `video/exports/VD-00X-nhap.mp4`** → duyệt hoặc nói em sửa (chữ, nhịp, tone nền).
+2. **Dán mô tả mới** vào phần Giới thiệu của Page (nội dung sẵn ở `docs/mo-ta-page.md`) — nếu chưa làm.
+3. **Nguồn nhạc nền dùng được thương mại** → đưa file vào `assets/music/`, em render lại kèm nhạc (`--nhac`).
 4. **Page ID + Page Access Token** → điền vào `.env` để em bật đăng tự động (`docs/huong-dan-dang-tu-dong.md`).
 5. **Ảnh chụp Meta Business Suite → Monetization** để em lên lộ trình theo con số thật (đang ~9.9K followers).
 
 ## Bước tiếp theo 👉
+- Anh duyệt video nháp → đăng VD-001 ngày 28/07, 20:00 (bấm tay, hoặc có token thì chạy `dang-video-fb.py`).
 - Sau khi đăng VD-001–002: điền số liệu vào bảng cuối `schedule/calendar.md` → em phân tích dạng nào chạy tốt để nhân bản.
-- Có token thì chạy `dang-video-fb.py` là đăng được từ máy, khỏi bấm tay.
+- Nâng cấp dần: thu **giọng thật** thay giọng máy, rồi thay nền gradient bằng **b-roll thật**.
 - Em soạn tiếp VD-007+ từ kho ý tưởng khi anh cần.
-- Chưa cài `ffmpeg` nên em chưa tự render video được — nếu anh muốn em dựng video nháp tự động (chữ + ảnh quote + giọng nháp) thì cài `brew install ffmpeg` rồi bảo em.
 
 ## Thông tin nền
 - Page: **Sống Tốt** — https://www.facebook.com/songtot.in — **~9.9K followers**.
