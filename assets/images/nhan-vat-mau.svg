@@ -9,85 +9,395 @@
         font-weight="800" fill="#F7FAF5">Nhân vật kênh Sống Tốt</text>
   <text x="540" y="162" text-anchor="middle" font-family="'Be Vietnam Pro','Montserrat',Arial,sans-serif" font-size="30"
         font-weight="500" fill="#E9C46A">vẽ vector — không lo bản quyền hình người thật</text>
-  <g transform="translate(270 500) scale(0.72)"><g>
-    
-    <!-- chân -->
-    <rect x="-34" y="-124" width="27" height="124" rx="13" fill="#2B4A3C"/>
-    <rect x="7" y="-124" width="27" height="124" rx="13" fill="#2B4A3C"/>
-    <!-- thân -->
-    <path d="M-54,-240 C -54,-268 -30,-284 0,-284 C 30,-284 54,-268 54,-240 L 54,-118 L -54,-118 Z" fill="#F7FAF5"/>
-    <!-- tay -->
-    <rect x="-76" y="-248" width="25" height="112" rx="12" fill="#F7FAF5" transform="rotate(7 -63 -248)"/>
-    <rect x="51" y="-248" width="25" height="112" rx="12" fill="#F7FAF5" transform="rotate(-7 63 -248)"/>
-    <circle cx="-70" cy="-134" r="13" fill="#E9BE97"/>
-    <circle cx="70" cy="-134" r="13" fill="#E9BE97"/>
-    <!-- cổ + đầu -->
-    <rect x="-14" y="-292" width="28" height="26" fill="#D9A87F"/>
-    <circle cx="0" cy="-330" r="47" fill="#E9BE97"/>
-    <path d="M-47,-334 C -46,-384 46,-384 47,-334 C 24,-352 -24,-352 -47,-334 Z" fill="#2B2B2B"/>
-    <circle cx="-17" cy="-332" r="5" fill="#2B3A33"/>
-    <circle cx="17" cy="-332" r="5" fill="#2B3A33"/>
-    
-    <path d="M-11,-301 Q0,-293 11,-301" stroke="#8A4A44" stroke-width="5" fill="none" stroke-linecap="round"/>
-  </g></g><text x="270" y="556" text-anchor="middle" font-family="'Be Vietnam Pro','Montserrat',Arial,sans-serif" font-size="34" font-weight="800" fill="#F7FAF5">anh — đàn ông trẻ</text><g transform="translate(810 500) scale(0.72)"><g>
-    <path d="M-52,-330 C -60,-250 -50,-215 -40,-205 L 40,-205 C 50,-215 60,-250 52,-330 Z" fill="#3A2E28"/>
-    <!-- chân -->
-    <rect x="-34" y="-124" width="27" height="124" rx="13" fill="#2B4A3C"/>
-    <rect x="7" y="-124" width="27" height="124" rx="13" fill="#2B4A3C"/>
-    <!-- thân -->
-    <path d="M-54,-240 C -54,-268 -30,-284 0,-284 C 30,-284 54,-268 54,-240 L 54,-118 L -54,-118 Z" fill="#A9D4A6"/>
-    <!-- tay -->
-    <rect x="-76" y="-248" width="25" height="112" rx="12" fill="#A9D4A6" transform="rotate(7 -63 -248)"/>
-    <rect x="51" y="-248" width="25" height="112" rx="12" fill="#A9D4A6" transform="rotate(-7 63 -248)"/>
-    <circle cx="-70" cy="-134" r="13" fill="#E9BE97"/>
-    <circle cx="70" cy="-134" r="13" fill="#E9BE97"/>
-    <!-- cổ + đầu -->
-    <rect x="-14" y="-292" width="28" height="26" fill="#D9A87F"/>
-    <circle cx="0" cy="-330" r="47" fill="#E9BE97"/>
-    <path d="M-47,-336 C -44,-382 44,-382 47,-336 C 30,-360 -30,-360 -47,-336 Z" fill="#3A2E28"/>
-    <circle cx="-17" cy="-332" r="5" fill="#2B3A33"/>
-    <circle cx="17" cy="-332" r="5" fill="#2B3A33"/>
-    
-    <path d="M-11,-301 Q0,-293 11,-301" stroke="#8A4A44" stroke-width="5" fill="none" stroke-linecap="round"/>
-  </g></g><text x="810" y="556" text-anchor="middle" font-family="'Be Vietnam Pro','Montserrat',Arial,sans-serif" font-size="34" font-weight="800" fill="#F7FAF5">chị — phụ nữ trẻ</text><g transform="translate(270 960) scale(0.72)"><g>
-    
-    <!-- chân -->
-    <rect x="-34" y="-124" width="27" height="124" rx="13" fill="#3A3A3A"/>
-    <rect x="7" y="-124" width="27" height="124" rx="13" fill="#3A3A3A"/>
-    <!-- thân -->
-    <path d="M-54,-240 C -54,-268 -30,-284 0,-284 C 30,-284 54,-268 54,-240 L 54,-118 L -54,-118 Z" fill="#A9D4A6"/>
-    <!-- tay -->
-    <rect x="-76" y="-248" width="25" height="112" rx="12" fill="#A9D4A6" transform="rotate(7 -63 -248)"/>
-    <rect x="51" y="-248" width="25" height="112" rx="12" fill="#A9D4A6" transform="rotate(-7 63 -248)"/>
-    <circle cx="-70" cy="-134" r="13" fill="#E9BE97"/>
-    <circle cx="70" cy="-134" r="13" fill="#E9BE97"/>
-    <!-- cổ + đầu -->
-    <rect x="-14" y="-292" width="28" height="26" fill="#D9A87F"/>
-    <circle cx="0" cy="-330" r="47" fill="#E9BE97"/>
-    <path d="M-47,-334 C -46,-384 46,-384 47,-334 C 24,-352 -24,-352 -47,-334 Z" fill="#C9CFCB"/>
-    <circle cx="-17" cy="-332" r="5" fill="#2B3A33"/>
-    <circle cx="17" cy="-332" r="5" fill="#2B3A33"/>
-    <g stroke="#2B3A33" stroke-width="4" fill="none"><circle cx="-17" cy="-329" r="15"/><circle cx="17" cy="-329" r="15"/><path d="M-2,-329 H2"/><path d="M-32,-332 H-42"/><path d="M32,-332 H42"/></g>
-    <path d="M-11,-301 Q0,-293 11,-301" stroke="#8A4A44" stroke-width="5" fill="none" stroke-linecap="round"/>
-  </g></g><text x="270" y="1016" text-anchor="middle" font-family="'Be Vietnam Pro','Montserrat',Arial,sans-serif" font-size="34" font-weight="800" fill="#F7FAF5">chú — đàn ông lớn tuổi</text><g transform="translate(810 960) scale(0.72)"><g>
-    <circle cx="0" cy="-378" r="22" fill="#C9CFCB"/>
-    <!-- chân -->
-    <rect x="-34" y="-124" width="27" height="124" rx="13" fill="#3A3A3A"/>
-    <rect x="7" y="-124" width="27" height="124" rx="13" fill="#3A3A3A"/>
-    <!-- thân -->
-    <path d="M-54,-240 C -54,-268 -30,-284 0,-284 C 30,-284 54,-268 54,-240 L 54,-118 L -54,-118 Z" fill="#F7FAF5"/>
-    <!-- tay -->
-    <rect x="-76" y="-248" width="25" height="112" rx="12" fill="#F7FAF5" transform="rotate(7 -63 -248)"/>
-    <rect x="51" y="-248" width="25" height="112" rx="12" fill="#F7FAF5" transform="rotate(-7 63 -248)"/>
-    <circle cx="-70" cy="-134" r="13" fill="#E9BE97"/>
-    <circle cx="70" cy="-134" r="13" fill="#E9BE97"/>
-    <!-- cổ + đầu -->
-    <rect x="-14" y="-292" width="28" height="26" fill="#D9A87F"/>
-    <circle cx="0" cy="-330" r="47" fill="#E9BE97"/>
-    <path d="M-46,-338 C -42,-378 42,-378 46,-338 C 26,-356 -26,-356 -46,-338 Z" fill="#C9CFCB"/>
-    <circle cx="-17" cy="-332" r="5" fill="#2B3A33"/>
-    <circle cx="17" cy="-332" r="5" fill="#2B3A33"/>
-    <g stroke="#2B3A33" stroke-width="4" fill="none"><circle cx="-17" cy="-329" r="15"/><circle cx="17" cy="-329" r="15"/><path d="M-2,-329 H2"/><path d="M-32,-332 H-42"/><path d="M32,-332 H42"/></g>
-    <path d="M-11,-301 Q0,-293 11,-301" stroke="#8A4A44" stroke-width="5" fill="none" stroke-linecap="round"/>
-  </g></g><text x="810" y="1016" text-anchor="middle" font-family="'Be Vietnam Pro','Montserrat',Arial,sans-serif" font-size="34" font-weight="800" fill="#F7FAF5">cô — phụ nữ lớn tuổi</text>
+  <g transform="translate(270 530) scale(0.72)"><g>
+  <defs>
+    <radialGradient id="nvanhda" cx="34%" cy="26%" r="78%">
+      <stop offset="0%" stop-color="#F2CDA7"/><stop offset="100%" stop-color="#D9A478"/>
+    </radialGradient>
+    <linearGradient id="nvanhao" x1="0%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0%" stop-color="#EEF3EA"/><stop offset="100%" stop-color="#C9D6C7"/>
+    </linearGradient>
+    <filter id="nvanhmo" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+    <!-- Bóng mờ phải bị cắt theo hình thân và hình đầu, không thì tràn ra ngoài thành viền sáng -->
+    <clipPath id="nvanhthan">
+      <path d="M-152,0 C-148,-104 -104,-168 -58,-196 L58,-196 C104,-168 148,-104 152,0 Z"/>
+    </clipPath>
+    <clipPath id="nvanhdau">
+      <path d="M-80,-368 C-80,-436 -46,-452 0,-452 C46,-452 80,-436 80,-368
+               C80,-306 44,-250 0,-250 C-44,-250 -80,-306 -80,-368 Z"/>
+    </clipPath>
+  </defs>
+
+  
+
+  <!-- vai và thân -->
+  <path d="M-152,0 C-148,-104 -104,-168 -58,-196 L58,-196 C104,-168 148,-104 152,0 Z" fill="url(#nvanhao)"/>
+  <g clip-path="url(#nvanhthan)">
+    <ellipse cx="-124" cy="-40" rx="46" ry="90" fill="#C9D6C7" opacity="0.4" filter="url(#nvanhmo)"/>
+    <ellipse cx="128" cy="-30" rx="40" ry="90" fill="#C9D6C7" opacity="0.3" filter="url(#nvanhmo)"/>
+  </g>
+
+  <!-- cổ -->
+  <path d="M-28,-200 L28,-200 L34,-244 L-34,-244 Z" fill="#D9A478"/>
+  <ellipse cx="0" cy="-244" rx="44" ry="20" fill="#000000" opacity="0.2" filter="url(#nvanhmo)"/>
+
+  
+    <path d="M-30,-208 L0,-150 L30,-208 L54,-196 L0,-120 L-54,-196 Z" fill="#D9A478" opacity="0.35"/>
+    <path d="M-30,-208 L-2,-152 L-26,-140 L-62,-186 Z" fill="#EEF3EA"/>
+    <path d="M30,-208 L2,-152 L26,-140 L62,-186 Z" fill="#EEF3EA"/>
+    <path d="M-2,-150 L2,-150 L6,0 L-6,0 Z" fill="#C9D6C7" opacity="0.45"/>
+    <circle cx="0" cy="-96" r="5" fill="#C9D6C7"/>
+    <circle cx="0" cy="-40" r="5" fill="#C9D6C7"/>
+
+  <!-- tai -->
+  <ellipse cx="-79" cy="-344" rx="13" ry="21" fill="#D9A478"/>
+  <ellipse cx="79" cy="-344" rx="13" ry="21" fill="#D9A478"/>
+
+  <!-- đầu -->
+  <path d="M-80,-368 C-80,-436 -46,-452 0,-452 C46,-452 80,-436 80,-368
+           C80,-306 44,-250 0,-250 C-44,-250 -80,-306 -80,-368 Z" fill="url(#nvanhda)"/>
+  <!-- má hồng + bóng hai bên mặt (cắt trong hình đầu) -->
+  <g clip-path="url(#nvanhdau)">
+    <ellipse cx="-50" cy="-318" rx="24" ry="13" fill="#E08D7A" opacity="0.32" filter="url(#nvanhmo)"/>
+    <ellipse cx="50" cy="-318" rx="24" ry="13" fill="#E08D7A" opacity="0.32" filter="url(#nvanhmo)"/>
+    <ellipse cx="-86" cy="-350" rx="26" ry="60" fill="#D9A478" opacity="0.45" filter="url(#nvanhmo)"/>
+  </g>
+
+  <!-- mày -->
+  <g fill="none" stroke="#241A15" stroke-width="7" stroke-linecap="round" opacity="0.95">
+    <path d="M-48,-392 C-38,-400 -20,-400 -12,-394"/>
+    <path d="M12,-394 C20,-400 38,-400 48,-392"/>
+  </g>
+
+  
+    <g transform="translate(-32 -360)">
+      <path d="M-19,0 C-13,-13 13,-13 19,0 C13,11 -13,11 -19,0 Z" fill="#F6F1EA"/>
+      <circle cx="0" cy="-1" r="9.5" fill="#3A2A22"/>
+      <circle cx="0" cy="-1" r="4.2" fill="#140D0A"/>
+      <circle cx="-3.4" cy="-4.4" r="2.8" fill="#FFFFFF" opacity="0.9"/>
+      <path d="M-19,0 C-13,-13 13,-13 19,0" fill="none" stroke="#3A2A22" stroke-width="3.4"
+            stroke-linecap="round" opacity="1.0"/>
+    </g>
+    <g transform="translate(32 -360)">
+      <path d="M-19,0 C-13,-13 13,-13 19,0 C13,11 -13,11 -19,0 Z" fill="#F6F1EA"/>
+      <circle cx="0" cy="-1" r="9.5" fill="#3A2A22"/>
+      <circle cx="0" cy="-1" r="4.2" fill="#140D0A"/>
+      <circle cx="-3.4" cy="-4.4" r="2.8" fill="#FFFFFF" opacity="0.9"/>
+      <path d="M-19,0 C-13,-13 13,-13 19,0" fill="none" stroke="#3A2A22" stroke-width="3.4"
+            stroke-linecap="round" opacity="1.0"/>
+    </g>
+
+  <!-- mũi -->
+  <path d="M0,-352 C-6,-330 -10,-320 -2,-314 C4,-311 10,-314 12,-320" fill="none"
+        stroke="#D9A478" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
+
+  
+    <g transform="translate(0 -292)">
+      <path d="M-25,0 C-16,-7 -6,-4 0,-3 C6,-4 16,-7 25,0 C16,8 -16,8 -25,0 Z" fill="#B4675F"/>
+      <path d="M-25,0 C-14,2 14,2 25,0" fill="none" stroke="#8E4A45" stroke-width="2.4" opacity="0.7"/>
+    </g>
+  
+  <path d="M-88,-340 C-110,-526 110,-526 88,-340 C70,-400 32,-416 0,-414 C-32,-414 -70,-392 -88,-340 Z" fill="#241A15"/><path d="M0,-414 C-28,-410 -60,-390 -80,-344 C-88,-382 -64,-410 -30,-422 Z" fill="#241A15"/>
+  
+</g></g><text x="270" y="586" text-anchor="middle" font-family="'Be Vietnam Pro','Montserrat',Arial,sans-serif" font-size="34" font-weight="800" fill="#F7FAF5">anh — đàn ông trẻ</text><g transform="translate(810 530) scale(0.72)"><g>
+  <defs>
+    <radialGradient id="nvchida" cx="34%" cy="26%" r="78%">
+      <stop offset="0%" stop-color="#F6D3B0"/><stop offset="100%" stop-color="#DDA980"/>
+    </radialGradient>
+    <linearGradient id="nvchiao" x1="0%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0%" stop-color="#A9D4A6"/><stop offset="100%" stop-color="#7BAE7F"/>
+    </linearGradient>
+    <filter id="nvchimo" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+    <!-- Bóng mờ phải bị cắt theo hình thân và hình đầu, không thì tràn ra ngoài thành viền sáng -->
+    <clipPath id="nvchithan">
+      <path d="M-152,0 C-148,-104 -104,-168 -58,-196 L58,-196 C104,-168 148,-104 152,0 Z"/>
+    </clipPath>
+    <clipPath id="nvchidau">
+      <path d="M-80,-368 C-80,-436 -46,-452 0,-452 C46,-452 80,-436 80,-368
+               C80,-306 44,-250 0,-250 C-44,-250 -80,-306 -80,-368 Z"/>
+    </clipPath>
+  </defs>
+
+  <path d="M-92,-356 C-110,-250 -104,-160 -88,-124 L88,-124 C104,-160 110,-250 92,-356 Z" fill="#2A1C16"/>
+
+  <!-- vai và thân -->
+  <path d="M-152,0 C-148,-104 -104,-168 -58,-196 L58,-196 C104,-168 148,-104 152,0 Z" fill="url(#nvchiao)"/>
+  <g clip-path="url(#nvchithan)">
+    <ellipse cx="-124" cy="-40" rx="46" ry="90" fill="#7BAE7F" opacity="0.4" filter="url(#nvchimo)"/>
+    <ellipse cx="128" cy="-30" rx="40" ry="90" fill="#7BAE7F" opacity="0.3" filter="url(#nvchimo)"/>
+  </g>
+
+  <!-- cổ -->
+  <path d="M-28,-200 L28,-200 L34,-244 L-34,-244 Z" fill="#DDA980"/>
+  <ellipse cx="0" cy="-244" rx="44" ry="20" fill="#000000" opacity="0.2" filter="url(#nvchimo)"/>
+
+  
+    <path d="M-44,-196 C-30,-160 30,-160 44,-196 C30,-176 -30,-176 -44,-196 Z" fill="#DDA980" opacity="0.4"/>
+    <path d="M-52,-192 C-34,-148 34,-148 52,-192" fill="none" stroke="#7BAE7F" stroke-width="6" opacity="0.5"/>
+
+  <!-- tai -->
+  <ellipse cx="-79" cy="-344" rx="13" ry="21" fill="#DDA980"/>
+  <ellipse cx="79" cy="-344" rx="13" ry="21" fill="#DDA980"/>
+
+  <!-- đầu -->
+  <path d="M-80,-368 C-80,-436 -46,-452 0,-452 C46,-452 80,-436 80,-368
+           C80,-306 44,-250 0,-250 C-44,-250 -80,-306 -80,-368 Z" fill="url(#nvchida)"/>
+  <!-- má hồng + bóng hai bên mặt (cắt trong hình đầu) -->
+  <g clip-path="url(#nvchidau)">
+    <ellipse cx="-50" cy="-318" rx="24" ry="13" fill="#E08D7A" opacity="0.32" filter="url(#nvchimo)"/>
+    <ellipse cx="50" cy="-318" rx="24" ry="13" fill="#E08D7A" opacity="0.32" filter="url(#nvchimo)"/>
+    <ellipse cx="-86" cy="-350" rx="26" ry="60" fill="#DDA980" opacity="0.45" filter="url(#nvchimo)"/>
+  </g>
+
+  <!-- mày -->
+  <g fill="none" stroke="#2A1C16" stroke-width="7" stroke-linecap="round" opacity="0.95">
+    <path d="M-48,-392 C-38,-400 -20,-400 -12,-394"/>
+    <path d="M12,-394 C20,-400 38,-400 48,-392"/>
+  </g>
+
+  
+    <g transform="translate(-32 -360)">
+      <path d="M-19,0 C-13,-13 13,-13 19,0 C13,11 -13,11 -19,0 Z" fill="#F6F1EA"/>
+      <circle cx="0" cy="-1" r="9.5" fill="#3A2A22"/>
+      <circle cx="0" cy="-1" r="4.2" fill="#140D0A"/>
+      <circle cx="-3.4" cy="-4.4" r="2.8" fill="#FFFFFF" opacity="0.9"/>
+      <path d="M-19,0 C-13,-13 13,-13 19,0" fill="none" stroke="#3A2A22" stroke-width="3.4"
+            stroke-linecap="round" opacity="1.0"/>
+    </g>
+    <g transform="translate(32 -360)">
+      <path d="M-19,0 C-13,-13 13,-13 19,0 C13,11 -13,11 -19,0 Z" fill="#F6F1EA"/>
+      <circle cx="0" cy="-1" r="9.5" fill="#3A2A22"/>
+      <circle cx="0" cy="-1" r="4.2" fill="#140D0A"/>
+      <circle cx="-3.4" cy="-4.4" r="2.8" fill="#FFFFFF" opacity="0.9"/>
+      <path d="M-19,0 C-13,-13 13,-13 19,0" fill="none" stroke="#3A2A22" stroke-width="3.4"
+            stroke-linecap="round" opacity="1.0"/>
+    </g>
+
+  <!-- mũi -->
+  <path d="M0,-352 C-6,-330 -10,-320 -2,-314 C4,-311 10,-314 12,-320" fill="none"
+        stroke="#DDA980" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
+
+  
+    <g transform="translate(0 -292)">
+      <path d="M-25,0 C-16,-7 -6,-4 0,-3 C6,-4 16,-7 25,0 C16,8 -16,8 -25,0 Z" fill="#B4675F"/>
+      <path d="M-25,0 C-14,2 14,2 25,0" fill="none" stroke="#8E4A45" stroke-width="2.4" opacity="0.7"/>
+    </g>
+  
+  <path d="M-90,-344 C-112,-528 112,-528 90,-344 C78,-402 40,-418 8,-416 C-26,-412 -66,-390 -90,-344 Z" fill="#2A1C16"/><path d="M8,-416 C-32,-410 -70,-386 -86,-340 C-96,-378 -84,-414 -56,-432 Z" fill="#2A1C16"/>
+  
+</g></g><text x="810" y="586" text-anchor="middle" font-family="'Be Vietnam Pro','Montserrat',Arial,sans-serif" font-size="34" font-weight="800" fill="#F7FAF5">chị — phụ nữ trẻ</text><g transform="translate(270 980) scale(0.72)"><g>
+  <defs>
+    <radialGradient id="nvchuda" cx="34%" cy="26%" r="78%">
+      <stop offset="0%" stop-color="#EDC8A4"/><stop offset="100%" stop-color="#CE9E76"/>
+    </radialGradient>
+    <linearGradient id="nvchuao" x1="0%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0%" stop-color="#9EC7A2"/><stop offset="100%" stop-color="#74A279"/>
+    </linearGradient>
+    <filter id="nvchumo" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+    <!-- Bóng mờ phải bị cắt theo hình thân và hình đầu, không thì tràn ra ngoài thành viền sáng -->
+    <clipPath id="nvchuthan">
+      <path d="M-152,0 C-148,-104 -104,-168 -58,-196 L58,-196 C104,-168 148,-104 152,0 Z"/>
+    </clipPath>
+    <clipPath id="nvchudau">
+      <path d="M-80,-368 C-80,-436 -46,-452 0,-452 C46,-452 80,-436 80,-368
+               C80,-306 44,-250 0,-250 C-44,-250 -80,-306 -80,-368 Z"/>
+    </clipPath>
+  </defs>
+
+  
+
+  <!-- vai và thân -->
+  <path d="M-152,0 C-148,-104 -104,-168 -58,-196 L58,-196 C104,-168 148,-104 152,0 Z" fill="url(#nvchuao)"/>
+  <g clip-path="url(#nvchuthan)">
+    <ellipse cx="-124" cy="-40" rx="46" ry="90" fill="#74A279" opacity="0.4" filter="url(#nvchumo)"/>
+    <ellipse cx="128" cy="-30" rx="40" ry="90" fill="#74A279" opacity="0.3" filter="url(#nvchumo)"/>
+  </g>
+
+  <!-- cổ -->
+  <path d="M-28,-200 L28,-200 L34,-244 L-34,-244 Z" fill="#CE9E76"/>
+  <ellipse cx="0" cy="-244" rx="44" ry="20" fill="#000000" opacity="0.2" filter="url(#nvchumo)"/>
+
+  
+    <path d="M-30,-208 L0,-150 L30,-208 L54,-196 L0,-120 L-54,-196 Z" fill="#CE9E76" opacity="0.35"/>
+    <path d="M-30,-208 L-2,-152 L-26,-140 L-62,-186 Z" fill="#9EC7A2"/>
+    <path d="M30,-208 L2,-152 L26,-140 L62,-186 Z" fill="#9EC7A2"/>
+    <path d="M-2,-150 L2,-150 L6,0 L-6,0 Z" fill="#74A279" opacity="0.45"/>
+    <circle cx="0" cy="-96" r="5" fill="#74A279"/>
+    <circle cx="0" cy="-40" r="5" fill="#74A279"/>
+
+  <!-- tai -->
+  <ellipse cx="-79" cy="-344" rx="13" ry="21" fill="#CE9E76"/>
+  <ellipse cx="79" cy="-344" rx="13" ry="21" fill="#CE9E76"/>
+
+  <!-- đầu -->
+  <path d="M-80,-368 C-80,-436 -46,-452 0,-452 C46,-452 80,-436 80,-368
+           C80,-306 44,-250 0,-250 C-44,-250 -80,-306 -80,-368 Z" fill="url(#nvchuda)"/>
+  <!-- má hồng + bóng hai bên mặt (cắt trong hình đầu) -->
+  <g clip-path="url(#nvchudau)">
+    <ellipse cx="-50" cy="-318" rx="24" ry="13" fill="#E08D7A" opacity="0.32" filter="url(#nvchumo)"/>
+    <ellipse cx="50" cy="-318" rx="24" ry="13" fill="#E08D7A" opacity="0.32" filter="url(#nvchumo)"/>
+    <ellipse cx="-86" cy="-350" rx="26" ry="60" fill="#CE9E76" opacity="0.45" filter="url(#nvchumo)"/>
+  </g>
+
+  <!-- mày -->
+  <g fill="none" stroke="#C7CDC8" stroke-width="7" stroke-linecap="round" opacity="0.95">
+    <path d="M-48,-392 C-38,-400 -20,-400 -12,-394"/>
+    <path d="M12,-394 C20,-400 38,-400 48,-392"/>
+  </g>
+
+  
+    <g transform="translate(-32 -360)">
+      <path d="M-19,0 C-13,-13 13,-13 19,0 C13,11 -13,11 -19,0 Z" fill="#F6F1EA"/>
+      <circle cx="0" cy="-1" r="9.5" fill="#3A2A22"/>
+      <circle cx="0" cy="-1" r="4.2" fill="#140D0A"/>
+      <circle cx="-3.4" cy="-4.4" r="2.8" fill="#FFFFFF" opacity="0.9"/>
+      <path d="M-19,0 C-13,-13 13,-13 19,0" fill="none" stroke="#3A2A22" stroke-width="3.4"
+            stroke-linecap="round" opacity="1.0"/>
+    </g>
+    <g transform="translate(32 -360)">
+      <path d="M-19,0 C-13,-13 13,-13 19,0 C13,11 -13,11 -19,0 Z" fill="#F6F1EA"/>
+      <circle cx="0" cy="-1" r="9.5" fill="#3A2A22"/>
+      <circle cx="0" cy="-1" r="4.2" fill="#140D0A"/>
+      <circle cx="-3.4" cy="-4.4" r="2.8" fill="#FFFFFF" opacity="0.9"/>
+      <path d="M-19,0 C-13,-13 13,-13 19,0" fill="none" stroke="#3A2A22" stroke-width="3.4"
+            stroke-linecap="round" opacity="1.0"/>
+    </g>
+
+  <!-- mũi -->
+  <path d="M0,-352 C-6,-330 -10,-320 -2,-314 C4,-311 10,-314 12,-320" fill="none"
+        stroke="#CE9E76" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
+
+  
+    <g transform="translate(0 -288)">
+      <path d="M-25,0 C-16,-7 -6,-4 0,-3 C6,-4 16,-7 25,0 C16,8 -16,8 -25,0 Z" fill="#B4675F"/>
+      <path d="M-25,0 C-14,2 14,2 25,0" fill="none" stroke="#8E4A45" stroke-width="2.4" opacity="0.7"/>
+    </g>
+  
+    <g fill="none" stroke="#CE9E76" stroke-width="3" opacity="0.55" stroke-linecap="round">
+      <path d="M-34,-404 C-20,-412 -6,-412 4,-406"/>
+      <path d="M-30,-390 C-16,-398 -2,-398 8,-392"/>
+      <path d="M-52,-344 C-58,-336 -58,-330 -54,-324"/>
+      <path d="M52,-344 C58,-336 58,-330 54,-324"/>
+      <path d="M-30,-318 C-38,-306 -40,-296 -34,-286"/>
+      <path d="M30,-318 C38,-306 40,-296 34,-286"/>
+    </g>
+  <path d="M-88,-340 C-110,-526 110,-526 88,-340 C70,-400 32,-416 0,-414 C-32,-414 -70,-392 -88,-340 Z" fill="#C7CDC8"/><path d="M0,-414 C-28,-410 -60,-390 -80,-344 C-88,-382 -64,-410 -30,-422 Z" fill="#C7CDC8"/>
+  
+    <g fill="#FFFFFF" fill-opacity="0.1" stroke="#3B3B3B" stroke-width="4.6" stroke-linejoin="round">
+      <rect x="-62" y="-382" width="60" height="46" rx="18"/>
+      <rect x="2" y="-382" width="60" height="46" rx="18"/>
+    </g>
+    <g fill="none" stroke="#3B3B3B" stroke-width="4.6" stroke-linecap="round">
+      <path d="M-2,-364 H2"/><path d="M-62,-368 L-80,-360"/><path d="M62,-368 L80,-360"/>
+    </g>
+</g></g><text x="270" y="1036" text-anchor="middle" font-family="'Be Vietnam Pro','Montserrat',Arial,sans-serif" font-size="34" font-weight="800" fill="#F7FAF5">chú — đàn ông lớn tuổi</text><g transform="translate(810 980) scale(0.72)"><g>
+  <defs>
+    <radialGradient id="nvcoda" cx="34%" cy="26%" r="78%">
+      <stop offset="0%" stop-color="#F2CFAE"/><stop offset="100%" stop-color="#D4A47D"/>
+    </radialGradient>
+    <linearGradient id="nvcoao" x1="0%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0%" stop-color="#F2F5F0"/><stop offset="100%" stop-color="#CFDACD"/>
+    </linearGradient>
+    <filter id="nvcomo" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+    <!-- Bóng mờ phải bị cắt theo hình thân và hình đầu, không thì tràn ra ngoài thành viền sáng -->
+    <clipPath id="nvcothan">
+      <path d="M-152,0 C-148,-104 -104,-168 -58,-196 L58,-196 C104,-168 148,-104 152,0 Z"/>
+    </clipPath>
+    <clipPath id="nvcodau">
+      <path d="M-80,-368 C-80,-436 -46,-452 0,-452 C46,-452 80,-436 80,-368
+               C80,-306 44,-250 0,-250 C-44,-250 -80,-306 -80,-368 Z"/>
+    </clipPath>
+  </defs>
+
+  <ellipse cx="4" cy="-462" rx="42" ry="36" fill="#D3D8D3"/>
+
+  <!-- vai và thân -->
+  <path d="M-152,0 C-148,-104 -104,-168 -58,-196 L58,-196 C104,-168 148,-104 152,0 Z" fill="url(#nvcoao)"/>
+  <g clip-path="url(#nvcothan)">
+    <ellipse cx="-124" cy="-40" rx="46" ry="90" fill="#CFDACD" opacity="0.4" filter="url(#nvcomo)"/>
+    <ellipse cx="128" cy="-30" rx="40" ry="90" fill="#CFDACD" opacity="0.3" filter="url(#nvcomo)"/>
+  </g>
+
+  <!-- cổ -->
+  <path d="M-28,-200 L28,-200 L34,-244 L-34,-244 Z" fill="#D4A47D"/>
+  <ellipse cx="0" cy="-244" rx="44" ry="20" fill="#000000" opacity="0.2" filter="url(#nvcomo)"/>
+
+  
+    <path d="M-44,-196 C-30,-160 30,-160 44,-196 C30,-176 -30,-176 -44,-196 Z" fill="#D4A47D" opacity="0.4"/>
+    <path d="M-52,-192 C-34,-148 34,-148 52,-192" fill="none" stroke="#CFDACD" stroke-width="6" opacity="0.5"/>
+
+  <!-- tai -->
+  <ellipse cx="-79" cy="-344" rx="13" ry="21" fill="#D4A47D"/>
+  <ellipse cx="79" cy="-344" rx="13" ry="21" fill="#D4A47D"/>
+
+  <!-- đầu -->
+  <path d="M-80,-368 C-80,-436 -46,-452 0,-452 C46,-452 80,-436 80,-368
+           C80,-306 44,-250 0,-250 C-44,-250 -80,-306 -80,-368 Z" fill="url(#nvcoda)"/>
+  <!-- má hồng + bóng hai bên mặt (cắt trong hình đầu) -->
+  <g clip-path="url(#nvcodau)">
+    <ellipse cx="-50" cy="-318" rx="24" ry="13" fill="#E08D7A" opacity="0.32" filter="url(#nvcomo)"/>
+    <ellipse cx="50" cy="-318" rx="24" ry="13" fill="#E08D7A" opacity="0.32" filter="url(#nvcomo)"/>
+    <ellipse cx="-86" cy="-350" rx="26" ry="60" fill="#D4A47D" opacity="0.45" filter="url(#nvcomo)"/>
+  </g>
+
+  <!-- mày -->
+  <g fill="none" stroke="#D3D8D3" stroke-width="7" stroke-linecap="round" opacity="0.95">
+    <path d="M-48,-392 C-38,-400 -20,-400 -12,-394"/>
+    <path d="M12,-394 C20,-400 38,-400 48,-392"/>
+  </g>
+
+  
+    <g transform="translate(-32 -360)">
+      <path d="M-19,0 C-13,-13 13,-13 19,0 C13,11 -13,11 -19,0 Z" fill="#F6F1EA"/>
+      <circle cx="0" cy="-1" r="9.5" fill="#3A2A22"/>
+      <circle cx="0" cy="-1" r="4.2" fill="#140D0A"/>
+      <circle cx="-3.4" cy="-4.4" r="2.8" fill="#FFFFFF" opacity="0.9"/>
+      <path d="M-19,0 C-13,-13 13,-13 19,0" fill="none" stroke="#3A2A22" stroke-width="3.4"
+            stroke-linecap="round" opacity="1.0"/>
+    </g>
+    <g transform="translate(32 -360)">
+      <path d="M-19,0 C-13,-13 13,-13 19,0 C13,11 -13,11 -19,0 Z" fill="#F6F1EA"/>
+      <circle cx="0" cy="-1" r="9.5" fill="#3A2A22"/>
+      <circle cx="0" cy="-1" r="4.2" fill="#140D0A"/>
+      <circle cx="-3.4" cy="-4.4" r="2.8" fill="#FFFFFF" opacity="0.9"/>
+      <path d="M-19,0 C-13,-13 13,-13 19,0" fill="none" stroke="#3A2A22" stroke-width="3.4"
+            stroke-linecap="round" opacity="1.0"/>
+    </g>
+
+  <!-- mũi -->
+  <path d="M0,-352 C-6,-330 -10,-320 -2,-314 C4,-311 10,-314 12,-320" fill="none"
+        stroke="#D4A47D" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
+
+  
+    <g transform="translate(0 -288)">
+      <path d="M-25,0 C-16,-7 -6,-4 0,-3 C6,-4 16,-7 25,0 C16,8 -16,8 -25,0 Z" fill="#B4675F"/>
+      <path d="M-25,0 C-14,2 14,2 25,0" fill="none" stroke="#8E4A45" stroke-width="2.4" opacity="0.7"/>
+    </g>
+  
+    <g fill="none" stroke="#D4A47D" stroke-width="3" opacity="0.55" stroke-linecap="round">
+      <path d="M-34,-404 C-20,-412 -6,-412 4,-406"/>
+      <path d="M-30,-390 C-16,-398 -2,-398 8,-392"/>
+      <path d="M-52,-344 C-58,-336 -58,-330 -54,-324"/>
+      <path d="M52,-344 C58,-336 58,-330 54,-324"/>
+      <path d="M-30,-318 C-38,-306 -40,-296 -34,-286"/>
+      <path d="M30,-318 C38,-306 40,-296 34,-286"/>
+    </g>
+  <path d="M-88,-346 C-108,-524 108,-524 88,-346 C70,-410 -70,-410 -88,-346 Z" fill="#D3D8D3"/><path d="M-88,-346 C-84,-390 -70,-414 -44,-428" fill="none" stroke="#D3D8D3" stroke-width="14" stroke-linecap="round"/>
+  
+    <g fill="#FFFFFF" fill-opacity="0.1" stroke="#3B3B3B" stroke-width="4.6" stroke-linejoin="round">
+      <rect x="-62" y="-382" width="60" height="46" rx="18"/>
+      <rect x="2" y="-382" width="60" height="46" rx="18"/>
+    </g>
+    <g fill="none" stroke="#3B3B3B" stroke-width="4.6" stroke-linecap="round">
+      <path d="M-2,-364 H2"/><path d="M-62,-368 L-80,-360"/><path d="M62,-368 L80,-360"/>
+    </g>
+</g></g><text x="810" y="1036" text-anchor="middle" font-family="'Be Vietnam Pro','Montserrat',Arial,sans-serif" font-size="34" font-weight="800" fill="#F7FAF5">cô — phụ nữ lớn tuổi</text>
 </svg>

@@ -31,8 +31,8 @@ import canh_nen  # noqa: E402
 import nhan_dien as nd  # noqa: E402
 import nhan_vat as nv  # noqa: E402
 
-TOI_DA_MOI_THE = 120     # ký tự tối đa mỗi thẻ chữ
-CHU_MOI_DONG = 28        # ký tự tối đa mỗi dòng
+TOI_DA_MOI_THE = 100     # ký tự tối đa mỗi thẻ chữ (≈ 4 dòng, vừa vùng chữ)
+CHU_MOI_DONG = 26        # ký tự tối đa mỗi dòng
 KHOANG_LANG = 0.34       # giây nghỉ sau mỗi thẻ (nói chuyện thì nghỉ ngắn)
 GIU_QUOTE = 3.0          # giây giữ ảnh quote cuối video
 NHIP_MIENG = 0.16        # giây mỗi lần mở/đóng miệng

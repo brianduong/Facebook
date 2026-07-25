@@ -31,7 +31,7 @@ def bang_nhan_vat() -> str:
     o = []
     for i, (loai, ten) in enumerate(TEN_GOI.items()):
         cx = 270 + (i % 2) * 540
-        cy = 500 + (i // 2) * 460
+        cy = 530 + (i // 2) * 450
         o.append(
             f'<g transform="translate({cx} {cy}) scale(0.72)">{nv.ve_nhan_vat(loai)}</g>'
             f'<text x="{cx}" y="{cy + 56}" text-anchor="middle" font-family="{nd.FONT}" '
