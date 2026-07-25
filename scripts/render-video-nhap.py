@@ -28,6 +28,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import canh_nen  # noqa: E402
+import giong_doc as gd  # noqa: E402
 import nhan_dien as nd  # noqa: E402
 import nhan_vat as nv  # noqa: E402
 
@@ -98,6 +99,10 @@ def main() -> int:
     p.add_argument("--toc-do", type=int, default=155,
                    help="Tốc độ đọc (từ/phút). 138 = đọc, 155 = nói chuyện (mặc định)")
     p.add_argument("--nhac", help="File nhạc nền (phải là nhạc được phép dùng thương mại)")
+    p.add_argument("--giong", default="Linh",
+                   help="Tên giọng của macOS (mặc định Linh). Xem danh sách: say -v '?'")
+    p.add_argument("--giong-phang", action="store_true",
+                   help="Đọc đều không ngữ điệu, không lọc âm (để so sánh với bản truyền cảm)")
     a = p.parse_args()
 
     kiem_tra_cong_cu()
@@ -125,7 +130,8 @@ def main() -> int:
 
     the = tach_doan(loi_doc.read_text(encoding="utf-8"))
     print(f"📝 {len(the)} thẻ chữ · nhân vật: {nhan_vat or 'không'} · "
-          f"cảnh: {', '.join(canh_list) or 'nền trơn'} · tốc độ: {a.toc_do} từ/phút")
+          f"cảnh: {', '.join(canh_list) or 'nền trơn'} · giọng: {a.giong} "
+          f"{'(đọc phẳng)' if a.giong_phang else '(có ngữ điệu)'} · {a.toc_do} từ/phút")
 
     wavs: list[Path] = []
     thoi_luong: list[float] = []
@@ -136,11 +142,16 @@ def main() -> int:
         aiff = lam_viec / f"{i:02d}.aiff"
         wav = lam_viec / f"{i:02d}.wav"
 
-        # Giọng đọc từng thẻ → lấy đúng thời lượng tiếng làm thời lượng hình
-        txt.write_text(doan, encoding="utf-8")
-        chay(["say", "-v", "Linh", "-r", str(a.toc_do), "-f", str(txt), "-o", str(aiff)])
+        # Giọng đọc từng thẻ → lấy đúng thời lượng tiếng làm thời lượng hình.
+        # Lời đọc được gắn ngữ điệu (cao độ, lên xuống, ngắt nghỉ) trước khi đưa cho `say`.
+        loi = doan if a.giong_phang else gd.soan_ngu_dieu(
+            doan, a.toc_do, la_the_dau=(i == 0), la_the_cuoi=(i == len(the) - 1)
+        )
+        txt.write_text(loi, encoding="utf-8")
+        chay(["say", "-v", a.giong, "-r", str(a.toc_do), "-f", str(txt), "-o", str(aiff)])
+        loc = f"apad=pad_dur={KHOANG_LANG}" if a.giong_phang else f"{gd.LOC_AM},apad=pad_dur={KHOANG_LANG}"
         chay(["ffmpeg", "-y", "-loglevel", "error", "-i", str(aiff),
-              "-af", f"apad=pad_dur={KHOANG_LANG}", "-ar", "44100", "-ac", "1", str(wav)])
+              "-af", loc, "-ar", "44100", "-ac", "1", str(wav)])
 
         dong = nd.boc_dong(doan, CHU_MOI_DONG)
         bo_hinh: list[Path] = []

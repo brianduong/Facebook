@@ -27,6 +27,21 @@ Miệng nhân vật mở/đóng theo nhịp → trông như đang nói, không p
 
 Xem thử nhân vật và cảnh trước khi render cả video: `python3 scripts/xem-thu.py`
 
+**Giọng đọc & ngữ điệu**
+
+Script tự gắn ngữ điệu cho giọng máy trước khi đọc (chi tiết trong `scripts/giong_doc.py`):
+- **Câu hỏi** → nhấc cao độ lên, ngữ điệu rộng hơn, đọc chậm lại một nhịp.
+- **Câu chốt cuối video** → hạ giọng trầm, chậm hẳn, nghe như đang đúc kết.
+- **Câu ngắn / liệt kê** → đi nhanh hơn, nghỉ ngắn.
+- **Câu kể thường** → cao độ nhích lên xuống theo thứ tự câu cho khỏi đều đều như đọc máy.
+- Ngắt nghỉ ở dấu phẩy (0,13s), cuối câu (0,3s), sau câu hook (0,52s).
+- Sau đó tiếng còn được hậu kỳ: lọc ù trầm, thêm ấm ở 220Hz, rõ chữ ở 3.2kHz, nén động cho đều, chút vang phòng, chuẩn hoá độ to về −16 LUFS (mức chuẩn cho mạng xã hội).
+
+So sánh trước/sau: `python3 scripts/so-sanh-giong.py VD-001` → hai file trong `video/raw/`.
+Muốn nghe lại kiểu đọc đều cũ: thêm `--giong-phang`.
+
+`--giong <tên>` để đổi giọng khác của macOS (`say -v '?'` xem danh sách). Nếu anh tải thêm giọng tiếng Việt chất lượng cao trong **Cài đặt hệ thống → Trợ năng → Nội dung đọc → Giọng hệ thống → Tiếng Việt**, chỉ cần truyền tên giọng đó vào là dùng được, không phải sửa code.
+
 **Các lựa chọn khác**
 - `--toc-do 155` — tốc độ đọc, mặc định 155 từ/phút (nghe như nói chuyện). Hạ xuống 138 nếu muốn chậm rãi hơn.
 - `--nhac assets/music/ten-file.mp3` — trộn nhạc nền (chỉ dùng nhạc được phép thương mại).
