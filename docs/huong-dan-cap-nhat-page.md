@@ -1,15 +1,17 @@
 # Hướng dẫn cập nhật Page (anh tự bấm trên Facebook)
 
-> Quyết định thiết kế: **giữ nguyên ảnh bìa mầm cây thật** (đang đẹp), chỉ **đổi ảnh đại diện** sang tông xanh cho đồng bộ, và **cập nhật mô tả**.
+> Quyết định thiết kế (bản mới): **đổi cả 3** — ảnh đại diện + ảnh bìa + mô tả — dùng bộ nhận diện tông xanh cho đồng bộ một bộ.
 
 ## 1. Đổi ảnh đại diện (icon)
 - File: `assets/logo/icon-song-tot.png` (1080×1080).
 - Trên máy: mở page **Sống Tốt** → di chuột vào ảnh đại diện → **Cập nhật ảnh đại diện** → chọn file trên → lưu.
 - Facebook sẽ cắt tròn — thiết kế đã canh sẵn cho việc này.
 
-## 2. Ảnh bìa
-- **Giữ nguyên** ảnh mầm cây hiện tại. Không cần làm gì.
-- *(Nếu sau này muốn đổi sang banner đồ hoạ: dùng `assets/images/banner-song-tot.png`.)*
+## 2. Đổi ảnh bìa (banner)
+- File: `assets/images/banner-song-tot.png` (1640×856, vùng an toàn ở giữa).
+- Trên máy: mở page **Sống Tốt** → di chuột vào ảnh bìa → **Chỉnh sửa ảnh bìa** → **Tải ảnh lên** → chọn file trên → kéo canh giữa → **Lưu thay đổi**.
+- Banner này khớp 100% tông với ảnh đại diện (cùng xanh rừng + mầm cây + điểm vàng nắng).
+- *(Ảnh mầm cây thật cũ: để dành làm nền cho bài đăng/video, đừng xoá.)*
 
 ## 3. Cập nhật mô tả
 - Vào **Giới thiệu (About)** → sửa phần mô tả → dán đoạn dưới:

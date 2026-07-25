@@ -11,6 +11,7 @@ Facebook/
 ├── content/            # Phần "nội dung chữ" — đưa lên GitHub
 │   ├── ideas/          # Kho ý tưởng, chủ đề còn thô
 │   ├── scripts/        # Kịch bản video hoàn chỉnh
+│   │   └── loi-doc/    # Lời đọc thuần văn bản (để thu giọng / tạo giọng nháp)
 │   ├── captions/       # Nội dung bài đăng (caption + hashtag) cho Facebook
 │   └── research/       # Tư liệu, trích dẫn, nguồn tham khảo
 │
@@ -19,7 +20,8 @@ Facebook/
 │   ├── images/         # Ảnh nền, ảnh minh hoạ
 │   ├── music/          # Nhạc nền (lưu ý bản quyền)
 │   ├── fonts/          # Font chữ
-│   └── templates/      # Mẫu thiết kế (Canva/CapCut link, khung intro/outro)
+│   └── templates/      # Khung video 1:1
+│       └── quotes/     # Ảnh quote 1:1 từng video (thumbnail + cảnh kết)
 │
 ├── video/              # File video — KHÔNG đưa lên GitHub
 │   ├── raw/            # Footage quay gốc
@@ -29,18 +31,30 @@ Facebook/
 │
 ├── schedule/           # Lịch đăng bài, kế hoạch nội dung theo tuần/tháng
 ├── docs/               # Tài liệu: định hướng kênh, brand guide, quy trình
-└── scripts/            # Script tự động (đổi tên file, xử lý ảnh...) nếu cần
+└── scripts/            # Công cụ tự động (tạo ảnh quote, giọng nháp, đăng bài)
 ```
 
 ## Quy trình gợi ý (từ ý tưởng → đăng bài)
 
 1. **Ý tưởng** → ghi vào [content/ideas/](content/ideas/)
 2. **Kịch bản** → viết theo mẫu [content/scripts/](content/scripts/)
-3. **Sản xuất** → quay/dựng, file để trong `video/` (ngoài GitHub)
+3. **Sản xuất** → dựng theo [docs/huong-dan-dung-video.md](docs/huong-dan-dung-video.md), file để trong `video/` (ngoài GitHub)
 4. **Caption** → soạn bài đăng trong [content/captions/](content/captions/)
 5. **Lên lịch** → cập nhật [schedule/calendar.md](schedule/calendar.md)
-6. **Đăng** → đăng lên Facebook Page, đánh dấu hoàn thành
+6. **Đăng** → bấm tay trên Page, hoặc chạy [scripts/dang-video-fb.py](scripts/dang-video-fb.py) (xem [docs/huong-dan-dang-tu-dong.md](docs/huong-dan-dang-tu-dong.md))
+
+## Công cụ trong `scripts/`
+
+| Lệnh | Làm gì |
+|------|--------|
+| `python3 scripts/tao-anh-quote.py VD-007 "Dòng 1" "Dòng 2"` | Tạo ảnh quote 1:1 đúng nhận diện kênh (SVG + PNG) |
+| `./scripts/tao-giong-doc.sh VD-001 138` | Tạo giọng đọc **nháp** tiếng Việt + đo thời lượng (cảnh báo nếu dưới 60s) |
+| `python3 scripts/dang-video-fb.py kiem-tra` | Kiểm tra Page Access Token |
+| `python3 scripts/dang-video-fb.py video <file> --ma VD-001 --dang-that` | Đăng video + caption lên Page |
 
 ## Định hướng
 
-Xem [PLAN.md](PLAN.md) để biết kế hoạch tổng thể và những phần đang chờ anh bổ sung.
+- Tiến độ hiện tại: [STATUS.md](STATUS.md)
+- Kế hoạch tổng thể: [PLAN.md](PLAN.md)
+- Nhận diện & bảng màu: [docs/dinh-huong-kenh.md](docs/dinh-huong-kenh.md)
+- Kiếm tiền: [docs/ke-hoach-kiem-tien.md](docs/ke-hoach-kiem-tien.md)
