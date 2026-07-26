@@ -56,6 +56,31 @@ python3 scripts/tai-anh-pexels.py VD-002
 - Được → in ra danh sách ảnh đã tải kèm tên người chụp.
 - Sai key → báo `❌ PEXELS_API_KEY sai hoặc hết hạn`.
 - Chưa dán → báo `❌ Chưa có PEXELS_API_KEY` kèm hướng dẫn.
+- **403 Forbidden** → key bị dán kèm dấu cách hoặc dấu nháy. Mở lại `.env`, xoá cho sạch.
+
+## Cách chọn ảnh cho ra ảnh đẹp
+
+Chạy trần như trên thì script lấy **ảnh đầu tiên** Pexels trả về cho mỗi từ khoá —
+nhanh nhưng hay ra ảnh lệch: ảnh đen trắng lẫn với ảnh màu, ảnh có logo thương hiệu,
+ảnh phố cổ châu Âu trong câu chuyện Việt Nam. Nên dùng hai bước:
+
+```bash
+# 1. Lấy 6 ứng viên mỗi từ khoá, ghép thành một bảng ảnh có số thứ tự
+python3 scripts/tai-anh-pexels.py VD-002 --chon 6
+open video/thu-anh/VD-002-chon.png
+
+# 2. Chấm số nào thì lấy số đó — thứ tự gõ = thứ tự xuất hiện trong video
+python3 scripts/tai-anh-pexels.py VD-002 --lay 4,10,18,16,12,9,29
+```
+
+Lấy khoảng **7 ảnh cho một video 60 giây** thì mỗi ảnh giữ ~2 thẻ chữ, hình đổi
+vừa đủ để khỏi đơn điệu mà không rối.
+
+Cần tránh khi chấm ảnh:
+- **Ảnh đen trắng** — để cạnh ảnh màu là lộ ngay
+- **Logo thương hiệu trong khung** — thành quảng cáo miễn phí cho hãng khác
+- **Biển hiệu chữ nước ngoài rõ mặt** — đọc ra ngay là không phải Việt Nam
+- **Ảnh studio nền trơn** — nhìn như ảnh sản phẩm, lệch không khí kể chuyện
 
 ## ⚠️ Bắt buộc ghi nguồn
 

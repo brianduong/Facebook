@@ -9,7 +9,7 @@
 | Ngày | Mã số | Tên video | Trạng thái |
 |------|-------|-----------|-----------|
 | 25/07 | VD-001 | Ba điều biết ơn mỗi sáng | ✅ Đã đăng (bản 1:1 cũ) · lời đọc đã viết lại (v2) |
-| 26/07 | VD-002 | Tử tế không bao giờ là điều lãng phí | 🟡 Lời đọc + caption đã viết lại · **62s** · chờ ảnh Pexels |
+| 26/07 | VD-002 | Tử tế không bao giờ là điều lãng phí | 🟢 **Đã render Reels 9:16 · 63s · 8,9 MB — sẵn sàng đăng** |
 | 27/07 | VD-003 | Hôm nay chỉ cần làm được một việc | ⬜ Cần viết lại lời đọc theo văn nói |
 | 28/07 | VD-004 | Cảm ơn phải nói rõ lý do | ⬜ Cần viết lại lời đọc theo văn nói |
 | 29/07 | VD-005 | Người bạn lâu không hỏi thăm | ⬜ Cần viết lại lời đọc theo văn nói |

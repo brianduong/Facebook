@@ -36,6 +36,8 @@ import argparse
 import json
 import os
 import re
+import shutil
+import subprocess
 import sys
 import urllib.error
 import urllib.parse
@@ -45,6 +47,10 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 THU_MUC_ANH = REPO / "assets" / "images" / "canh"
 API = "https://api.pexels.com/v1/search"
+
+# Pexels chặn User-Agent mặc định của urllib ("Python-urllib/3.x") → trả 403.
+# Đã thử: cùng key, đổi User-Agent thì 403 thành 200. Nên phải gắn cho MỌI request.
+USER_AGENT = "song-tot/1.0 (+https://www.facebook.com/songtot.in)"
 
 # Chỉ lấy ảnh dọc cho Reels 9:16; ảnh ngang bị cắt mất hai bên thành ra
 # nhân vật/vật thể chính hay rơi ra ngoài khung.
@@ -117,22 +123,105 @@ def tim(key: str, tu_khoa: str, huong: str, so_luong: int = 5) -> list[dict]:
     q = urllib.parse.urlencode(
         {"query": tu_khoa, "orientation": huong, "per_page": so_luong, "locale": "en-US"}
     )
-    req = urllib.request.Request(f"{API}?{q}", headers={"Authorization": key})
+    req = urllib.request.Request(
+        f"{API}?{q}", headers={"Authorization": key, "User-Agent": USER_AGENT}
+    )
     try:
         with urllib.request.urlopen(req, timeout=30) as r:
             return json.load(r).get("photos", [])
     except urllib.error.HTTPError as e:
         if e.code == 401:
             sys.exit("❌ PEXELS_API_KEY sai hoặc hết hạn. Lấy key mới ở https://www.pexels.com/api/")
+        if e.code == 403:
+            sys.exit("❌ Pexels trả 403 Forbidden. Thường là do key bị dán kèm dấu cách/dấu nháy "
+                     "trong .env, hoặc User-Agent bị chặn. Kiểm tra lại dòng PEXELS_API_KEY.")
         if e.code == 429:
             sys.exit("❌ Quá 200 lượt/giờ của Pexels. Chờ một lát rồi chạy lại.")
         raise
 
 
 def tai(url: str, ra: Path) -> None:
-    req = urllib.request.Request(url, headers={"User-Agent": "song-tot/1.0"})
+    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
     with urllib.request.urlopen(req, timeout=60) as r, ra.open("wb") as f:
         f.write(r.read())
+
+
+def ghi_file_nguon(ra: Path, tu_khoa: list[str], dong: list[str]) -> None:
+    """Điều khoản API bắt phải dẫn nguồn Pexels → giữ danh sách để dán vào caption."""
+    (ra / "nguon.txt").write_text(
+        "Ảnh tải qua Pexels API. Điều khoản API BẮT BUỘC dẫn nguồn:\n"
+        "  → thêm dòng 'Ảnh: Pexels.com' vào cuối caption Facebook.\n\n"
+        f"Từ khoá: {', '.join(dict.fromkeys(tu_khoa))}\n\n"
+        "Người chụp từng ảnh (ghi tên nếu muốn ghi đầy đủ hơn):\n"
+        + "\n".join(f"  {d}" for d in dong) + "\n",
+        encoding="utf-8"
+    )
+
+
+# ---------------------------------------------------------------- chế độ chọn
+
+def _duong_dan_chon(ma: str) -> tuple[Path, Path, Path]:
+    """Thư mục tạm giữ ứng viên, file ghi thông tin, và bảng ảnh để xem."""
+    thu_muc = REPO / "video" / "thu-anh" / ma          # trong video/ nên không lên GitHub
+    return thu_muc, thu_muc / "ung-vien.json", thu_muc.parent / f"{ma}-chon.png"
+
+
+def gom_ung_vien(key: str, tu_khoa: list[str], huong: str, moi_tu_khoa: int,
+                 ma: str) -> list[dict]:
+    """Tải ảnh nhỏ của nhiều ứng viên về, ghi lại thông tin để bước --lay dùng."""
+    thu_muc, f_json, _ = _duong_dan_chon(ma)
+    if thu_muc.exists():
+        shutil.rmtree(thu_muc)
+    thu_muc.mkdir(parents=True)
+
+    ung_vien: list[dict] = []
+    for tk in tu_khoa:
+        for ct in tim(key, tk, huong, so_luong=moi_tu_khoa):
+            so = len(ung_vien) + 1
+            nho = thu_muc / f"{so:02d}.jpg"
+            tai(ct["src"]["medium"], nho)       # bản nhỏ, chỉ để xem cho nhanh
+            ung_vien.append({
+                "so": so, "tu_khoa": tk, "xem": str(nho),
+                "tai_ve": ct["src"]["large2x"],
+                "nguoi_chup": ct["photographer"], "trang": ct["url"],
+            })
+            print(f"   {so:2d}. {tk}")
+    f_json.write_text(json.dumps(ung_vien, ensure_ascii=False, indent=1), encoding="utf-8")
+    return ung_vien
+
+
+def dung_bang_chon(ung_vien: list[dict], ra: Path, moi_hang: int = 6) -> None:
+    """Ghép ứng viên thành một bảng ảnh có số thứ tự để xem một lượt."""
+    if not shutil.which("rsvg-convert"):
+        sys.exit("❌ Thiếu rsvg-convert (brew install librsvg) — cần để dựng bảng chọn.")
+
+    o, cao_o, le = 300, 440, 12                        # cỡ mỗi ô và khoảng cách
+    hang = (len(ung_vien) + moi_hang - 1) // moi_hang
+    rong = moi_hang * (o + le) + le
+    cao = hang * (cao_o + le) + le
+
+    phan: list[str] = []
+    for i, uv in enumerate(ung_vien):
+        x = le + (i % moi_hang) * (o + le)
+        y = le + (i // moi_hang) * (cao_o + le)
+        phan.append(
+            f'  <image xlink:href="file://{uv["xem"]}" x="{x}" y="{y}" '
+            f'width="{o}" height="{cao_o}" preserveAspectRatio="xMidYMid slice"/>\n'
+            f'  <rect x="{x}" y="{y}" width="66" height="52" fill="#0B1F18" opacity="0.85"/>\n'
+            f'  <text x="{x + 33}" y="{y + 38}" text-anchor="middle" font-family="Arial" '
+            f'font-size="34" font-weight="bold" fill="#E9C46A">{uv["so"]}</text>'
+        )
+
+    svg = (f'<svg xmlns="http://www.w3.org/2000/svg" '
+           f'xmlns:xlink="http://www.w3.org/1999/xlink" width="{rong}" height="{cao}">\n'
+           f'  <rect width="{rong}" height="{cao}" fill="#16382A"/>\n'
+           + "\n".join(phan) + "\n</svg>\n")
+
+    f_svg = ra.with_suffix(".svg")
+    f_svg.write_text(svg, encoding="utf-8")
+    subprocess.run(["rsvg-convert", "-w", str(rong), "-h", str(cao), "-o", str(ra), str(f_svg)],
+                   check=True)
+    f_svg.unlink()
 
 
 def main() -> None:
@@ -147,6 +236,12 @@ def main() -> None:
                    help="Hướng ảnh (mặc định portrait cho Reels 9:16)")
     p.add_argument("--so-anh", type=int, default=1,
                    help="Số ảnh lấy cho mỗi từ khoá (mặc định 1)")
+    p.add_argument("--chon", type=int, metavar="N",
+                   help="Chế độ CHỌN: lấy N ứng viên mỗi từ khoá, ghép thành một bảng "
+                        "ảnh có số thứ tự để anh xem rồi tự chọn. Không ghi vào thư mục ảnh.")
+    p.add_argument("--lay", metavar="1,4,7",
+                   help="Sau khi xem bảng ở --chon, lấy đúng những số này làm ảnh nền "
+                        "(theo thứ tự anh gõ = thứ tự xuất hiện trong video).")
     a = p.parse_args()
 
     key = doc_env().get("PEXELS_API_KEY") or os.environ.get("PEXELS_API_KEY")
@@ -159,12 +254,60 @@ def main() -> None:
             "   → Hướng dẫn đầy đủ từng bước: docs/lay-pexels-api-key.md"
         )
 
+    ra = THU_MUC_ANH / a.ma
+    _, f_json, f_bang = _duong_dan_chon(a.ma)
+
+    # ---- Bước 2 của chế độ chọn: lấy đúng những số anh đã chấm ----
+    if a.lay:
+        if not f_json.exists():
+            sys.exit(f"❌ Chưa có danh sách ứng viên cho {a.ma}.\n"
+                     f"   Chạy trước:  python3 scripts/tai-anh-pexels.py {a.ma} --chon 6")
+        ung_vien = {uv["so"]: uv for uv in json.loads(f_json.read_text(encoding="utf-8"))}
+        try:
+            so_chon = [int(s) for s in a.lay.replace(" ", "").split(",") if s]
+        except ValueError:
+            sys.exit("❌ --lay phải là các số cách nhau bởi dấu phẩy, ví dụ --lay 2,5,9")
+        thieu = [s for s in so_chon if s not in ung_vien]
+        if thieu:
+            sys.exit(f"❌ Không có ứng viên số {thieu}. Bảng chọn chỉ có 1–{max(ung_vien)}.")
+
+        ra.mkdir(parents=True, exist_ok=True)
+        for f in ra.glob("*.jpg"):
+            f.unlink()
+        print(f"⬇️  Lấy {len(so_chon)} ảnh đã chọn → {ra.relative_to(REPO)}")
+        ghi_nguon = []
+        for i, s in enumerate(so_chon, 1):
+            uv = ung_vien[s]
+            f = ra / f"{i:02d}.jpg"
+            tai(uv["tai_ve"], f)
+            print(f"   {i:2d}. {f.name}  ← ứng viên #{s}  · chụp bởi {uv['nguoi_chup']}")
+            ghi_nguon.append(f"{f.name}  —  {uv['nguoi_chup']}  —  {uv['trang']}")
+        ghi_file_nguon(ra, [ung_vien[s]["tu_khoa"] for s in so_chon], ghi_nguon)
+        print(f"\n✅ Xong. Render được rồi:\n"
+              f"   .venv-tts/bin/python scripts/render-video-v2.py {a.ma} "
+              f"--nhac assets/music/nen-am-ap.m4a")
+        print("📌 Nhớ dòng 'Ảnh: Pexels.com' ở cuối caption — điều khoản API bắt buộc.")
+        return
+
     tu_khoa = a.tu_khoa or [dich_tu_khoa(t) for t in tu_khoa_tu_kich_ban(a.ma)]
     if not tu_khoa:
         sys.exit(f"❌ Không tìm được từ khoá cho {a.ma}. "
                  f"Thêm dòng '**Hình ảnh/B-roll:**' vào kịch bản, hoặc dùng --tu-khoa")
 
-    ra = THU_MUC_ANH / a.ma
+    # ---- Bước 1 của chế độ chọn: gom ứng viên và dựng bảng để xem ----
+    if a.chon:
+        print(f"🔎 {len(tu_khoa)} từ khoá × {a.chon} ứng viên · hướng {a.huong}")
+        ung_vien = gom_ung_vien(key, tu_khoa, a.huong, a.chon, a.ma)
+        if not ung_vien:
+            sys.exit("❌ Không tìm được ảnh nào.")
+        f_bang.parent.mkdir(parents=True, exist_ok=True)
+        dung_bang_chon(ung_vien, f_bang)
+        print(f"\n🖼  Bảng chọn: {f_bang.relative_to(REPO)}  ({len(ung_vien)} ứng viên)")
+        print(f"   Mở xem:   open {f_bang.relative_to(REPO)}")
+        print(f"   Chọn xong thì lấy đúng những số đó, theo thứ tự muốn xuất hiện:")
+        print(f"   python3 scripts/tai-anh-pexels.py {a.ma} --lay 2,5,9,11")
+        return
+
     ra.mkdir(parents=True, exist_ok=True)
     print(f"🔎 {len(tu_khoa)} từ khoá · hướng {a.huong} → {ra.relative_to(REPO)}")
 
@@ -183,15 +326,7 @@ def main() -> None:
             ghi_nguon.append(f"{f.name}  —  {ct['photographer']}  —  {ct['url']}")
 
     if dem:
-        # Điều khoản API bắt phải dẫn nguồn Pexels → giữ danh sách này để dán vào caption
-        (ra / "nguon.txt").write_text(
-            "Ảnh tải qua Pexels API. Điều khoản API BẮT BUỘC dẫn nguồn:\n"
-            "  → thêm dòng 'Ảnh: Pexels.com' vào cuối caption Facebook.\n\n"
-            f"Từ khoá: {', '.join(tu_khoa)}\n\n"
-            "Người chụp từng ảnh (ghi tên nếu muốn ghi đầy đủ hơn):\n"
-            + "\n".join(f"  {d}" for d in ghi_nguon) + "\n",
-            encoding="utf-8"
-        )
+        ghi_file_nguon(ra, tu_khoa, ghi_nguon)
     print(f"\n✅ Xong {dem} ảnh.  Xem thử:  open {ra.relative_to(REPO)}")
     if dem:
         print("📌 Nhớ thêm dòng 'Ảnh: Pexels.com' vào cuối caption — điều khoản API bắt buộc.")

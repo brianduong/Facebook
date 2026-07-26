@@ -49,7 +49,9 @@ Facebook/
 
 | Lệnh | Làm gì |
 |------|--------|
-| `python3 scripts/tai-anh-pexels.py VD-001` | Tải ảnh chụp thật từ Pexels theo từ khoá B-roll ghi trong kịch bản |
+| `python3 scripts/tai-anh-pexels.py VD-001` | Tải ảnh chụp thật từ Pexels theo từ khoá B-roll ghi trong kịch bản (lấy luôn ảnh đầu tiên) |
+| `python3 scripts/tai-anh-pexels.py VD-001 --chon 6` | **Nên dùng cái này** — lấy 6 ứng viên mỗi từ khoá, ghép thành một bảng ảnh có số để xem một lượt |
+| `python3 scripts/tai-anh-pexels.py VD-001 --lay 4,10,18` | Sau khi xem bảng, lấy đúng những số đã chấm (thứ tự gõ = thứ tự xuất hiện trong video) |
 | `.venv-tts/bin/python scripts/thu-giong-vieneu.py --liet-ke` | Xem 14 giọng VieNeu có sẵn |
 | `.venv-tts/bin/python scripts/thu-giong-vieneu.py` | Nghe thử vài giọng trên cùng một đoạn chữ |
 | `.venv-tts/bin/python scripts/render-video-v2.py VD-001 --chi-do-dai` | Đo thử bài dài bao nhiêu giây (chưa cần ảnh, chưa render) |
