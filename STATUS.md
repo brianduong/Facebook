@@ -80,8 +80,9 @@ vẫn giữ để đối chiếu, **không dùng nữa**.
 
 ## Làm tiếp 👉
 
-1. **Anh lấy Pexels API key** ở https://www.pexels.com/api/ → dán vào `.env` dòng
-   `PEXELS_API_KEY=`. Đây là việc duy nhất đang chặn — có key là render ra bản thật ngay:
+1. **Anh lấy Pexels API key** — hướng dẫn từng bước bấm ở
+   [docs/lay-pexels-api-key.md](docs/lay-pexels-api-key.md). Đây là việc duy nhất
+   đang chặn — có key là render ra bản thật ngay:
    ```bash
    python3 scripts/tai-anh-pexels.py VD-002
    .venv-tts/bin/python scripts/render-video-v2.py VD-002 --nhac assets/music/nen-am-ap.m4a

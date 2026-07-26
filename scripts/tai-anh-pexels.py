@@ -16,8 +16,18 @@ https://www.pexels.com/api/ (đăng ký ~2 phút, 200 lượt/giờ — thừa d
 Ảnh về nằm ở `assets/images/canh/VD-001/01.jpg, 02.jpg…` (thư mục này
 KHÔNG lên GitHub — xem .gitignore).
 
-Giấy phép Pexels: dùng thương mại được, không bắt ghi nguồn, không được
-bán lại ảnh gốc nguyên trạng. Đưa vào video có chữ đè lên là hợp lệ.
+⚠️ GHI NGUỒN LÀ BẮT BUỘC. Giấy phép ảnh Pexels thì không bắt, nhưng điều khoản
+API thì có: *"Whenever you are doing an API request make sure to show a prominent
+link to Pexels."* Mình lấy ảnh qua API nên phải theo. Cách làm: thêm một dòng ở
+cuối caption Facebook, ví dụ
+
+    Ảnh: Pexels.com
+
+Script tự ghi tên người chụp vào `nguon.txt` cạnh ảnh để anh ghi tên họ nếu muốn.
+Ngoài ra: dùng thương mại được, không được bán lại ảnh gốc nguyên trạng — đưa vào
+video có chữ đè lên là hợp lệ.
+
+Hạn mức miễn phí: 200 lượt/giờ, 20.000 lượt/tháng.
 """
 
 from __future__ import annotations
@@ -143,8 +153,10 @@ def main() -> None:
     if not key:
         sys.exit(
             "❌ Chưa có PEXELS_API_KEY.\n"
-            "   1. Vào https://www.pexels.com/api/ → đăng ký → copy key\n"
-            "   2. Mở file .env, thêm dòng:  PEXELS_API_KEY=key_vua_copy"
+            "   1. Vào https://www.pexels.com/api/ → bấm 'Get Started' → đăng nhập\n"
+            "      (có thể dùng 'Continue with Google') → điền mô tả → key hiện ra ngay\n"
+            "   2. Mở file .env, dán vào dòng:  PEXELS_API_KEY=key_vua_copy\n"
+            "   → Hướng dẫn đầy đủ từng bước: docs/lay-pexels-api-key.md"
         )
 
     tu_khoa = a.tu_khoa or [dich_tu_khoa(t) for t in tu_khoa_tu_kich_ban(a.ma)]
@@ -157,6 +169,7 @@ def main() -> None:
     print(f"🔎 {len(tu_khoa)} từ khoá · hướng {a.huong} → {ra.relative_to(REPO)}")
 
     dem = 0
+    ghi_nguon: list[str] = []
     for tk in tu_khoa:
         anh = tim(key, tk, a.huong, so_luong=max(a.so_anh, 3))
         if not anh:
@@ -167,14 +180,21 @@ def main() -> None:
             f = ra / f"{dem:02d}.jpg"
             tai(ct["src"]["large2x"], f)
             print(f"   {dem:2d}. {f.name}  ← {tk!r}  · chụp bởi {ct['photographer']}")
+            ghi_nguon.append(f"{f.name}  —  {ct['photographer']}  —  {ct['url']}")
 
     if dem:
-        # Ghi lại nguồn để sau này cần đối chiếu bản quyền thì có chỗ tra
+        # Điều khoản API bắt phải dẫn nguồn Pexels → giữ danh sách này để dán vào caption
         (ra / "nguon.txt").write_text(
-            f"Ảnh tải từ Pexels (pexels.com) — giấy phép dùng thương mại tự do.\n"
-            f"Từ khoá: {', '.join(tu_khoa)}\n", encoding="utf-8"
+            "Ảnh tải qua Pexels API. Điều khoản API BẮT BUỘC dẫn nguồn:\n"
+            "  → thêm dòng 'Ảnh: Pexels.com' vào cuối caption Facebook.\n\n"
+            f"Từ khoá: {', '.join(tu_khoa)}\n\n"
+            "Người chụp từng ảnh (ghi tên nếu muốn ghi đầy đủ hơn):\n"
+            + "\n".join(f"  {d}" for d in ghi_nguon) + "\n",
+            encoding="utf-8"
         )
     print(f"\n✅ Xong {dem} ảnh.  Xem thử:  open {ra.relative_to(REPO)}")
+    if dem:
+        print("📌 Nhớ thêm dòng 'Ảnh: Pexels.com' vào cuối caption — điều khoản API bắt buộc.")
 
 
 if __name__ == "__main__":

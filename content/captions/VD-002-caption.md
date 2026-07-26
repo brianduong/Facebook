@@ -21,6 +21,8 @@ Tử tế không bao giờ là lãng phí đâu. Kể cả khi mình chẳng th�
 
 👉 Nếu từng có ai tử tế với bạn đúng lúc bạn cần, kể lại đây một câu nhé.
 
+Ảnh: Pexels.com
+
 ---
 
 ## Hashtag

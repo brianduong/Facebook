@@ -78,5 +78,6 @@ Facebook/
 - Tiến độ hiện tại: [STATUS.md](STATUS.md)
 - Kế hoạch tổng thể: [PLAN.md](PLAN.md)
 - **Cách viết lời đọc nghe ra tiếng Việt: [docs/giong-van-tieng-viet.md](docs/giong-van-tieng-viet.md)**
+- Lấy Pexels API key để tải ảnh nền: [docs/lay-pexels-api-key.md](docs/lay-pexels-api-key.md)
 - Nhận diện & bảng màu: [docs/dinh-huong-kenh.md](docs/dinh-huong-kenh.md)
 - Kiếm tiền: [docs/ke-hoach-kiem-tien.md](docs/ke-hoach-kiem-tien.md)
