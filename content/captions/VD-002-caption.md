@@ -1,23 +1,25 @@
 # Caption: Tử tế không bao giờ là điều lãng phí
 
 - **Mã số:** VD-002
-- **Ngày đăng dự kiến:** 2026-07-31 (thứ Sáu, 20:00)
+- **Ngày đăng dự kiến:** 2026-07-26 (20:00) — nhịp mỗi ngày 1 video
 
 ---
 
 ## Caption đăng Facebook
 
-Có một việc tốt bạn làm cách đây nhiều năm — và bạn không hề biết nó vẫn còn đang chạy.
+Có một việc tốt bạn làm từ nhiều năm trước. Giờ nó vẫn đang đi tiếp, mà bạn không hề biết.
 
-Một người che mưa cho người lạ ở trạm xe bus. Mười phút, một cái áo mưa, rồi đường ai người ấy đi. Người được che mưa hôm đó đang trên đường đi phỏng vấn, và họ nhận được việc.
+Trời mưa, một người đứng đợi ở bến xe buýt. Bên cạnh có người lạ ướt hết, không mang áo mưa. Người kia kéo áo che chung. Mười phút thôi, rồi xe tới, mỗi người một ngả. Không ai hỏi tên ai.
 
-Người che mưa không bao giờ biết chuyện đó.
+Người được che mưa hôm đó đang trên đường đi phỏng vấn. Bước vào phòng, đầu tóc còn gọn gàng. Và họ nhận được việc.
 
-Chúng ta hay thôi làm điều tử tế vì thấy nó quá nhỏ. Nhưng tử tế không hoạt động theo kiểu cho đi rồi ngồi đo kết quả — nó đi tiếp, qua người khác, tới những nơi mình không nhìn thấy.
+Người che mưa không bao giờ biết chuyện đó. Đến giờ vẫn không biết.
 
-Tử tế không bao giờ là điều lãng phí.
+Mình hay bỏ qua những việc tử tế nhỏ, vì nghĩ nhỏ thế thì thay đổi được gì. Nhưng tử tế đâu phải cho đi rồi ngồi đó đo xem được bao nhiêu. Nó đi tiếp, qua người này người kia, tới những chỗ mình không nhìn thấy.
 
-👉 Nếu từng có ai đó tử tế với bạn đúng lúc bạn cần, kể lại đây một câu nhé.
+Tử tế không bao giờ là lãng phí đâu. Kể cả khi mình chẳng thấy nó đi tới đâu.
+
+👉 Nếu từng có ai tử tế với bạn đúng lúc bạn cần, kể lại đây một câu nhé.
 
 ---
 
@@ -26,5 +28,6 @@ Tử tế không bao giờ là điều lãng phí.
 
 ## Ghi chú
 - Ảnh bìa/thumbnail: `assets/templates/quotes/VD-002-quote.png`
-- Link video (exports): _(chưa có)_
+- Link video (exports): _(chưa có — chờ ảnh nền Pexels)_
 - Câu chuyện mang tính minh hoạ — không nêu tên người/địa điểm thật.
+- Văn phong theo `docs/giong-van-tieng-viet.md` (khớp với lời đọc trong video).

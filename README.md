@@ -52,6 +52,7 @@ Facebook/
 | `python3 scripts/tai-anh-pexels.py VD-001` | Tải ảnh chụp thật từ Pexels theo từ khoá B-roll ghi trong kịch bản |
 | `.venv-tts/bin/python scripts/thu-giong-vieneu.py --liet-ke` | Xem 14 giọng VieNeu có sẵn |
 | `.venv-tts/bin/python scripts/thu-giong-vieneu.py` | Nghe thử vài giọng trên cùng một đoạn chữ |
+| `.venv-tts/bin/python scripts/render-video-v2.py VD-001 --chi-do-dai` | Đo thử bài dài bao nhiêu giây (chưa cần ảnh, chưa render) |
 | `.venv-tts/bin/python scripts/render-video-v2.py VD-001 --nhac assets/music/nen-am-ap.m4a` | **Render Reels 9:16** — ảnh thật + chữ theo timeline + giọng VieNeu |
 
 > ⚠️ Ba lệnh giọng/render phải chạy bằng `.venv-tts/bin/python`, không phải `python3`.

@@ -127,6 +127,9 @@ def main() -> int:
     p.add_argument("--nhac", help="File nhạc nền (phải được phép dùng thương mại)")
     p.add_argument("--loi-doc", type=Path,
                    help="Chỉ định file lời đọc khác (mặc định tự tìm bản -v2 trước)")
+    p.add_argument("--chi-do-dai", action="store_true",
+                   help="Chỉ đọc thử để đo thời lượng, không cần ảnh nền, không render. "
+                        "Dùng để kiểm bài có đủ 60 giây chưa trước khi làm tiếp.")
     a = p.parse_args()
 
     kiem_tra_cong_cu()
@@ -140,7 +143,7 @@ def main() -> int:
     if not loi_doc or not loi_doc.exists():
         sys.exit(f"❌ Không thấy lời đọc cho {a.ma_so} trong {thu_muc_loi.relative_to(REPO)}")
 
-    anh_nen = lay_anh(a.ma_so)
+    anh_nen = [] if a.chi_do_dai else lay_anh(a.ma_so)
     the = tach_the(loi_doc.read_text(encoding="utf-8"))
 
     lam_viec = REPO / "video" / "edit" / f"{a.ma_so}-reels"
@@ -150,7 +153,8 @@ def main() -> int:
     ra = REPO / "video" / "exports" / f"{a.ma_so}-reels.mp4"
     ra.parent.mkdir(parents=True, exist_ok=True)
 
-    print(f"📝 {len(the)} thẻ chữ · {len(anh_nen)} ảnh nền · "
+    print(f"📝 {len(the)} thẻ chữ · "
+          f"{'chỉ đo thời lượng' if a.chi_do_dai else f'{len(anh_nen)} ảnh nền'} · "
           f"giọng {a.giong} ({a.kieu}) · nguồn chữ {loi_doc.name}")
     print("⏳ Đang nạp model VieNeu-TTS v3 Turbo...")
     giong = gv.Giong(a.giong, a.kieu)
@@ -168,23 +172,31 @@ def main() -> int:
               "-af", f"{gv.LOC_TUNG_THE},apad=pad_dur={KHOANG_LANG}",
               "-ar", "48000", "-ac", "1", "-c:a", "pcm_s16le", str(wav)])
 
+        giay = do_dai(wav)
+        wavs.append(wav)
+        thoi_luong.append(giay)
+
+        if a.chi_do_dai:
+            print(f"   {i + 1:2d}. {giay:5.1f}s  {doan[:52]}{'…' if len(doan) > 52 else ''}")
+            continue
+
         # Ảnh xoay vòng nếu số thẻ nhiều hơn số ảnh
         anh = anh_nen[i * len(anh_nen) // len(the)]
         lop = kr.tao_lop_chu(doan, dau_video=(i == 0))
         khung.append(dung_khung(anh, lop, lam_viec, f"{i:02d}"))
-
-        giay = do_dai(wav)
-        wavs.append(wav)
-        thoi_luong.append(giay)
         print(f"   {i + 1:2d}. {giay:5.1f}s  {anh.name}  {doan[:46]}{'…' if len(doan) > 46 else ''}")
-
-    # Thẻ chốt cuối: câu kết + dòng kêu gọi theo dõi, đứng im 3,2 giây
-    ket = kr.tao_lop_chu(the[-1], cta=True)
-    khung_ket = dung_khung(anh_nen[-1], ket, lam_viec, "ket")
 
     tong = sum(thoi_luong) + GIU_KET
     print(f"⏱  Tổng: {tong:.0f}s",
           "✅ trên 60s" if tong > 60 else "⚠️  DƯỚI 60s — cần thêm nội dung")
+
+    if a.chi_do_dai:
+        shutil.rmtree(lam_viec, ignore_errors=True)
+        return 0
+
+    # Thẻ chốt cuối: câu kết + dòng kêu gọi theo dõi, đứng im 3,2 giây
+    ket = kr.tao_lop_chu(the[-1], cta=True)
+    khung_ket = dung_khung(anh_nen[-1], ket, lam_viec, "ket")
 
     # ---- Tiếng: ghép các thẻ rồi mới chuẩn hoá độ to MỘT LẦN trên toàn bài ----
     ds_am = lam_viec / "am-thanh.txt"

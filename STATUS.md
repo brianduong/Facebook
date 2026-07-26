@@ -64,7 +64,8 @@ thực (~13 giây tiếng mất ~7 giây máy chạy) — cả video 60s mất k
 | Mã | Kịch bản | Lời đọc | Caption | Ảnh quote | Video |
 |----|:--------:|:-------:|:-------:|:---------:|:-----:|
 | VD-001 | ✅ | ✅ **đã viết lại (v2)** | ✅ | ✅ | ✅ đã đăng bản cũ 1:1 · bản Reels mới đang thử |
-| VD-002 → VD-006 | ✅ | ⚠️ cần viết lại theo văn nói | ✅ | ✅ | ⬜ chưa render |
+| VD-002 | ✅ | ✅ **đã viết lại** · đo được **62s** | ✅ **đã viết lại** | ✅ | 🟡 chờ ảnh Pexels |
+| VD-003 → VD-006 | ✅ | ⚠️ cần viết lại theo văn nói | ✅ | ✅ | ⬜ chưa render |
 | VD-007 → VD-012 | ⬜ | ⚠️ như trên | ⬜ | ⬜ | ⬜ |
 
 **Công cụ mới (`scripts/`)**
@@ -80,10 +81,14 @@ vẫn giữ để đối chiếu, **không dùng nữa**.
 ## Làm tiếp 👉
 
 1. **Anh lấy Pexels API key** ở https://www.pexels.com/api/ → dán vào `.env` dòng
-   `PEXELS_API_KEY=`. Đây là việc duy nhất đang chặn — có key là render ra bản thật ngay.
+   `PEXELS_API_KEY=`. Đây là việc duy nhất đang chặn — có key là render ra bản thật ngay:
+   ```bash
+   python3 scripts/tai-anh-pexels.py VD-002
+   .venv-tts/bin/python scripts/render-video-v2.py VD-002 --nhac assets/music/nen-am-ap.m4a
+   ```
 2. **Anh nghe 3 giọng** trong `video/thu-giong/` rồi chốt giọng cho kênh.
 3. Render lại VD-001 bằng ảnh thật → đăng lại dạng Reels (bản 1:1 cũ để nguyên trên Page).
-4. Viết lại lời đọc VD-002 → VD-006 theo `docs/giong-van-tieng-viet.md`.
+4. Viết lại lời đọc VD-003 → VD-006 theo `docs/giong-van-tieng-viet.md`.
 
 ## Đang chờ anh trả lời
 - **Chốt giọng nào?** Mặc định đang để Phạm Tuyên (nam · Bắc · tự nhiên).

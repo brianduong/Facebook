@@ -76,10 +76,17 @@ def tu_khoa_tu_kich_ban(ma: str) -> list[str]:
 # Cụm tiếng Việt hay gặp trong ghi chú B-roll → cụm tìm tiếng Anh cho Pexels.
 # Thiếu chữ nào thì cứ thêm vào đây, hoặc truyền thẳng --tu-khoa.
 TU_DIEN = {
+    # VD-001
     "ánh nắng qua cửa sổ": "morning sunlight through window",
     "tay rót nước": "hands pouring water glass",
     "giường vừa dọn": "made bed morning light",
     "người ngồi bên bàn viết": "person writing notebook desk",
+    # VD-002
+    "mưa trên mái hiên": "rain dripping from roof eaves",
+    "hai người dưới một cái áo mưa": "two people sharing umbrella rain",
+    "bàn tay đưa": "hands giving receiving gesture",
+    "người bước vào toà nhà": "person entering office building",
+    # dùng chung
     "bàn trà": "tea cup table calm",
     "đường cây": "tree lined path walking",
     "bến mưa": "rain bus stop street",

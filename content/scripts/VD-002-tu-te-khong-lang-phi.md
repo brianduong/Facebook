@@ -4,8 +4,8 @@
 - **Ngày viết:** 2026-07-25
 - **Thông điệp chính:** Một việc tử tế nhỏ có thể đi rất xa, kể cả khi mình không bao giờ biết nó đi tới đâu.
 - **Thời lượng dự kiến:** ~70s
-- **Định dạng:** Vuông 1:1 (1080×1080)
-- **Trạng thái:** Đang viết
+- **Định dạng:** Reels dọc 9:16 (1080×1920)
+- **Trạng thái:** Lời đọc đã viết lại theo văn nói — chờ ảnh nền để render
 
 ---
 
