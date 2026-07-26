@@ -56,6 +56,7 @@ Facebook/
 | `.venv-tts/bin/python scripts/thu-giong-vieneu.py` | Nghe thử vài giọng trên cùng một đoạn chữ |
 | `.venv-tts/bin/python scripts/render-video-v2.py VD-001 --chi-do-dai` | Đo thử bài dài bao nhiêu giây (chưa cần ảnh, chưa render) |
 | `.venv-tts/bin/python scripts/render-video-v2.py VD-001 --nhac assets/music/nen-am-ap.m4a` | **Render Reels 9:16** — ảnh thật + chữ theo timeline + giọng VieNeu |
+| `python3 scripts/tao-anh-bia-reels.py VD-001 "Câu quote." --anh 2` | Tạo ảnh bìa Reels 9:16 (ảnh quote 1:1 cũ lên Reels bị cắt) |
 
 > ⚠️ Ba lệnh giọng/render phải chạy bằng `.venv-tts/bin/python`, không phải `python3`.
 > Lý do: `onnxruntime` chưa có bản cho Python 3.14 của máy nên môi trường TTS dựng riêng trên Python 3.13.
@@ -81,5 +82,6 @@ Facebook/
 - Kế hoạch tổng thể: [PLAN.md](PLAN.md)
 - **Cách viết lời đọc nghe ra tiếng Việt: [docs/giong-van-tieng-viet.md](docs/giong-van-tieng-viet.md)**
 - Lấy Pexels API key để tải ảnh nền: [docs/lay-pexels-api-key.md](docs/lay-pexels-api-key.md)
+- **Đăng Reels lên Page từng bước: [docs/huong-dan-dang-reels.md](docs/huong-dan-dang-reels.md)**
 - Nhận diện & bảng màu: [docs/dinh-huong-kenh.md](docs/dinh-huong-kenh.md)
 - Kiếm tiền: [docs/ke-hoach-kiem-tien.md](docs/ke-hoach-kiem-tien.md)
