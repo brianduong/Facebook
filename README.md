@@ -56,6 +56,7 @@ Facebook/
 | `python3 scripts/tach-loi-doc.py VD-001 --dong-bo` | Dựng lại phần "Đọc liền mạch" ở đầu file song ngữ sau khi sửa chữ (chưa duyệt cũng chạy được) |
 | `python3 scripts/tach-loi-doc.py VD-001 --en` | Rút khối **EN** ra lời đọc cho kênh One Small Thing |
 | `.venv-tts/bin/python scripts/thu-giong-piper.py` | Nghe thử giọng tiếng Anh (Piper, chạy offline) |
+| `.venv-tts/bin/python scripts/so-ngu-dieu.py` | **Đo ngữ điệu** giọng Việt qua nhiều cấu hình (độ lệch chuẩn cao độ) — chọn tham số bằng số thay vì bằng cảm giác |
 | `.venv-tts/bin/python scripts/render-video-v2.py VD-001 --en --nhac assets/music/nen-am-ap.m4a` | **Render bản tiếng Anh** — giọng Piper, logo và lời kêu gọi của One Small Thing |
 | `python3 scripts/tai-anh-pexels.py VD-001` | Tải ảnh chụp thật từ Pexels theo từ khoá B-roll ghi trong kịch bản (lấy luôn ảnh đầu tiên) |
 | `python3 scripts/tai-anh-pexels.py VD-001 --chon 6` | **Nên dùng cái này** — lấy 6 ứng viên mỗi từ khoá, ghép thành một bảng ảnh có số để xem một lượt |

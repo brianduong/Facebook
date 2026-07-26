@@ -51,6 +51,12 @@ _(Liệt kê những chỗ cố ý không dịch sát EN và lý do — để an
 
 ---
 
+## Lưu ý khi viết phần mô tả để đăng
+
+Mỗi đoạn viết thành **một dòng liền**, không ngắt dòng giữa câu cho vừa khổ giấy.
+YouTube và Facebook giữ nguyên chỗ xuống dòng, nên chữ ngắt giữa câu sẽ hiện lởm chởm
+trên điện thoại. (Dính lỗi này ở VD-001 hôm 27/07.)
+
 ## Sau khi anh duyệt
 
 ```bash

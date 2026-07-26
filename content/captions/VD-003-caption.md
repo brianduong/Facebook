@@ -28,3 +28,35 @@ Sức bền được xây bằng những ngày như thế.
 - Ảnh bìa/thumbnail: `assets/templates/quotes/VD-003-quote.png`
 - Link video (exports): _(chưa có)_
 - Nội dung động viên, không phải tư vấn tâm lý.
+
+---
+
+## Đăng YouTube Shorts — kênh Sống Tốt (`@songtotdaily`)
+
+> Mỗi đoạn dán thành **một dòng liền**, đừng ngắt dòng giữa câu.
+
+**Tiêu đề**
+```
+Ngày mệt thì làm một việc thôi #Shorts
+```
+
+**Mô tả**
+```
+Có những sáng nằm nhìn trần nhà, ngày chưa bắt đầu mà đã thấy mình chậm mất rồi.
+
+Ngày đuối không phải ngày hỏng đâu, ai mà chẳng có. Mà cái làm mình mệt thêm không phải là việc — là cái giọng trong đầu cứ trách mình sao hôm nay không được như mọi hôm.
+
+Ngày như thế thì hạ xuống. Một việc thôi, chọn cái nhỏ nhất ấy. Chỗ bát trong bồn. Mười phút bước ra ngoài. Cái tin nhắn trốn mấy hôm nay chưa trả lời. Làm xong thì thôi, đừng cộng thêm gì nữa.
+
+Còn nếu hôm nay một việc cũng không nổi, thì việc của hôm nay là nghỉ. Nghỉ cũng tính chứ.
+
+🌱 Sống Tốt — mỗi ngày một điều tốt lành.
+Facebook: https://www.facebook.com/songtot.in
+
+Ảnh: Pexels.com
+```
+
+**Thẻ (tags)**
+```
+sống tốt, ngày mệt mỏi, kiệt sức, chữa lành, tự chăm sóc bản thân, bình an, sống chậm
+```

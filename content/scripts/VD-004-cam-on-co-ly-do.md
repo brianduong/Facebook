@@ -44,7 +44,8 @@ _(Chốt: logo Sống Tốt + "theo dõi để sống tốt mỗi ngày")_
 → File: `assets/templates/quotes/VD-004-quote.png`
 
 ## Ghi chú sản xuất
-- **Hình ảnh/B-roll:** Phần cơm để dành trên bàn · hai người làm việc cùng bàn · tay nhắn tin · người đọc tin nhắn rồi mỉm cười.
+- **Hình ảnh/B-roll:** Phần cơm để dành trên bàn · bữa cơm gia đình buổi tối · hai người làm việc cùng bàn · bàn tay đưa cho nhau · hai người ngồi nói chuyện · người nghe rồi mỉm cười · tay nhắn tin · ánh sáng chiều trong nhà
+- **Tông màu:** Ấm, ánh vàng, nhịp chậm. Khối 10 (cảnh người khựng lại rồi cười) cần một ảnh cận mặt người đang cười nhẹ, không cười to.
 - **Nhạc nền:** Ấm, tiết tấu vừa. Nguồn **được phép dùng thương mại**.
 - **Text on screen:** Nhấn chữ **VÌ** màu `#E9C46A` mỗi lần xuất hiện — làm điểm nhớ.
 - **Giọng đọc:** Vui nhẹ, như đang mách một mẹo nhỏ.

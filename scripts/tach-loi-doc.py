@@ -31,11 +31,11 @@ MOC_MO = "<!-- ĐỌC LIỀN MẠCH · máy tự ghép từ các khối bên dư
 MOC_DONG = "<!-- HẾT PHẦN ĐỌC LIỀN MẠCH -->"
 
 
-# Tốc độ đọc (chữ mỗi giây), cân theo thời lượng render thật của VD-003:
-#   VI — VieNeu giọng Phạm Tuyên: 251 chữ, 17 thẻ → 69 giây
-#   EN — Piper giọng en_US-ryan-high ở length_scale 1.12: 232 chữ, 20 thẻ → 75 giây
-# Đổi giọng hoặc đổi `DO_CHAM_MAC_DINH` trong giong_piper.py thì phải đo lại.
-TOC_DO = {"VI": 4.28, "EN": 3.66}
+# Tốc độ đọc (chữ mỗi giây), cân theo thời lượng render thật của cả ba bài (27/07):
+#   VI — VieNeu, Phạm Tuyên, kiểu doc_truyen: 76s/62s/69s → 4,47 · 4,64 · 4,45
+#   EN — Piper, en_US-ryan-high, chậm 1.12:   85s/71s/78s → 3,50 · 3,47 · 3,64
+# Đổi giọng, đổi `KIEU_MAC_DINH` hay đổi `DO_CHAM_MAC_DINH` thì phải đo lại.
+TOC_DO = {"VI": 4.52, "EN": 3.53}
 
 TOI_DA_MOI_THE = 92     # phải khớp hằng số cùng tên trong render-video-v2.py
 
@@ -53,7 +53,7 @@ def uoc_so_the(khoi: list[str]) -> int:
 def uoc_thoi_luong(so_chu: int, so_the: int, nhan: str = "VI") -> float:
     """Ước thời lượng video: thời gian đọc + khoảng lặng giữa thẻ + đoạn giữ thẻ chốt
     (`KHOANG_LANG` và `GIU_KET` trong render-video-v2.py)."""
-    return so_chu / TOC_DO[nhan] + so_the * 0.42 + 3.2
+    return so_chu / TOC_DO[nhan] + so_the * 0.55 + 3.2   # khớp KHOANG_LANG và GIU_KET
 
 
 def bo_phan_may_ghep(noi_dung: str) -> str:

@@ -1,6 +1,101 @@
 # STATUS — Ghi chú tiến độ
 
-_Cập nhật: 2026-07-26_
+_Cập nhật: 2026-07-27_
+
+## 📍 Dừng ở đâu — sáng mai làm tiếp từ đây
+
+| Việc | Trạng thái |
+|---|---|
+| VD-001 · VD-002 · VD-003 | ✅ render xong cả hai thứ tiếng · **đã đăng YouTube cả hai kênh** |
+| **VD-004** · Câu cảm ơn có chữ vì | ✅ **render xong** — VI 72s · EN 69s · chưa đăng · **chưa có chữ đăng bài** |
+| VD-005 · Tin nhắn lâu không hỏi thăm | ⬜ chưa bắt đầu — lời đọc cũ còn dùng "chúng ta", phải viết lại khối VI |
+| VD-006 · So sánh với chính mình | ⬜ chưa bắt đầu — như trên |
+
+### Sáng mai làm theo thứ tự này
+
+1. **Xem VD-004** (`video/exports/VD-004-reels.mp4` và `-en.mp4`) — bài này em viết lại
+   hoàn toàn khối VI (bản cũ dùng "chúng ta", trái `docs/giong-van-tieng-viet.md`) và
+   thêm hai khối mới: *"Chặn cái ngại"* và một cảnh *"người ta khựng lại rồi mới cười"*.
+   Ghi chú đầy đủ ở cuối `content/scripts/song-ngu/VD-004-song-ngu.md`.
+2. **Viết chữ đăng bài VD-004** — chưa có, cả hai thứ tiếng.
+3. **VD-005 rồi VD-006** theo đúng nếp: viết lại khối VI → thêm khối EN → chạy
+   `--dong-bo` → kiểm thời lượng ≥ 65s → ảnh → render hai bản.
+4. **Sau 24h: thêm lại link Facebook** vào mô tả 3 video kênh Sống Tốt (xem mục dưới).
+5. **Đo số 48 giờ** của sáu video đã đăng, ghi vào `schedule/calendar.md`.
+
+**Còn nợ:** chưa commit gì từ `fc23c37` · chưa đăng Facebook Page · chưa chốt giọng
+tiếng Anh (đang tạm `en_US-ryan-high`, còn 3 giọng chờ anh nghe ở `video/thu-giong-en/`).
+
+## 🎉 Đã lên sóng — đêm 27/07
+
+**Hai kênh YouTube đã lập và đăng xong ba video đầu.**
+
+| Kênh | Handle | Video đã đăng |
+|---|---|---|
+| **One Small Thing** (tiếng Anh) | https://youtube.com/@onesmallthingdaily | VD-001 · VD-002 · VD-003 |
+| **Sống Tốt** (tiếng Việt) | https://youtube.com/@songtotdaily | VD-001 · VD-002 · VD-003 |
+
+Thứ tự đăng VD-001 → VD-002 → VD-003 là cố ý: YouTube xếp video mới nhất lên đầu, nên
+VD-003 nằm trên cùng — nó là bài giải thích đúng cái tên kênh tiếng Anh.
+
+Facebook Page vẫn chưa đăng ba bài này. Chưa commit, chưa push — đúng như anh dặn.
+
+### Đo số sau 48 giờ
+
+Ghi vào `schedule/calendar.md`, **tách riêng từng kênh**:
+
+| Số cần lấy | Vì sao |
+|---|---|
+| Lượt xem | biết bài nào được đẩy |
+| **Tỉ lệ xem hết** | **quan trọng nhất** — YouTube chấm bằng cái này |
+| Người đăng ký mới | đường tới mốc 1.000 để bật kiếm tiền |
+| Lưu / chia sẻ | dấu hiệu ý đó đáng gom vào video dài |
+
+## ⏰ Việc phải làm sau 24 giờ (đặt lịch 28/07)
+
+Kênh **Sống Tốt** (`@songtotdaily`) đang chờ YouTube duyệt xác minh — số điện thoại vừa
+dùng cho kênh One Small Thing nên không xác minh tức thì được.
+
+Chưa xác minh thì **link ngoài trong mô tả không bấm được**, và YouTube tô đỏ ô mô tả.
+Nên ba video đầu đăng **không có dòng Facebook**.
+
+**Xong 24 giờ, quay lại làm:** Content → sửa mô tả từng video → thêm lại dòng
+`Facebook: https://www.facebook.com/songtot.in`. Sửa mô tả không ảnh hưởng lượt xem.
+
+Đây là đường duy nhất kéo 9,9K người bên Facebook sang YouTube, đừng bỏ qua.
+
+## 👉 Anh đọc chỗ này trước — làm đêm 27/07
+
+**Sáu video đã render xong, sẵn sàng đăng.** Ba bài × hai thứ tiếng.
+
+| Mã | Tiếng Việt (Sống Tốt) | Tiếng Anh (One Small Thing) |
+|---|---|---|
+| VD-001 · Ba điều biết ơn | `VD-001-reels.mp4` · 75s | `VD-001-reels-en.mp4` · 84s |
+| VD-002 · Tử tế không lãng phí | `VD-002-reels.mp4` · 62s | `VD-002-reels-en.mp4` · 70s |
+| VD-003 · Hôm nay một việc | `VD-003-reels.mp4` · 69s | `VD-003-reels-en.mp4` · 78s |
+
+Tất cả 1080×1920, tiếng đều −15,5 đến −16,2 LUFS, đều **trên 60 giây** (mốc thưởng TikTok).
+
+**Giọng tiếng Việt đã sửa theo góp ý "phải có ngữ điệu"** — đổi sang kiểu `doc_truyen`,
+đo được hơn `tu_nhien` 44% về độ dao động cao độ, cộng nới khoảng nghỉ giữa các ý.
+Anh nghe lại xem đã ra "giọng nói" chưa.
+
+**Chữ đăng bài** đã viết sẵn: `content/captions/VD-00X-caption.md` (Việt) và
+`VD-00X-caption-en.md` (Anh, có sẵn tiêu đề · mô tả · thẻ).
+
+**Chưa làm, đúng như anh dặn:** chưa đăng lên Page, chưa commit, chưa push.
+
+**Một lỗi suýt lọt:** VD-001 bản đầu render thiếu hẳn hai khối chữ, vì `render-video-v2.py`
+ưu tiên file `-loi-doc-v2.txt` cũ hơn bản rút từ file song ngữ. Đã sửa, và đã thêm chốt
+chặn: giờ render sẽ **dừng hẳn** nếu lời đọc không khớp file song ngữ, thay vì lặng lẽ
+dựng ra video mang chữ cũ.
+
+**Một chỗ chưa hoàn hảo, em chưa sửa:** ảnh nền rải **đều** trên các thẻ chữ chứ không
+gắn theo nội dung từng khối. Nên có chỗ lệch nhẹ — ví dụ VD-001 thẻ "không nghĩ ra đủ ba
+thì hai cũng được" lại đang chạy trên ảnh bát bún. Không sai hẳn (bữa cơm là một trong ba
+thứ) nhưng chưa khớp. Sửa được, nhưng phải gắn từ khoá B-roll với từng khối trong file
+song ngữ — việc đó lớn hơn một đêm, để anh quyết có làm không.
+
 
 ## Chốt trong ngày 26/07 — làm lại toàn bộ cách sản xuất
 
@@ -137,7 +232,32 @@ Bốn tài liệu của kênh này:
 - **Pipeline**: `render-video-v2.py --en` — đổi giọng, đổi logo, đổi lời kêu gọi và đổi
   màu lớp phủ tối theo kênh. `tach-loi-doc.py --en` rút khối EN ra lời đọc.
 
-**Chờ anh:** nghe 4 giọng rồi chốt · giữ chỗ handle `@onesmallthing`
+**Kênh đã lập 27/07:** https://youtube.com/@onesmallthingdaily
+(`@onesmallthing` đã có người lấy trước)
+
+**Chờ anh:** nghe 4 giọng tiếng Anh rồi chốt một
+
+## Giọng Việt: đổi sang kiểu `doc_truyen` (27/07)
+
+Anh chê giọng vẫn là "giọng đọc chứ không phải giọng nói, phải có ngữ điệu". Thay vì đoán,
+em đo: ngữ điệu chính là **độ dao động cao độ**, đo được bằng độ lệch chuẩn F0.
+`scripts/so-ngu-dieu.py` tổng hợp cùng một đoạn qua 16 cấu hình rồi chấm điểm.
+
+| Cấu hình | F0 std |
+|---|---|
+| **`doc_truyen` · nhiệt 0.8 · lặng 0.28** ← chốt | **60,7** |
+| `doc_truyen` · nhiệt 0.95 · lặng 0.15 | 57,2 |
+| `tu_nhien` · nhiệt 0.8 · lặng 0.15 ← đang dùng trước đó | 42,2 |
+
+Kết quả ngược trực giác: kiểu **`doc_truyen`** cho ngữ điệu cao hơn `tu_nhien` **44%**.
+Tên nghe như "giọng đọc" nhưng thực chất là lối kể chuyện — có nhấn có chùng; còn
+`tu_nhien` của VieNeu lại ra đều đều, đúng thứ bị chê.
+
+Giữ nhiệt ở 0.8: đo rồi, nhiệt cao hơn **không** cho thêm ngữ điệu mà làm model vấp chữ.
+Chỉ nâng `silence_p` lên 0.28 để có chỗ ngắt lấy hơi.
+
+⚠️ `doc_truyen` đọc **nhanh hơn** (4,89 chữ/giây so với 4,28) → bài ngắn đi ~10%.
+VD-001 tụt xuống 59 giây nên phải thêm một khối. `TOC_DO["VI"]` đã cân lại.
 
 ## Ba lỗi pipeline sửa nhân tiện (27/07)
 
@@ -156,8 +276,8 @@ và đếm theo **số thẻ** thay vì số khối. Giờ khớp đúng: ước
    rồi duyệt. Chưa ưng chỗ nào thì sửa trong file song ngữ, em render lại.
 2. **Anh nghe giọng**: `video/thu-giong/` (tiếng Việt) và `video/thu-giong-en/` (tiếng Anh)
    rồi chốt cho từng kênh.
-3. **Giữ chỗ handle**: `@songtot.in` trên YouTube/TikTok/Instagram, `@onesmallthing`
-   trên YouTube. Chưa đăng gì cũng cứ giữ — mất tên là mất hẳn.
+3. **Giữ chỗ handle** `@songtotdaily` trên TikTok và Instagram nữa (YouTube đã lấy).
+   Chưa đăng gì cũng cứ giữ — mất tên là mất hẳn, như vừa mất `@onesmallthing` và `@songtot.in`.
 4. Render lại VD-001 bằng ảnh thật → đăng lại dạng Reels (bản 1:1 cũ để nguyên trên Page).
 5. Làm file song ngữ cho VD-004 → VD-006 (VD-002 đã đăng, chỉ làm lại nếu muốn render lại).
 6. **Tuyến video dài 16:9** — chưa dựng gì, xem `docs/quy-trinh-short-va-video-dai.md`.

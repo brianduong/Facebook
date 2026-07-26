@@ -37,7 +37,12 @@ import khung_reels as kr  # noqa: E402
 REPO = Path(__file__).resolve().parent.parent
 
 TOI_DA_MOI_THE = 92      # ký tự tối đa mỗi thẻ chữ (khung dọc hẹp hơn khung vuông)
-KHOANG_LANG = 0.42       # giây nghỉ sau mỗi thẻ (VieNeu nói gọn hơn `say` nên nghỉ dài hơn chút)
+KHOANG_LANG = 0.55       # giây nghỉ sau mỗi thẻ
+# Nâng từ 0,42 lên 0,55 ngày 27/07, hai lý do cùng chiều:
+#   1. Kiểu đọc doc_truyen (chốt vì ngữ điệu tốt hơn 44%) đọc nhanh hơn tu_nhien ~14%,
+#      làm bài tụt xuống sát mốc 60 giây — mốc bắt buộc để ăn thưởng TikTok.
+#   2. Người nói thì nghỉ giữa hai ý, người đọc thì không. Nghỉ dài hơn chính là thứ
+#      anh đòi khi bảo "giọng nói chứ không phải giọng đọc" — không phải chỗ độn thời lượng.
 GIU_KET = 3.2            # giây giữ thẻ chốt cuối video
 AM_LUONG_NHAC = 0.42     # nhạc nền so với giọng
 RONG, CAO = kr.RONG, kr.CAO
@@ -95,6 +100,16 @@ def tach_the(text: str) -> list[str]:
         if hien_tai:
             the.append(hien_tai)
     return the
+
+
+def _tld():
+    """Nạp tach-loi-doc.py (tên có dấu gạch nên không import thẳng được)."""
+    import importlib.util
+    d = Path(__file__).resolve().parent / "tach-loi-doc.py"
+    spec = importlib.util.spec_from_file_location("tach_loi_doc", d)
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+    return m
 
 
 def do_dai(f: Path) -> float:
@@ -163,10 +178,18 @@ def main() -> int:
     hau_to = "-reels-en" if a.en else "-reels"
 
     thu_muc_loi = REPO / "content" / "scripts" / "loi-doc"
+    song_ngu = REPO / "content" / "scripts" / "song-ngu" / f"{a.ma_so}-song-ngu.md"
+
     if a.en:
         ung_vien = (thu_muc_loi / f"{a.ma_so}-loi-doc-en.txt",)
+    elif song_ngu.exists():
+        # Có file song ngữ thì nó là nguồn thật, và tach-loi-doc.py luôn ghi ra
+        # `-loi-doc.txt`. KHÔNG được ngó tới `-loi-doc-v2.txt` nữa: file v2 là di sản
+        # từ trước khi có quy trình song ngữ, để nó ưu tiên thì render ra bản chữ cũ
+        # mà nhìn video không tài nào biết (đã dính đúng lỗi này với VD-001 ngày 27/07).
+        ung_vien = (thu_muc_loi / f"{a.ma_so}-loi-doc.txt",)
     else:
-        # Ưu tiên bản lời đọc v2 (đã viết lại theo văn nói) nếu có
+        # Bài chưa có file song ngữ: giữ nếp cũ, ưu tiên bản v2 đã viết lại theo văn nói
         ung_vien = (thu_muc_loi / f"{a.ma_so}-loi-doc-v2.txt",
                     thu_muc_loi / f"{a.ma_so}-loi-doc.txt")
     loi_doc = a.loi_doc or next((f for f in ung_vien if f.exists()), None)
@@ -176,13 +199,20 @@ def main() -> int:
                  f"   Rút ra từ file song ngữ:  python3 scripts/tach-loi-doc.py "
                  f"{a.ma_so}{' --en' if a.en else ''}")
 
-    # File song ngữ là nguồn thật; loi-doc chỉ là bản rút ra. Sửa chữ mà quên rút lại
-    # thì render ra video mang chữ cũ — nhìn không ra, nên phải báo.
-    song_ngu = REPO / "content" / "scripts" / "song-ngu" / f"{a.ma_so}-song-ngu.md"
-    if song_ngu.exists() and song_ngu.stat().st_mtime > loi_doc.stat().st_mtime:
-        print(f"⚠️  {song_ngu.name} mới hơn {loi_doc.name} — lời đọc đang dùng có thể là bản cũ.\n"
-              f"   Rút lại:  python3 scripts/tach-loi-doc.py {a.ma_so}"
-              f"{' --en' if a.en else ''}")
+    # File song ngữ là nguồn thật; loi-doc chỉ là bản rút ra. Sửa chữ mà quên rút lại thì
+    # render ra video mang chữ cũ, mà nhìn video không tài nào biết — nên phải chặn.
+    #
+    # So **nội dung** chứ không so giờ sửa file: `tach-loi-doc.py --dong-bo` có ghi lại
+    # phần đọc liền mạch nên file song ngữ luôn mới hơn, so giờ thì báo nhầm suốt.
+    if song_ngu.exists():
+        cu = loi_doc.read_text(encoding="utf-8").split()
+        moi = " ".join(_tld().doc_khoi(song_ngu.read_text(encoding="utf-8"),
+                                       "EN" if a.en else "VI")).split()
+        if moi and cu != moi:
+            sys.exit(f"⛔ {loi_doc.name} không khớp {song_ngu.name} — chữ trong file song "
+                     f"ngữ đã sửa mà chưa rút ra.\n"
+                     f"   Rút lại:  python3 scripts/tach-loi-doc.py {a.ma_so}"
+                     f"{' --en' if a.en else ''}")
 
     anh_nen = [] if a.chi_do_dai else lay_anh(a.ma_so)
     the = tach_the(loi_doc.read_text(encoding="utf-8"))

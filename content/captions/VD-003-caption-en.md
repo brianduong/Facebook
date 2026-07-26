@@ -24,11 +24,13 @@ The one-thing rule for tired days #Shorts
 
 ## Mô tả
 
+> ⚠️ **Dán nguyên khối, đừng tự ngắt dòng giữa câu.** Mỗi đoạn phải là **một dòng liền**
+> — YouTube giữ nguyên chỗ xuống dòng, ngắt giữa câu thì trên điện thoại nhìn lởm chởm.
+
 ```
 Some days you wake up already behind. This is what to do with a day like that.
 
-Ask less of yourself. One thing — the smallest one you can find. Do it, then stop.
-And if even one thing is too much today, then today's one thing is rest.
+Ask less of yourself. One thing — the smallest one you can find. Do it, then stop. And if even one thing is too much today, then today's one thing is rest.
 
 Small things, said quietly. One video a day.
 

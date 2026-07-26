@@ -46,3 +46,38 @@ Từng bước bấm: [docs/huong-dan-dang-reels.md](../../docs/huong-dan-dang-r
 - Ảnh quote vuông `assets/templates/quotes/VD-002-quote.png` **không dùng làm bìa Reels**
   (1:1 sẽ bị cắt) — chỉ để dành khi nào đăng dạng ảnh tĩnh.
 - Nguồn từng ảnh nền (tên người chụp + link): `assets/images/canh/VD-002/nguon.txt`
+
+---
+
+## Đăng YouTube Shorts — kênh Sống Tốt (`@songtotdaily`)
+
+> Mỗi đoạn dán thành **một dòng liền**, đừng ngắt dòng giữa câu.
+
+**Tiêu đề**
+```
+Tử tế không bao giờ là lãng phí #Shorts
+```
+
+**Mô tả**
+```
+Có một việc tốt bạn làm từ nhiều năm trước. Giờ nó vẫn đang đi tiếp, mà bạn không hề biết.
+
+Trời mưa, một người che chung áo mưa với người lạ ở bến xe buýt. Mười phút thôi. Xe tới, mỗi người một ngả, không ai hỏi tên ai.
+
+Người được che mưa hôm đó đang trên đường đi phỏng vấn. Bước vào phòng, đầu tóc còn gọn gàng. Và họ nhận được việc. Người che mưa đến giờ vẫn không biết.
+
+Tử tế đâu phải cho đi rồi ngồi đó đo xem được bao nhiêu. Nó đi tiếp, qua người này người kia, tới những chỗ mình không nhìn thấy.
+
+🌱 Sống Tốt — mỗi ngày một điều tốt lành.
+Facebook: https://www.facebook.com/songtot.in
+
+Ảnh: Pexels.com
+```
+
+**Thẻ (tags)**
+```
+sống tốt, tử tế, lòng tốt, câu chuyện ý nghĩa, sống tích cực, chữa lành, thông điệp cuộc sống
+```
+
+> Câu chuyện là **ví dụ minh hoạ**, không phải chuyện có thật. Mô tả cố ý không dùng chữ
+> "chuyện có thật" và không gắn tên người hay địa danh — đừng thêm vào lúc đăng.

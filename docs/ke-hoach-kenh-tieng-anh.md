@@ -33,21 +33,19 @@ Cách nhắm này là ý anh, và nó gỡ được đúng chỗ khó nhất c�
 | | |
 |---|---|
 | Tên hiển thị | **One Small Thing** |
-| Handle | `@onesmallthing` — thử theo thứ tự ở dưới |
+| Handle | **`@onesmallthingdaily`** — đã lấy 27/07 |
+| Đường dẫn | https://youtube.com/@onesmallthingdaily |
 | Tagline | *Small things, said quietly.* |
 | Icon | `assets/logo/icon-one-small-thing.png` |
 | Banner | `assets/images/banner-one-small-thing.png` |
 | Ngôn ngữ kênh | English · Quốc gia: Việt Nam |
 
-**Handle thử theo thứ tự** (vào `youtube.com/@<tên>`, hiện trang lỗi tức là còn trống):
+**Handle đã chốt: `@onesmallthingdaily`.** `@onesmallthing` đã có người lấy trước.
+Chữ *daily* hoá ra lại hợp — nó nói luôn nhịp đăng, khớp câu *"New video every day"*
+trong phần mô tả kênh.
 
-1. `@onesmallthing`
-2. `@doonesmallthing` — câu mệnh lệnh, hợp nội dung
-3. `@onesmallthingdaily`
-4. `@justonesmallthing`
-
-> Handle là duy nhất toàn cầu, ai lấy trước được trước, và đổi về sau làm hỏng hết link
-> cũ. **Đi giữ chỗ ngay cả khi chưa đăng gì.**
+> Handle là duy nhất toàn cầu và **đổi về sau làm hỏng hết link cũ** — coi như đã cố định.
+> Kênh tiếng Việt lấy `@songtotdaily` (`@songtot.in` đã có người). Hai kênh cùng nếp đặt tên.
 
 ### Về logo
 
@@ -162,8 +160,9 @@ nghe ra giọng máy dạy học, mất hết cái ấm mà kênh cần. **Đổ
 
 ## Việc chưa làm
 
-- [ ] Anh nghe 4 giọng rồi chốt một
-- [ ] Anh giữ chỗ handle
-- [ ] Banner kênh
-- [ ] Render VD-003 bản tiếng Anh
+- [x] ~~Giữ chỗ handle~~ → `@onesmallthingdaily`, lập kênh 27/07
+- [x] ~~Logo + banner~~
+- [x] ~~Render VD-001 · VD-002 · VD-003 bản tiếng Anh~~ → 84s · 70s · 78s
+- [ ] **Anh nghe 4 giọng rồi chốt một** — đang tạm để `en_US-ryan-high`
+- [ ] Giữ chỗ `@onesmallthingdaily` trên TikTok và Instagram phòng khi mở rộng
 - [ ] Tuyến video dài 16:9 — xem `docs/quy-trinh-short-va-video-dai.md`

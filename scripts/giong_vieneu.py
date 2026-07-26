@@ -33,8 +33,26 @@ import re
 from pathlib import Path
 from typing import Any
 
-GIONG_MAC_DINH = "Phạm Tuyên"     # nam, giọng Bắc, phong cách tự nhiên
-KIEU_MAC_DINH = "tu_nhien"        # tu_nhien | tin_tuc | doc_truyen
+GIONG_MAC_DINH = "Phạm Tuyên"     # nam, giọng Bắc
+KIEU_MAC_DINH = "doc_truyen"      # tu_nhien | tin_tuc | doc_truyen
+
+# Hai cần gạt quyết định "giọng nói" hay "giọng đọc":
+#   nhiet     — temperature của model. Thấp thì câu nào cũng một đường cao độ như
+#               nhau, nghe ra người đọc thuộc lòng. Cao thì cao độ nhấp nhô hơn,
+#               có nhấn có chùng. Cao quá thì bắt đầu vấp và đọc sai chữ.
+#   im_lang   — xác suất chèn khoảng lặng. Cao hơn thì có chỗ ngắt để lấy hơi,
+#               là thứ người nói có mà máy đọc thì không.
+#
+# Chọn bằng cách đo độ lệch chuẩn cao độ trên 16 cấu hình (scripts/so-ngu-dieu.py,
+# chạy 27/07). Kết quả bất ngờ: kiểu **doc_truyen** cho ngữ điệu cao hơn tu_nhien
+# tới 44% (F0 std 60,7 so với 42,2). Tên nghe như "giọng đọc" nhưng thực tế nó là
+# lối kể chuyện — có nhấn có chùng; còn tu_nhien của VieNeu lại ra đều đều, đúng
+# thứ anh chê là "giọng đọc chứ không phải giọng nói" ở VD-001.
+#
+# Giữ nhiệt ở mức mặc định 0.8: nhiệt cao hơn không cho thêm ngữ điệu (đo rồi) mà
+# lại làm model vấp và đọc sai chữ. Chỉ nâng im_lang để có chỗ ngắt lấy hơi.
+NHIET_MAC_DINH = 0.8
+IM_LANG_MAC_DINH = 0.28
 
 # Lọc từng thẻ: chỉ cắt ù trầm và ghìm đỉnh. Không echo, không nâng trung trầm,
 # không chuẩn hoá độ to ở bước này.
@@ -53,11 +71,15 @@ LOC_TOAN_BAI = (
 class Giong:
     """Bọc VieNeu lại cho gọn — nạp model một lần rồi đọc nhiều thẻ."""
 
-    def __init__(self, ten_giong: str = GIONG_MAC_DINH, kieu: str = KIEU_MAC_DINH) -> None:
+    def __init__(self, ten_giong: str = GIONG_MAC_DINH, kieu: str = KIEU_MAC_DINH,
+                 nhiet: float = NHIET_MAC_DINH,
+                 im_lang: float = IM_LANG_MAC_DINH) -> None:
         from vieneu import Vieneu       # nạp trong hàm cho thông báo lỗi dễ hiểu hơn
 
         self.ten_giong = ten_giong
         self.kieu = kieu
+        self.nhiet = nhiet
+        self.im_lang = im_lang
         self._tts: Any = Vieneu()
 
         co_san = {ten for _, ten in self._tts.list_preset_voices()}
@@ -73,7 +95,8 @@ class Giong:
 
     def doc(self, chu: str, ra: Path) -> float:
         """Đọc một thẻ chữ ra file wav. Trả về thời lượng tính bằng giây."""
-        am = self._tts.infer(lam_sach(chu), voice=self.ten_giong, style=self.kieu)
+        am = self._tts.infer(lam_sach(chu), voice=self.ten_giong, style=self.kieu,
+                             temperature=self.nhiet, silence_p=self.im_lang)
         self._tts.save(am, str(ra))
         return len(am) / self.tan_so
 

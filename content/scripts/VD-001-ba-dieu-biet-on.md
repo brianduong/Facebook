@@ -44,7 +44,8 @@ _(Chốt: logo Sống Tốt + "theo dõi để sống tốt mỗi ngày")_
 → File: `assets/templates/quotes/VD-001-quote.png`
 
 ## Ghi chú sản xuất
-- **Hình ảnh/B-roll:** Ánh nắng qua cửa sổ · tay rót nước · giường vừa dọn · người ngồi bên bàn viết. Nhịp chậm, tránh cắt gấp.
+- **Hình ảnh/B-roll:** Ánh nắng qua cửa sổ · tay với lấy điện thoại trên bàn · giường vừa dọn · bữa cơm nóng trên bàn · tay cầm bút ghi giấy · người ngồi bên bàn viết · con đường buổi sáng
+- **Tông màu:** Sáng dần từ đầu tới cuối, nhịp chậm, tránh cắt gấp.
 - **Nhạc nền:** Piano/acoustic nhẹ, không lời, âm lượng thấp — **chỉ dùng nhạc có bản quyền cho phép thương mại** (điều kiện bật kiếm tiền).
 - **Text on screen:** Chỉ 4–6 chữ mỗi lần, đặt trong dải tối phía dưới của `khung-video-1x1` (từ y≈620 xuống). Màu chữ `#F7FAF5`, gạch nhấn `#E9C46A`.
 - **Giọng đọc:** Ấm, chậm, như đang nói với một người — không lên gân, không giáo điều.
