@@ -32,7 +32,11 @@ node_modules/
 .env.local
 *.log
 .venv/
+.venv-tts/
 __pycache__/
+
+# Ảnh nền tải từ Pexels — nặng và tải lại được bất cứ lúc nào
+assets/images/canh/
 
 # ============================================
 # File tạm khi biên tập
