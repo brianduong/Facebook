@@ -43,7 +43,8 @@ _(Chốt: logo Sống Tốt + "theo dõi để sống tốt mỗi ngày")_
 → File: `assets/templates/quotes/VD-005-quote.png`
 
 ## Ghi chú sản xuất
-- **Hình ảnh/B-roll:** Màn hình danh bạ cuộn chậm · ô nhập tin nhắn nhấp nháy · điện thoại úp trên bàn · hai người gặp lại nhau. Có thể quay giả lập màn hình điện thoại (dựng bằng Canva).
+- **Hình ảnh/B-roll:** Tay cầm điện thoại nhắn tin · người nhìn màn hình điện thoại buổi tối · điện thoại úp trên bàn · hai người bạn cũ gặp lại · người đọc tin nhắn rồi mỉm cười · quán cà phê hai người ngồi · cửa sổ đêm có đèn
+- **Tông màu:** Tối và ấm, ánh đèn điện thoại hắt lên mặt. Sáng dần ở đoạn cuối khi tin nhắn được gửi đi.
 - **Nhạc nền:** Chậm, hơi bùi ngùi, sáng lên ở đoạn CTA. Nguồn **được phép dùng thương mại**.
 - **Text on screen:** Hiện nguyên câu mẫu **"Tự nhiên nhớ tới cậu. Dạo này ổn không?"** thật to, giữ 3 giây để người xem chép lại được.
 - **Giọng đọc:** Trầm, thân mật, như nói với bạn cũ.

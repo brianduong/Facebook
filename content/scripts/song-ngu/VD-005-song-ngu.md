@@ -14,6 +14,73 @@
 
 ## Từng khối — sửa ở đây
 
+<!-- ĐỌC LIỀN MẠCH · máy tự ghép từ các khối bên dưới — đừng sửa ở đây -->
+
+## Đọc liền mạch
+
+_Phần này máy ghép lại từ các khối bên dưới, chỉ để soi nghĩa một lượt._
+_Muốn sửa chữ thì sửa ở khối bên dưới rồi chạy `tach-loi-doc.py` — phần này tự cập nhật._
+
+### EN — bản gốc
+
+Someone out there thinks you've forgotten them. They're wrong. They just don't know it.
+
+We don't lose touch with people because we stopped caring. We lose touch because every time, we think: I'll do it when things calm down.
+
+Then the other reasons pile on. It'd be weird now. They're probably busy. I'd just be bothering them.
+
+And the other person is thinking exactly the same thing. So neither one writes. And the silence just keeps getting longer.
+
+Maybe you've even opened the chat. Typed a few words, looked at them, deleted them. Put the phone down.
+
+It doesn't have to be a good message. And you don't owe anyone an explanation for the silence. Nobody's asking you to sum up the last few years.
+
+One line is enough. Was just thinking about you. How have you been?
+
+Nine words. No introduction, no apology.
+
+Someone who actually cares about you isn't keeping score of who wrote first. They'll just be glad you thought of them.
+
+That list of people you keep meaning to check in on — it doesn't get shorter on its own.
+
+It only gets shorter in two ways. You send the message, or you lose the person.
+
+Pick one name. Send it now, before this video ends.
+
+Once you've sent it, just write "sent" in the comments.
+
+### VI — lời đọc trong video _(≈ 69 giây)_
+
+Có một người đang nghĩ là bạn quên họ rồi. Họ đoán sai, mà họ không biết là mình đoán sai.
+
+Mình mất liên lạc với người mình quý, đâu phải vì hết quý. Mất là vì lần nào cũng nghĩ, thôi để hôm nào rảnh đã.
+
+Rồi thêm mấy lý do nữa. Giờ nhắn thì kỳ lắm. Chắc người ta đang bận. Nhắn vào lại thành làm phiền.
+
+Mà bên kia cũng đang nghĩ y hệt. Nên chẳng ai nhắn cả. Và im lặng cứ thế dài thêm ra.
+
+Có khi bạn còn mở khung chat lên rồi ấy chứ. Gõ được mấy chữ, nhìn một lúc, rồi xoá đi. Úp điện thoại xuống.
+
+Không cần một tin nhắn hay đâu. Cũng không cần giải thích vì sao lâu nay im. Chẳng ai bắt bạn phải kể lại mấy năm vừa rồi cả.
+
+Chỉ cần một câu thôi. Tự nhiên nhớ tới cậu. Dạo này ổn không?
+
+Chín chữ. Không cần mở bài, không cần xin lỗi.
+
+Người thật sự quý bạn sẽ không ngồi tính xem ai nhắn trước đâu. Họ chỉ thấy mừng vì có người còn nhớ tới mình.
+
+Cái danh sách những người mình định hỏi thăm hôm nào ấy, nó không tự ngắn đi được.
+
+Nó chỉ ngắn lại theo đúng hai cách thôi. Mình nhắn, hoặc mình mất họ.
+
+Chọn một cái tên. Nhắn ngay bây giờ, trước khi video này hết.
+
+Nhắn rồi thì để lại một chữ "xong" ở phần bình luận nhé.
+
+<!-- HẾT PHẦN ĐỌC LIỀN MẠCH -->
+
+---
+
 ## 1 · Hook
 
 **EN**
@@ -67,10 +134,10 @@
 ## 6 · Hạ tiêu chuẩn
 
 **EN**
-> It doesn't have to be a good message. And you don't owe anyone an explanation for the silence.
+> It doesn't have to be a good message. And you don't owe anyone an explanation for the silence. Nobody's asking you to sum up the last few years.
 
 **VI**
-> Không cần một tin nhắn hay đâu. Cũng không cần giải thích vì sao lâu nay im.
+> Không cần một tin nhắn hay đâu. Cũng không cần giải thích vì sao lâu nay im. Chẳng ai bắt bạn phải kể lại mấy năm vừa rồi cả.
 
 ---
 
@@ -97,10 +164,10 @@
 ## 9 · Chặn cái sợ
 
 **EN**
-> Someone who actually cares about you isn't keeping score of who wrote first.
+> Someone who actually cares about you isn't keeping score of who wrote first. They'll just be glad you thought of them.
 
 **VI**
-> Người thật sự quý bạn sẽ không ngồi tính xem ai nhắn trước đâu.
+> Người thật sự quý bạn sẽ không ngồi tính xem ai nhắn trước đâu. Họ chỉ thấy mừng vì có người còn nhớ tới mình.
 
 ---
 

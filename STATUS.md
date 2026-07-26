@@ -7,24 +7,36 @@ _Cập nhật: 2026-07-27_
 | Việc | Trạng thái |
 |---|---|
 | VD-001 · VD-002 · VD-003 | ✅ render xong cả hai thứ tiếng · **đã đăng YouTube cả hai kênh** |
-| **VD-004** · Câu cảm ơn có chữ vì | ✅ **render xong** — VI 72s · EN 69s · chưa đăng · **chưa có chữ đăng bài** |
-| VD-005 · Tin nhắn lâu không hỏi thăm | ⬜ chưa bắt đầu — lời đọc cũ còn dùng "chúng ta", phải viết lại khối VI |
-| VD-006 · So sánh với chính mình | ⬜ chưa bắt đầu — như trên |
+| **VD-004** · Câu cảm ơn có chữ vì | ✅ render xong — VI 72s · EN 69s · chưa đăng · **chưa có chữ đăng bài** |
+| **VD-005** · Tin nhắn lâu không hỏi thăm | ✅ render xong — VI 69s · EN 77s · chưa đăng · **chưa có chữ đăng bài** |
+| **VD-006** · So sánh với chính mình | 🟡 **chữ xong** (song ngữ 12 khối) · **chưa có ảnh, chưa render** |
 
 ### Sáng mai làm theo thứ tự này
 
-1. **Xem VD-004** (`video/exports/VD-004-reels.mp4` và `-en.mp4`) — bài này em viết lại
-   hoàn toàn khối VI (bản cũ dùng "chúng ta", trái `docs/giong-van-tieng-viet.md`) và
-   thêm hai khối mới: *"Chặn cái ngại"* và một cảnh *"người ta khựng lại rồi mới cười"*.
-   Ghi chú đầy đủ ở cuối `content/scripts/song-ngu/VD-004-song-ngu.md`.
-2. **Viết chữ đăng bài VD-004** — chưa có, cả hai thứ tiếng.
-3. **VD-005 rồi VD-006** theo đúng nếp: viết lại khối VI → thêm khối EN → chạy
-   `--dong-bo` → kiểm thời lượng ≥ 65s → ảnh → render hai bản.
+1. **Xem 4 video mới** — VD-004 và VD-005, mỗi bài hai thứ tiếng. Cả hai bài đều được
+   **viết lại khối VI** vì bản cũ dùng "chúng ta", trái `docs/giong-van-tieng-viet.md`,
+   và đều được **thêm một khối cảnh** (bản cũ toàn lời khuyên, không có khoảnh khắc nào
+   để bám). Lý do từng chỗ sửa ghi ở cuối mỗi file `song-ngu/`.
+2. **Làm nốt VD-006** — chữ đã xong (`song-ngu/VD-006-song-ngu.md`), còn thiếu ảnh và
+   render:
+   ```bash
+   python3 scripts/tach-loi-doc.py VD-006 --dong-bo
+   python3 scripts/tach-loi-doc.py VD-006 --cu-lam
+   python3 scripts/tach-loi-doc.py VD-006 --en --cu-lam
+   python3 scripts/tai-anh-pexels.py VD-006 --chon 6
+   open video/thu-anh/VD-006-chon.png
+   python3 scripts/tai-anh-pexels.py VD-006 --lay <số đã chấm>
+   .venv-tts/bin/python scripts/render-video-v2.py VD-006 --nhac assets/music/nen-am-ap.m4a
+   .venv-tts/bin/python scripts/render-video-v2.py VD-006 --en --nhac assets/music/nen-am-ap.m4a
+   ```
+   ⚠️ Nhớ sửa dòng B-roll trong `content/scripts/VD-006-so-sanh-voi-chinh-minh.md` trước
+   khi tải ảnh — bài này chưa cập nhật từ khoá như VD-004 và VD-005.
+3. **Viết chữ đăng bài** cho VD-004, VD-005, VD-006 — cả ba đều chưa có, cả hai thứ tiếng.
 4. **Sau 24h: thêm lại link Facebook** vào mô tả 3 video kênh Sống Tốt (xem mục dưới).
 5. **Đo số 48 giờ** của sáu video đã đăng, ghi vào `schedule/calendar.md`.
 
-**Còn nợ:** chưa commit gì từ `fc23c37` · chưa đăng Facebook Page · chưa chốt giọng
-tiếng Anh (đang tạm `en_US-ryan-high`, còn 3 giọng chờ anh nghe ở `video/thu-giong-en/`).
+**Còn nợ:** chưa đăng Facebook Page · chưa chốt giọng tiếng Anh (đang tạm
+`en_US-ryan-high`, còn 3 giọng chờ anh nghe ở `video/thu-giong-en/`).
 
 ## 🎉 Đã lên sóng — đêm 27/07
 
