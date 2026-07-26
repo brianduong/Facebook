@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2560" height="1440" viewBox="0 0 2560 1440">
+  <!--
+    Banner kênh One Small Thing.
+
+    YouTube nhận file 2560×1440 nhưng cắt rất khác nhau theo thiết bị — trên TV thấy
+    gần hết, trên điện thoại chỉ còn dải giữa 1546×423. Nên mọi chữ và hình đều nằm
+    trong dải an toàn đó (x 507→2053, y 508→932), phần ngoài chỉ để nền.
+  -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#33455A"/>
+      <stop offset="55%" stop-color="#233042"/>
+      <stop offset="100%" stop-color="#161E28"/>
+    </linearGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feDropShadow dx="0" dy="0" stdDeviation="30" flood-color="#E9C46A" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="2560" height="1440" fill="url(#bg)"/>
+
+  <!-- Vệt tròn mờ ngoài dải an toàn — chỉ thấy trên TV và máy tính, thêm chiều sâu -->
+  <circle cx="330" cy="330" r="300" fill="none" stroke="#8FA6BF" stroke-width="3" opacity="0.10"/>
+  <circle cx="2270" cy="1160" r="380" fill="none" stroke="#8FA6BF" stroke-width="3" opacity="0.10"/>
+  <circle cx="2330" cy="290" r="170" fill="none" stroke="#8FA6BF" stroke-width="3" opacity="0.08"/>
+
+  <!-- ===== DẢI AN TOÀN ===== -->
+
+  <!-- Ba việc: một xong, hai để đấy -->
+  <g>
+    <circle cx="1164" cy="622" r="46" fill="#E9C46A" filter="url(#glow)"/>
+    <circle cx="1280" cy="622" r="46" fill="none" stroke="#8FA6BF" stroke-width="8" opacity="0.32"/>
+    <circle cx="1396" cy="622" r="46" fill="none" stroke="#8FA6BF" stroke-width="8" opacity="0.32"/>
+  </g>
+
+  <text x="1280" y="808" text-anchor="middle"
+        font-family="'Be Vietnam Pro','Montserrat','Segoe UI',Arial,sans-serif"
+        font-size="132" font-weight="800" fill="#F4F6F8" letter-spacing="2">One Small Thing</text>
+
+  <text x="1280" y="884" text-anchor="middle"
+        font-family="'Be Vietnam Pro','Montserrat','Segoe UI',Arial,sans-serif"
+        font-size="40" font-weight="500" fill="#E9C46A" letter-spacing="11">SMALL THINGS, SAID QUIETLY</text>
+</svg>

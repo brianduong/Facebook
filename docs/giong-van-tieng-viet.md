@@ -71,3 +71,32 @@ lại theo đúng những điều trên. Đặt cạnh
 
 Từ VD-002 trở đi, viết thẳng theo lối này — đặt tên file `*-loi-doc.txt` như bình thường,
 không cần hậu tố `-v2`.
+
+## Quy trình duyệt chữ trước khi render (từ VD-003)
+
+VD-002 đăng rồi vẫn còn chỗ nghe ra bản dịch. Nguyên nhân: chữ chỉ được đọc lại **sau khi
+video đã dựng**, lúc đó ngại sửa. Nên tách hẳn khâu duyệt chữ ra trước.
+
+Mỗi video có một file song ngữ: `content/scripts/song-ngu/VD-XXX-song-ngu.md`, gồm hai tầng:
+
+1. **Đọc liền mạch** (đầu file) — toàn bộ EN rồi toàn bộ VI, để soi nghĩa một lượt xem
+   cả bài có chạy không. Phần này **máy ghép từ các khối bên dưới**, không sửa tay:
+   để hai bản chữ trong cùng một file mà sửa hai nơi thì sớm muộn cũng lệch nhau.
+2. **Từng khối** — chỗ sửa thật, mỗi khối có **EN** và **VI** đặt cạnh nhau.
+
+Sửa xong chạy `tach-loi-doc.py VD-XXX --dong-bo`, phần đọc liền mạch tự cập nhật theo.
+
+- **EN** là bản gốc, dùng để soi ý cho chặt — mỗi khối phải nói được đúng một điều.
+- **VI** **không phải bản dịch**. Đọc EN xong thì gấp lại, viết bằng tiếng Việt.
+  Hai cột khớp ý, không khớp chữ. Chỗ nào cố dịch sát là chỗ đó hỏng.
+- Cuối file ghi rõ những chỗ cố ý đi lệch khỏi EN và lý do, để người duyệt soi nhanh.
+
+Anh sửa thẳng vào khối **VI**, đổi `Trạng thái duyệt` thành ✅, rồi:
+
+```bash
+python3 scripts/tach-loi-doc.py VD-XXX      # rút bản VI ra content/scripts/loi-doc/
+```
+
+Script sẽ **từ chối chạy** nếu chưa duyệt, và báo luôn thời lượng ước tính
+(dưới 60 giây thì cảnh báo — Reels cần dài hơn). Không sửa tay file `*-loi-doc.txt`
+nữa: nguồn duy nhất là file song ngữ, sửa tay sẽ bị ghi đè ở lần rút tiếp theo.

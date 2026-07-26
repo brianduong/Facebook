@@ -6,10 +6,18 @@ làm cho chữ đọc được trên ảnh.
 
 Xuất ra SVG nền trong suốt, `render-video-v2.py` sẽ đè lên ảnh bằng ffmpeg.
 
-Vùng an toàn của Reels (Facebook che mất):
-    - đáy  320px  (nút thích/bình luận/chia sẻ + tên trang)
-    - phải 120px  (cột nút dọc)
-Nên khối chữ nằm gọn trong khoảng y 980–1520.
+Vùng an toàn tính theo nơi che nhiều nhất trong ba nền tảng, để **một file đăng
+được cả ba chỗ** (Facebook Reels · Instagram Reels · YouTube Shorts):
+
+    | Nền tảng          | đáy che  | phải che | đỉnh che |
+    |-------------------|----------|----------|----------|
+    | Facebook Reels    | ~320px   | ~120px   | ~110px   |
+    | Instagram Reels   | ~400px   | ~120px   | ~110px   |  ← che nhiều nhất ở đáy
+    | YouTube Shorts    | ~330px   | ~140px   | ~130px   |  ← che nhiều nhất ở phải/đỉnh
+
+Nên lấy mức khắt khe nhất: đáy 470px, phải 140px, đỉnh 130px. Khối chữ vì thế nằm
+trong khoảng y 980–1450 (trước chỉ tính riêng Facebook nên để tới 1520 — Instagram
+sẽ che mất dòng cuối).
 """
 
 from __future__ import annotations
@@ -24,20 +32,39 @@ VANG = "#E9C46A"      # vàng nắng — gạch nhấn
 LA_NHAT = "#A9D4A6"
 FONT = "'Be Vietnam Pro','Montserrat','Helvetica Neue',Arial,sans-serif"
 CTA = "theo dõi để sống tốt mỗi ngày"
+CTA_EN = "subscribe for one small thing a day"
 
-# Vùng an toàn Reels
-LE_DAY = 320
-LE_PHAI = 120
-CHU_DAY = 1520        # đáy khối chữ, nằm trên vùng nút của Facebook
+# Vùng an toàn — lấy mức khắt khe nhất của cả ba nền tảng (xem bảng ở đầu file)
+LE_DAY = 470          # Instagram che đáy nhiều nhất
+LE_PHAI = 140         # YouTube Shorts che phải nhiều nhất
+LE_DINH = 130         # YouTube Shorts che đỉnh nhiều nhất
+CHU_DAY = 1450        # đáy khối chữ
 CHU_DINH = 980        # đỉnh khối chữ
 
-LOGO = f"""  <g transform="translate(64 96)">
+LOGO = f"""  <g transform="translate(64 168)">
     <g transform="scale(0.30)">
       <path d="M0,60 C -48,30 -48,-75 -7,-116 C -3,-95 -9,-35 0,60 Z" fill="{KEM}" transform="rotate(-16)"/>
       <path d="M0,60 C 48,30 48,-75 7,-116 C 3,-95 9,-35 0,60 Z" fill="{LA_NHAT}" transform="rotate(16)"/>
     </g>
     <text x="56" y="20" font-family="{FONT}" font-size="46" font-weight="800" fill="{KEM}">Sống Tốt</text>
   </g>"""
+
+# Logo kênh tiếng Anh: ba việc, một xong hai để đấy. Cùng vị trí và cỡ chữ với logo
+# Sống Tốt để hai kênh nhìn ra là cùng một tay làm.
+LOGO_EN = f"""  <g transform="translate(70 168)">
+    <circle cx="0" cy="0" r="15" fill="{VANG}"/>
+    <circle cx="40" cy="0" r="15" fill="none" stroke="{KEM}" stroke-width="4" opacity="0.45"/>
+    <circle cx="80" cy="0" r="15" fill="none" stroke="{KEM}" stroke-width="4" opacity="0.45"/>
+    <text x="114" y="16" font-family="{FONT}" font-size="46" font-weight="800" fill="{KEM}">One Small Thing</text>
+  </g>"""
+
+# Màu lớp phủ tối — ám cả khung hình, nên phải theo nền của từng kênh:
+# Sống Tốt xanh lá, One Small Thing xanh đá. Dùng chung thì video tiếng Anh bị ám
+# xanh lá, lệch hẳn với icon và banner của kênh đó.
+NHAN_DIEN = {
+    "vi": (LOGO, CTA, "#0B1F18", "#06120D"),
+    "en": (LOGO_EN, CTA_EN, "#0B1219", "#050A0F"),
+}
 
 
 def boc_dong(chu: str, moi_dong: int = 22) -> list[str]:
@@ -54,13 +81,16 @@ def co_chu(dong: list[str]) -> int:
     return 44
 
 
-def tao_lop_chu(chu: str, dau_video: bool = False, cta: bool = False) -> str:
+def tao_lop_chu(chu: str, dau_video: bool = False, cta: bool = False,
+                kenh: str = "vi") -> str:
     """Lớp phủ trong suốt: mờ tối phía dưới + khối chữ + logo.
 
     chu        : nội dung thẻ
     dau_video  : thẻ mở đầu — chữ to hơn một nấc cho câu hook đập vào mắt
     cta        : có in dòng kêu gọi theo dõi ở đáy không (dùng cho thẻ cuối)
+    kenh       : "vi" (Sống Tốt) hoặc "en" (One Small Thing) — đổi logo và lời kêu gọi
     """
+    logo_kenh, cta_kenh, mau_toi, mau_bong = NHAN_DIEN[kenh]
     dong = boc_dong(chu, moi_dong=20 if dau_video else 22)
     co = co_chu(dong) + (6 if dau_video else 0)
     buoc = int(co * 1.36)
@@ -90,24 +120,24 @@ def tao_lop_chu(chu: str, dau_video: bool = False, cta: bool = False) -> str:
         dong_cta = (
             f'    <text x="{RONG // 2}" y="{gach_y + 62}" text-anchor="middle" '
             f'font-family="{FONT}" font-size="34" font-weight="600" fill="{KEM}" '
-            f'opacity="0.86" letter-spacing="1.2">{html.escape(CTA)}</text>'
+            f'opacity="0.86" letter-spacing="1.2">{html.escape(cta_kenh)}</text>'
         )
 
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{RONG}" height="{CAO}"
      viewBox="0 0 {RONG} {CAO}">
   <defs>
     <linearGradient id="toi_duoi" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"   stop-color="#0B1F18" stop-opacity="0"/>
-      <stop offset="38%"  stop-color="#0B1F18" stop-opacity="0.42"/>
-      <stop offset="70%"  stop-color="#0B1F18" stop-opacity="0.78"/>
-      <stop offset="100%" stop-color="#0B1F18" stop-opacity="0.92"/>
+      <stop offset="0%"   stop-color="{mau_toi}" stop-opacity="0"/>
+      <stop offset="38%"  stop-color="{mau_toi}" stop-opacity="0.42"/>
+      <stop offset="70%"  stop-color="{mau_toi}" stop-opacity="0.78"/>
+      <stop offset="100%" stop-color="{mau_toi}" stop-opacity="0.92"/>
     </linearGradient>
     <linearGradient id="toi_tren" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"   stop-color="#0B1F18" stop-opacity="0.55"/>
-      <stop offset="100%" stop-color="#0B1F18" stop-opacity="0"/>
+      <stop offset="0%"   stop-color="{mau_toi}" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="{mau_toi}" stop-opacity="0"/>
     </linearGradient>
     <filter id="bong" x="-12%" y="-12%" width="124%" height="124%">
-      <feDropShadow dx="0" dy="3" stdDeviation="7" flood-color="#06120D" flood-opacity="0.75"/>
+      <feDropShadow dx="0" dy="3" stdDeviation="7" flood-color="{mau_bong}" flood-opacity="0.75"/>
     </filter>
   </defs>
 
@@ -115,7 +145,7 @@ def tao_lop_chu(chu: str, dau_video: bool = False, cta: bool = False) -> str:
   <rect x="0" y="0" width="{RONG}" height="360" fill="url(#toi_tren)"/>
   <rect x="0" y="{CAO - 1180}" width="{RONG}" height="1180" fill="url(#toi_duoi)"/>
 
-{LOGO}
+{logo_kenh}
 {chr(10).join(dong_svg)}
 {gach}
 {dong_cta}

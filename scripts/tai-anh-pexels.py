@@ -77,6 +77,10 @@ def tu_khoa_tu_kich_ban(ma: str) -> list[str]:
 
     Trong kịch bản viết tiếng Việt, ngăn nhau bằng dấu '·'. Pexels tìm bằng
     tiếng Anh cho ra ảnh tốt hơn nhiều, nên phần dịch nằm ở bảng TU_DIEN dưới.
+
+    Dòng B-roll hay có thêm ghi chú tông màu ở cuối ("Tông trầm hơn hai video
+    kia…") và chú thích trong ngoặc ("(cho khối 8)"). Cả hai đều không phải từ
+    khoá — đưa nguyên vào Pexels thì ra ảnh vớ vẩn. Nên cắt bỏ ở đây.
     """
     ds = sorted((REPO / "content" / "scripts").glob(f"{ma}-*.md"))
     if not ds:
@@ -85,7 +89,14 @@ def tu_khoa_tu_kich_ban(ma: str) -> list[str]:
         if "B-roll" in dong:
             phan = dong.split(":", 1)[1] if ":" in dong else ""
             phan = re.sub(r"\*\*|_", "", phan)
-            return [x.strip() for x in phan.split("·") if x.strip()]
+            ra = []
+            for x in phan.split("·"):
+                x = re.sub(r"\([^)]*\)", " ", x)     # bỏ chú thích trong ngoặc
+                x = x.split(".")[0]                  # cắt câu ghi chú đuôi
+                x = " ".join(x.split()).strip(" ,;")
+                if x:
+                    ra.append(x)
+            return ra
     return []
 
 

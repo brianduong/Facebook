@@ -11,7 +11,8 @@ Facebook/
 ├── content/            # Phần "nội dung chữ" — đưa lên GitHub
 │   ├── ideas/          # Kho ý tưởng, chủ đề còn thô
 │   ├── scripts/        # Kịch bản video hoàn chỉnh
-│   │   └── loi-doc/    # Lời đọc thuần văn bản (để thu giọng / tạo giọng nháp)
+│   │   ├── song-ngu/   # EN + VI đặt cạnh nhau — chỗ DUYỆT chữ, nuôi cả hai kênh
+│   │   └── loi-doc/    # Lời đọc thuần văn bản (máy render đọc file này — sinh tự động)
 │   ├── captions/       # Nội dung bài đăng (caption + hashtag) cho Facebook
 │   └── research/       # Tư liệu, trích dẫn, nguồn tham khảo
 │
@@ -36,12 +37,13 @@ Facebook/
 
 ## Quy trình gợi ý (từ ý tưởng → đăng bài)
 
-1. **Ý tưởng** → ghi vào [content/ideas/](content/ideas/)
+1. **Ý tưởng** → ghi vào [content/ideas/](content/ideas/) — kênh Việt: [kho-y-tuong.md](content/ideas/kho-y-tuong.md) · kênh Anh: [kho-y-tuong-en.md](content/ideas/kho-y-tuong-en.md)
 2. **Kịch bản** → viết theo mẫu [content/scripts/](content/scripts/)
-3. **Sản xuất** → dựng theo [docs/huong-dan-dung-video.md](docs/huong-dan-dung-video.md), file để trong `video/` (ngoài GitHub)
-4. **Caption** → soạn bài đăng trong [content/captions/](content/captions/)
-5. **Lên lịch** → cập nhật [schedule/calendar.md](schedule/calendar.md)
-6. **Đăng** → bấm tay trên Page, hoặc chạy [scripts/dang-video-fb.py](scripts/dang-video-fb.py) (xem [docs/huong-dan-dang-tu-dong.md](docs/huong-dan-dang-tu-dong.md))
+3. **Duyệt chữ** → file song ngữ EN/VI trong [content/scripts/song-ngu/](content/scripts/song-ngu/), sửa xong đánh ✅ rồi chạy `tach-loi-doc.py` (xem [docs/giong-van-tieng-viet.md](docs/giong-van-tieng-viet.md))
+4. **Sản xuất** → dựng theo [docs/huong-dan-dung-video.md](docs/huong-dan-dung-video.md), file để trong `video/` (ngoài GitHub)
+5. **Caption** → soạn bài đăng trong [content/captions/](content/captions/)
+6. **Lên lịch** → cập nhật [schedule/calendar.md](schedule/calendar.md)
+7. **Đăng** → bấm tay trên Page, hoặc chạy [scripts/dang-video-fb.py](scripts/dang-video-fb.py) (xem [docs/huong-dan-dang-tu-dong.md](docs/huong-dan-dang-tu-dong.md))
 
 ## Công cụ trong `scripts/`
 
@@ -49,6 +51,12 @@ Facebook/
 
 | Lệnh | Làm gì |
 |------|--------|
+| `python3 scripts/tach-loi-doc.py VD-001` | Rút bản VI trong file song ngữ ra lời đọc (từ chối chạy nếu anh chưa duyệt; báo luôn thời lượng ước tính) |
+| `python3 scripts/tach-loi-doc.py VD-001 --xem` | Chỉ in bản VI ra màn hình để đọc to thử, không ghi file |
+| `python3 scripts/tach-loi-doc.py VD-001 --dong-bo` | Dựng lại phần "Đọc liền mạch" ở đầu file song ngữ sau khi sửa chữ (chưa duyệt cũng chạy được) |
+| `python3 scripts/tach-loi-doc.py VD-001 --en` | Rút khối **EN** ra lời đọc cho kênh One Small Thing |
+| `.venv-tts/bin/python scripts/thu-giong-piper.py` | Nghe thử giọng tiếng Anh (Piper, chạy offline) |
+| `.venv-tts/bin/python scripts/render-video-v2.py VD-001 --en --nhac assets/music/nen-am-ap.m4a` | **Render bản tiếng Anh** — giọng Piper, logo và lời kêu gọi của One Small Thing |
 | `python3 scripts/tai-anh-pexels.py VD-001` | Tải ảnh chụp thật từ Pexels theo từ khoá B-roll ghi trong kịch bản (lấy luôn ảnh đầu tiên) |
 | `python3 scripts/tai-anh-pexels.py VD-001 --chon 6` | **Nên dùng cái này** — lấy 6 ứng viên mỗi từ khoá, ghép thành một bảng ảnh có số để xem một lượt |
 | `python3 scripts/tai-anh-pexels.py VD-001 --lay 4,10,18` | Sau khi xem bảng, lấy đúng những số đã chấm (thứ tự gõ = thứ tự xuất hiện trong video) |

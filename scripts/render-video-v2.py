@@ -30,6 +30,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import giong_piper as gp  # noqa: E402
 import giong_vieneu as gv  # noqa: E402
 import khung_reels as kr  # noqa: E402
 
@@ -51,34 +52,48 @@ def chay(cmd: list[str]) -> str:
     return kq.stdout.strip()
 
 
-def kiem_tra_cong_cu() -> None:
+def kiem_tra_cong_cu(en: bool = False) -> None:
     thieu = [t for t in ("ffmpeg", "ffprobe", "rsvg-convert") if not shutil.which(t)]
     if thieu:
         sys.exit(f"❌ Máy thiếu: {', '.join(thieu)}\n"
                  "   ffmpeg/ffprobe → brew install ffmpeg\n"
                  "   rsvg-convert  → brew install librsvg")
+    thu_vien = "piper" if en else "vieneu"
     try:
-        import vieneu  # noqa: F401
+        __import__(thu_vien)
     except ImportError:
-        sys.exit("❌ Không thấy thư viện vieneu.\n"
+        sys.exit(f"❌ Không thấy thư viện {thu_vien}.\n"
                  "   Phải chạy bằng:  .venv-tts/bin/python scripts/render-video-v2.py ...")
 
 
 def tach_the(text: str) -> list[str]:
-    """Cắt lời đọc thành từng thẻ chữ. Câu đầu (hook) luôn đứng riêng một thẻ."""
-    cau = [c.strip() for c in re.split(r"(?<=[.!?])\s+", " ".join(text.split())) if c.strip()]
-    if not cau:
+    """Cắt lời đọc thành thẻ chữ. Một thẻ KHÔNG được vắt qua hai khối.
+
+    Mỗi khối trong file lời đọc (cách nhau một dòng trống) là một ý trọn vẹn do
+    người viết chia ra. Gộp hai khối vào chung một thẻ thì chữ trên màn hình vắt
+    ngang đúng chỗ chuyển ý — người xem đọc thấy hai ý dính làm một. Nên chỉ gộp
+    câu **trong cùng một khối**; khối dài quá thì cắt nhỏ ra.
+
+    Câu đầu (hook) luôn đứng riêng một thẻ.
+    """
+    khoi = [k.strip() for k in re.split(r"\n\s*\n", text) if k.strip()]
+    if not khoi:
         sys.exit("❌ File lời đọc rỗng.")
-    the = [cau[0]]
-    hien_tai = ""
-    for c in cau[1:]:
-        if hien_tai and len(hien_tai) + len(c) + 1 > TOI_DA_MOI_THE:
+
+    the: list[str] = []
+    for i, k in enumerate(khoi):
+        cau = [c.strip() for c in re.split(r"(?<=[.!?])\s+", " ".join(k.split())) if c.strip()]
+        if i == 0 and cau:
+            the.append(cau.pop(0))        # hook đứng riêng
+        hien_tai = ""
+        for c in cau:
+            if hien_tai and len(hien_tai) + len(c) + 1 > TOI_DA_MOI_THE:
+                the.append(hien_tai)
+                hien_tai = c
+            else:
+                hien_tai = f"{hien_tai} {c}".strip()
+        if hien_tai:
             the.append(hien_tai)
-            hien_tai = c
-        else:
-            hien_tai = f"{hien_tai} {c}".strip()
-    if hien_tai:
-        the.append(hien_tai)
     return the
 
 
@@ -116,14 +131,24 @@ def dung_khung(anh: Path, lop_svg: str, lam_viec: Path, ten: str) -> Path:
 
 
 def main() -> int:
-    p = argparse.ArgumentParser(description="Render video Reels 9:16 cho kênh Sống Tốt")
+    p = argparse.ArgumentParser(
+        description="Render Reels/Shorts 9:16 — Sống Tốt (tiếng Việt) hoặc "
+                    "One Small Thing (tiếng Anh, thêm --en)")
     p.add_argument("ma_so", help="Mã video, vd VD-001")
-    p.add_argument("--giong", default=gv.GIONG_MAC_DINH,
-                   help=f"Giọng VieNeu (mặc định {gv.GIONG_MAC_DINH}). "
-                        f"Xem danh sách: .venv-tts/bin/python scripts/thu-giong-vieneu.py --liet-ke")
+    p.add_argument("--en", action="store_true",
+                   help="Làm bản tiếng Anh cho kênh One Small Thing: đọc lời từ "
+                        "*-loi-doc-en.txt, giọng Piper, logo và lời kêu gọi tiếng Anh")
+    p.add_argument("--giong",
+                   help=f"Giọng đọc. Mặc định {gv.GIONG_MAC_DINH!r} (VieNeu) hoặc "
+                        f"{gp.GIONG_MAC_DINH!r} khi có --en. Xem danh sách: "
+                        f"thu-giong-vieneu.py --liet-ke · thu-giong-piper.py --liet-ke")
     p.add_argument("--kieu", default=gv.KIEU_MAC_DINH,
                    choices=["tu_nhien", "tin_tuc", "doc_truyen"],
-                   help="Kiểu đọc (mặc định tu_nhien — giọng nói đời thường)")
+                   help="Kiểu đọc của VieNeu (bỏ qua khi có --en)")
+    p.add_argument("--cham", type=float, default=gp.DO_CHAM_MAC_DINH,
+                   help=f"Chỉ dùng với --en: tốc độ đọc, >1 là chậm lại "
+                        f"(mặc định %(default)s). Đổi thì nhớ đo lại TOC_DO['EN'] "
+                        f"trong tach-loi-doc.py")
     p.add_argument("--nhac", help="File nhạc nền (phải được phép dùng thương mại)")
     p.add_argument("--loi-doc", type=Path,
                    help="Chỉ định file lời đọc khác (mặc định tự tìm bản -v2 trước)")
@@ -132,32 +157,57 @@ def main() -> int:
                         "Dùng để kiểm bài có đủ 60 giây chưa trước khi làm tiếp.")
     a = p.parse_args()
 
-    kiem_tra_cong_cu()
+    kiem_tra_cong_cu(a.en)
 
-    # Ưu tiên bản lời đọc v2 (đã viết lại theo văn nói) nếu có
+    kenh = "en" if a.en else "vi"
+    hau_to = "-reels-en" if a.en else "-reels"
+
     thu_muc_loi = REPO / "content" / "scripts" / "loi-doc"
-    loi_doc = a.loi_doc or next(
-        (f for f in (thu_muc_loi / f"{a.ma_so}-loi-doc-v2.txt",
-                     thu_muc_loi / f"{a.ma_so}-loi-doc.txt") if f.exists()), None
-    )
+    if a.en:
+        ung_vien = (thu_muc_loi / f"{a.ma_so}-loi-doc-en.txt",)
+    else:
+        # Ưu tiên bản lời đọc v2 (đã viết lại theo văn nói) nếu có
+        ung_vien = (thu_muc_loi / f"{a.ma_so}-loi-doc-v2.txt",
+                    thu_muc_loi / f"{a.ma_so}-loi-doc.txt")
+    loi_doc = a.loi_doc or next((f for f in ung_vien if f.exists()), None)
     if not loi_doc or not loi_doc.exists():
-        sys.exit(f"❌ Không thấy lời đọc cho {a.ma_so} trong {thu_muc_loi.relative_to(REPO)}")
+        sys.exit(f"❌ Không thấy lời đọc cho {a.ma_so} ({'EN' if a.en else 'VI'}) trong "
+                 f"{thu_muc_loi.relative_to(REPO)}\n"
+                 f"   Rút ra từ file song ngữ:  python3 scripts/tach-loi-doc.py "
+                 f"{a.ma_so}{' --en' if a.en else ''}")
+
+    # File song ngữ là nguồn thật; loi-doc chỉ là bản rút ra. Sửa chữ mà quên rút lại
+    # thì render ra video mang chữ cũ — nhìn không ra, nên phải báo.
+    song_ngu = REPO / "content" / "scripts" / "song-ngu" / f"{a.ma_so}-song-ngu.md"
+    if song_ngu.exists() and song_ngu.stat().st_mtime > loi_doc.stat().st_mtime:
+        print(f"⚠️  {song_ngu.name} mới hơn {loi_doc.name} — lời đọc đang dùng có thể là bản cũ.\n"
+              f"   Rút lại:  python3 scripts/tach-loi-doc.py {a.ma_so}"
+              f"{' --en' if a.en else ''}")
 
     anh_nen = [] if a.chi_do_dai else lay_anh(a.ma_so)
     the = tach_the(loi_doc.read_text(encoding="utf-8"))
 
-    lam_viec = REPO / "video" / "edit" / f"{a.ma_so}-reels"
+    lam_viec = REPO / "video" / "edit" / f"{a.ma_so}{hau_to}"
     if lam_viec.exists():
         shutil.rmtree(lam_viec)
     lam_viec.mkdir(parents=True)
-    ra = REPO / "video" / "exports" / f"{a.ma_so}-reels.mp4"
+    ra = REPO / "video" / "exports" / f"{a.ma_so}{hau_to}.mp4"
     ra.parent.mkdir(parents=True, exist_ok=True)
 
-    print(f"📝 {len(the)} thẻ chữ · "
+    ten_giong = a.giong or (gp.GIONG_MAC_DINH if a.en else gv.GIONG_MAC_DINH)
+    mo_ta_giong = f"{ten_giong} (chậm {a.cham:g})" if a.en else f"{ten_giong} ({a.kieu})"
+    print(f"📝 [{kenh.upper()}] {len(the)} thẻ chữ · "
           f"{'chỉ đo thời lượng' if a.chi_do_dai else f'{len(anh_nen)} ảnh nền'} · "
-          f"giọng {a.giong} ({a.kieu}) · nguồn chữ {loi_doc.name}")
-    print("⏳ Đang nạp model VieNeu-TTS v3 Turbo...")
-    giong = gv.Giong(a.giong, a.kieu)
+          f"giọng {mo_ta_giong} · nguồn chữ {loi_doc.name}")
+
+    if a.en:
+        print("⏳ Đang nạp model Piper...")
+        giong: object = gp.Giong(ten_giong, a.cham)
+        loc_the, loc_bai = gp.LOC_TUNG_THE, gp.LOC_TOAN_BAI
+    else:
+        print("⏳ Đang nạp model VieNeu-TTS v3 Turbo...")
+        giong = gv.Giong(ten_giong, a.kieu)
+        loc_the, loc_bai = gv.LOC_TUNG_THE, gv.LOC_TOAN_BAI
 
     wavs: list[Path] = []
     thoi_luong: list[float] = []
@@ -169,7 +219,7 @@ def main() -> int:
         wav = lam_viec / f"{i:02d}.wav"
         giong.doc(doan, tho)
         chay(["ffmpeg", "-y", "-loglevel", "error", "-i", str(tho),
-              "-af", f"{gv.LOC_TUNG_THE},apad=pad_dur={KHOANG_LANG}",
+              "-af", f"{loc_the},apad=pad_dur={KHOANG_LANG}",
               "-ar", "48000", "-ac", "1", "-c:a", "pcm_s16le", str(wav)])
 
         giay = do_dai(wav)
@@ -182,7 +232,7 @@ def main() -> int:
 
         # Ảnh xoay vòng nếu số thẻ nhiều hơn số ảnh
         anh = anh_nen[i * len(anh_nen) // len(the)]
-        lop = kr.tao_lop_chu(doan, dau_video=(i == 0))
+        lop = kr.tao_lop_chu(doan, dau_video=(i == 0), kenh=kenh)
         khung.append(dung_khung(anh, lop, lam_viec, f"{i:02d}"))
         print(f"   {i + 1:2d}. {giay:5.1f}s  {anh.name}  {doan[:46]}{'…' if len(doan) > 46 else ''}")
 
@@ -195,7 +245,7 @@ def main() -> int:
         return 0
 
     # Thẻ chốt cuối: câu kết + dòng kêu gọi theo dõi, đứng im 3,2 giây
-    ket = kr.tao_lop_chu(the[-1], cta=True)
+    ket = kr.tao_lop_chu(the[-1], cta=True, kenh=kenh)
     khung_ket = dung_khung(anh_nen[-1], ket, lam_viec, "ket")
 
     # ---- Tiếng: ghép các thẻ rồi mới chuẩn hoá độ to MỘT LẦN trên toàn bài ----
@@ -203,7 +253,7 @@ def main() -> int:
     ds_am.write_text("".join(f"file '{w}'\n" for w in wavs), encoding="utf-8")
     giong_wav = lam_viec / "giong.wav"
     chay(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", str(ds_am),
-          "-af", f"{gv.LOC_TOAN_BAI},apad=pad_dur={GIU_KET}",
+          "-af", f"{loc_bai},apad=pad_dur={GIU_KET}",
           "-ar", "48000", "-c:a", "pcm_s16le", str(giong_wav)])
 
     # ---- Hình: mỗi thẻ giữ đúng thời lượng tiếng của nó ----

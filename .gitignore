@@ -33,6 +33,10 @@ node_modules/
 *.log
 .venv/
 .venv-tts/
+
+# Model giọng đọc tiếng Anh Piper — ~300 MB, tải lại bằng:
+#   .venv-tts/bin/python -m piper.download_voices --data-dir .piper-voices <tên giọng>
+.piper-voices/
 __pycache__/
 
 # Ảnh nền tải từ Pexels — nặng và tải lại được bất cứ lúc nào

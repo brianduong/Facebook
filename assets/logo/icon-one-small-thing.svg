@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <!--
+    Icon kênh One Small Thing (YouTube tiếng Anh).
+
+    Ý tưởng: ba việc trong ngày — một việc đã xong (chấm vàng đặc), hai việc còn
+    lại để đấy (viền mờ). Đúng thông điệp kênh, và ba hình tròn vẫn đọc được ở
+    cỡ 48px, khác hẳn logo có chữ nhỏ đọc không ra.
+
+    Cùng họ với icon Sống Tốt: chung màu nhấn vàng #E9C46A, chung font, chung
+    kiểu đổ bóng mềm. Khác ở nền — xanh đá trầm thay cho xanh lá, để hai kênh
+    không bị nhầm nhau trên cùng một màn hình.
+  -->
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="38%" r="72%">
+      <stop offset="0%" stop-color="#33455A"/>
+      <stop offset="100%" stop-color="#1B2530"/>
+    </radialGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="10" stdDeviation="18" flood-color="#0A1119" flood-opacity="0.45"/>
+    </filter>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feDropShadow dx="0" dy="0" stdDeviation="26" flood-color="#E9C46A" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- Nền tròn (YouTube cắt tròn, nên mọi thứ nằm trong r=470) -->
+  <circle cx="540" cy="540" r="540" fill="url(#bg)"/>
+  <circle cx="540" cy="540" r="484" fill="none" stroke="#6E88A6" stroke-width="5" opacity="0.35"/>
+
+  <!--
+    BA VIỆC: một xong, hai để đấy.
+    Chấm cố tình to — avatar YouTube hiện ở ~48px trong phần bình luận, cỡ đó chỉ
+    còn ba hình tròn là đọc được, chữ thành vệt mờ. Nên hình phải gánh, chữ chỉ đỡ.
+  -->
+  <g filter="url(#soft)">
+    <!-- Việc đã làm -->
+    <circle cx="372" cy="446" r="82" fill="#E9C46A" filter="url(#glow)"/>
+    <!-- Hai việc còn lại — mờ, không phải hôm nay -->
+    <circle cx="540" cy="446" r="82" fill="none" stroke="#8FA6BF" stroke-width="13" opacity="0.32"/>
+    <circle cx="708" cy="446" r="82" fill="none" stroke="#8FA6BF" stroke-width="13" opacity="0.32"/>
+  </g>
+
+  <!-- Tên kênh. Không để tagline ở đây — cỡ đó không ai đọc nổi, để dành cho banner. -->
+  <text x="540" y="716" text-anchor="middle"
+        font-family="'Be Vietnam Pro','Montserrat','Segoe UI',Arial,sans-serif"
+        font-size="92" font-weight="800" fill="#F4F6F8" letter-spacing="1">One Small Thing</text>
+</svg>
