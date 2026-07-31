@@ -155,8 +155,18 @@ nghe ra giọng máy dạy học, mất hết cái ấm mà kênh cần. **Đổ
    Small things, said quietly. One video a day.
    Photos: Pexels.com
    ```
-4. **Đối tượng**: "Không, video này không dành cho trẻ em" *(bắt buộc trả lời)*
-5. **Hiển thị**: Công khai, hoặc lên lịch
+4. **Thẻ (tags)** — chỉ dùng thẻ theo **chủ đề bài**, cộng `one small thing` và
+   `gentle motivation`. **Không dùng thẻ học tiếng Anh** (`slow english`,
+   `english listening practice`…) — chốt 28/07, kênh không nhắm người học tiếng Anh nữa.
+5. **Đối tượng**: "Không, video này không dành cho trẻ em" *(bắt buộc trả lời)*
+6. **Danh mục**: **Con người và Blog — People & Blogs**. Ô này nằm cuối trang Chi tiết,
+   phải bấm "Hiện thêm" mới hiện ra, nên rất dễ quên. Cả hai kênh dùng chung một danh
+   mục, mọi video đều chọn giống nhau — đổi qua đổi lại làm nhoè hồ sơ chủ đề của kênh.
+7. **Hiển thị**: Công khai, hoặc lên lịch
+
+> Danh mục là **của từng video**, YouTube không có chỗ đặt một lần cho cả kênh. Nếu lỡ
+> chọn sai hàng loạt thì sửa được: Studio → Nội dung → tích chọn nhiều video → thanh
+> **Chỉnh sửa** → *Danh mục*. Sửa danh mục không ảnh hưởng lượt xem.
 
 ## Việc chưa làm
 

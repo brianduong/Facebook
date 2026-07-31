@@ -45,7 +45,7 @@ _(Chốt: logo Sống Tốt + "theo dõi để sống tốt mỗi ngày")_
 → File: `assets/templates/quotes/VD-006-quote.png`
 
 ## Ghi chú sản xuất
-- **Hình ảnh/B-roll:** Ngón tay cuộn mạng xã hội · người chạy bộ một mình trên đường vắng · lịch cũ · tay đánh dấu vào sổ.
+- **Hình ảnh/B-roll:** Người cuộn điện thoại trong bóng tối · lễ tốt nghiệp tung mũ · người chạy bộ một mình lúc sớm · đường vắng buổi sáng sớm · người viết sổ tay bên cửa sổ · bàn chân bước lên bậc thang · bình minh trên con đường dài
 - **Nhạc nền:** Nhịp đều, hơi mạnh hơn các video khác. Nguồn **được phép dùng thương mại**.
 - **Text on screen:** Ba câu hỏi ở phần 2 nên hiện dạng danh sách gạch đầu dòng, mỗi câu 3 giây.
 - **Giọng đọc:** Dứt khoát, tin cậy — video này cần chút chắc nịch, không mềm như VD-003.

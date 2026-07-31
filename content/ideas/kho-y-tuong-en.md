@@ -37,62 +37,72 @@ Lấy từ kho bên dưới, **rải đều năm trụ** để mỗi trụ đủ
 
 ## Kho ý tưởng
 
-Trạng thái: ⬜ ý tưởng · 🟡 đang viết · 🟢 có khối EN · ✅ đã đăng
+Trạng thái: ⬜ ý tưởng · 🟡 đang viết · 🟢 có khối EN · ✅ đã render
+
+**Cập nhật 27/07/2026:** hàng đợi sản xuất chốt đến **VD-030** (xem
+`kho-y-tuong.md` — thứ tự làm nằm ở đó; hồ sơ chi tiết: `y-tuong-VD-007-020.md`
+và `y-tuong-VD-021-030.md`). Các ý được xếp hàng đổi từ mã `EN-0XX` sang mã chung
+`VD-0XX`. Hết VD-030 là **đúng 6 bài mỗi trụ** — đủ dựng 5 video dài. Kho chờ chỉ
+còn EN-001 và ý "phone before bed" (đều trụ 1): đợt VD-031+ cần vòng nghĩ ý mới.
 
 ### Trụ 1 — Heavy days
 
 | Mã | Tiêu đề tiếng Anh (nháp) | Thông điệp | TT |
 |---|---|---|---|
-| VD-003 | On a heavy day, do one thing | Một việc xong là ngày đó không mất | 🟢 |
+| VD-003 | On a heavy day, do one thing | Một việc xong là ngày đó không mất | ✅ |
+| VD-008 | Staying up late to steal your day back | Thức khuya "trả thù" — đi ngủ đúng giờ là tử tế với chính mình | 🟡 |
+| VD-013 | The first ten minutes | Khó nhất là mười phút đầu, không phải cả việc | ⬜ |
+| VD-018 | Doing it badly still counts | Làm dở vẫn hơn không làm — bản hoàn hảo không tồn tại | ⬜ |
+| VD-025 | Lower the bar, keep the day | Thu việc nhỏ lại, đừng vứt cả ngày | ⬜ |
+| VD-029 | Rest you haven't earned yet | Nghỉ không phải phần thưởng phải đạt điểm mới được lĩnh | ⬜ |
 | EN-001 | The tired that sleep doesn't fix | Có loại mệt không phải do thiếu ngủ — do làm việc mình không tin | ⬜ |
-| EN-002 | Lower the standard, not the day | Hạ chuẩn một hôm không phải bỏ cuộc | ⬜ |
-| EN-003 | Doing it badly still counts | Làm dở vẫn hơn không làm — bản hoàn hảo không tồn tại | ⬜ |
-| EN-004 | The first ten minutes | Khó nhất là mười phút đầu, không phải cả việc | ⬜ |
-| EN-005 | Rest before you've earned it | Nghỉ không cần phải xứng đáng mới được nghỉ | ⬜ |
 
 ### Trụ 2 — Small kindness
 
 | Mã | Tiêu đề tiếng Anh (nháp) | Thông điệp | TT |
 |---|---|---|---|
-| VD-002 | The kindness you never saw land | Việc tốt nhỏ đi rất xa, mình không thấy được | ⬜ |
-| EN-006 | Be kind when it's inconvenient | Tử tế lúc tiện thì dễ; lúc bất tiện mới là tử tế | ⬜ |
-| EN-007 | The people who serve you have names | Nhìn thấy người khác là một dạng tử tế | ⬜ |
-| EN-008 | Do one good thing nobody knows about | Làm mà không cần ai biết | ⬜ |
-| EN-009 | Kindness is passed down, not invented | Người tử tế nhất là người từng được ai đó nhẫn nại | ⬜ |
-| EN-010 | Let someone help you | Nhận giúp đỡ cũng là một cách tử tế với người kia | ⬜ |
+| VD-002 | The kindness you never saw land | Việc tốt nhỏ đi rất xa, mình không thấy được | ✅ |
+| VD-007 | Kindness is passed down, not invented | Người tử tế nhất là người từng được ai đó nhẫn nại | 🟡 |
+| VD-011 | Do one good thing nobody knows about | Có một thứ chỉ xuất hiện khi không ai xem | 🟡 |
+| VD-012 | The people who serve you have names | Nhìn thấy người khác là một dạng tử tế | 🟡 |
+| VD-020 | Let someone help you | Nhận giúp đỡ cũng là một cách tử tế với người kia | ⬜ |
+| VD-021 | Be kind when it's inconvenient | Lúc bất tiện mới biết tử tế là của mình | ⬜ |
 
 ### Trụ 3 — What you already have
 
 | Mã | Tiêu đề tiếng Anh (nháp) | Thông điệp | TT |
 |---|---|---|---|
-| VD-001 | Start the day from what you have | Đừng mở ngày bằng danh sách những thứ còn thiếu | ⬜ |
-| EN-011 | The things that didn't go wrong today | Cái không hỏng thì mình không đếm — nhưng nó vẫn có | ⬜ |
-| EN-012 | Look up from the phone once | Ba mươi giây nhìn ra ngoài cửa sổ | ⬜ |
-| EN-013 | The version of you that wanted this | Có lúc mình từng mong đúng cái mình đang có | ⬜ |
-| EN-014 | A warm meal is not a small thing | Thứ tưởng hiển nhiên thì không hiển nhiên với ai đó | ⬜ |
-| EN-015 | Sit still for five minutes | Khoảng nghỉ không phải sự lười | ⬜ |
+| VD-001 | Start the day from what you have | Đừng mở ngày bằng danh sách những thứ còn thiếu | ✅ |
+| VD-014 | The things that didn't go wrong today | Cái không hỏng thì mình không đếm — nhưng nó vẫn có | ⬜ |
+| VD-017 | Sit still for five minutes | Khoảng nghỉ không phải sự lười | ⬜ |
+| VD-019 | The version of you that wanted this | Có lúc mình từng mong đúng cái mình đang có | ⬜ |
+| VD-023 | Someone made your dinner warm | Thứ hiển nhiên luôn có một người làm nó thành hiển nhiên | ⬜ |
+| VD-027 | Look up while you wait | Khoảng chờ là thời gian có sẵn — đừng rút điện thoại | ⬜ |
 
 ### Trụ 4 — The voice in your head
 
 | Mã | Tiêu đề tiếng Anh (nháp) | Thông điệp | TT |
 |---|---|---|---|
-| VD-006 | Stop racing people on a different road | Chỉ so với chính mình hôm qua | ⬜ |
-| EN-016 | You wouldn't say that to a friend | Nói với mình như nói với bạn thân | ⬜ |
-| EN-017 | Everyone's showing you their edited life | Cái mình thấy trên mạng đã qua cắt gọt | ⬜ |
-| EN-018 | Being behind is not the same as failing | Chậm hơn người khác không phải là hỏng | ⬜ |
-| EN-019 | You're allowed to change your mind | Đổi ý không phải là thất bại | ⬜ |
-| EN-020 | Learn to say "let me think about it" | Biết từ chối là giữ sức để giúp lâu dài | ⬜ |
+| VD-006 | Stop racing people on a different road | Chỉ so với chính mình hôm qua | ✅ |
+| VD-009 | Learn to say "let me think about it" | Biết từ chối là giữ sức để giúp lâu dài | 🟡 |
+| VD-015 | You wouldn't say that to a friend | Nói với mình như nói với bạn thân | ⬜ |
+| VD-022 | Being behind is not failing | Mốc "đúng tuổi phải…" chẳng ai ký cả | ⬜ |
+| VD-026 | You're allowed to change your mind | "Tiếc công" là tiếc thứ vốn không lấy lại được | ⬜ |
+| VD-030 | You post the edited version too | Mười tấm chụp một tấm đăng — của ai cũng vậy | ⬜ |
 
 ### Trụ 5 — Reaching people
 
 | Mã | Tiêu đề tiếng Anh (nháp) | Thông điệp | TT |
 |---|---|---|---|
-| VD-004 | Say thank you, then say why | "Cảm ơn vì…" mạnh hơn "cảm ơn" | ⬜ |
-| VD-005 | The message you keep not sending | Một tin nhắn cứu được một ngày | ⬜ |
-| EN-021 | Ask a second question | Hỏi thêm một câu là chỗ câu chuyện bắt đầu thật | ⬜ |
-| EN-022 | Show up before you're needed | Có mặt lúc chưa ai gọi | ⬜ |
-| EN-023 | Tell people what they did right | Khen cụ thể, không khen chung chung | ⬜ |
-| EN-024 | Forgiving isn't for them | Bỏ xuống để mình đi tiếp | ⬜ |
+| VD-004 | Say thank you, then say why | "Cảm ơn vì…" mạnh hơn "cảm ơn" | ✅ |
+| VD-005 | The message you keep not sending | Một tin nhắn cứu được một ngày | ✅ |
+| VD-010 | Forgiving isn't for them | Bỏ xuống để mình đi tiếp | 🟡 |
+| VD-016 | Ask a second question | Hỏi thêm một câu là chỗ câu chuyện bắt đầu thật | ⬜ |
+| VD-024 | Show up before you're asked | Chọn một việc nhỏ rồi làm, thay vì hỏi "cần gì không" | ⬜ |
+| VD-028 | Say what they did right | Lời khen cụ thể chứng minh mình đã thật sự nhìn | ⬜ |
+
+> 🟡 = VD-007 → VD-012 có lời đọc nháp tiếng Việt từ pipeline cũ (chưa duyệt, chưa có
+> khối EN). Khi làm sẽ viết lại thành file song ngữ như VD-004 → VD-006.
 
 ---
 

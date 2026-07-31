@@ -1,39 +1,174 @@
 # STATUS — Ghi chú tiến độ
 
-_Cập nhật: 2026-07-27_
+_Cập nhật: 2026-07-31_
 
 ## 📍 Dừng ở đâu — sáng mai làm tiếp từ đây
 
 | Việc | Trạng thái |
 |---|---|
 | VD-001 · VD-002 · VD-003 | ✅ render xong cả hai thứ tiếng · **đã đăng YouTube cả hai kênh** |
-| **VD-004** · Câu cảm ơn có chữ vì | ✅ render xong — VI 72s · EN 69s · chưa đăng · **chưa có chữ đăng bài** |
-| **VD-005** · Tin nhắn lâu không hỏi thăm | ✅ render xong — VI 69s · EN 77s · chưa đăng · **chưa có chữ đăng bài** |
-| **VD-006** · So sánh với chính mình | 🟡 **chữ xong** (song ngữ 12 khối) · **chưa có ảnh, chưa render** |
+| **VD-004** · Câu cảm ơn có chữ vì | ✅ render xong — VI 72s · EN 69s · ✅ caption hai kênh · chưa đăng |
+| **VD-005** · Tin nhắn lâu không hỏi thăm | ✅ render xong — VI 69s · EN 77s · ✅ caption hai kênh · chưa đăng |
+| **VD-006** · So sánh với chính mình | ✅ **render xong 27/07** — VI 67s · EN 70s · ✅ caption hai kênh · chưa đăng |
+| **VD-007** · Tử tế được truyền tay | ✅ **render xong 30/07** — VI 78s · EN 85s · ✅ caption hai kênh · chưa đăng |
+| **VD-008** · Thức khuya trả thù | ✅ **render xong 31/07** — VI 81s · EN 86s · ✅ caption hai kênh · chưa đăng |
+| **VD-009** · Để mình nghĩ đã | ✅ **render xong 31/07** — VI 72s · EN 79s · ✅ caption hai kênh · chưa đăng |
+| **VD-010** · Tha thứ không phải cho người kia | ✅ **render xong 31/07** — VI 75s · EN 77s · ✅ caption hai kênh · chưa đăng |
+| **VD-011** · Một việc tốt không ai biết | ✅ **render xong 31/07** — VI 67s · EN 72s · ✅ caption hai kênh · chưa đăng |
+| **VD-012** · Người phục vụ mình cũng có tên | ✅ **render xong 31/07** — VI 74s · EN 82s · ✅ caption hai kênh · chưa đăng |
+
+⚠️ **Đang tồn 9 bài đã render mà chưa đăng (VD-004 → VD-012) — 18 video.** Kho càng dày
+thì cái thiếu càng rõ: **vẫn chưa có một số liệu nào** để biết nên đi hướng nào. Ba video
+đã đăng từ 27/07 đến giờ chưa đo. **Việc đáng làm nhất bây giờ không phải làm thêm video,
+mà là đăng lần lượt số đang tồn rồi ghi số vào `schedule/calendar.md`.**
+
+**Hết hàng có nháp cũ.** VD-011 và VD-012 là hai bài cuối còn nháp từ pipeline cũ. Từ
+**VD-013 trở đi chỉ có hồ sơ ý tưởng, chưa có chữ nào** — mỗi bài sẽ phải viết mới hoàn
+toàn từ đầu.
+
+### Ba bài mới — làm ngày 31/07
+
+Cả ba đi trọn quy trình: hồ sơ ý tưởng → file song ngữ 13 khối → rút lời đọc hai thứ
+tiếng → chấm ảnh tay từ bảng ứng viên → render VI + EN → caption hai kênh.
+
+| Mã | Trụ | Chốt bài | CTA |
+|---|---|---|---|
+| VD-008 | 1 · Heavy days | Đi ngủ là việc tử tế đầu tiên làm cho mình của ngày mai | Đặt **báo thức ngược**, thả chữ "đặt rồi" |
+| VD-009 | 4 · The voice in your head | "Để mình nghĩ đã, tối nay mình trả lời nhé" | Chép câu đó lại, dùng thử rồi quay lại kể |
+| VD-010 | 5 · Reaching people | Cái nặng mấy năm nay không phải người ta — là cái mình vác | Viết một dòng cho riêng mình, thả chữ "rồi" |
+
+- **Ba nháp cũ chỉ dùng làm sườn, đã viết lại hẳn** — lý do từng chỗ ghi cuối mỗi file
+  `song-ngu/`. Đáng chú ý: nháp VD-008 xưng **"em"** ở CTA (trái quy ước `bạn`/`mình`) và
+  dùng hành động trùng ý dự trữ; nháp VD-010 chốt bằng *"cho nhẹ người mà đi"* — đúng lời
+  hứa mà vòng chấm đã cấm, nên bỏ và thay bằng hai khối "không nhẹ ngay đâu".
+- **VD-009 khối 7 đứng riêng một thẻ chữ** — câu chép được hiện to giữa màn hình, đúng
+  công thức đã ăn ở VD-005. Đã kiểm bằng `--chi-do-dai`: nó là thẻ số 9, không dính khối nào.
+- **Đổi một ảnh sau khi soi khung hình:** ảnh nền số 4 của VD-009 lúc đầu là người đang
+  **hút thuốc** ngồi bên cửa sổ — không hợp kênh, đã thay bằng ảnh tay cầm điện thoại
+  trên bàn làm việc rồi render lại cả hai bản.
+- ⚠️ **Chữ chưa ai đọc lại** — cả ba để trạng thái duyệt 🤖, rút lời đọc bằng `--cu-lam`.
+- **Nhắc trong caption:** VD-008 nên **đăng buổi tối 21–22h** (CTA đặt báo thức làm được
+  ngay tại chỗ); VD-009 có **CTA độ trễ** nên phải mở lại bài sau 3–4 ngày để trả lời;
+  VD-010 **đừng đăng liền sau VD-009**, xen một bài trụ 2 vào giữa.
+- Chỗ lệch cũ vẫn còn: ảnh rải **đều** trên các thẻ chữ, không gắn theo nội dung từng khối.
+  Lần này rơi trúng khá nhiều (VD-010 khối "không phải quay lại làm bạn" đúng lúc ảnh cái
+  ghế trống bên cửa sổ) nhưng đó là may, không phải do máy hiểu.
+
+### Hai bài nữa — cũng làm ngày 31/07
+
+| Mã | Trụ | Chốt bài | CTA |
+|---|---|---|---|
+| VD-011 | 2 · Small kindness | Chỗ khó không nằm ở lúc làm — nằm ở lúc mình thèm kể | **Đảo: cấm kể ở bình luận**, giữ cho riêng mình |
+| VD-012 | 2 · Small kindness | Cảm ơn thì có nói, mà mắt vẫn ở trên điện thoại | Xin **người đứng bên kia quầy** kể chuyện của họ |
+
+- ⚠️ **VD-012 phải lật góc vì nháp cũ trùng VD-004.** Nháp dựng cả bài quanh *"một lời khen
+  cụ thể"* (*"ly này pha đúng ý em"*), mà VD-004 đã là **"cảm ơn có chữ vì"** — cùng đúng
+  một cơ chế, và VD-004 còn có sẵn câu *"nói xong thì để ý mặt người ta"*. Hai bài sẽ như
+  một bài làm hai lần. Bản mới **bỏ hẳn phần lời nói, dồn vào ánh mắt**: cái VD-004 không
+  có là *người phục vụ là người lạ* và chỗ hỏng nằm ở chỗ mắt vẫn ở trên điện thoại.
+  **Nếu sửa chữ về sau, giữ nguyên nguyên tắc này** — đã ghi trong ghi chú sản xuất.
+- **VD-011 sửa lỗi "chúng ta"** ở đoạn hai của nháp (*"việc tốt của chúng ta"*), trái
+  `docs/giong-van-tieng-viet.md`. Thêm hai khối 10 · 11 về **cơn thèm kể sau khi làm xong**
+  — đó mới là chỗ bài này có thật; nháp chỉ bảo "rồi không kể với ai hết".
+- ⚠️ **VD-011 sẽ ít bình luận hơn hẳn mọi bài khác, và đó là chủ ý** — CTA cấm kể. Đo bài
+  này bằng **lượt lưu** và **tỉ lệ xem hết**, đừng đo bằng bình luận, và **đừng tự bình
+  luận mở hàng** (mở hàng là phá đúng cái CTA).
+- **Xếp lịch:** VD-011 và VD-012 cùng trụ 2 → hồ sơ ý tưởng dặn **đảo VD-012 với VD-013**
+  để hai bài không liền nhau. Tiện thể tách luôn hai ảnh nền máy quẹt thẻ (VD-011 ảnh 5 và
+  VD-012 ảnh 2) khỏi đứng cạnh nhau.
+- ⚠️ **Chữ chưa ai đọc lại** — cả hai để trạng thái duyệt 🤖, rút lời đọc bằng `--cu-lam`.
+
+### VD-007 — làm ngày 30/07
+
+- **Render cả hai bản:** `VD-007-reels.mp4` (VI · 78s · −16,1 LUFS) và
+  `VD-007-reels-en.mp4` (EN · 85s · −15,4 LUFS) — 1080×1920 · 30fps · đều trên 60s.
+- **Chữ viết mới hoàn toàn, 13 khối** (`song-ngu/VD-007-song-ngu.md`). Nháp cũ
+  `loi-doc/VD-007-loi-doc.txt` chỉ dùng làm sườn ý — nháp nhét cả ba cảnh vào một đoạn
+  và mở bài bằng "Bạn có bao giờ thắc mắc…", kiểu câu của bài viết chứ không phải của ba
+  giây đầu. **File nháp cũ đã bị ghi đè** bằng bản rút từ file song ngữ.
+- **Ảnh:** 7 ảnh Pexels chấm tay — phòng có người ngồi làm việc → lớp học → hai người
+  cùng một cái máy → hai bóng người trong khung cửa đêm → hai bàn tay đưa nhau →
+  người trẻ ngồi bên cửa sổ → căn phòng nắng chiều.
+- **Caption hai kênh:** `content/captions/VD-007-caption.md` và `VD-007-caption-en.md`.
+- ⚠️ **Chữ chưa ai đọc lại** — trạng thái duyệt để 🤖 (em tự duyệt), rút lời đọc bằng
+  `--cu-lam`. Anh đọc lại phần "Từng khối" trong file song ngữ, chỗ nào chưa ưng thì sửa,
+  em render lại.
+- Chỗ lệch cũ vẫn còn: ảnh rải **đều** trên các thẻ chữ nên "Chỉ ngồi đó tới khuya" đang
+  chạy trên ảnh văn phòng, còn ảnh khung cửa đêm thì đến sau một nhịp.
 
 ### Sáng mai làm theo thứ tự này
 
-1. **Xem 4 video mới** — VD-004 và VD-005, mỗi bài hai thứ tiếng. Cả hai bài đều được
-   **viết lại khối VI** vì bản cũ dùng "chúng ta", trái `docs/giong-van-tieng-viet.md`,
-   và đều được **thêm một khối cảnh** (bản cũ toàn lời khuyên, không có khoảnh khắc nào
-   để bám). Lý do từng chỗ sửa ghi ở cuối mỗi file `song-ngu/`.
-2. **Làm nốt VD-006** — chữ đã xong (`song-ngu/VD-006-song-ngu.md`), còn thiếu ảnh và
-   render:
-   ```bash
-   python3 scripts/tach-loi-doc.py VD-006 --dong-bo
-   python3 scripts/tach-loi-doc.py VD-006 --cu-lam
-   python3 scripts/tach-loi-doc.py VD-006 --en --cu-lam
-   python3 scripts/tai-anh-pexels.py VD-006 --chon 6
-   open video/thu-anh/VD-006-chon.png
-   python3 scripts/tai-anh-pexels.py VD-006 --lay <số đã chấm>
-   .venv-tts/bin/python scripts/render-video-v2.py VD-006 --nhac assets/music/nen-am-ap.m4a
-   .venv-tts/bin/python scripts/render-video-v2.py VD-006 --en --nhac assets/music/nen-am-ap.m4a
-   ```
-   ⚠️ Nhớ sửa dòng B-roll trong `content/scripts/VD-006-so-sanh-voi-chinh-minh.md` trước
-   khi tải ảnh — bài này chưa cập nhật từ khoá như VD-004 và VD-005.
-3. **Viết chữ đăng bài** cho VD-004, VD-005, VD-006 — cả ba đều chưa có, cả hai thứ tiếng.
-4. **Sau 24h: thêm lại link Facebook** vào mô tả 3 video kênh Sống Tốt (xem mục dưới).
-5. **Đo số 48 giờ** của sáu video đã đăng, ghi vào `schedule/calendar.md`.
+0. **Đăng đi đã.** Chín bài đang tồn, không bài nào có số. Đăng VD-004 → VD-012 lần lượt
+   (VD-008 để buổi tối · VD-010 đừng liền sau VD-009 · VD-012 đảo với VD-013), rồi đo 48h.
+   Làm thêm video mới bây giờ chỉ làm kho dày thêm chứ không trả lời được câu "hướng nào chạy".
+1. **Xem 18 video mới** — VD-004 → VD-012, mỗi bài hai thứ tiếng. VD-004 và
+   VD-005 đều được **viết lại khối VI** vì bản cũ dùng "chúng ta", trái
+   `docs/giong-van-tieng-viet.md`, và đều được **thêm một khối cảnh** (bản cũ toàn lời
+   khuyên, không có khoảnh khắc nào để bám). Lý do từng chỗ sửa ghi ở cuối mỗi file
+   `song-ngu/`.
+2. **Sau 24h: thêm lại link Facebook** vào mô tả 3 video kênh Sống Tốt (xem mục dưới).
+3. **Đo số 48 giờ** của sáu video đã đăng, ghi vào `schedule/calendar.md`.
+
+### Chốt 28/07 — danh mục YouTube và thẻ tiếng Anh
+
+**Danh mục: Con người và Blog (People & Blogs)** — cả hai kênh, mọi video. Ô này nằm
+cuối trang Chi tiết, phải bấm **"Hiện thêm"** mới hiện ra nên rất dễ bỏ sót. Danh mục
+là của **từng video**, không có chỗ đặt một lần cho cả kênh; sửa hàng loạt được ở
+Studio → Nội dung → tích nhiều video → **Chỉnh sửa** → *Danh mục*.
+
+**Bỏ thẻ học tiếng Anh** (`slow english` · `easy english listening` ·
+`english listening practice`) — kênh One Small Thing không nhắm người học tiếng Anh nữa.
+Đã gỡ khỏi caption VD-004 · VD-005 · VD-006 và ghi luật vào `docs/ke-hoach-kenh-tieng-anh.md`
+(mục "Đăng mỗi Short"). **Ba video đã đăng (VD-001 → VD-003) để nguyên**, không sửa lại.
+
+⚠️ **Còn hở:** bốn tài liệu định hướng kênh tiếng Anh vẫn viết trên nền "nhắm người Việt
+và người châu Á đang học tiếng Anh" (`docs/ke-hoach-kenh-tieng-anh.md` mục "Kênh này nhắm
+ai", `docs/dinh-huong-one-small-thing.md`, `content/ideas/kho-y-tuong-en.md`, mục kênh thứ
+hai cuối file này). Chưa sửa vì cần anh nói kênh giờ nhắm ai. Để nguyên thì ý tưởng và
+chữ của các video sau vẫn bị kéo về hướng cũ.
+
+### Hàng đợi nối thêm VD-021 → VD-030 (27/07) — tròn 6 bài mỗi trụ
+
+Hồ sơ + vòng chấm: `content/ideas/y-tuong-VD-021-030.md`. 10/12 ý dự trữ dùng được;
+2 ý loại vì trùng chủ đề ngủ với VD-008. Ba ý phải lật góc mới qua cửa "không trùng"
+(VD-023 món ăn→người nấu · VD-030 nhìn người ta→nhìn mình · VD-022 kẻ ranh giới với
+VD-006). **Hết VD-030 = đúng 6 bài mỗi trụ → đủ dựng 5 video dài 16:9.** Kho dự trữ
+chỉ còn 2 ý: đợt VD-031+ phải nghĩ vòng mới, nguồn lấy từ bình luận người xem + số
+liệu 48h, và tránh hai cụm đã chật (điện thoại · nới-tay-với-mình).
+
+### Hàng đợi ý tưởng đã chốt đến VD-020 (27/07) — đã qua vòng chấm
+
+Bảng thứ tự sản xuất: `content/ideas/kho-y-tuong.md` (mục "Xếp hàng làm tiếp").
+**Hồ sơ chi tiết 14 ý — mỗi ý có thông điệp, hook hai thứ tiếng, cảnh cụ thể, CTA —
+và bảng chấm 5 cửa: `content/ideas/y-tuong-VD-007-020.md`.** Kết quả chấm: 14/14 giữ,
+3 ý sửa trong lúc chấm (VD-007 đổi CTA vì trùng, VD-010 thêm neo cụ thể, VD-017 né từ
+ngữ thiền); lịch đăng đảo VD-012 ↔ VD-013 cho hai bài trụ 2 khỏi liền nhau.
+
+- **VD-007 → VD-012** — sáu bài đã có lời đọc nháp từ pipeline cũ (`loi-doc/VD-00X-loi-doc.txt`).
+  Khi làm: lấy nháp làm sườn ý, viết lại thành file song ngữ 12–13 khối, **đừng render
+  thẳng từ nháp** — chưa duyệt và có chỗ dùng "chúng ta" (VD-011).
+- **VD-013 → VD-020** — tám ý mới chọn từ kho chung, rải đều năm trụ: mười phút đầu tiên ·
+  những thứ hôm nay không hỏng · nói với mình như nói với bạn thân · hỏi thêm một câu ·
+  ngồi im năm phút · làm dở vẫn tính · mình của ngày trước từng mong điều này · để người
+  khác giúp mình.
+- Kho EN (`kho-y-tuong-en.md`) đã đổi mã các ý xếp hàng sang `VD-0XX` dùng chung; mã
+  `EN-0XX` còn lại là kho chờ cho VD-021 trở đi.
+
+### VD-006 — làm xong đêm 27/07
+
+- **Render cả hai bản:** `VD-006-reels.mp4` (VI · 67s · −16,0 LUFS) và
+  `VD-006-reels-en.mp4` (EN · 70s · −15,7 LUFS) — đều 1080×1920 · 30fps · trên 60s.
+- **Thêm khối 5 "Cuộc đua không có thật"** vào file song ngữ (12 → 13 khối): bản 12
+  khối ước chỉ ~60 giây tiếng Việt, đúng mép mốc thưởng. Lý do ghi cuối file song ngữ.
+  ⚠️ Khối này em tự viết, anh chưa đọc.
+- **Ảnh:** 7 ảnh Pexels chấm tay theo mạch bài — cuộn điện thoại trong tối → ảnh tốt
+  nghiệp (đoạn kết người ta khoe) → người chạy giữa phố → cửa sổ có người ngồi ngẫm →
+  khoảng lặng bên cửa sổ → đường quê một người chạy → đường sáng bình minh.
+- **Caption hai kênh:** `content/captions/VD-006-caption.md` (Facebook + YouTube Shorts)
+  và `VD-006-caption-en.md` — viết lại theo kịch bản 13 khối, bản caption cũ dùng chữ
+  của dàn ý 1:1 hồi 25/07.
+- Dòng B-roll trong `content/scripts/VD-006-so-sanh-voi-chinh-minh.md` đã cập nhật
+  từ khoá theo kiểu VD-004/VD-005.
 
 **Còn nợ:** chưa đăng Facebook Page · chưa chốt giọng tiếng Anh (đang tạm
 `en_US-ryan-high`, còn 3 giọng chờ anh nghe ở `video/thu-giong-en/`).

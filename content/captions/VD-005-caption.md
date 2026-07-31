@@ -73,6 +73,8 @@ sống tốt, tình bạn, bạn cũ, mất liên lạc, hỏi thăm, nhắn tin
 - Ảnh bìa/thumbnail: `assets/templates/quotes/VD-005-quote.png`
 - **YouTube — đối tượng:** chọn "Không, video này không dành cho trẻ em" — bắt buộc
   trả lời, chọn sai là tắt mất bình luận.
+- **YouTube — danh mục: Con người và Blog (People & Blogs).** Nằm cuối trang Chi tiết,
+  phải bấm "Hiện thêm" mới hiện ra. Mọi video của cả hai kênh dùng chung danh mục này.
 - **Dòng `Ảnh: Pexels.com`** trong mô tả YouTube phải giữ — điều khoản API Pexels bắt
   buộc ghi nguồn.
 - **Không tự thêm nhạc của YouTube.** Video đã có nhạc nền gốc `nen-am-ap` rồi.

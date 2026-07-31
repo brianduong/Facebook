@@ -29,7 +29,7 @@ Photos: Pexels.com
 ## 3 · Thẻ (tags) — copy khối này
 
 ```
-one small thing, reconnect with old friends, text an old friend, losing touch, friendship, gentle motivation, slow english, easy english listening, english listening practice, calm
+one small thing, reconnect with old friends, text an old friend, losing touch, friendship, gentle motivation, calm
 ```
 
 ---
@@ -40,6 +40,8 @@ one small thing, reconnect with old friends, text an old friend, losing touch, f
   ngắt giữa câu thì trên điện thoại nhìn lởm chởm.
 - **Đối tượng:** chọn "Không, video này không dành cho trẻ em" — bắt buộc trả lời, chọn
   sai là tắt mất bình luận.
+- **Danh mục: Con người và Blog (People & Blogs).** Nằm cuối trang Chi tiết, phải bấm
+  "Hiện thêm" mới hiện ra. Mọi video của cả hai kênh dùng chung danh mục này.
 - **Dòng `Photos: Pexels.com`** phải giữ — điều khoản API Pexels bắt buộc ghi nguồn.
 - **Không tự thêm nhạc của YouTube.** Video đã có nhạc nền gốc `nen-am-ap` rồi.
 - Đăng xong, tự bình luận một chữ "sent" từ tài khoản kênh rồi ghim lên đầu — mồi cho
