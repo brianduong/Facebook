@@ -18,13 +18,32 @@ Mỗi bài đi lên **ba nơi**: **YouTube tiếng Việt** (`@songtotdaily`) ·
 | — | VD-005 | Tin nhắn lâu không hỏi thăm | ✅ | ✅ | ✅ |
 | — | VD-006 | So sánh với chính mình | ✅ | ✅ | ✅ |
 | **31/07** | **VD-008** | **Thức khuya trả thù** | ✅ | ✅ | ✅ |
-| **kế tiếp** | **VD-007** | **Không ai tự nhiên tử tế cả** | ❗ | ❗ | ❓ |
-| sau đó | VD-009 | Để mình nghĩ đã | 🟢 | 🟢 | 🟢 |
+| **02/08** | **VD-007** | **Không ai tự nhiên tử tế cả** | 🕒 | 🕒 | ❓ |
+| 03/08 | VD-009 | Để mình nghĩ đã | 🟢 | 🟢 | 🟢 |
 | sau đó | VD-011 | Một việc tốt không ai biết | 🟢 | 🟢 | 🟢 |
 | sau đó | VD-010 | Tha thứ không phải cho người kia | 🟢 | 🟢 | 🟢 |
 | sau đó | VD-012 | Người phục vụ mình cũng có tên | 🟢 | 🟢 | 🟢 |
 
-**Chú thích:** ⬜ Chưa render · 📝 Có lời đọc, chưa có caption/ảnh quote · 🟡 Đang làm · 🟢 Sẵn sàng / đang đăng · ✅ Đã đăng · ❗ Bị bỏ sót · ❓ Chưa kiểm
+**Chú thích:** ⬜ Chưa render · 📝 Có lời đọc, chưa có caption/ảnh quote · 🟡 Đang làm · 🟢 Sẵn sàng / đang đăng · 🕒 Đã tải lên, hẹn giờ · ✅ Đã đăng · ❗ Bị bỏ sót · ❓ Chưa kiểm
+
+## Nguyên tắc đăng (anh chốt 02/08)
+
+- **Nhiều nhất 1 video/ngày** mỗi kênh
+- **Công khai lúc 19:30** giờ Việt Nam
+- Đăng trước giờ đó thì **phải đặt lịch**, đừng để tự lên ngay
+
+Đang tồn 4 bài sau VD-007 → rải mỗi ngày một bài, hết ngày 06/08.
+
+### VD-007 — tải lên 02/08 lúc 17:4x, hẹn 19:30
+
+| Kênh | Link | Chế độ |
+|---|---|---|
+| YouTube tiếng Anh | https://youtu.be/QaDH7_4ZaFA | riêng tư · hẹn 19:30 |
+| YouTube tiếng Việt | https://youtu.be/Wfsv45pH9z0 | riêng tư · hẹn 19:30 |
+
+YouTube **đã nhận lịch** (`publishAt` lưu đúng `12:30Z` = 19:30 giờ Việt Nam) — trái với
+lo ngại ban đầu là project chưa qua audit sẽ bị bỏ qua lịch. **Nhưng nhận lịch chưa chắc
+đã tự công khai** — phải xem lúc 19:30 mới biết chắc. Không lên thì vào Studio bấm tay.
 
 ❗ **VD-007 bị bỏ sót — phát hiện 02/08.** Nối API vào hai kênh rồi đọc danh sách video:
 mỗi kênh chỉ có 7 video, là VD-001 → VD-006 rồi nhảy thẳng sang VD-008. VD-007 render
