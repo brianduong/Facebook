@@ -38,8 +38,8 @@ node_modules/
 # Chìa khoá đăng YouTube — KHÔNG BAO GIỜ đưa lên GitHub.
 # Ai có mấy file này là đăng/xoá được video trên kênh.
 # Dựng lại: xem docs/huong-dan-dang-youtube.md
-.google-client-secret.json
-.youtube-token-*.json
+secrets/
+
 
 # Model giọng đọc tiếng Anh Piper — ~300 MB, tải lại bằng:
 #   .venv-tts/bin/python -m piper.download_voices --data-dir .piper-voices <tên giọng>

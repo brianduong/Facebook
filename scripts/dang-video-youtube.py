@@ -33,8 +33,16 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 
-# Xin đúng một quyền: tải video lên. Không xin quyền đọc/xoá cho đỡ rủi ro.
-PHAM_VI = ["https://www.googleapis.com/auth/youtube.upload"]
+# Chỉ xin quyền tải lên và quyền đọc. Không xin `force-ssl` vì quyền đó kèm cả xoá
+# video — mình không cần, mà lỡ hỏng thì mất bài.
+# Quyền đọc để `kiem-tra` in được tên kênh đang nối: hai kênh nằm chung một tài khoản
+# Google nên đây là chốt chặn duy nhất phát hiện xin quyền nhầm kênh.
+PHAM_VI = [
+    "https://www.googleapis.com/auth/youtube.upload",
+    "https://www.googleapis.com/auth/youtube.readonly",
+]
+
+THU_MUC_BI_MAT = "secrets"
 
 # Danh mục "Con người và Blog" (People & Blogs) — đã chốt cho cả hai kênh, mọi video.
 DANH_MUC_NGUOI_VA_BLOG = "22"
@@ -45,7 +53,7 @@ KENH = {
         "handle": "@onesmallthingdaily",
         "caption": "{ma}-caption-en.md",
         "video": "{ma}-reels-en.mp4",
-        "token": ".youtube-token-en.json",
+        "token": "youtube-token-en.json",
         "ngon_ngu": "en",
     },
     "vi": {
@@ -53,7 +61,7 @@ KENH = {
         "handle": "@songtotdaily",
         "caption": "{ma}-caption.md",
         "video": "{ma}-reels.mp4",
-        "token": ".youtube-token-vi.json",
+        "token": "youtube-token-vi.json",
         "ngon_ngu": "vi",
     },
 }
@@ -85,8 +93,9 @@ def lay_dich_vu(ma_kenh: str, cho_dang_nhap: bool = False):
     except ImportError as loi:
         _thieu_thu_vien(loi)
 
-    f_token = REPO / KENH[ma_kenh]["token"]
-    f_secret = REPO / ".google-client-secret.json"
+    thu_muc = REPO / THU_MUC_BI_MAT
+    f_token = thu_muc / KENH[ma_kenh]["token"]
+    f_secret = thu_muc / "youtube-client.json"
     quyen = None
 
     if f_token.exists():
@@ -111,17 +120,18 @@ def lay_dich_vu(ma_kenh: str, cho_dang_nhap: bool = False):
             )
         if not f_secret.exists():
             sys.exit(
-                "❌ Không thấy file .google-client-secret.json ở gốc repo.\n"
-                "   Đây là file Google Cloud cho tải về khi tạo OAuth client.\n"
+                f"❌ Không thấy {THU_MUC_BI_MAT}/youtube-client.json\n"
+                "   Đây là file Google Cloud cho tải về khi tạo OAuth client (Desktop app).\n"
                 "   Các bước lấy: docs/huong-dan-dang-youtube.md (mục A)"
             )
         luong = InstalledAppFlow.from_client_secrets_file(str(f_secret), PHAM_VI)
         print(f"🌐 Đang mở trình duyệt để xin quyền cho: {KENH[ma_kenh]['ten']}")
         print(f"   ⚠️ Nhớ chọn đúng tài khoản đang quản lý kênh {KENH[ma_kenh]['handle']}")
         quyen = luong.run_local_server(port=0, prompt="consent")
+        thu_muc.mkdir(mode=0o700, exist_ok=True)
         f_token.write_text(quyen.to_json(), encoding="utf-8")
         f_token.chmod(0o600)
-        print(f"✅ Đã lưu quyền vào {f_token.name} (file này không lên GitHub)")
+        print(f"✅ Đã lưu quyền vào {THU_MUC_BI_MAT}/{f_token.name} (không lên GitHub)")
 
     return build("youtube", "v3", credentials=quyen, cache_discovery=False)
 

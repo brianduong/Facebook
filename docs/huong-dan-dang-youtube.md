@@ -70,16 +70,16 @@ vẫn hiện màn hình cảnh báo — mục C nói cách đi qua.
 3. **Application type**: chọn **Desktop app** — ⚠️ chọn nhầm *Web application* là hỏng, script chạy trên máy
 4. **Name**: `May cua Brian` → **Create**
 5. Hộp thoại hiện ra → bấm **Download JSON**
-6. Đổi tên file vừa tải thành **`.google-client-secret.json`** rồi để vào **gốc repo**
-   (`/Users/mac/Miganet/OneSmallThing/`)
+6. Đổi tên file vừa tải thành **`youtube-client.json`** rồi để vào thư mục
+   **`secrets/`** trong repo — giống hệt cách dự án DailyConversation đang để
 
 ```bash
-# Chép từ Downloads vào repo, đổi tên luôn — sửa tên file cho khớp cái vừa tải
-mv ~/Downloads/client_secret_*.json /Users/mac/Miganet/OneSmallThing/.google-client-secret.json
+# Chép từ Downloads vào repo, đổi tên luôn
+mv ~/Downloads/client_secret_*.json /Users/mac/Miganet/OneSmallThing/secrets/youtube-client.json
 ```
 
-🔒 File này đã nằm trong `.gitignore`, không lên GitHub. **Ai có nó là đăng và xoá được
-video trên kênh** — đừng gửi qua chat hay email.
+🔒 Cả thư mục `secrets/` nằm trong `.gitignore`, không lên GitHub. **Ai có file này là đăng
+được video lên kênh** — đừng gửi qua chat hay email, kể cả gửi cho em.
 
 ---
 
@@ -128,7 +128,7 @@ Nó in ra tên kênh đang nối và tên kênh mong đợi — **hai dòng ph�
 xoá chìa rồi làm lại:
 
 ```bash
-rm .youtube-token-en.json
+rm secrets/youtube-token-en.json
 .venv-dang/bin/python scripts/dang-video-youtube.py xin-quyen --kenh en
 ```
 
@@ -218,7 +218,7 @@ Hạn mức reset lúc 0h giờ Thái Bình Dương, tức khoảng **14–15h g
 | `Thiếu thư viện Google` | Chạy bằng `python3` thay vì `.venv-dang/bin/python` | Chạy lại đúng lệnh trong mục D |
 | `Chưa có quyền cho kênh…` | Chưa xin quyền, hoặc quyền hết hạn | Chạy lại `xin-quyen` |
 | Tuần trước chạy được, giờ đòi xin lại | Màn hình đồng ý vẫn ở **Testing** → Google thu hồi sau 7 ngày | Làm mục **A3**, chuyển sang In production |
-| `kiem-tra` in ra tên kênh khác | Lúc xin quyền chọn nhầm tài khoản hoặc nhầm kênh | `rm .youtube-token-<kênh>.json` rồi xin lại |
+| `kiem-tra` in ra tên kênh khác | Lúc xin quyền chọn nhầm tài khoản hoặc nhầm kênh | `rm secrets/youtube-token-<kênh>.json` rồi xin lại |
 | Đăng xong video vẫn riêng tư | Đúng như dự kiến — project chưa qua audit | Vào Studio bấm công khai, hoặc làm mục E |
 | `Hết hạn mức API trong ngày` | Quá 6 lượt đăng trong ngày | Đợi tới ~14–15h giờ Việt Nam |
 | `không có mục '# Đăng YouTube Shorts'` | File caption đời cũ (VD-001 → VD-003) khuôn khác | Sửa file caption theo khuôn VD-004 trở đi |
