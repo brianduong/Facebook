@@ -3,7 +3,7 @@
 - **Mã số:** VD-005
 - **File video:** `video/exports/VD-005-reels.mp4` · 1080×1920 · 69 giây
 - **Ngày đăng dự kiến:** 2026-08-11 (thứ Ba, 20:00)
-- **Trạng thái:** ⬜ Facebook · ⬜ YouTube
+- **Trạng thái:** ✅ Đã đăng đủ ba nơi — YouTube tiếng Việt · YouTube tiếng Anh · Facebook
 
 Mỗi khối dưới đây copy nguyên khối, đừng ngắt dòng giữa câu.
 

@@ -3,7 +3,7 @@
 - **Mã số:** VD-004
 - **File video:** `video/exports/VD-004-reels.mp4` · 1080×1920 · 72 giây
 - **Ngày đăng dự kiến:** 2026-08-07 (thứ Sáu, 20:00)
-- **Trạng thái:** ⬜ Facebook · ⬜ YouTube
+- **Trạng thái:** ✅ Đã đăng đủ ba nơi — YouTube tiếng Việt · YouTube tiếng Anh · Facebook
 
 Mỗi khối dưới đây copy nguyên khối, đừng ngắt dòng giữa câu.
 

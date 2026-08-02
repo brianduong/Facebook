@@ -3,7 +3,7 @@
 - **Mã số:** VD-007
 - **File video:** `video/exports/VD-007-reels.mp4` · 1080×1920 · 78 giây
 - **Ngày đăng dự kiến:** _(xếp sau VD-004, VD-005, VD-006)_
-- **Trạng thái:** ⬜ Facebook · ⬜ YouTube
+- **Trạng thái:** ✅ Đã đăng đủ ba nơi — YouTube tiếng Việt · YouTube tiếng Anh · Facebook
 
 Mỗi khối dưới đây copy nguyên khối, đừng ngắt dòng giữa câu.
 

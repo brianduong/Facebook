@@ -1,25 +1,41 @@
 # STATUS — Ghi chú tiến độ
 
-_Cập nhật: 2026-07-31_
+_Cập nhật: 2026-08-02_
 
-## 📍 Dừng ở đâu — sáng mai làm tiếp từ đây
+## 📍 Ba nơi đăng — tên gọi quy ước
+
+Mỗi bài đi lên **ba nơi**, gọi đúng ba tên này:
+
+| Tên gọi | Bản dùng | Nơi thật |
+|---|---|---|
+| **YouTube tiếng Việt** | tiếng Việt | https://youtube.com/@songtotdaily |
+| **YouTube tiếng Anh** | tiếng Anh | https://youtube.com/@onesmallthingdaily |
+| **Facebook** | **tiếng Việt** | https://www.facebook.com/songtot.in · ~9,9K người theo dõi |
+
+Facebook dùng **chung file video tiếng Việt** với YouTube tiếng Việt, không render riêng.
+Nên mỗi bài có 2 file video nhưng **3 lượt đăng**.
+
+## 📍 Dừng ở đâu — làm tiếp từ đây
 
 | Việc | Trạng thái |
 |---|---|
-| VD-001 → VD-007 | ✅ render xong cả hai thứ tiếng · **đã đăng YouTube cả hai kênh** |
-| **VD-008** · Thức khuya trả thù | ✅ render xong 31/07 — VI 81s · EN 86s · ✅ caption hai kênh · **đã đăng cả hai kênh 31/07** |
-| **VD-009** · Để mình nghĩ đã | ✅ **render xong 31/07** — VI 72s · EN 79s · ✅ caption hai kênh · **⏭️ chưa đăng — bài kế tiếp** |
-| **VD-010** · Tha thứ không phải cho người kia | ✅ **render xong 31/07** — VI 75s · EN 77s · ✅ caption hai kênh · chưa đăng |
-| **VD-011** · Một việc tốt không ai biết | ✅ **render xong 31/07** — VI 67s · EN 72s · ✅ caption hai kênh · chưa đăng |
-| **VD-012** · Người phục vụ mình cũng có tên | ✅ **render xong 31/07** — VI 74s · EN 82s · ✅ caption hai kênh · chưa đăng |
+| VD-001 → VD-008 | ✅ render xong cả hai thứ tiếng · **đã đăng đủ cả ba nơi** |
+| **VD-009** · Để mình nghĩ đã | ✅ **render xong 31/07** — VI 72s · EN 79s · ✅ caption đủ · **⏭️ chưa đăng — bài kế tiếp** |
+| **VD-010** · Tha thứ không phải cho người kia | ✅ **render xong 31/07** — VI 75s · EN 77s · ✅ caption đủ · chưa đăng |
+| **VD-011** · Một việc tốt không ai biết | ✅ **render xong 31/07** — VI 67s · EN 72s · ✅ caption đủ · chưa đăng |
+| **VD-012** · Người phục vụ mình cũng có tên | ✅ **render xong 31/07** — VI 74s · EN 82s · ✅ caption đủ · chưa đăng |
 
-➡️ **Bài kế tiếp cần đăng: VD-009 · "Để mình nghĩ đã"** (đã render + caption đủ hai kênh).
-Anh đã đăng tới **VD-008** — cả hai kênh, ngày 31/07.
+➡️ **Bài kế tiếp cần đăng: VD-009 · "Để mình nghĩ đã"** (render + caption đủ cả ba nơi).
+Anh đã đăng tới **VD-008**, ba nơi đang đồng bộ nhau.
 
-⚠️ **Còn tồn 4 bài đã render mà chưa đăng (VD-009 → VD-012) — 8 video.** Cái thiếu vẫn là
-cái thiếu cũ: **chưa có một số liệu nào** để biết nên đi hướng nào. Tám video đã đăng từ
-27/07 đến giờ chưa đo. **Việc đáng làm nhất bây giờ không phải làm thêm video, mà là đăng
-nốt số đang tồn rồi ghi số vào `schedule/calendar.md`.**
+**Thứ tự đăng bốn bài còn tồn: VD-009 → VD-011 → VD-010 → VD-012.** Lý do: VD-010 không
+được đứng liền sau VD-009 (hồ sơ ý tưởng dặn xen một bài trụ 2 vào giữa), mà VD-011 với
+VD-012 lại cùng trụ 2 nên cũng không được liền nhau — xếp kiểu này gỡ được cả hai.
+
+⚠️ **Còn tồn 4 bài — 12 lượt đăng.** Cái thiếu vẫn là cái thiếu cũ: **chưa có một số liệu
+nào** để biết nên đi hướng nào. Tám bài đã đăng từ 27/07 đến giờ chưa đo bài nào.
+**Việc đáng làm nhất bây giờ không phải làm thêm video, mà là đăng nốt số đang tồn rồi ghi
+số vào `schedule/calendar.md`.**
 
 **Hết hàng có nháp cũ.** VD-011 và VD-012 là hai bài cuối còn nháp từ pipeline cũ. Từ
 **VD-013 trở đi chỉ có hồ sơ ý tưởng, chưa có chữ nào** — mỗi bài sẽ phải viết mới hoàn

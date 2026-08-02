@@ -3,7 +3,7 @@
 - **Mã số:** VD-009
 - **File video:** `video/exports/VD-009-reels.mp4` · 1080×1920 · 72 giây
 - **Ngày đăng dự kiến:** _(xếp sau VD-004 → VD-008)_
-- **Trạng thái:** ⬜ Facebook · ⬜ YouTube
+- **Trạng thái:** ⬜ YouTube tiếng Việt · ⬜ YouTube tiếng Anh · ⬜ Facebook
 
 Mỗi khối dưới đây copy nguyên khối, đừng ngắt dòng giữa câu.
 

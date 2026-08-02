@@ -6,22 +6,37 @@
 
 ## Tháng 7–8/2026
 
-| Ngày | Mã số | Tên video | Trạng thái |
-|------|-------|-----------|-----------|
-| 25/07 | VD-001 | Ba điều biết ơn mỗi sáng | ✅ Đã đăng cả hai kênh |
-| 26/07 | VD-002 | Tử tế không bao giờ là điều lãng phí | ✅ Đã đăng cả hai kênh |
-| 27/07 | VD-003 | Hôm nay chỉ cần làm được một việc | ✅ Đã đăng cả hai kênh |
-| — | VD-004 | Câu cảm ơn có chữ vì | ✅ Đã đăng cả hai kênh |
-| — | VD-005 | Tin nhắn lâu không hỏi thăm | ✅ Đã đăng cả hai kênh |
-| — | VD-006 | So sánh với chính mình | ✅ Đã đăng cả hai kênh |
-| — | VD-007 | Tử tế được truyền tay | ✅ Đã đăng cả hai kênh |
-| **31/07** | **VD-008** | **Thức khuya trả thù** | ✅ **Đã đăng cả hai kênh — 31/07** |
-| kế tiếp | VD-009 | Để mình nghĩ đã | 🟢 **Sẵn sàng đăng — bài kế tiếp** (render + caption đủ hai kênh) |
-| | VD-010 | Tha thứ không phải cho người kia | 🟢 Sẵn sàng đăng |
-| | VD-011 | Một việc tốt không ai biết | 🟢 Sẵn sàng đăng |
-| | VD-012 | Người phục vụ mình cũng có tên | 🟢 Sẵn sàng đăng |
+Mỗi bài đi lên **ba nơi**: **YouTube tiếng Việt** (`@songtotdaily`) · **YouTube tiếng Anh**
+(`@onesmallthingdaily`) · **Facebook** (page Sống Tốt, dùng bản tiếng Việt).
+
+| Ngày | Mã số | Tên video | YT tiếng Việt | YT tiếng Anh | Facebook |
+|------|-------|-----------|:---:|:---:|:---:|
+| 25/07 | VD-001 | Ba điều biết ơn mỗi sáng | ✅ | ✅ | ✅ |
+| 26/07 | VD-002 | Tử tế không bao giờ là điều lãng phí | ✅ | ✅ | ✅ |
+| 27/07 | VD-003 | Hôm nay chỉ cần làm được một việc | ✅ | ✅ | ✅ |
+| — | VD-004 | Câu cảm ơn có chữ vì | ✅ | ✅ | ✅ |
+| — | VD-005 | Tin nhắn lâu không hỏi thăm | ✅ | ✅ | ✅ |
+| — | VD-006 | So sánh với chính mình | ✅ | ✅ | ✅ |
+| — | VD-007 | Tử tế được truyền tay | ✅ | ✅ | ✅ |
+| **31/07** | **VD-008** | **Thức khuya trả thù** | ✅ | ✅ | ✅ |
+| **kế tiếp** | **VD-009** | **Để mình nghĩ đã** | 🟢 | 🟢 | 🟢 |
+| sau đó | VD-011 | Một việc tốt không ai biết | 🟢 | 🟢 | 🟢 |
+| sau đó | VD-010 | Tha thứ không phải cho người kia | 🟢 | 🟢 | 🟢 |
+| sau đó | VD-012 | Người phục vụ mình cũng có tên | 🟢 | 🟢 | 🟢 |
 
 **Chú thích:** ⬜ Chưa render · 📝 Có lời đọc, chưa có caption/ảnh quote · 🟡 Đang làm · 🟢 Sẵn sàng / đang đăng · ✅ Đã đăng
+
+**Còn tồn: 4 bài × 3 nơi = 12 lượt đăng.**
+
+⚠️ **Thứ tự bốn bài còn lại đã đảo có chủ ý: VD-009 → VD-011 → VD-010 → VD-012.**
+VD-010 không được đứng liền sau VD-009, mà VD-011 với VD-012 lại cùng trụ 2 nên cũng
+không được liền nhau — xếp kiểu này gỡ được cả hai.
+
+⚠️ **VD-011 sẽ ít bình luận hẳn, đó là chủ ý** — CTA của nó là *cấm kể*. Đo bài này bằng
+lượt lưu và tỉ lệ xem hết, đừng đo bằng bình luận, và đừng tự bình luận mở hàng.
+
+⚠️ **VD-008 nên đăng buổi tối 21–22h** · **VD-009 có CTA độ trễ** nên phải mở lại bài sau
+3–4 ngày để trả lời người xem.
 
 > Từ 26/07 bỏ cột "Nhân vật" — không còn vẽ nhân vật nữa, nền là ảnh chụp thật
 > lấy theo từ khoá B-roll ghi trong từng kịch bản. Xem `STATUS.md`.
@@ -30,8 +45,47 @@ _Render khi anh yêu cầu (anh đã chốt như vậy ngày 25/07), không tự
 
 ## Ghi nhận hiệu quả (điền sau khi đăng 24–48h)
 
-| Mã số | Lượt xem | Xem hết ≥1 phút | Tương tác | Ghi chú |
-|-------|----------|-----------------|-----------|---------|
-| VD-001 |  |  |  |  |
-| VD-002 |  |  |  |  |
-| VD-003 |  |  |  |  |
+⚠️ **Tám bài đã đăng, chưa bài nào có số.** Đây là chỗ nghẽn thật của dự án — không có số
+thì không biết nên đi hướng nào, làm thêm video chỉ làm kho dày thêm. **Ghi tách riêng
+từng nơi**, vì ba nơi có tệp người xem khác hẳn nhau.
+
+**Số quan trọng nhất là tỉ lệ xem hết** — YouTube chấm bằng cái này.
+
+### YouTube tiếng Việt (`@songtotdaily`)
+
+| Mã số | Lượt xem | Tỉ lệ xem hết | Đăng ký mới | Lưu / chia sẻ | Ghi chú |
+|-------|----------|---------------|-------------|---------------|---------|
+| VD-001 |  |  |  |  |  |
+| VD-002 |  |  |  |  |  |
+| VD-003 |  |  |  |  |  |
+| VD-004 |  |  |  |  |  |
+| VD-005 |  |  |  |  |  |
+| VD-006 |  |  |  |  |  |
+| VD-007 |  |  |  |  |  |
+| VD-008 |  |  |  |  |  |
+
+### YouTube tiếng Anh (`@onesmallthingdaily`)
+
+| Mã số | Lượt xem | Tỉ lệ xem hết | Đăng ký mới | Lưu / chia sẻ | Ghi chú |
+|-------|----------|---------------|-------------|---------------|---------|
+| VD-001 |  |  |  |  |  |
+| VD-002 |  |  |  |  |  |
+| VD-003 |  |  |  |  |  |
+| VD-004 |  |  |  |  |  |
+| VD-005 |  |  |  |  |  |
+| VD-006 |  |  |  |  |  |
+| VD-007 |  |  |  |  |  |
+| VD-008 |  |  |  |  |  |
+
+### Facebook (page Sống Tốt)
+
+| Mã số | Lượt xem | Xem hết ≥1 phút | Tương tác | Chia sẻ | Ghi chú |
+|-------|----------|-----------------|-----------|---------|---------|
+| VD-001 |  |  |  |  |  |
+| VD-002 |  |  |  |  |  |
+| VD-003 |  |  |  |  |  |
+| VD-004 |  |  |  |  |  |
+| VD-005 |  |  |  |  |  |
+| VD-006 |  |  |  |  |  |
+| VD-007 |  |  |  |  |  |
+| VD-008 |  |  |  |  |  |

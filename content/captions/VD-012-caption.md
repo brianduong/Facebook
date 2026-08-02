@@ -3,7 +3,7 @@
 - **Mã số:** VD-012
 - **File video:** `video/exports/VD-012-reels.mp4` · 1080×1920 · 74 giây
 - **Ngày đăng dự kiến:** _(đảo với VD-013 — đừng đăng liền sau VD-011)_
-- **Trạng thái:** ⬜ Facebook · ⬜ YouTube
+- **Trạng thái:** ⬜ YouTube tiếng Việt · ⬜ YouTube tiếng Anh · ⬜ Facebook
 
 Mỗi khối dưới đây copy nguyên khối, đừng ngắt dòng giữa câu.
 
