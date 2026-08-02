@@ -163,8 +163,15 @@ Xong nó in ra link video và link Studio. Vào Studio bấm **Công khai**.
     --hen-gio 2026-08-03T20:00:00+07:00 --dang-that
 ```
 
-⚠️ Hẹn giờ **chỉ chạy sau khi project đã qua audit**. Chưa qua audit thì video vẫn nằm im
-ở chế độ riêng tư, đến giờ cũng không tự lên.
+**Đo thật ngày 02/08 (VD-007):** YouTube **nhận** lịch — hỏi lại API thì `publishAt` lưu
+đúng `2026-08-02T12:30:00Z`, tức 19:30 giờ Việt Nam. Trái với lo ngại ban đầu là project
+chưa qua audit sẽ bị bỏ qua lịch.
+
+⚠️ Nhưng **nhận lịch chưa chắc đã tự công khai**. Đến giờ mà video vẫn riêng tư thì vào
+Studio bấm tay — đặt lịch trong Studio không bị chặn, chỉ API mới có thể bị.
+
+**Nguyên tắc của kênh:** nhiều nhất **1 video/ngày** mỗi kênh, công khai lúc **19:30** giờ
+Việt Nam. Đăng sớm hơn thì luôn kèm `--hen-gio`, đừng để tự lên ngay.
 
 ### Script tự lo sẵn những gì
 
