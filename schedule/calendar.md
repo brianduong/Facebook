@@ -28,11 +28,27 @@ Mỗi bài đi lên **ba nơi**: **YouTube tiếng Việt** (`@songtotdaily`) ·
 
 ## Nguyên tắc đăng (anh chốt 02/08)
 
-- **Nhiều nhất 1 video/ngày** mỗi kênh
+- **Nhiều nhất 1 bài/ngày**
+- **Đồng bộ cả ba nơi cùng ngày, cùng một bài** — đừng để nơi này đi trước nơi kia
 - **Công khai lúc 19:30** giờ Việt Nam
-- Đăng trước giờ đó thì **phải đặt lịch**, đừng để tự lên ngay
+- **Luôn đăng trước rồi đặt lịch**, không đăng đúng giờ, không để tự lên ngay
+- Facebook phải dùng lệnh **`reels`**, không dùng `video`
 
 Đang tồn 4 bài sau VD-007 → rải mỗi ngày một bài, hết ngày 06/08.
+
+### Lệnh một ngày — thay VD-0XX rồi chạy ba dòng
+
+```bash
+.venv-dang/bin/python scripts/dang-video-youtube.py dang VD-0XX --kenh en \
+    --hen-gio 2026-08-0DT19:30:00+07:00 --dang-that
+.venv-dang/bin/python scripts/dang-video-youtube.py dang VD-0XX --kenh vi \
+    --hen-gio 2026-08-0DT19:30:00+07:00 --dang-that
+python3 scripts/dang-video-fb.py reels video/exports/VD-0XX-reels.mp4 --ma VD-0XX \
+    --hen-gio 2026-08-0DT19:30:00+07:00 --dang-that
+```
+
+⚠️ **VD-003 còn nợ riêng Facebook.** Bù vào một ngày nào đó, nhưng bù là phá nhịp đồng bộ
+— nên xếp vào ngày không có bài mới, đừng chen vào ngày đang đăng bài khác.
 
 ### VD-007 — tải lên 02/08 lúc 17:4x, hẹn 19:30
 
