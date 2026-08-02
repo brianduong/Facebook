@@ -12,7 +12,7 @@ Mỗi bài đi lên **ba nơi**: **YouTube tiếng Việt** (`@songtotdaily`) ·
 | Ngày | Mã số | Tên video | YT tiếng Việt | YT tiếng Anh | Facebook |
 |------|-------|-----------|:---:|:---:|:---:|
 | 25/07 | VD-001 | Ba điều biết ơn mỗi sáng | ✅ | ✅ | ✅ |
-| 26/07 | VD-002 | Tử tế không bao giờ là điều lãng phí | ✅ | ✅ | ✅ đăng 2 lần |
+| 26/07 | VD-002 | Tử tế không bao giờ là điều lãng phí | ✅ | ✅ | ✅ |
 | 27/07 | VD-003 | Hôm nay chỉ cần làm được một việc | ✅ | ✅ | 🕒 bù 02/08 21:45 |
 | — | VD-004 | Câu cảm ơn có chữ vì | ✅ | ✅ | ✅ |
 | — | VD-005 | Tin nhắn lâu không hỏi thăm | ✅ | ✅ | ✅ |
@@ -75,7 +75,7 @@ qua `/videos` ra bài video thường, video dọc 9:16 không vào được tab
 |---|---|---|
 | YouTube tiếng Anh | 7 video: VD-001→006, VD-008 | **VD-007** |
 | YouTube tiếng Việt | 7 video: VD-001→006, VD-008 | **VD-007** |
-| Facebook | 7 video nhưng chỉ 6 bài — VD-002 đăng 2 lần | **VD-003 · VD-007** |
+| Facebook | 7 video nhưng chỉ 6 bài — VD-002 đăng 2 lần (đã xoá bản 26/07 ngày 02/08) | **VD-003 · VD-007** |
 
 Cách kiểm: đọc danh sách video qua API rồi khớp từng bài với caption trong
 `content/captions/`. Bài 27/07 trên Facebook mở đầu *"Sáng nay mở mắt ra…"* là **VD-001**
