@@ -15,68 +15,108 @@ Mỗi bài đi lên **ba nơi**, gọi đúng ba tên này:
 Facebook dùng **chung file video tiếng Việt** với YouTube tiếng Việt, không render riêng.
 Nên mỗi bài có 2 file video nhưng **3 lượt đăng**.
 
-## 🤖 Đăng tự động — dựng 02/08
+## 🤖 Đăng tự động — dựng xong 02/08, cả ba nơi ✅
 
-Đăng bằng dòng lệnh, chữ bóc thẳng từ file caption nên không phải dán tay bốn ô.
+Đăng bằng dòng lệnh, chữ bóc thẳng từ file caption nên không phải dán tay ô nào.
+**Đã chạy thật, không còn phải bấm gì trên trình duyệt.**
 
-| Nơi | Script | Trạng thái |
+| Nơi | Script | Chìa khoá |
 |---|---|---|
-| YouTube tiếng Anh · tiếng Việt | `scripts/dang-video-youtube.py` | ✅ script xong · **chờ anh lấy chìa khoá bên Google** |
-| Facebook | `scripts/dang-video-fb.py` | ✅ có từ 25/07 |
+| YouTube tiếng Anh · tiếng Việt | `scripts/dang-video-youtube.py` | `secrets/youtube-token-{en,vi}.json` |
+| Facebook | `scripts/dang-video-fb.py reels` | `.env` → `FB_PAGE_TOKEN` |
 
-**Anh cần làm một lần:** theo mục A → C trong `docs/huong-dan-dang-youtube.md` (tạo project
-Google Cloud, tải file chìa khoá về, xin quyền cho từng kênh). Xong rồi mỗi ngày chỉ còn:
+### Nguyên tắc đăng (anh chốt 02/08)
+
+- **Nhiều nhất 1 bài/ngày**
+- **Đồng bộ cả ba nơi cùng ngày, cùng một bài** — đừng để nơi này đi trước nơi kia
+- **Công khai lúc 19:30** giờ Việt Nam
+- **Luôn đăng trước rồi đặt lịch**, không đăng đúng giờ, không để tự lên ngay
+
+### Ba dòng lệnh của một ngày
 
 ```bash
-.venv-dang/bin/python scripts/dang-video-youtube.py dang VD-009 --kenh en            # xem trước
-.venv-dang/bin/python scripts/dang-video-youtube.py dang VD-009 --kenh en --dang-that # đăng
+.venv-dang/bin/python scripts/dang-video-youtube.py dang VD-009 --kenh en \
+    --hen-gio 2026-08-03T19:30:00+07:00 --dang-that
+.venv-dang/bin/python scripts/dang-video-youtube.py dang VD-009 --kenh vi \
+    --hen-gio 2026-08-03T19:30:00+07:00 --dang-that
+python3 scripts/dang-video-fb.py reels video/exports/VD-009-reels.mp4 --ma VD-009 \
+    --hen-gio 2026-08-03T19:30:00+07:00 --dang-that
 ```
 
-⚠️ **Video đăng qua API sẽ bị YouTube khoá ở chế độ riêng tư**, vì project chưa qua vòng
-audit của Google. Không phải lỗi script, không lách được bằng code — script vẫn lo phần
-nặng (tải file, tiêu đề, mô tả, thẻ, danh mục, khai báo trẻ em), anh vào Studio bấm công
-khai. Muốn bỏ hẳn bước bấm tay thì nộp đơn xin audit, xem mục E của hướng dẫn.
+Bỏ `--dang-that` là chạy thử, chỉ in ra những gì sắp gửi. Xem trước **không cần đăng nhập**.
 
-⚠️ **Bước dễ bỏ sót nhất là A3** — phải chuyển màn hình đồng ý từ *Testing* sang
-*In production*, không thì Google thu hồi quyền sau đúng 7 ngày.
+### Mấy chỗ phải nhớ
+
+- ⚠️ **Facebook phải dùng lệnh `reels`**, không dùng `video`. Lệnh `video` đi đường
+  `/videos` ra bài video thường; video dọc 9:16 phải qua `/video_reels` mới vào tab Reels.
+- ⚠️ **YouTube khoá video ở chế độ riêng tư** vì project chưa qua audit. Nhưng **có nhận
+  `publishAt`** — đo thật ngày 02/08. Nhận lịch chưa chắc đã tự công khai; đến giờ mà chưa
+  lên thì vào Studio bấm tay. Muốn hết hẳn thì nộp đơn audit, mục E của hướng dẫn.
+- ⚠️ **Facebook hẹn giờ chạy thẳng**, không vướng audit. Đòi cách hiện tại ≥10 phút.
+- ⚠️ Màn hình đồng ý của Google phải ở **In production**, không thì Google thu hồi quyền
+  sau 7 ngày. Đã chuyển 02/08.
+- 🔒 `secrets/` và `.env` đều bị `.gitignore` chặn. **Đừng dán token vào chat.**
+
+Các bước lấy chìa khoá (nếu phải làm lại): `docs/huong-dan-dang-youtube.md` cho YouTube,
+`docs/huong-dan-dang-tu-dong.md` cho Facebook.
+
+### Ảnh bìa — anh chốt 02/08: không làm
+
+Không bài nào có ảnh bìa tự chọn, tất cả để YouTube và Facebook tự cắt khung hình. Hai kênh
+YouTube **đã xác minh** nên đặt bìa được, nhưng anh quyết không cần: Shorts và Reels chạy
+ngay khi lướt tới, hiếm ai nhìn bìa. Công cụ `scripts/tao-anh-bia-reels.py` vẫn còn đó,
+`video/thumbnails/` mới có mỗi `VD-002-bia.png` từ hồi thử nghiệm.
 
 ## 📍 Dừng ở đâu — làm tiếp từ đây
 
-| Việc | Trạng thái |
+### Đã hẹn giờ tối nay 02/08
+
+| Bài | YouTube tiếng Anh | YouTube tiếng Việt | Facebook |
+|---|---|---|---|
+| **VD-007** · Không ai tự nhiên tử tế cả | `QaDH7_4ZaFA` · 19:30 | `Wfsv45pH9z0` · 19:30 | `4731819720383240` · 19:30 |
+| **VD-003** · bù riêng cho Facebook | — | — | `2227069261412713` · **21:45** |
+
+Cả bốn lượt đều đã hỏi lại API xác nhận có lịch, không tin dòng thông báo lúc đăng.
+VD-003 để 21:45 cho khỏi đè lên VD-007 trong cùng một tối.
+
+### Còn tồn — 4 bài, mỗi bài 3 nơi
+
+| Bài | Trạng thái |
 |---|---|
-| VD-001 → VD-006 · VD-008 | ✅ render xong cả hai thứ tiếng · **đã đăng cả hai kênh YouTube** |
-| **VD-007** · Không ai tự nhiên tử tế cả | ✅ render xong 30/07 · ✅ caption đủ · **❗ bị bỏ sót — chưa đăng, phải đăng trước** |
-| **VD-009** · Để mình nghĩ đã | ✅ **render xong 31/07** — VI 72s · EN 79s · ✅ caption đủ · chưa đăng |
-| **VD-010** · Tha thứ không phải cho người kia | ✅ **render xong 31/07** — VI 75s · EN 77s · ✅ caption đủ · chưa đăng |
-| **VD-011** · Một việc tốt không ai biết | ✅ **render xong 31/07** — VI 67s · EN 72s · ✅ caption đủ · chưa đăng |
-| **VD-012** · Người phục vụ mình cũng có tên | ✅ **render xong 31/07** — VI 74s · EN 82s · ✅ caption đủ · chưa đăng |
+| **VD-009** · Để mình nghĩ đã | ✅ render + caption đủ · **bài kế tiếp, đăng 03/08** |
+| **VD-011** · Một việc tốt không ai biết | ✅ render + caption đủ |
+| **VD-010** · Tha thứ không phải cho người kia | ✅ render + caption đủ |
+| **VD-012** · Người phục vụ mình cũng có tên | ✅ render + caption đủ |
 
-➡️ **Bài kế tiếp cần đăng: VD-007 · "Không ai tự nhiên tử tế cả"** — bài này **bị bỏ sót**,
-không phải VD-009.
+**Thứ tự: VD-009 → VD-011 → VD-010 → VD-012**, mỗi ngày một bài, hết ngày 06/08.
+VD-010 không được đứng liền sau VD-009, mà VD-011 · VD-012 cùng trụ 2 nên cũng không được
+dính nhau — xếp kiểu này gỡ được cả hai.
 
-❗ **Phát hiện 02/08 khi nối API vào cả ba nơi.** Sổ cũ ghi "đã đăng tới VD-008, ba nơi
-đồng bộ" — đọc thẳng từ API thì không phải:
+### ❗ Bài học 02/08: sổ và trí nhớ đều sai, chỉ API là đúng
 
-| Nơi | Thực tế | Thiếu |
+Sổ cũ ghi "đã đăng tới VD-008, ba nơi đồng bộ". Nối API vào đọc thẳng thì không phải:
+
+| Nơi | Thực tế trước hôm nay | Thiếu |
 |---|---|---|
 | YouTube tiếng Anh | VD-001→006, VD-008 | **VD-007** |
 | YouTube tiếng Việt | VD-001→006, VD-008 | **VD-007** |
 | Facebook | VD-001, 002, 004, 005, 006, 008 · VD-002 đăng 2 lần | **VD-003 · VD-007** |
 
-VD-007 render xong 30/07 mà chưa đăng đâu cả — trên hai kênh YouTube trống đúng ngày 30/07.
-Riêng Facebook sót thêm VD-003 từ hồi 27/07.
+VD-007 render xong 30/07 mà chưa đăng đâu cả. Facebook còn sót thêm VD-003 từ 27/07 —
+hơn một tuần không ai biết. Cả hai đã bù trong tối nay.
 
-**Thứ tự đăng năm bài còn tồn: VD-007 → VD-009 → VD-011 → VD-010 → VD-012.** Lý do:
-VD-010 không được đứng liền sau VD-009, mà VD-007 · VD-011 · VD-012 đều là trụ 2 nên cũng
-không được dính nhau — xếp kiểu này gỡ được cả ba ràng buộc.
+**Cách kiểm cho lần sau:** đọc danh sách video qua API rồi khớp mô tả với `content/captions/`
+**bằng máy, đừng nhìn mắt**. Bài 27/07 trên Facebook mở đầu *"Sáng nay mở mắt ra…"* trông
+hệt VD-003 nhưng thực ra là VD-001 bản caption viết lại.
 
-⚠️ **Còn tồn 5 bài + 1 lượt bù (VD-003 trên Facebook) = 16 lượt đăng.** Cái thiếu vẫn là
-cái thiếu cũ: **chưa có một số liệu nào** để biết nên đi hướng nào. Bảy bài đã đăng từ
-26/07 đến giờ chưa đo bài nào. **Việc đáng làm nhất bây giờ không phải làm thêm video, mà
-là đăng nốt số đang tồn rồi ghi số vào `schedule/calendar.md`.**
+### ⚠️ Chỗ nghẽn thật, chưa ai đụng
 
-✅ **Cả ba nơi giờ đều nối được bằng API** — đọc số và đăng bài bằng dòng lệnh, không phải
-tin vào sổ nữa. Token Facebook đã lấy 02/08 (`.env`, quyền 600).
+**Chín bài đã đăng, chưa bài nào có số.** Từ 26/07 đến giờ không đo một lần nào. Bảng đã
+dựng sẵn trong `schedule/calendar.md`, tách riêng ba nơi, chỉ chờ điền.
+
+Giờ **cả ba nơi đều đọc được bằng API** nên lấy số về được, không phải ngồi chép tay. Đây
+là việc đáng làm nhất — làm thêm video lúc này chỉ dày kho chứ không trả lời được câu
+"hướng nào chạy".
 
 **Hết hàng có nháp cũ.** VD-011 và VD-012 là hai bài cuối còn nháp từ pipeline cũ. Từ
 **VD-013 trở đi chỉ có hồ sơ ý tưởng, chưa có chữ nào** — mỗi bài sẽ phải viết mới hoàn
@@ -152,18 +192,16 @@ tiếng → chấm ảnh tay từ bảng ứng viên → render VI + EN → capt
 - Chỗ lệch cũ vẫn còn: ảnh rải **đều** trên các thẻ chữ nên "Chỉ ngồi đó tới khuya" đang
   chạy trên ảnh văn phòng, còn ảnh khung cửa đêm thì đến sau một nhịp.
 
-### Sáng mai làm theo thứ tự này
+### Ngày mai 03/08 làm theo thứ tự này
 
-0. **Đăng đi đã.** Chín bài đang tồn, không bài nào có số. Đăng VD-004 → VD-012 lần lượt
-   (VD-008 để buổi tối · VD-010 đừng liền sau VD-009 · VD-012 đảo với VD-013), rồi đo 48h.
-   Làm thêm video mới bây giờ chỉ làm kho dày thêm chứ không trả lời được câu "hướng nào chạy".
-1. **Xem 18 video mới** — VD-004 → VD-012, mỗi bài hai thứ tiếng. VD-004 và
-   VD-005 đều được **viết lại khối VI** vì bản cũ dùng "chúng ta", trái
-   `docs/giong-van-tieng-viet.md`, và đều được **thêm một khối cảnh** (bản cũ toàn lời
-   khuyên, không có khoảnh khắc nào để bám). Lý do từng chỗ sửa ghi ở cuối mỗi file
-   `song-ngu/`.
-2. **Sau 24h: thêm lại link Facebook** vào mô tả 3 video kênh Sống Tốt (xem mục dưới).
-3. **Đo số 48 giờ** của sáu video đã đăng, ghi vào `schedule/calendar.md`.
+_(mục này viết lại 02/08 — bản cũ đã lỗi thời vì phần đăng giờ chạy bằng lệnh)_
+
+1. **Soi lại tối qua:** VD-007 có tự lên lúc 19:30 trên hai kênh YouTube không? Không lên
+   thì vào Studio bấm công khai — project chưa qua audit nên chưa chắc ăn.
+2. **Đăng VD-009 đủ ba nơi**, hẹn 19:30 — ba dòng lệnh ở mục "Đăng tự động" bên trên.
+3. **Lấy số về ghi vào `schedule/calendar.md`.** Đây là việc đáng làm nhất và đã bỏ lửng
+   từ 26/07. Cả ba nơi đọc được bằng API rồi.
+4. Còn nợ cũ: **thêm lại link Facebook** vào mô tả 3 video đầu kênh Sống Tốt (mục dưới).
 
 ### Chốt 28/07 — danh mục YouTube và thẻ tiếng Anh
 
@@ -408,7 +446,7 @@ vẽ tay, giọng `say`), không dùng lại được. Sẽ làm lại toàn b�
 - `thu-giong-vieneu.py` — nghe thử giọng
 - `tach-loi-doc.py` — rút bản VI trong file song ngữ ra lời đọc (chặn nếu chưa duyệt)
 - `dang-video-youtube.py` — đăng lên hai kênh YouTube, chữ bóc thẳng từ file caption
-- `dang-video-fb.py` — đăng lên Facebook (có từ 25/07)
+- `dang-video-fb.py` — đăng lên Facebook · lệnh `reels` đi luồng /video_reels, có hẹn giờ
 
 **Công cụ cũ** (`render-video-nhap.py`, `nhan_vat.py`, `canh_nen.py`, `giong_doc.py`)
 vẫn giữ để đối chiếu, **không dùng nữa**.
