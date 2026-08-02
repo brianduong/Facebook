@@ -27,6 +27,7 @@ import json
 import re
 import subprocess
 import sys
+from datetime import datetime
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
@@ -70,21 +71,45 @@ def goi_api(args: list[str]) -> dict:
     return data
 
 
+def _khoi_duoi_muc(noi_dung: str, ten_muc: str) -> str | None:
+    """Lấy khối ``` đầu tiên nằm dưới tiêu đề mục khớp `ten_muc` (khuôn VD-004 trở đi)."""
+    m = re.search(rf"^##\s*(?:\d+\s*[·.]\s*)?{ten_muc}\b", noi_dung, re.M | re.I)
+    if not m:
+        return None
+    khoi = re.search(r"```[a-z]*\n(.*?)\n```", noi_dung[m.end():], re.S)
+    return khoi.group(1).strip() if khoi else None
+
+
 def lay_caption(ma_so: str) -> str:
-    """Ghép caption + hashtag từ content/captions/<ma>-caption.md."""
+    """Ghép caption + hashtag từ content/captions/<ma>-caption.md.
+
+    Đọc được cả hai khuôn: khuôn cũ (VD-001 → VD-003, chữ nằm thẳng dưới tiêu đề)
+    và khuôn mới (VD-004 trở đi, chữ nằm trong khối ``` để copy nguyên khối).
+    """
     f = REPO / "content" / "captions" / f"{ma_so}-caption.md"
     if not f.exists():
         sys.exit(f"❌ Không thấy {f.relative_to(REPO)}")
     noi_dung = f.read_text(encoding="utf-8")
 
-    than = re.search(r"## Caption đăng Facebook\s*(.+?)\n---", noi_dung, re.S)
-    if not than:
-        sys.exit(f"❌ {f.name} thiếu mục '## Caption đăng Facebook'")
-    text = than.group(1).strip()
+    # Khuôn mới có cả phần Facebook lẫn phần YouTube — cắt lấy phần Facebook.
+    moc_fb = re.search(r"^#\s*Đăng Facebook", noi_dung, re.M)
+    if moc_fb:
+        moc_yt = re.search(r"^#\s*Đăng YouTube", noi_dung[moc_fb.start():], re.M)
+        phan_fb = noi_dung[moc_fb.start():moc_fb.start() + moc_yt.start()] if moc_yt else noi_dung[moc_fb.start():]
+        text = _khoi_duoi_muc(phan_fb, "Caption")
+        if not text:
+            sys.exit(f"❌ {f.name} có mục '# Đăng Facebook' nhưng không thấy khối Caption")
+        tag = _khoi_duoi_muc(phan_fb, "Hashtag")
+    else:
+        than = re.search(r"## Caption đăng Facebook\s*(.+?)\n---", noi_dung, re.S)
+        if not than:
+            sys.exit(f"❌ {f.name} thiếu mục '## Caption đăng Facebook'")
+        text = than.group(1).strip()
+        m_tag = re.search(r"## Hashtag\s*(.+?)(?:\n##|\Z)", noi_dung, re.S)
+        tag = m_tag.group(1).strip() if m_tag else None
 
-    tag = re.search(r"## Hashtag\s*(.+?)(?:\n##|\Z)", noi_dung, re.S)
     if tag:
-        text += "\n\n" + tag.group(1).strip()
+        text += "\n\n" + tag
 
     # Bỏ ký hiệu markdown (Facebook không hiểu **đậm**)
     text = re.sub(r"\*\*(.+?)\*\*", r"\1", text)
@@ -92,14 +117,67 @@ def lay_caption(ma_so: str) -> str:
     return text.strip()
 
 
+def dang_reels(page_id: str, token: str, f: Path, caption: str, hen_gio: str | None) -> str:
+    """Đăng Reels — luồng ba bước riêng của Facebook, không dùng chung với /videos.
+
+    Đăng qua /videos ra bài video thường; video dọc 9:16 phải đi đường này mới
+    thành Reels và mới được đẩy trong tab Reels.
+    """
+    print("① Xin chỗ tải lên...")
+    mo = goi_api(["-X", "POST", f"{API}/{page_id}/video_reels",
+                  "-F", "upload_phase=start", "-F", f"access_token={token}"])
+    vid, url = mo.get("video_id"), mo.get("upload_url")
+    if not vid or not url:
+        sys.exit(f"❌ Facebook không trả về chỗ tải lên: {mo}")
+
+    kich_thuoc = f.stat().st_size
+    print(f"② Đang tải {kich_thuoc / 1e6:.1f} MB... (video nặng có thể mất vài phút)")
+    kq = subprocess.run(
+        ["curl", "-sS", "-X", "POST", url,
+         "-H", f"Authorization: OAuth {token}",
+         "-H", "offset: 0",
+         "-H", f"file_size: {kich_thuoc}",
+         "--data-binary", f"@{f}"],
+        capture_output=True, text=True,
+    )
+    if kq.returncode != 0:
+        sys.exit(f"❌ Tải lên lỗi: {kq.stderr.strip()}")
+    try:
+        ket = json.loads(kq.stdout)
+    except json.JSONDecodeError:
+        sys.exit(f"❌ Facebook trả về không phải JSON khi tải lên:\n{kq.stdout[:300]}")
+    if not ket.get("success"):
+        sys.exit(f"❌ Facebook báo tải lên chưa xong: {ket}")
+
+    print("③ Chốt bài...")
+    form = ["-X", "POST", f"{API}/{page_id}/video_reels",
+            "-F", f"video_id={vid}", "-F", "upload_phase=finish",
+            "-F", f"description={caption}", "-F", f"access_token={token}"]
+    if hen_gio:
+        moc = datetime.fromisoformat(hen_gio)
+        giay = int(moc.timestamp())
+        con = giay - int(datetime.now(moc.tzinfo).timestamp())
+        if con < 600:
+            sys.exit(f"❌ Facebook đòi hẹn giờ cách hiện tại ít nhất 10 phút (đang còn {con // 60} phút).")
+        form += ["-F", "video_state=SCHEDULED", "-F", f"scheduled_publish_time={giay}"]
+    else:
+        form += ["-F", "video_state=PUBLISHED"]
+
+    xong = goi_api(form)
+    if not xong.get("success", True):
+        sys.exit(f"❌ Chốt bài không thành: {xong}")
+    return vid
+
+
 def main() -> int:
     p = argparse.ArgumentParser(description="Đăng bài lên Page Sống Tốt")
-    p.add_argument("loai", choices=["kiem-tra", "video", "anh"])
+    p.add_argument("loai", choices=["kiem-tra", "video", "reels", "anh"])
     p.add_argument("file", nargs="?", help="Đường dẫn file video/ảnh")
     p.add_argument("--ma", help="Mã video để lấy caption, vd VD-001")
     p.add_argument("--caption", help="Caption gõ trực tiếp (thay cho --ma)")
     p.add_argument("--thumb", help="Ảnh thumbnail cho video (chỉ dùng với loại video)")
     p.add_argument("--tieu-de", help="Tiêu đề video")
+    p.add_argument("--hen-gio", help="Hẹn giờ cho Reels, vd 2026-08-03T19:30:00+07:00")
     p.add_argument("--dang-that", action="store_true", help="Đăng thật lên Page")
     a = p.parse_args()
 
@@ -128,6 +206,26 @@ def main() -> int:
         caption = lay_caption(a.ma)
     else:
         sys.exit("❌ Cần --ma VD-00X hoặc --caption \"...\"")
+
+    if a.loai == "reels":
+        print("─" * 60)
+        print(f"Sẽ đăng REELS: {f.name}  →  Page Sống Tốt")
+        if a.hen_gio:
+            print(f"Hẹn giờ: {a.hen_gio}")
+        print("─" * 60)
+        print(caption)
+        print("─" * 60)
+        if not a.dang_that:
+            print("🟡 Đang chạy thử. Thêm --dang-that để đăng lên Page thật.")
+            return 0
+        vid = dang_reels(page_id, token, f, caption, a.hen_gio)
+        print(f"\n✅ Đã đăng Reels. ID: {vid}")
+        if a.hen_gio:
+            print(f"   Đang hẹn giờ — xem ở Meta Business Suite → Nội dung → Đã lên lịch")
+        else:
+            print(f"   Xem: https://www.facebook.com/reel/{vid}")
+        print("👉 Nhớ cập nhật trạng thái ✅ trong schedule/calendar.md")
+        return 0
 
     if a.loai == "video":
         endpoint = f"{API}/{page_id}/videos"

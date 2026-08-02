@@ -18,7 +18,7 @@ Mỗi bài đi lên **ba nơi**: **YouTube tiếng Việt** (`@songtotdaily`) ·
 | — | VD-005 | Tin nhắn lâu không hỏi thăm | ✅ | ✅ | ✅ |
 | — | VD-006 | So sánh với chính mình | ✅ | ✅ | ✅ |
 | **31/07** | **VD-008** | **Thức khuya trả thù** | ✅ | ✅ | ✅ |
-| **02/08** | **VD-007** | **Không ai tự nhiên tử tế cả** | 🕒 | 🕒 | ❗ **thiếu** |
+| **02/08** | **VD-007** | **Không ai tự nhiên tử tế cả** | 🕒 | 🕒 | 🕒 |
 | 03/08 | VD-009 | Để mình nghĩ đã | 🟢 | 🟢 | 🟢 |
 | sau đó | VD-011 | Một việc tốt không ai biết | 🟢 | 🟢 | 🟢 |
 | sau đó | VD-010 | Tha thứ không phải cho người kia | 🟢 | 🟢 | 🟢 |
@@ -36,14 +36,21 @@ Mỗi bài đi lên **ba nơi**: **YouTube tiếng Việt** (`@songtotdaily`) ·
 
 ### VD-007 — tải lên 02/08 lúc 17:4x, hẹn 19:30
 
-| Kênh | Link | Chế độ |
+| Nơi | Mã bài | Chế độ |
 |---|---|---|
 | YouTube tiếng Anh | https://youtu.be/QaDH7_4ZaFA | riêng tư · hẹn 19:30 |
 | YouTube tiếng Việt | https://youtu.be/Wfsv45pH9z0 | riêng tư · hẹn 19:30 |
+| Facebook (**Reels**) | `4731819720383240` | chưa công khai · hẹn 19:30 |
 
-YouTube **đã nhận lịch** (`publishAt` lưu đúng `12:30Z` = 19:30 giờ Việt Nam) — trái với
-lo ngại ban đầu là project chưa qua audit sẽ bị bỏ qua lịch. **Nhưng nhận lịch chưa chắc
-đã tự công khai** — phải xem lúc 19:30 mới biết chắc. Không lên thì vào Studio bấm tay.
+Cả ba nơi **đều nhận lịch**: YouTube lưu `publishAt = 12:30Z`, Facebook lưu
+`scheduled_publish_time = 2026-08-02T12:30:00+0000` — đều là 19:30 giờ Việt Nam.
+
+⚠️ **Nhận lịch chưa chắc đã tự công khai** — riêng YouTube, project chưa qua audit nên
+19:30 mới biết chắc. Không lên thì vào Studio bấm tay.
+
+**Facebook đăng bằng luồng Reels** (`/video_reels`, ba bước), không phải `/videos`. Đăng
+qua `/videos` ra bài video thường, video dọc 9:16 không vào được tab Reels — mất chỗ được
+đẩy mạnh nhất.
 
 ❗ **Hai chỗ bỏ sót — phát hiện 02/08 khi nối API vào cả ba nơi.** Trước đó sổ ghi
 "đã đăng tới VD-008, ba nơi đồng bộ", thực tế không phải:
