@@ -8,18 +8,18 @@
 
 | Ngày | Mã số | Tên video | Trạng thái |
 |------|-------|-----------|-----------|
-| 25/07 | VD-001 | Ba điều biết ơn mỗi sáng | ✅ Đã đăng (bản 1:1 cũ) · lời đọc đã viết lại (v2) |
-| 26/07 | VD-002 | Tử tế không bao giờ là điều lãng phí | 🟢 **Đã render Reels 9:16 · 63s · 8,9 MB — sẵn sàng đăng** |
-| 27/07 | VD-003 | Hôm nay chỉ cần làm được một việc | ⬜ Cần viết lại lời đọc theo văn nói |
-| 28/07 | VD-004 | Cảm ơn phải nói rõ lý do | ⬜ Cần viết lại lời đọc theo văn nói |
-| 29/07 | VD-005 | Người bạn lâu không hỏi thăm | ⬜ Cần viết lại lời đọc theo văn nói |
-| 30/07 | VD-006 | Đường của bạn không cùng vạch với ai | ⬜ Cần viết lại lời đọc theo văn nói |
-| 31/07 | VD-007 | Tử tế là thứ được truyền tay | 📝 Có lời đọc (bản cũ) |
-| 01/08 | VD-008 | Ngủ đủ là việc tử tế đầu tiên với mình | 📝 Có lời đọc (bản cũ) |
-| 02/08 | VD-009 | Học nói "để mình xem lại đã" | 📝 Có lời đọc (bản cũ) |
-| 03/08 | VD-010 | Tha thứ là món quà cho chính mình | 📝 Có lời đọc (bản cũ) |
-| 04/08 | VD-011 | Một việc tốt không ai biết | 📝 Có lời đọc (bản cũ) |
-| 05/08 | VD-012 | Lời khen phải cụ thể | 📝 Có lời đọc (bản cũ) |
+| 25/07 | VD-001 | Ba điều biết ơn mỗi sáng | ✅ Đã đăng cả hai kênh |
+| 26/07 | VD-002 | Tử tế không bao giờ là điều lãng phí | ✅ Đã đăng cả hai kênh |
+| 27/07 | VD-003 | Hôm nay chỉ cần làm được một việc | ✅ Đã đăng cả hai kênh |
+| — | VD-004 | Câu cảm ơn có chữ vì | ✅ Đã đăng cả hai kênh |
+| — | VD-005 | Tin nhắn lâu không hỏi thăm | ✅ Đã đăng cả hai kênh |
+| — | VD-006 | So sánh với chính mình | ✅ Đã đăng cả hai kênh |
+| — | VD-007 | Tử tế được truyền tay | ✅ Đã đăng cả hai kênh |
+| **31/07** | **VD-008** | **Thức khuya trả thù** | ✅ **Đã đăng cả hai kênh — 31/07** |
+| kế tiếp | VD-009 | Để mình nghĩ đã | 🟢 **Sẵn sàng đăng — bài kế tiếp** (render + caption đủ hai kênh) |
+| | VD-010 | Tha thứ không phải cho người kia | 🟢 Sẵn sàng đăng |
+| | VD-011 | Một việc tốt không ai biết | 🟢 Sẵn sàng đăng |
+| | VD-012 | Người phục vụ mình cũng có tên | 🟢 Sẵn sàng đăng |
 
 **Chú thích:** ⬜ Chưa render · 📝 Có lời đọc, chưa có caption/ảnh quote · 🟡 Đang làm · 🟢 Sẵn sàng / đang đăng · ✅ Đã đăng
 

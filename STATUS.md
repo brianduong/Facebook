@@ -6,21 +6,20 @@ _Cập nhật: 2026-07-31_
 
 | Việc | Trạng thái |
 |---|---|
-| VD-001 · VD-002 · VD-003 | ✅ render xong cả hai thứ tiếng · **đã đăng YouTube cả hai kênh** |
-| **VD-004** · Câu cảm ơn có chữ vì | ✅ render xong — VI 72s · EN 69s · ✅ caption hai kênh · chưa đăng |
-| **VD-005** · Tin nhắn lâu không hỏi thăm | ✅ render xong — VI 69s · EN 77s · ✅ caption hai kênh · chưa đăng |
-| **VD-006** · So sánh với chính mình | ✅ **render xong 27/07** — VI 67s · EN 70s · ✅ caption hai kênh · chưa đăng |
-| **VD-007** · Tử tế được truyền tay | ✅ **render xong 30/07** — VI 78s · EN 85s · ✅ caption hai kênh · chưa đăng |
-| **VD-008** · Thức khuya trả thù | ✅ **render xong 31/07** — VI 81s · EN 86s · ✅ caption hai kênh · chưa đăng |
-| **VD-009** · Để mình nghĩ đã | ✅ **render xong 31/07** — VI 72s · EN 79s · ✅ caption hai kênh · chưa đăng |
+| VD-001 → VD-007 | ✅ render xong cả hai thứ tiếng · **đã đăng YouTube cả hai kênh** |
+| **VD-008** · Thức khuya trả thù | ✅ render xong 31/07 — VI 81s · EN 86s · ✅ caption hai kênh · **đã đăng cả hai kênh 31/07** |
+| **VD-009** · Để mình nghĩ đã | ✅ **render xong 31/07** — VI 72s · EN 79s · ✅ caption hai kênh · **⏭️ chưa đăng — bài kế tiếp** |
 | **VD-010** · Tha thứ không phải cho người kia | ✅ **render xong 31/07** — VI 75s · EN 77s · ✅ caption hai kênh · chưa đăng |
 | **VD-011** · Một việc tốt không ai biết | ✅ **render xong 31/07** — VI 67s · EN 72s · ✅ caption hai kênh · chưa đăng |
 | **VD-012** · Người phục vụ mình cũng có tên | ✅ **render xong 31/07** — VI 74s · EN 82s · ✅ caption hai kênh · chưa đăng |
 
-⚠️ **Đang tồn 9 bài đã render mà chưa đăng (VD-004 → VD-012) — 18 video.** Kho càng dày
-thì cái thiếu càng rõ: **vẫn chưa có một số liệu nào** để biết nên đi hướng nào. Ba video
-đã đăng từ 27/07 đến giờ chưa đo. **Việc đáng làm nhất bây giờ không phải làm thêm video,
-mà là đăng lần lượt số đang tồn rồi ghi số vào `schedule/calendar.md`.**
+➡️ **Bài kế tiếp cần đăng: VD-009 · "Để mình nghĩ đã"** (đã render + caption đủ hai kênh).
+Anh đã đăng tới **VD-008** — cả hai kênh, ngày 31/07.
+
+⚠️ **Còn tồn 4 bài đã render mà chưa đăng (VD-009 → VD-012) — 8 video.** Cái thiếu vẫn là
+cái thiếu cũ: **chưa có một số liệu nào** để biết nên đi hướng nào. Tám video đã đăng từ
+27/07 đến giờ chưa đo. **Việc đáng làm nhất bây giờ không phải làm thêm video, mà là đăng
+nốt số đang tồn rồi ghi số vào `schedule/calendar.md`.**
 
 **Hết hàng có nháp cũ.** VD-011 và VD-012 là hai bài cuối còn nháp từ pipeline cũ. Từ
 **VD-013 trở đi chỉ có hồ sơ ý tưởng, chưa có chữ nào** — mỗi bài sẽ phải viết mới hoàn
