@@ -12,13 +12,13 @@ Mỗi bài đi lên **ba nơi**: **YouTube tiếng Việt** (`@songtotdaily`) ·
 | Ngày | Mã số | Tên video | YT tiếng Việt | YT tiếng Anh | Facebook |
 |------|-------|-----------|:---:|:---:|:---:|
 | 25/07 | VD-001 | Ba điều biết ơn mỗi sáng | ✅ | ✅ | ✅ |
-| 26/07 | VD-002 | Tử tế không bao giờ là điều lãng phí | ✅ | ✅ | ✅ |
-| 27/07 | VD-003 | Hôm nay chỉ cần làm được một việc | ✅ | ✅ | ✅ |
+| 26/07 | VD-002 | Tử tế không bao giờ là điều lãng phí | ✅ | ✅ | ✅ đăng 2 lần |
+| 27/07 | VD-003 | Hôm nay chỉ cần làm được một việc | ✅ | ✅ | ❗ **thiếu** |
 | — | VD-004 | Câu cảm ơn có chữ vì | ✅ | ✅ | ✅ |
 | — | VD-005 | Tin nhắn lâu không hỏi thăm | ✅ | ✅ | ✅ |
 | — | VD-006 | So sánh với chính mình | ✅ | ✅ | ✅ |
 | **31/07** | **VD-008** | **Thức khuya trả thù** | ✅ | ✅ | ✅ |
-| **02/08** | **VD-007** | **Không ai tự nhiên tử tế cả** | 🕒 | 🕒 | ❓ |
+| **02/08** | **VD-007** | **Không ai tự nhiên tử tế cả** | 🕒 | 🕒 | ❗ **thiếu** |
 | 03/08 | VD-009 | Để mình nghĩ đã | 🟢 | 🟢 | 🟢 |
 | sau đó | VD-011 | Một việc tốt không ai biết | 🟢 | 🟢 | 🟢 |
 | sau đó | VD-010 | Tha thứ không phải cho người kia | 🟢 | 🟢 | 🟢 |
@@ -45,12 +45,20 @@ YouTube **đã nhận lịch** (`publishAt` lưu đúng `12:30Z` = 19:30 giờ V
 lo ngại ban đầu là project chưa qua audit sẽ bị bỏ qua lịch. **Nhưng nhận lịch chưa chắc
 đã tự công khai** — phải xem lúc 19:30 mới biết chắc. Không lên thì vào Studio bấm tay.
 
-❗ **VD-007 bị bỏ sót — phát hiện 02/08.** Nối API vào hai kênh rồi đọc danh sách video:
-mỗi kênh chỉ có 7 video, là VD-001 → VD-006 rồi nhảy thẳng sang VD-008. VD-007 render
-xong 30/07 mà chưa đăng ở kênh nào, và trên kênh trống đúng ngày 30/07.
-**Facebook chưa kiểm** nên để dấu ❓.
+❗ **Hai chỗ bỏ sót — phát hiện 02/08 khi nối API vào cả ba nơi.** Trước đó sổ ghi
+"đã đăng tới VD-008, ba nơi đồng bộ", thực tế không phải:
 
-**Còn tồn: 5 bài × 3 nơi = 15 lượt đăng.**
+| Nơi | Thực tế trên đó | Thiếu |
+|---|---|---|
+| YouTube tiếng Anh | 7 video: VD-001→006, VD-008 | **VD-007** |
+| YouTube tiếng Việt | 7 video: VD-001→006, VD-008 | **VD-007** |
+| Facebook | 7 video nhưng chỉ 6 bài — VD-002 đăng 2 lần | **VD-003 · VD-007** |
+
+Cách kiểm: đọc danh sách video qua API rồi khớp từng bài với caption trong
+`content/captions/`. Bài 27/07 trên Facebook mở đầu *"Sáng nay mở mắt ra…"* là **VD-001**
+bản caption viết lại, không phải VD-003 — dễ nhìn nhầm nên đã khớp bằng máy.
+
+**Còn tồn: 5 bài + 1 lượt bù (VD-003 trên Facebook) = 16 lượt đăng.**
 
 ⚠️ **Thứ tự năm bài còn lại đã đảo có chủ ý: VD-007 → VD-009 → VD-011 → VD-010 → VD-012.**
 VD-010 không được đứng liền sau VD-009, mà VD-007 · VD-011 · VD-012 đều trụ 2 nên cũng

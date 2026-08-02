@@ -60,14 +60,37 @@ def doc_env() -> dict[str, str]:
 
 
 def ghi_env(page_id: str, token: str) -> None:
+    """Chỉ sửa hai dòng của Facebook, giữ nguyên mọi dòng khác trong .env.
+
+    Bản cũ ghi đè cả file nên nuốt mất PEXELS_API_KEY — chạy xong là hỏng khâu
+    tải ảnh nền mà không báo gì.
+    """
     f = nd.REPO / ".env"
-    f.write_text(
-        "# Page Sống Tốt — https://www.facebook.com/songtot.in\n"
-        "# File này KHÔNG lên GitHub (đã bị .gitignore chặn)\n"
-        f"FB_PAGE_ID={page_id}\n"
-        f"FB_PAGE_TOKEN={token}\n",
-        encoding="utf-8",
-    )
+    moi = {"FB_PAGE_ID": page_id, "FB_PAGE_TOKEN": token}
+    ra: list[str] = []
+    da_ghi: set[str] = set()
+
+    if f.exists():
+        for dong in f.read_text(encoding="utf-8").splitlines():
+            kho = dong.strip()
+            if kho and not kho.startswith("#") and "=" in kho:
+                k = kho.split("=", 1)[0].strip()
+                if k in moi:
+                    ra.append(f"{k}={moi[k]}")
+                    da_ghi.add(k)
+                    continue
+            ra.append(dong)
+    else:
+        ra = [
+            "# Page Sống Tốt — https://www.facebook.com/songtot.in",
+            "# File này KHÔNG lên GitHub (đã bị .gitignore chặn)",
+        ]
+
+    for k, v in moi.items():
+        if k not in da_ghi:
+            ra.append(f"{k}={v}")
+
+    f.write_text("\n".join(ra).rstrip("\n") + "\n", encoding="utf-8")
     f.chmod(0o600)
 
 

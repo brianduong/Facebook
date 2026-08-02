@@ -54,22 +54,29 @@ khai. Muốn bỏ hẳn bước bấm tay thì nộp đơn xin audit, xem mục 
 ➡️ **Bài kế tiếp cần đăng: VD-007 · "Không ai tự nhiên tử tế cả"** — bài này **bị bỏ sót**,
 không phải VD-009.
 
-❗ **Phát hiện 02/08 khi nối API vào hai kênh:** mỗi kênh chỉ có **7 video**, và đọc danh
-sách ra thì là VD-001 → VD-006 rồi **nhảy thẳng sang VD-008**. VD-007 render xong ngày
-30/07 nhưng chưa bao giờ đăng ở kênh nào. Ngày tháng khớp: có bài 29/07 và 31/07, trống
-đúng ngày 30/07. Sổ cũ ghi "đã đăng tới VD-008" nên không ai để ý chỗ hụt ở giữa.
+❗ **Phát hiện 02/08 khi nối API vào cả ba nơi.** Sổ cũ ghi "đã đăng tới VD-008, ba nơi
+đồng bộ" — đọc thẳng từ API thì không phải:
+
+| Nơi | Thực tế | Thiếu |
+|---|---|---|
+| YouTube tiếng Anh | VD-001→006, VD-008 | **VD-007** |
+| YouTube tiếng Việt | VD-001→006, VD-008 | **VD-007** |
+| Facebook | VD-001, 002, 004, 005, 006, 008 · VD-002 đăng 2 lần | **VD-003 · VD-007** |
+
+VD-007 render xong 30/07 mà chưa đăng đâu cả — trên hai kênh YouTube trống đúng ngày 30/07.
+Riêng Facebook sót thêm VD-003 từ hồi 27/07.
 
 **Thứ tự đăng năm bài còn tồn: VD-007 → VD-009 → VD-011 → VD-010 → VD-012.** Lý do:
 VD-010 không được đứng liền sau VD-009, mà VD-007 · VD-011 · VD-012 đều là trụ 2 nên cũng
 không được dính nhau — xếp kiểu này gỡ được cả ba ràng buộc.
 
-⚠️ **Còn tồn 5 bài — 15 lượt đăng.** Cái thiếu vẫn là cái thiếu cũ: **chưa có một số liệu
-nào** để biết nên đi hướng nào. Bảy bài đã đăng từ 26/07 đến giờ chưa đo bài nào.
-**Việc đáng làm nhất bây giờ không phải làm thêm video, mà là đăng nốt số đang tồn rồi ghi
-số vào `schedule/calendar.md`.**
+⚠️ **Còn tồn 5 bài + 1 lượt bù (VD-003 trên Facebook) = 16 lượt đăng.** Cái thiếu vẫn là
+cái thiếu cũ: **chưa có một số liệu nào** để biết nên đi hướng nào. Bảy bài đã đăng từ
+26/07 đến giờ chưa đo bài nào. **Việc đáng làm nhất bây giờ không phải làm thêm video, mà
+là đăng nốt số đang tồn rồi ghi số vào `schedule/calendar.md`.**
 
-⚠️ **Chưa soi được Facebook.** Con số trên chỉ đúng cho hai kênh YouTube — đọc thẳng từ API.
-Facebook chưa kiểm, nên chưa biết VD-007 có bị sót ở đó không.
+✅ **Cả ba nơi giờ đều nối được bằng API** — đọc số và đăng bài bằng dòng lệnh, không phải
+tin vào sổ nữa. Token Facebook đã lấy 02/08 (`.env`, quyền 600).
 
 **Hết hàng có nháp cũ.** VD-011 và VD-012 là hai bài cuối còn nháp từ pipeline cũ. Từ
 **VD-013 trở đi chỉ có hồ sơ ý tưởng, chưa có chữ nào** — mỗi bài sẽ phải viết mới hoàn
