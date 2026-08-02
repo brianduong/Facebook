@@ -44,23 +44,32 @@ khai. Muốn bỏ hẳn bước bấm tay thì nộp đơn xin audit, xem mục 
 
 | Việc | Trạng thái |
 |---|---|
-| VD-001 → VD-008 | ✅ render xong cả hai thứ tiếng · **đã đăng đủ cả ba nơi** |
-| **VD-009** · Để mình nghĩ đã | ✅ **render xong 31/07** — VI 72s · EN 79s · ✅ caption đủ · **⏭️ chưa đăng — bài kế tiếp** |
+| VD-001 → VD-006 · VD-008 | ✅ render xong cả hai thứ tiếng · **đã đăng cả hai kênh YouTube** |
+| **VD-007** · Không ai tự nhiên tử tế cả | ✅ render xong 30/07 · ✅ caption đủ · **❗ bị bỏ sót — chưa đăng, phải đăng trước** |
+| **VD-009** · Để mình nghĩ đã | ✅ **render xong 31/07** — VI 72s · EN 79s · ✅ caption đủ · chưa đăng |
 | **VD-010** · Tha thứ không phải cho người kia | ✅ **render xong 31/07** — VI 75s · EN 77s · ✅ caption đủ · chưa đăng |
 | **VD-011** · Một việc tốt không ai biết | ✅ **render xong 31/07** — VI 67s · EN 72s · ✅ caption đủ · chưa đăng |
 | **VD-012** · Người phục vụ mình cũng có tên | ✅ **render xong 31/07** — VI 74s · EN 82s · ✅ caption đủ · chưa đăng |
 
-➡️ **Bài kế tiếp cần đăng: VD-009 · "Để mình nghĩ đã"** (render + caption đủ cả ba nơi).
-Anh đã đăng tới **VD-008**, ba nơi đang đồng bộ nhau.
+➡️ **Bài kế tiếp cần đăng: VD-007 · "Không ai tự nhiên tử tế cả"** — bài này **bị bỏ sót**,
+không phải VD-009.
 
-**Thứ tự đăng bốn bài còn tồn: VD-009 → VD-011 → VD-010 → VD-012.** Lý do: VD-010 không
-được đứng liền sau VD-009 (hồ sơ ý tưởng dặn xen một bài trụ 2 vào giữa), mà VD-011 với
-VD-012 lại cùng trụ 2 nên cũng không được liền nhau — xếp kiểu này gỡ được cả hai.
+❗ **Phát hiện 02/08 khi nối API vào hai kênh:** mỗi kênh chỉ có **7 video**, và đọc danh
+sách ra thì là VD-001 → VD-006 rồi **nhảy thẳng sang VD-008**. VD-007 render xong ngày
+30/07 nhưng chưa bao giờ đăng ở kênh nào. Ngày tháng khớp: có bài 29/07 và 31/07, trống
+đúng ngày 30/07. Sổ cũ ghi "đã đăng tới VD-008" nên không ai để ý chỗ hụt ở giữa.
 
-⚠️ **Còn tồn 4 bài — 12 lượt đăng.** Cái thiếu vẫn là cái thiếu cũ: **chưa có một số liệu
-nào** để biết nên đi hướng nào. Tám bài đã đăng từ 27/07 đến giờ chưa đo bài nào.
+**Thứ tự đăng năm bài còn tồn: VD-007 → VD-009 → VD-011 → VD-010 → VD-012.** Lý do:
+VD-010 không được đứng liền sau VD-009, mà VD-007 · VD-011 · VD-012 đều là trụ 2 nên cũng
+không được dính nhau — xếp kiểu này gỡ được cả ba ràng buộc.
+
+⚠️ **Còn tồn 5 bài — 15 lượt đăng.** Cái thiếu vẫn là cái thiếu cũ: **chưa có một số liệu
+nào** để biết nên đi hướng nào. Bảy bài đã đăng từ 26/07 đến giờ chưa đo bài nào.
 **Việc đáng làm nhất bây giờ không phải làm thêm video, mà là đăng nốt số đang tồn rồi ghi
 số vào `schedule/calendar.md`.**
+
+⚠️ **Chưa soi được Facebook.** Con số trên chỉ đúng cho hai kênh YouTube — đọc thẳng từ API.
+Facebook chưa kiểm, nên chưa biết VD-007 có bị sót ở đó không.
 
 **Hết hàng có nháp cũ.** VD-011 và VD-012 là hai bài cuối còn nháp từ pipeline cũ. Từ
 **VD-013 trở đi chỉ có hồ sơ ý tưởng, chưa có chữ nào** — mỗi bài sẽ phải viết mới hoàn

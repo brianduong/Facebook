@@ -17,20 +17,25 @@ Mỗi bài đi lên **ba nơi**: **YouTube tiếng Việt** (`@songtotdaily`) ·
 | — | VD-004 | Câu cảm ơn có chữ vì | ✅ | ✅ | ✅ |
 | — | VD-005 | Tin nhắn lâu không hỏi thăm | ✅ | ✅ | ✅ |
 | — | VD-006 | So sánh với chính mình | ✅ | ✅ | ✅ |
-| — | VD-007 | Tử tế được truyền tay | ✅ | ✅ | ✅ |
 | **31/07** | **VD-008** | **Thức khuya trả thù** | ✅ | ✅ | ✅ |
-| **kế tiếp** | **VD-009** | **Để mình nghĩ đã** | 🟢 | 🟢 | 🟢 |
+| **kế tiếp** | **VD-007** | **Không ai tự nhiên tử tế cả** | ❗ | ❗ | ❓ |
+| sau đó | VD-009 | Để mình nghĩ đã | 🟢 | 🟢 | 🟢 |
 | sau đó | VD-011 | Một việc tốt không ai biết | 🟢 | 🟢 | 🟢 |
 | sau đó | VD-010 | Tha thứ không phải cho người kia | 🟢 | 🟢 | 🟢 |
 | sau đó | VD-012 | Người phục vụ mình cũng có tên | 🟢 | 🟢 | 🟢 |
 
-**Chú thích:** ⬜ Chưa render · 📝 Có lời đọc, chưa có caption/ảnh quote · 🟡 Đang làm · 🟢 Sẵn sàng / đang đăng · ✅ Đã đăng
+**Chú thích:** ⬜ Chưa render · 📝 Có lời đọc, chưa có caption/ảnh quote · 🟡 Đang làm · 🟢 Sẵn sàng / đang đăng · ✅ Đã đăng · ❗ Bị bỏ sót · ❓ Chưa kiểm
 
-**Còn tồn: 4 bài × 3 nơi = 12 lượt đăng.**
+❗ **VD-007 bị bỏ sót — phát hiện 02/08.** Nối API vào hai kênh rồi đọc danh sách video:
+mỗi kênh chỉ có 7 video, là VD-001 → VD-006 rồi nhảy thẳng sang VD-008. VD-007 render
+xong 30/07 mà chưa đăng ở kênh nào, và trên kênh trống đúng ngày 30/07.
+**Facebook chưa kiểm** nên để dấu ❓.
 
-⚠️ **Thứ tự bốn bài còn lại đã đảo có chủ ý: VD-009 → VD-011 → VD-010 → VD-012.**
-VD-010 không được đứng liền sau VD-009, mà VD-011 với VD-012 lại cùng trụ 2 nên cũng
-không được liền nhau — xếp kiểu này gỡ được cả hai.
+**Còn tồn: 5 bài × 3 nơi = 15 lượt đăng.**
+
+⚠️ **Thứ tự năm bài còn lại đã đảo có chủ ý: VD-007 → VD-009 → VD-011 → VD-010 → VD-012.**
+VD-010 không được đứng liền sau VD-009, mà VD-007 · VD-011 · VD-012 đều trụ 2 nên cũng
+không được dính nhau.
 
 ⚠️ **VD-011 sẽ ít bình luận hẳn, đó là chủ ý** — CTA của nó là *cấm kể*. Đo bài này bằng
 lượt lưu và tỉ lệ xem hết, đừng đo bằng bình luận, và đừng tự bình luận mở hàng.
