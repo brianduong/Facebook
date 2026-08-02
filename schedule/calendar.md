@@ -13,7 +13,7 @@ Mỗi bài đi lên **ba nơi**: **YouTube tiếng Việt** (`@songtotdaily`) ·
 |------|-------|-----------|:---:|:---:|:---:|
 | 25/07 | VD-001 | Ba điều biết ơn mỗi sáng | ✅ | ✅ | ✅ |
 | 26/07 | VD-002 | Tử tế không bao giờ là điều lãng phí | ✅ | ✅ | ✅ đăng 2 lần |
-| 27/07 | VD-003 | Hôm nay chỉ cần làm được một việc | ✅ | ✅ | ❗ **thiếu** |
+| 27/07 | VD-003 | Hôm nay chỉ cần làm được một việc | ✅ | ✅ | 🕒 bù 02/08 21:45 |
 | — | VD-004 | Câu cảm ơn có chữ vì | ✅ | ✅ | ✅ |
 | — | VD-005 | Tin nhắn lâu không hỏi thăm | ✅ | ✅ | ✅ |
 | — | VD-006 | So sánh với chính mình | ✅ | ✅ | ✅ |
@@ -47,8 +47,8 @@ python3 scripts/dang-video-fb.py reels video/exports/VD-0XX-reels.mp4 --ma VD-0X
     --hen-gio 2026-08-0DT19:30:00+07:00 --dang-that
 ```
 
-⚠️ **VD-003 còn nợ riêng Facebook.** Bù vào một ngày nào đó, nhưng bù là phá nhịp đồng bộ
-— nên xếp vào ngày không có bài mới, đừng chen vào ngày đang đăng bài khác.
+✅ **VD-003 đã bù xong cho Facebook** — đăng 02/08, hẹn **21:45** (tách khỏi khung 19:30 của
+VD-007 để hai bài không đè nhau trong cùng một tối). Mã bài `2227069261412713`.
 
 ### VD-007 — tải lên 02/08 lúc 17:4x, hẹn 19:30
 
