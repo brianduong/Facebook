@@ -15,6 +15,31 @@ Mỗi bài đi lên **ba nơi**, gọi đúng ba tên này:
 Facebook dùng **chung file video tiếng Việt** với YouTube tiếng Việt, không render riêng.
 Nên mỗi bài có 2 file video nhưng **3 lượt đăng**.
 
+## 🤖 Đăng tự động — dựng 02/08
+
+Đăng bằng dòng lệnh, chữ bóc thẳng từ file caption nên không phải dán tay bốn ô.
+
+| Nơi | Script | Trạng thái |
+|---|---|---|
+| YouTube tiếng Anh · tiếng Việt | `scripts/dang-video-youtube.py` | ✅ script xong · **chờ anh lấy chìa khoá bên Google** |
+| Facebook | `scripts/dang-video-fb.py` | ✅ có từ 25/07 |
+
+**Anh cần làm một lần:** theo mục A → C trong `docs/huong-dan-dang-youtube.md` (tạo project
+Google Cloud, tải file chìa khoá về, xin quyền cho từng kênh). Xong rồi mỗi ngày chỉ còn:
+
+```bash
+.venv-dang/bin/python scripts/dang-video-youtube.py dang VD-009 --kenh en            # xem trước
+.venv-dang/bin/python scripts/dang-video-youtube.py dang VD-009 --kenh en --dang-that # đăng
+```
+
+⚠️ **Video đăng qua API sẽ bị YouTube khoá ở chế độ riêng tư**, vì project chưa qua vòng
+audit của Google. Không phải lỗi script, không lách được bằng code — script vẫn lo phần
+nặng (tải file, tiêu đề, mô tả, thẻ, danh mục, khai báo trẻ em), anh vào Studio bấm công
+khai. Muốn bỏ hẳn bước bấm tay thì nộp đơn xin audit, xem mục E của hướng dẫn.
+
+⚠️ **Bước dễ bỏ sót nhất là A3** — phải chuyển màn hình đồng ý từ *Testing* sang
+*In production*, không thì Google thu hồi quyền sau đúng 7 ngày.
+
 ## 📍 Dừng ở đâu — làm tiếp từ đây
 
 | Việc | Trạng thái |
@@ -366,6 +391,8 @@ vẽ tay, giọng `say`), không dùng lại được. Sẽ làm lại toàn b�
 - `render-video-v2.py` — render Reels hoàn chỉnh
 - `thu-giong-vieneu.py` — nghe thử giọng
 - `tach-loi-doc.py` — rút bản VI trong file song ngữ ra lời đọc (chặn nếu chưa duyệt)
+- `dang-video-youtube.py` — đăng lên hai kênh YouTube, chữ bóc thẳng từ file caption
+- `dang-video-fb.py` — đăng lên Facebook (có từ 25/07)
 
 **Công cụ cũ** (`render-video-nhap.py`, `nhan_vat.py`, `canh_nen.py`, `giong_doc.py`)
 vẫn giữ để đối chiếu, **không dùng nữa**.
