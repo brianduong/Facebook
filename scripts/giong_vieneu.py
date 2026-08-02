@@ -52,14 +52,35 @@ KIEU_MAC_DINH = "doc_truyen"      # tu_nhien | tin_tuc | doc_truyen
 # Giữ nhiệt ở mức mặc định 0.8: nhiệt cao hơn không cho thêm ngữ điệu (đo rồi) mà
 # lại làm model vấp và đọc sai chữ. Chỉ nâng im_lang để có chỗ ngắt lấy hơi.
 NHIET_MAC_DINH = 0.8
-IM_LANG_MAC_DINH = 0.28
 
-# Lọc từng thẻ: chỉ cắt ù trầm và ghìm đỉnh. Không echo, không nâng trung trầm,
-# không chuẩn hoá độ to ở bước này.
-LOC_TUNG_THE = (
+# Nâng 0.28 → 0.34 ngày 02/08 theo góp ý "chậm một chút và truyền cảm một chút".
+# Khoảng lặng dài hơn cho câu có chỗ rơi, đó là thứ làm giọng bớt gấp.
+IM_LANG_MAC_DINH = 0.34
+
+# Làm chậm lại bao nhiêu phần. 1.0 là giữ nguyên, 1.09 là chậm hơn 9%.
+#
+# VieNeu không có tham số tốc độ nên phải làm ở khâu hậu kỳ bằng `atempo` —
+# bộ lọc này đổi nhịp mà **không đổi cao độ**, nên giọng không bị trầm đi.
+#
+# Đặt 1.09 ngày 02/08 vì kiểu `doc_truyen` đọc 4,89 chữ/giây, nhanh hơn `tu_nhien`
+# (4,28) tới 14% — được ngữ điệu nhưng mất nhịp thở. Chậm 9% kéo về khoảng
+# 4,49 chữ/giây, vẫn nhanh hơn tu_nhien một chút nhưng đã có chỗ nghỉ.
+#
+# ⚠️ Đừng quá 1.15: atempo kéo xa quá thì tiếng bắt đầu nghe rỗng và ọc ạch.
+# ⚠️ Đổi số này thì bài dài ra theo — nhớ đo lại `TOC_DO["VI"]` trong tach-loi-doc.py.
+DO_CHAM_MAC_DINH = 1.09
+
+# Lọc từng thẻ, phần dùng chung cho cả hai thứ tiếng: chỉ cắt ù trầm và ghìm đỉnh.
+# Không echo, không nâng trung trầm, không chuẩn hoá độ to ở bước này.
+LOC_TUNG_THE_CHUNG = (
     "highpass=f=70,"                                              # cắt ù trầm
     "acompressor=threshold=-20dB:ratio=2:attack=20:release=250"    # nén nhẹ cho đều
 )
+
+# Bản riêng cho tiếng Việt — có thêm khâu làm chậm.
+# Tiếng Anh KHÔNG dùng chuỗi này: Piper đã chậm sẵn bằng length_scale 1.12,
+# chồng thêm atempo nữa là thành giọng máy dạy học.
+LOC_TUNG_THE = f"{LOC_TUNG_THE_CHUNG},atempo={1 / DO_CHAM_MAC_DINH:.4f}"
 
 # Lọc một lần trên toàn bộ giọng đã ghép — đây mới là chỗ chuẩn hoá độ to.
 LOC_TOAN_BAI = (

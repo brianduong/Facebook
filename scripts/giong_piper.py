@@ -34,7 +34,11 @@ from typing import Any
 
 # Chuỗi hậu kỳ tiếng dùng chung với bản tiếng Việt — lý do chọn từng bộ lọc ghi
 # trong giong_vieneu.py, không chép lại ở đây.
-from giong_vieneu import LOC_TOAN_BAI, LOC_TUNG_THE  # noqa: F401
+#
+# ⚠️ Lấy bản `_CHUNG`, KHÔNG lấy `LOC_TUNG_THE` của tiếng Việt: bản đó có thêm
+# `atempo` làm chậm 9%, mà tiếng Anh đã chậm sẵn bằng length_scale 1.12 rồi.
+from giong_vieneu import LOC_TOAN_BAI  # noqa: F401
+from giong_vieneu import LOC_TUNG_THE_CHUNG as LOC_TUNG_THE  # noqa: F401
 
 REPO = Path(__file__).resolve().parent.parent
 KHO_GIONG = REPO / ".piper-voices"
