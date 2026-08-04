@@ -71,33 +71,49 @@ ngay khi lướt tới, hiếm ai nhìn bìa. Công cụ `scripts/tao-anh-bia-re
 
 ## 📍 Dừng ở đâu — làm tiếp từ đây
 
-### Đã hẹn giờ 04–07/08 lúc 19:30
+### Đã hẹn giờ 04–08/08 lúc 19:30 — đủ cả ba nơi
 
-| Ngày | Bài | Facebook post ID | Trạng thái |
-|---|---|---|---|
-| 04/08 | VD-009 | `315460902683557_1660124185681318` | 🕒 19:30 |
-| 05/08 | VD-011 | `315460902683557_1660124532347950` | 🕒 19:30 |
-| 06/08 | VD-010 | `315460902683557_1660124749014595` | 🕒 19:30 |
-| 07/08 | VD-012 | `315460902683557_1660125055681231` | 🕒 19:30 |
+| Ngày | Bài | YouTube tiếng Việt | YouTube tiếng Anh | Facebook | Trạng thái |
+|---|---|---|---|---|---|
+| 04/08 | VD-009 | `rmgkx_XTnJo` | `leBaRFd4fXQ` | `315460902683557_1660124185681318` | 🕒 19:30 |
+| 05/08 | VD-011 | `tY5SZz3F5kY` | `ZzcZEZD_TSE` | `315460902683557_1660124532347950` | 🕒 19:30 |
+| 06/08 | VD-010 | `qUGygq8-qw4` | `MJCbGstdSgQ` | `315460902683557_1660124749014595` | 🕒 19:30 |
+| 07/08 | VD-012 | `wECczzrqARA` | `EO_qomjUYPE` | `315460902683557_1660125055681231` | 🕒 19:30 |
+| **08/08** | **VD-013** | `VrHJoc6XGSg` | `DOYFZXQ_VC0` | Reels `787834854408440` | 🕒 19:30 |
 
-API Facebook đã được đọc lại sau khi tải: đúng bốn lịch, mỗi ngày một bài, đều là
-`12:30Z` = **19:30 giờ Việt Nam**. Hai lịch trùng phát sinh trong lúc chạy đã được xóa.
-VD-003 và VD-007 cũng đã được xác nhận công khai đúng lịch ngày 02/08.
+**Đã đọc lại API cả ba nơi ngày 04/08 để xác nhận, không tin dòng báo thành công của
+script:** hai kênh YouTube đều **13 video, khớp đủ VD-001 → VD-013**, không trùng không
+thiếu, cả 5 bài đang chờ đều `uploadStatus = processed` và `processingStatus = succeeded`,
+không bài nào bị từ chối. Facebook có **đúng 5 lịch**, mỗi ngày một bài, không trùng giờ,
+permalink trả về `/reel/…` nên chắc chắn là Reels chứ không phải video thường. Tất cả đều
+lưu mốc `12:30Z` = **19:30 giờ Việt Nam**.
 
-**VD-013 đã sẵn sàng cho 19:30 ngày 08/08, chưa tải lên nền tảng:** bản Việt 72 giây
-(`VD-013-reels.mp4`) · bản Anh 85 giây (`VD-013-reels-en.mp4`) · 1080×1920 · 30fps.
-Chữ song ngữ, hai caption và 7 ảnh Pexels đã đủ. Trạng thái duyệt chữ vẫn là 🤖 em tự
-duyệt; nếu anh không yêu cầu sửa thì đây là bài kế tiếp để lên lịch đủ ba nơi.
+Hai lịch trùng phát sinh lúc chạy đợt VD-009→012 đã được xóa. VD-003 và VD-007 cũng đã
+xác nhận công khai đúng lịch ngày 02/08.
+
+⏳ **Bài vừa hẹn giờ trên Facebook mất khoảng một phút mới hiện trong `/scheduled_posts`.**
+VD-013 đăng lúc 17:18 ngày 04/08, đọc ngay sau đó thấy danh sách chỉ có 4 bài, tưởng hụt.
+Tra thẳng `/{video-id}` thì đã `publish_status = scheduled` đúng mốc. **Chưa thấy trong
+danh sách thì tra mã bài trước, đừng vội đăng lại** — đăng lại là ra hai lịch trùng.
+
+⚠️ **Tên mục trong file caption phải viết bằng tiếng Việt, kể cả file `-en.md`.**
+`dang-video-youtube.py` tìm đúng ba chuỗi `Tiêu đề` · `Mô tả` · `Thẻ`. Bản tiếng Anh của
+VD-013 ban đầu đặt là `Title` · `Description` · `Tags` nên script báo *thiếu mục* dù chữ
+có đủ, và kênh tiếng Anh không đăng được. Bài sau cứ chép khuôn `VD-012-caption-en.md`.
 
 ### Lịch còn chờ công khai
 
 | Bài | Trạng thái |
 |---|---|
-| **VD-009 → VD-012** | ✅ đã lên lịch đủ cả ba nơi tới hết 07/08 |
+| **VD-009 → VD-013** | ✅ đã lên lịch đủ cả ba nơi tới hết 08/08 |
 
-**Thứ tự: VD-009 → VD-011 → VD-010 → VD-012**, mỗi ngày một bài, hết ngày 07/08.
+**Thứ tự: VD-009 → VD-011 → VD-010 → VD-012 → VD-013**, mỗi ngày một bài, hết ngày 08/08.
 VD-010 không được đứng liền sau VD-009, mà VD-011 · VD-012 cùng trụ 2 nên cũng không được
-dính nhau — xếp kiểu này gỡ được cả hai.
+dính nhau — xếp kiểu này gỡ được cả hai. VD-013 là trụ 1 nên đứng sau VD-012 không phạm.
+
+🔻 **Hết bài từ 09/08.** VD-014 (*Những thứ hôm nay không hỏng*, trụ 3) mới có hồ sơ ý
+tưởng trong `content/ideas/y-tuong-VD-007-020.md`, chưa viết chữ nào. Muốn giữ nhịp mỗi
+ngày một bài thì phải bắt đầu viết trước 08/08.
 
 ### ❗ Bài học 02/08: sổ và trí nhớ đều sai, chỉ API là đúng
 
@@ -116,18 +132,45 @@ hơn một tuần không ai biết. Cả hai đã bù trong tối nay.
 **bằng máy, đừng nhìn mắt**. Bài 27/07 trên Facebook mở đầu *"Sáng nay mở mắt ra…"* trông
 hệt VD-003 nhưng thực ra là VD-001 bản caption viết lại.
 
-### ⚠️ Chỗ nghẽn thật, chưa ai đụng
+### ⚠️ Chỗ nghẽn thật — đã có số lần đầu (04/08)
 
-**Chín bài đã đăng, chưa bài nào có số.** Từ 26/07 đến giờ không đo một lần nào. Bảng đã
-dựng sẵn trong `schedule/calendar.md`, tách riêng ba nơi, chỉ chờ điền.
+Kéo bằng API ngày 04/08, tám bài đã công khai:
 
-Giờ **cả ba nơi đều đọc được bằng API** nên lấy số về được, không phải ngồi chép tay. Đây
-là việc đáng làm nhất — làm thêm video lúc này chỉ dày kho chứ không trả lời được câu
-"hướng nào chạy".
+| Mã | Sống Tốt (VI) | One Small Thing (EN) |
+|---|---:|---:|
+| VD-001 | 824 | 8 |
+| VD-002 | 875 | 24 |
+| VD-003 | 588 | 39 |
+| VD-004 | **29** | 41 |
+| VD-005 | 903 | 1 |
+| VD-006 | 498 | 0 |
+| VD-007 | 1.082 | 9 |
+| VD-008 | **1.174** | 8 |
+| **Tổng** | **5.971** · 12 đăng ký | **130** · 3 đăng ký |
 
-**Hết hàng có nháp cũ.** VD-011 và VD-012 là hai bài cuối còn nháp từ pipeline cũ. Từ
-**VD-013 trở đi chỉ có hồ sơ ý tưởng, chưa có chữ nào** — mỗi bài sẽ phải viết mới hoàn
-toàn từ đầu.
+Page Facebook: 9.926 người theo dõi.
+
+**1. Kênh Việt chạy, kênh Anh thì không** — chênh 46 lần trên cùng nội dung, cùng ngày
+đăng. Đây không phải chuyện nội dung hay dở. Trước khi đổ thêm công vào kênh EN thì phải
+hiểu vì sao nó không được đẩy, không thì làm bao nhiêu cũng vậy.
+
+**2. Kênh Việt đang lên dần** — hai bài mới nhất là hai bài cao nhất (VD-008: 1.174,
+VD-007: 1.082) so với ~500–900 hồi cuối tháng 7. Nhịp đăng đều có tác dụng.
+
+**3. VD-004 tiếng Việt chỉ 29 lượt** trong khi mọi bài VI khác đều 500+. Lệch 20 lần so
+với bài kém nhất kế tiếp, khó mà do nội dung — nghi bị hạn chế hiển thị. Đáng vào Studio
+xem thử.
+
+**4. Cả 16 bài, hai kênh, đều 0 bình luận.** Không hẳn bất thường với Shorts, nhưng cũng
+có thể do tắt bình luận — kiểm trong Studio là biết ngay.
+
+⚠️ **Còn thiếu tỉ lệ xem hết** — đây mới là số YouTube chấm, mà API công khai không trả
+về. Phải lấy qua YouTube Analytics API hoặc xem tay trong Studio. Bảng trong
+`schedule/calendar.md` vẫn đang chờ điền.
+
+**Hết hàng có nháp cũ.** VD-011 và VD-012 là hai bài cuối còn nháp từ pipeline cũ. VD-013
+đã viết mới hoàn toàn ngày 04/08. Từ **VD-014 trở đi chỉ có hồ sơ ý tưởng, chưa có chữ
+nào** — mỗi bài phải viết mới từ đầu.
 
 ### Ba bài mới — làm ngày 31/07
 
@@ -199,16 +242,21 @@ tiếng → chấm ảnh tay từ bảng ứng viên → render VI + EN → capt
 - Chỗ lệch cũ vẫn còn: ảnh rải **đều** trên các thẻ chữ nên "Chỉ ngồi đó tới khuya" đang
   chạy trên ảnh văn phòng, còn ảnh khung cửa đêm thì đến sau một nhịp.
 
-### Ngày mai 03/08 làm theo thứ tự này
+### Làm tiếp theo thứ tự này (viết lại 04/08)
 
-_(mục này viết lại 02/08 — bản cũ đã lỗi thời vì phần đăng giờ chạy bằng lệnh)_
+_(bản trước viết cho 03/08 — mục 1 và 2 đã xong, xóa khỏi danh sách)_
 
-1. **Soi lại tối qua:** VD-007 có tự lên lúc 19:30 trên hai kênh YouTube không? Không lên
-   thì vào Studio bấm công khai — project chưa qua audit nên chưa chắc ăn.
-2. **Đăng VD-009 đủ ba nơi**, hẹn 19:30 — ba dòng lệnh ở mục "Đăng tự động" bên trên.
-3. **Lấy số về ghi vào `schedule/calendar.md`.** Đây là việc đáng làm nhất và đã bỏ lửng
-   từ 26/07. Cả ba nơi đọc được bằng API rồi.
-4. Còn nợ cũ: **thêm lại link Facebook** vào mô tả 3 video đầu kênh Sống Tốt (mục dưới).
+1. **Viết VD-014 trước 08/08.** Đây là việc gấp nhất: hết 08/08 là đứt nhịp. Ý tưởng
+   *Những thứ hôm nay không hỏng* (trụ 3) đã có trong `content/ideas/y-tuong-VD-007-020.md`,
+   nhưng chưa có chữ nào.
+2. **Vào Studio xem VD-004 tiếng Việt** — chỉ 29 lượt trong khi mọi bài VI khác 500+.
+   Nghi bị hạn chế hiển thị. Nhân tiện xem luôn vì sao cả 16 bài đều 0 bình luận.
+3. **Lấy tỉ lệ xem hết.** Số lượt xem đã có (bảng ở mục "Chỗ nghẽn thật"), nhưng tỉ lệ
+   xem hết — số YouTube thật sự chấm — thì API công khai không trả về. Phải qua YouTube
+   Analytics API hoặc xem tay trong Studio, rồi điền vào `schedule/calendar.md`.
+4. **Tìm hiểu vì sao kênh tiếng Anh không được đẩy** (130 lượt so với 5.971). Trước khi
+   quyết có đầu tư tiếp cho kênh EN hay không.
+5. Còn nợ cũ: **thêm lại link Facebook** vào mô tả 3 video đầu kênh Sống Tốt (mục dưới).
 
 ### Chốt 28/07 — danh mục YouTube và thẻ tiếng Anh
 
