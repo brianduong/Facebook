@@ -1,6 +1,6 @@
 # STATUS — Ghi chú tiến độ
 
-_Cập nhật: 2026-08-02_
+_Cập nhật: 2026-08-04_
 
 ## 📍 Ba nơi đăng — tên gọi quy ước
 
@@ -31,6 +31,9 @@ Nên mỗi bài có 2 file video nhưng **3 lượt đăng**.
 - **Đồng bộ cả ba nơi cùng ngày, cùng một bài** — đừng để nơi này đi trước nơi kia
 - **Công khai lúc 19:30** giờ Việt Nam
 - **Luôn đăng trước rồi đặt lịch**, không đăng đúng giờ, không để tự lên ngay
+- Khi có một lô bài: dùng **19:30 gần nhất còn trống** cho bài đầu (tối nay chỉ khi còn
+  ít nhất 10 phút), rồi **19:30 mỗi ngày kế tiếp** cho từng bài còn lại
+- Sau khi lên lịch phải đọc lại API, khớp ngày/giờ/câu đầu và xóa lịch trùng nếu có
 
 ### Ba dòng lệnh của một ngày
 
@@ -49,9 +52,8 @@ Bỏ `--dang-that` là chạy thử, chỉ in ra những gì sắp gửi. Xem tr
 
 - ⚠️ **Facebook phải dùng lệnh `reels`**, không dùng `video`. Lệnh `video` đi đường
   `/videos` ra bài video thường; video dọc 9:16 phải qua `/video_reels` mới vào tab Reels.
-- ⚠️ **YouTube khoá video ở chế độ riêng tư** vì project chưa qua audit. Nhưng **có nhận
-  `publishAt`** — đo thật ngày 02/08. Nhận lịch chưa chắc đã tự công khai; đến giờ mà chưa
-  lên thì vào Studio bấm tay. Muốn hết hẳn thì nộp đơn audit, mục E của hướng dẫn.
+- ⚠️ **YouTube khoá video ở chế độ riêng tư trước giờ hẹn** vì project chưa qua audit,
+  nhưng đã đo thật: tới `publishAt` video vẫn tự công khai đúng giờ.
 - ⚠️ **Facebook hẹn giờ chạy thẳng**, không vướng audit. Đòi cách hiện tại ≥10 phút.
 - ⚠️ Màn hình đồng ý của Google phải ở **In production**, không thì Google thu hồi quyền
   sau 7 ngày. Đã chuyển 02/08.
@@ -69,26 +71,26 @@ ngay khi lướt tới, hiếm ai nhìn bìa. Công cụ `scripts/tao-anh-bia-re
 
 ## 📍 Dừng ở đâu — làm tiếp từ đây
 
-### Đã hẹn giờ tối nay 02/08
+### Đã hẹn giờ 04–07/08 lúc 19:30
 
-| Bài | YouTube tiếng Anh | YouTube tiếng Việt | Facebook |
+| Ngày | Bài | Facebook post ID | Trạng thái |
 |---|---|---|---|
-| **VD-007** · Không ai tự nhiên tử tế cả | `QaDH7_4ZaFA` · 19:30 | `Wfsv45pH9z0` · 19:30 | `4731819720383240` · 19:30 |
-| **VD-003** · bù riêng cho Facebook | — | — | `2227069261412713` · **21:45** |
+| 04/08 | VD-009 | `315460902683557_1660124185681318` | 🕒 19:30 |
+| 05/08 | VD-011 | `315460902683557_1660124532347950` | 🕒 19:30 |
+| 06/08 | VD-010 | `315460902683557_1660124749014595` | 🕒 19:30 |
+| 07/08 | VD-012 | `315460902683557_1660125055681231` | 🕒 19:30 |
 
-Cả bốn lượt đều đã hỏi lại API xác nhận có lịch, không tin dòng thông báo lúc đăng.
-VD-003 để 21:45 cho khỏi đè lên VD-007 trong cùng một tối.
+API Facebook đã được đọc lại sau khi tải: đúng bốn lịch, mỗi ngày một bài, đều là
+`12:30Z` = **19:30 giờ Việt Nam**. Hai lịch trùng phát sinh trong lúc chạy đã được xóa.
+VD-003 và VD-007 cũng đã được xác nhận công khai đúng lịch ngày 02/08.
 
-### Còn tồn — 4 bài, mỗi bài 3 nơi
+### Lịch còn chờ công khai
 
 | Bài | Trạng thái |
 |---|---|
-| **VD-009** · Để mình nghĩ đã | ✅ render + caption đủ · **bài kế tiếp, đăng 03/08** |
-| **VD-011** · Một việc tốt không ai biết | ✅ render + caption đủ |
-| **VD-010** · Tha thứ không phải cho người kia | ✅ render + caption đủ |
-| **VD-012** · Người phục vụ mình cũng có tên | ✅ render + caption đủ |
+| **VD-009 → VD-012** | ✅ đã lên lịch đủ cả ba nơi tới hết 07/08 |
 
-**Thứ tự: VD-009 → VD-011 → VD-010 → VD-012**, mỗi ngày một bài, hết ngày 06/08.
+**Thứ tự: VD-009 → VD-011 → VD-010 → VD-012**, mỗi ngày một bài, hết ngày 07/08.
 VD-010 không được đứng liền sau VD-009, mà VD-011 · VD-012 cùng trụ 2 nên cũng không được
 dính nhau — xếp kiểu này gỡ được cả hai.
 

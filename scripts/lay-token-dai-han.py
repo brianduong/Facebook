@@ -96,15 +96,29 @@ def main() -> int:
 
     print(f"③ Ghi vào .env cho Page: {chon['name']}")
     env = nd.REPO / ".env"
-    if env.exists():
-        cu = env.read_text(encoding="utf-8")
-        if "FB_PAGE_TOKEN" in cu and input("   .env đã có token. Ghi đè? (co/khong) ").strip().lower() not in ("co", "c", "y"):
-            print("   Bỏ qua, không ghi gì.")
-            return 0
-    env.write_text(
-        f"FB_PAGE_ID={chon['id']}\nFB_PAGE_TOKEN={chon['access_token']}\n", encoding="utf-8"
-    )
+    cu = env.read_text(encoding="utf-8") if env.exists() else ""
+    if "FB_PAGE_TOKEN" in cu and input("   .env đã có token. Ghi đè? (co/khong) ").strip().lower() not in ("co", "c", "y"):
+        print("   Bỏ qua, không ghi gì.")
+        return 0
+
+    # Chỉ thay hai dòng của Facebook, giữ nguyên mọi thứ khác trong .env —
+    # ghi đè cả file thì mất PEXELS_API_KEY, mà lỗi đó chỉ lòi ra lúc tải ảnh nền.
+    moi = {"FB_PAGE_ID": chon["id"], "FB_PAGE_TOKEN": chon["access_token"]}
+    ra, da_thay = [], set()
+    for dong in cu.splitlines():
+        khoa = dong.split("=", 1)[0].strip() if "=" in dong and not dong.lstrip().startswith("#") else None
+        if khoa in moi:
+            ra.append(f"{khoa}={moi[khoa]}")
+            da_thay.add(khoa)
+        else:
+            ra.append(dong)
+    for khoa, gt in moi.items():
+        if khoa not in da_thay:
+            ra.append(f"{khoa}={gt}")
+
+    env.write_text("\n".join(ra).rstrip("\n") + "\n", encoding="utf-8")
     env.chmod(0o600)
+    print(f"   (giữ nguyên {len([d for d in ra if '=' in d]) - 2} dòng cài đặt khác trong .env)")
     print(f"   ✅ Đã ghi .env — Page ID {chon['id']}, token {che(chon['access_token'])}")
     print("\nKiểm tra lại: python3 scripts/dang-video-fb.py kiem-tra")
     return 0
