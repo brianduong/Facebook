@@ -51,7 +51,7 @@ còn EN-001 và ý "phone before bed" (đều trụ 1): đợt VD-031+ cần vò
 |---|---|---|---|
 | VD-003 | On a heavy day, do one thing | Một việc xong là ngày đó không mất | ✅ |
 | VD-008 | Staying up late to steal your day back | Thức khuya "trả thù" — đi ngủ đúng giờ là tử tế với chính mình | 🟡 |
-| VD-013 | The first ten minutes | Khó nhất là mười phút đầu, không phải cả việc | ⬜ |
+| VD-013 | The first ten minutes | Khó nhất là mười phút đầu, không phải cả việc | ✅ |
 | VD-018 | Doing it badly still counts | Làm dở vẫn hơn không làm — bản hoàn hảo không tồn tại | ⬜ |
 | VD-025 | Lower the bar, keep the day | Thu việc nhỏ lại, đừng vứt cả ngày | ⬜ |
 | VD-029 | Rest you haven't earned yet | Nghỉ không phải phần thưởng phải đạt điểm mới được lĩnh | ⬜ |

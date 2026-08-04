@@ -84,6 +84,11 @@ API Facebook đã được đọc lại sau khi tải: đúng bốn lịch, mỗ
 `12:30Z` = **19:30 giờ Việt Nam**. Hai lịch trùng phát sinh trong lúc chạy đã được xóa.
 VD-003 và VD-007 cũng đã được xác nhận công khai đúng lịch ngày 02/08.
 
+**VD-013 đã sẵn sàng cho 19:30 ngày 08/08, chưa tải lên nền tảng:** bản Việt 72 giây
+(`VD-013-reels.mp4`) · bản Anh 85 giây (`VD-013-reels-en.mp4`) · 1080×1920 · 30fps.
+Chữ song ngữ, hai caption và 7 ảnh Pexels đã đủ. Trạng thái duyệt chữ vẫn là 🤖 em tự
+duyệt; nếu anh không yêu cầu sửa thì đây là bài kế tiếp để lên lịch đủ ba nơi.
+
 ### Lịch còn chờ công khai
 
 | Bài | Trạng thái |

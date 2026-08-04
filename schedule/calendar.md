@@ -27,6 +27,8 @@ Mỗi bài đi lên **ba nơi**: **YouTube tiếng Việt** (`@songtotdaily`) ·
 | 05/08 | VD-011 | Một việc tốt không ai biết | 🕒 | 🕒 | 🕒 19:30 |
 | 06/08 | VD-010 | Tha thứ không phải cho người kia | 🕒 | 🕒 | 🕒 19:30 |
 | 07/08 | VD-012 | Người phục vụ mình cũng có tên | 🕒 | 🕒 | 🕒 19:30 |
+| 08/08 | VD-013 | Mười phút đầu tiên | 🕒 | 🕒 | 🕒 19:30 |
+| 08/08 | VD-013 | Mười phút đầu tiên | 🟢 sẵn sàng | 🟢 sẵn sàng | 🟢 sẵn sàng |
 
 **Chú thích:** ⬜ Chưa render · 📝 Có lời đọc, chưa có caption/ảnh quote · 🟡 Đang làm · 🟢 Sẵn sàng / đang đăng · 🕒 Đã tải lên, hẹn giờ · ✅ Đã đăng · ❗ Bị bỏ sót · ❓ Chưa kiểm
 
@@ -61,11 +63,12 @@ python3 scripts/dang-video-fb.py reels video/exports/VD-0XX-reels.mp4 --ma VD-0X
     --hen-gio 2026-08-0DT19:30:00+07:00 --dang-that
 ```
 
-## Đợt đăng 04/08 — VD-009 → VD-012 lên cả ba nơi
+## Đợt đăng 04/08 — VD-009 → VD-013 lên cả ba nơi
 
-Đọc lại từ API sau khi đăng: hai kênh YouTube đều có **12 video, khớp đủ VD-001 →
-VD-012**. Facebook có đúng bốn lịch dưới đây, mỗi ngày một bài. Tất cả đều lưu mốc
-`12:30Z` (**19:30 giờ Việt Nam**) đúng ngày.
+Đọc lại từ API sau khi đăng: hai kênh YouTube đều có **13 video, khớp đủ VD-001 →
+VD-013**, không trùng không thiếu, cả 5 bài chờ đều `uploadStatus = processed` và
+`processingStatus = succeeded`. Facebook có đúng năm lịch dưới đây, mỗi ngày một bài,
+không trùng giờ. Tất cả đều lưu mốc `12:30Z` (**19:30 giờ Việt Nam**) đúng ngày.
 
 | Ngày 19:30 | Mã | YouTube tiếng Việt | YouTube tiếng Anh | Facebook post ID |
 |---|---|---|---|---|
@@ -73,6 +76,17 @@ VD-012**. Facebook có đúng bốn lịch dưới đây, mỗi ngày một bài
 | 05/08 | VD-011 | https://youtu.be/tY5SZz3F5kY | https://youtu.be/ZzcZEZD_TSE | `315460902683557_1660124532347950` |
 | 06/08 | VD-010 | https://youtu.be/qUGygq8-qw4 | https://youtu.be/MJCbGstdSgQ | `315460902683557_1660124749014595` |
 | 07/08 | VD-012 | https://youtu.be/wECczzrqARA | https://youtu.be/EO_qomjUYPE | `315460902683557_1660125055681231` |
+| **08/08** | **VD-013** | https://youtu.be/VrHJoc6XGSg | https://youtu.be/DOYFZXQ_VC0 | Reels `787834854408440` |
+
+⏳ **Bài vừa hẹn giờ trên Facebook mất khoảng một phút mới hiện trong `/scheduled_posts`.**
+VD-013 đăng lúc 17:18 ngày 04/08, đọc ngay sau đó thì danh sách chỉ có 4 bài, tưởng hụt.
+Tra thẳng `/{video-id}` thì đã thấy `publish_status = scheduled` đúng mốc. **Chưa thấy trong
+danh sách thì tra mã bài trước, đừng vội đăng lại** — đăng lại là ra hai lịch trùng.
+
+⚠️ **Tên mục trong file caption phải viết bằng tiếng Việt, kể cả file `-en.md`.** Script
+tìm đúng ba chuỗi `Tiêu đề` · `Mô tả` · `Thẻ`. VD-013 bản tiếng Anh ban đầu đặt tên mục là
+`Title` · `Description` · `Tags` nên `dang-video-youtube.py` báo *thiếu mục* dù chữ có đủ.
+Đã sửa về khuôn chung. Bài sau cứ chép khuôn của `VD-012-caption-en.md` cho chắc.
 
 ⚠️ **Bốn bản tiếng Việt đã render lại ngày 04/08 trước khi đăng.** Bản cũ render 31/07,
 tức trước commit 5b4fac8 (chậm giọng 9%, 02/08) — đăng nguyên si là lặp lại đúng lỗi anh

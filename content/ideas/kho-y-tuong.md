@@ -34,7 +34,7 @@ VD-012 ↔ VD-013 để hai bài trụ 2 (VD-011, VD-012) không đứng liền 
 | VD-010 | Tha thứ không phải cho người kia | Bỏ xuống để mình đi tiếp | 5 | 🟡 nháp cũ |
 | VD-011 | Một việc tốt không ai biết | Có một thứ chỉ xuất hiện khi không ai xem | 2 | 🟡 nháp cũ |
 | VD-012 | Người phục vụ mình cũng có tên | Nhìn thấy người khác là một dạng tử tế | 2 | 🟡 nháp cũ |
-| VD-013 | Mười phút đầu tiên | Khó nhất là mở đầu, không phải cả việc | 1 | ⬜ |
+| VD-013 | Mười phút đầu tiên | Khó nhất là mở đầu, không phải cả việc | 1 | ✅ render xong 04/08 |
 | VD-014 | Những thứ hôm nay không hỏng | Cái không hỏng thì mình không đếm — mà nó vẫn đang đỡ mình | 3 | ⬜ |
 | VD-015 | Nói với mình như nói với bạn thân | Câu mình tự mắng mình, mình chẳng bao giờ nỡ nói với bạn | 4 | ⬜ |
 | VD-016 | Hỏi thêm một câu | Câu hỏi thứ hai mới là chỗ câu chuyện bắt đầu thật | 5 | ⬜ |
