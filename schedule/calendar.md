@@ -23,12 +23,13 @@ Mỗi bài đi lên **ba nơi**: **YouTube tiếng Việt** (`@songtotdaily`) ·
 | **31/07** | **VD-008** | **Thức khuya trả thù** | ✅ | ✅ | ✅ |
 | **02/08** | **VD-007** | **Không ai tự nhiên tử tế cả** | ✅ | ✅ | ✅ |
 | 03/08 | — | _lỡ nhịp, không đăng gì_ | — | — | — |
-| **04/08** | **VD-009** | **Để mình nghĩ đã** | 🕒 | 🕒 | 🕒 19:30 |
-| 05/08 | VD-011 | Một việc tốt không ai biết | 🕒 | 🕒 | 🕒 19:30 |
+| **04/08** | **VD-009** | **Để mình nghĩ đã** | ✅ | ✅ | ✅ |
+| 05/08 | VD-011 | Một việc tốt không ai biết | ✅ | ✅ | ✅ |
 | 06/08 | VD-010 | Tha thứ không phải cho người kia | 🕒 | 🕒 | 🕒 19:30 |
 | 07/08 | VD-012 | Người phục vụ mình cũng có tên | 🕒 | 🕒 | 🕒 19:30 |
 | 08/08 | VD-013 | Mười phút đầu tiên | 🕒 | 🕒 | 🕒 19:30 |
-| 08/08 | VD-013 | Mười phút đầu tiên | 🟢 sẵn sàng | 🟢 sẵn sàng | 🟢 sẵn sàng |
+| **09/08** | **VD-014** | **Những thứ hôm nay không hỏng** | 🕒 | 🕒 | 🕒 19:30 |
+| **10/08** | **VD-015** | **Nói với mình như nói với bạn thân** | 🕒 | 🕒 | 🕒 19:30 |
 
 **Chú thích:** ⬜ Chưa render · 📝 Có lời đọc, chưa có caption/ảnh quote · 🟡 Đang làm · 🟢 Sẵn sàng / đang đăng · 🕒 Đã tải lên, hẹn giờ · ✅ Đã đăng · ❗ Bị bỏ sót · ❓ Chưa kiểm
 
@@ -44,9 +45,9 @@ Mỗi bài đi lên **ba nơi**: **YouTube tiếng Việt** (`@songtotdaily`) ·
 - Sau khi xếp xong phải đọc lại API, khớp **ngày + giờ + câu đầu caption**, và xóa ngay
   lịch trùng; không chỉ tin dòng báo thành công của script
 
-Hết bài tồn: VD-009 → VD-012 đã lên lịch YouTube tới **07/08**. Sau đó **hết chữ** — VD-013
-trở đi mới chỉ có hồ sơ ý tưởng, chưa viết. Muốn giữ nhịp mỗi ngày một bài thì phải bắt đầu
-viết VD-013 trước 07/08.
+Đã lên lịch đủ ba nơi tới hết **10/08** (VD-015). Sau đó **hết chữ** — VD-016 trở đi mới chỉ
+có hồ sơ ý tưởng trong `content/ideas/y-tuong-VD-007-020.md`, chưa viết chữ nào. Muốn giữ
+nhịp mỗi ngày một bài thì phải bắt đầu viết VD-016 trước 10/08.
 
 ⚠️ **Render lại bản tiếng Việt trước khi đăng nếu file cũ hơn commit sửa giọng gần nhất.**
 File trong `video/exports/` không tự biết nó render bằng thiết lập giọng nào — so ngày sửa
@@ -77,6 +78,29 @@ không trùng giờ. Tất cả đều lưu mốc `12:30Z` (**19:30 giờ Việt
 | 06/08 | VD-010 | https://youtu.be/qUGygq8-qw4 | https://youtu.be/MJCbGstdSgQ | `315460902683557_1660124749014595` |
 | 07/08 | VD-012 | https://youtu.be/wECczzrqARA | https://youtu.be/EO_qomjUYPE | `315460902683557_1660125055681231` |
 | **08/08** | **VD-013** | https://youtu.be/VrHJoc6XGSg | https://youtu.be/DOYFZXQ_VC0 | Reels `787834854408440` |
+
+## Đợt đăng 06/08 — VD-014 và VD-015 lên cả ba nơi
+
+Hai bài viết mới trong ngày 06/08 (từ VD-014 trở đi không còn nháp cũ, viết mới từ đầu).
+Xếp vào **hai mốc 19:30 còn trống gần nhất** — 06/07/08 đã có bài rồi nên bài đầu rơi vào
+09/08, đúng luật "19:30 gần nhất còn trống".
+
+| Ngày 19:30 | Mã | YouTube tiếng Việt | YouTube tiếng Anh | Facebook Reels (post id) |
+|---|---|---|---|---|
+| **09/08** | **VD-014** | https://youtu.be/y6FLC-NdpwQ | https://youtu.be/Of0VLegiUvQ | `944174878692756` (`…_1661784295515307`) |
+| **10/08** | **VD-015** | https://youtu.be/UbdSj9x9bFg | https://youtu.be/aDd1IUzvab0 | `2328234654652391` (`…_1661784848848585`) |
+
+**Đã đọc lại API cả ba nơi ngay sau khi đăng:** hai kênh YouTube đều **15 video, khớp đủ
+VD-001 → VD-015**, không trùng không thiếu; bốn bài chờ đều `publishAt = 12:30Z` đúng ngày.
+Facebook có **đúng 5 lịch**, mỗi ngày một bài từ 06/08 đến 10/08, không trùng giờ, cả hai
+bài mới đều `publish_status = scheduled` và permalink trả về `/reel/…`.
+
+⏳ **Lại gặp đúng độ trễ đã ghi:** VD-015 vừa đăng xong thì `/scheduled_posts` chỉ hiện 4
+bài. Tra thẳng `/{video-id}` thì đã `scheduled` đúng mốc; một phút sau danh sách hiện đủ 5.
+**Đừng đăng lại khi chưa thấy trong danh sách.**
+
+⚠️ Thẻ tiếng Anh của VD-014 lúc đầu có `quiet gratitude` — trái luật "cấm chữ biết ơn" của
+chính bài. Đã đổi trước khi đăng. Bài trụ 3 sau này soi lại thẻ, không chỉ soi lời đọc.
 
 ⏳ **Bài vừa hẹn giờ trên Facebook mất khoảng một phút mới hiện trong `/scheduled_posts`.**
 VD-013 đăng lúc 17:18 ngày 04/08, đọc ngay sau đó thì danh sách chỉ có 4 bài, tưởng hụt.

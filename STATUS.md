@@ -1,6 +1,6 @@
 # STATUS — Ghi chú tiến độ
 
-_Cập nhật: 2026-08-04_
+_Cập nhật: 2026-08-06_
 
 ## 📍 Ba nơi đăng — tên gọi quy ước
 
@@ -71,25 +71,48 @@ ngay khi lướt tới, hiếm ai nhìn bìa. Công cụ `scripts/tao-anh-bia-re
 
 ## 📍 Dừng ở đâu — làm tiếp từ đây
 
-### Đã hẹn giờ 04–08/08 lúc 19:30 — đủ cả ba nơi
+### Đã hẹn giờ tới hết 10/08 lúc 19:30 — đủ cả ba nơi
 
 | Ngày | Bài | YouTube tiếng Việt | YouTube tiếng Anh | Facebook | Trạng thái |
 |---|---|---|---|---|---|
-| 04/08 | VD-009 | `rmgkx_XTnJo` | `leBaRFd4fXQ` | `315460902683557_1660124185681318` | 🕒 19:30 |
-| 05/08 | VD-011 | `tY5SZz3F5kY` | `ZzcZEZD_TSE` | `315460902683557_1660124532347950` | 🕒 19:30 |
+| 04/08 | VD-009 | `rmgkx_XTnJo` | `leBaRFd4fXQ` | `315460902683557_1660124185681318` | ✅ đã lên |
+| 05/08 | VD-011 | `tY5SZz3F5kY` | `ZzcZEZD_TSE` | `315460902683557_1660124532347950` | ✅ đã lên |
 | 06/08 | VD-010 | `qUGygq8-qw4` | `MJCbGstdSgQ` | `315460902683557_1660124749014595` | 🕒 19:30 |
 | 07/08 | VD-012 | `wECczzrqARA` | `EO_qomjUYPE` | `315460902683557_1660125055681231` | 🕒 19:30 |
-| **08/08** | **VD-013** | `VrHJoc6XGSg` | `DOYFZXQ_VC0` | Reels `787834854408440` | 🕒 19:30 |
+| 08/08 | VD-013 | `VrHJoc6XGSg` | `DOYFZXQ_VC0` | Reels `787834854408440` | 🕒 19:30 |
+| **09/08** | **VD-014** | `y6FLC-NdpwQ` | `Of0VLegiUvQ` | Reels `944174878692756` | 🕒 19:30 |
+| **10/08** | **VD-015** | `UbdSj9x9bFg` | `aDd1IUzvab0` | Reels `2328234654652391` | 🕒 19:30 |
 
-**Đã đọc lại API cả ba nơi ngày 04/08 để xác nhận, không tin dòng báo thành công của
-script:** hai kênh YouTube đều **13 video, khớp đủ VD-001 → VD-013**, không trùng không
-thiếu, cả 5 bài đang chờ đều `uploadStatus = processed` và `processingStatus = succeeded`,
-không bài nào bị từ chối. Facebook có **đúng 5 lịch**, mỗi ngày một bài, không trùng giờ,
-permalink trả về `/reel/…` nên chắc chắn là Reels chứ không phải video thường. Tất cả đều
-lưu mốc `12:30Z` = **19:30 giờ Việt Nam**.
+**Đã đọc lại API cả ba nơi ngày 06/08 để xác nhận, không tin dòng báo thành công của
+script:** hai kênh YouTube đều **15 video, khớp đủ VD-001 → VD-015**, không trùng không
+thiếu; bốn bài đang chờ đều lưu `publishAt = 12:30Z` đúng ngày của nó. Facebook có **đúng
+5 lịch** (06/08 → 10/08), mỗi ngày một bài, không trùng giờ, permalink trả về `/reel/…`
+nên chắc chắn là Reels chứ không phải video thường. `12:30Z` = **19:30 giờ Việt Nam**.
 
 Hai lịch trùng phát sinh lúc chạy đợt VD-009→012 đã được xóa. VD-003 và VD-007 cũng đã
 xác nhận công khai đúng lịch ngày 02/08.
+
+### VD-014 · VD-015 — viết mới và đăng ngày 06/08
+
+Hai bài đầu tiên **không còn nháp cũ nào để dựa**, viết mới hoàn toàn từ hồ sơ ý tưởng.
+
+| Mã | Trụ | Chốt bài | CTA |
+|---|---|---|---|
+| VD-014 | 3 · What you already have | Cái hỏng thì kêu nên mình đếm; cái không hỏng thì im nên mình bỏ sót | Kể một thứ hôm nay không hỏng, càng nhỏ càng tốt |
+| VD-015 | 4 · The voice in your head | Cùng một chuyện có hai câu — câu tử tế thì mình để dành cho người khác | Viết lại câu tự mắng theo kiểu nhắn cho bạn thân |
+
+- **Thời lượng:** VD-014 88s (VI) · 87s (EN) · VD-015 79s (VI) · 77s (EN) — đều trên mốc 60s.
+- **Xếp lịch không phạm luật trụ:** VD-013 trụ 1 → VD-014 trụ 3 → VD-015 trụ 4, không có
+  hai bài cùng trụ đứng cạnh nhau. Kiểu CTA cũng khác nhau ba bài liền (hành động ngay lúc
+  xem → kể chuyện ở bình luận → viết một dòng).
+- **VD-014 cấm chữ "biết ơn"**, VD-015 **cấm cụm "yêu thương bản thân"** — cả trong caption
+  lẫn khi trả lời bình luận. Ghi rõ trong hai file caption.
+- ⚠️ **Thẻ tiếng Anh VD-014 lúc đầu lọt chữ `quiet gratitude`**, trái đúng luật của chính
+  bài. Bắt được lúc chạy thử nên đã sửa trước khi đăng. **Bài trụ 3 sau này phải soi cả
+  phần thẻ, không chỉ soi lời đọc.**
+- 📌 **Anh chốt 06/08: không đọc lại chữ hai bài này.** Trạng thái duyệt để 🤖, lời đọc rút
+  bằng `--cu-lam`, và **cứ để nguyên như đã đăng** — đừng hỏi duyệt lại, đừng render lại.
+- Chỗ lệch cũ vẫn còn: ảnh rải **đều** trên các thẻ chữ, không gắn theo nội dung từng khối.
 
 ⏳ **Bài vừa hẹn giờ trên Facebook mất khoảng một phút mới hiện trong `/scheduled_posts`.**
 VD-013 đăng lúc 17:18 ngày 04/08, đọc ngay sau đó thấy danh sách chỉ có 4 bài, tưởng hụt.
@@ -105,15 +128,16 @@ có đủ, và kênh tiếng Anh không đăng được. Bài sau cứ chép khu
 
 | Bài | Trạng thái |
 |---|---|
-| **VD-009 → VD-013** | ✅ đã lên lịch đủ cả ba nơi tới hết 08/08 |
+| **VD-010 · VD-012 · VD-013** | 🕒 chờ công khai 06 → 08/08 |
+| **VD-014 · VD-015** | 🕒 chờ công khai 09 → 10/08 |
 
-**Thứ tự: VD-009 → VD-011 → VD-010 → VD-012 → VD-013**, mỗi ngày một bài, hết ngày 08/08.
-VD-010 không được đứng liền sau VD-009, mà VD-011 · VD-012 cùng trụ 2 nên cũng không được
-dính nhau — xếp kiểu này gỡ được cả hai. VD-013 là trụ 1 nên đứng sau VD-012 không phạm.
+**Thứ tự: VD-009 → VD-011 → VD-010 → VD-012 → VD-013 → VD-014 → VD-015**, mỗi ngày một
+bài, hết ngày 10/08. VD-010 không được đứng liền sau VD-009, mà VD-011 · VD-012 cùng trụ 2
+nên cũng không được dính nhau — xếp kiểu này gỡ được cả hai.
 
-🔻 **Hết bài từ 09/08.** VD-014 (*Những thứ hôm nay không hỏng*, trụ 3) mới có hồ sơ ý
-tưởng trong `content/ideas/y-tuong-VD-007-020.md`, chưa viết chữ nào. Muốn giữ nhịp mỗi
-ngày một bài thì phải bắt đầu viết trước 08/08.
+🔻 **Hết bài từ 11/08.** VD-016 (*Hỏi thêm một câu*, trụ 5) mới có hồ sơ ý tưởng trong
+`content/ideas/y-tuong-VD-007-020.md`, chưa viết chữ nào. Muốn giữ nhịp mỗi ngày một bài
+thì phải bắt đầu viết trước 10/08.
 
 ### ❗ Bài học 02/08: sổ và trí nhớ đều sai, chỉ API là đúng
 
@@ -169,8 +193,8 @@ về. Phải lấy qua YouTube Analytics API hoặc xem tay trong Studio. Bảng
 `schedule/calendar.md` vẫn đang chờ điền.
 
 **Hết hàng có nháp cũ.** VD-011 và VD-012 là hai bài cuối còn nháp từ pipeline cũ. VD-013
-đã viết mới hoàn toàn ngày 04/08. Từ **VD-014 trở đi chỉ có hồ sơ ý tưởng, chưa có chữ
-nào** — mỗi bài phải viết mới từ đầu.
+viết mới ngày 04/08, VD-014 và VD-015 viết mới ngày 06/08. Từ **VD-016 trở đi chỉ có hồ sơ
+ý tưởng, chưa có chữ nào** — mỗi bài phải viết mới từ đầu.
 
 ### Ba bài mới — làm ngày 31/07
 
@@ -242,12 +266,12 @@ tiếng → chấm ảnh tay từ bảng ứng viên → render VI + EN → capt
 - Chỗ lệch cũ vẫn còn: ảnh rải **đều** trên các thẻ chữ nên "Chỉ ngồi đó tới khuya" đang
   chạy trên ảnh văn phòng, còn ảnh khung cửa đêm thì đến sau một nhịp.
 
-### Làm tiếp theo thứ tự này (viết lại 04/08)
+### Làm tiếp theo thứ tự này (viết lại 06/08)
 
-_(bản trước viết cho 03/08 — mục 1 và 2 đã xong, xóa khỏi danh sách)_
+_(mục "viết VD-014" của bản 04/08 đã xong — VD-014 và VD-015 đăng ngày 06/08)_
 
-1. **Viết VD-014 trước 08/08.** Đây là việc gấp nhất: hết 08/08 là đứt nhịp. Ý tưởng
-   *Những thứ hôm nay không hỏng* (trụ 3) đã có trong `content/ideas/y-tuong-VD-007-020.md`,
+1. **Viết VD-016 trước 10/08.** Đây là việc gấp nhất: hết 10/08 là đứt nhịp. Ý tưởng
+   *Hỏi thêm một câu* (trụ 5) đã có trong `content/ideas/y-tuong-VD-007-020.md`,
    nhưng chưa có chữ nào.
 2. **Vào Studio xem VD-004 tiếng Việt** — chỉ 29 lượt trong khi mọi bài VI khác 500+.
    Nghi bị hạn chế hiển thị. Nhân tiện xem luôn vì sao cả 16 bài đều 0 bình luận.
