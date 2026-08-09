@@ -30,6 +30,7 @@ Mỗi bài đi lên **ba nơi**: **YouTube tiếng Việt** (`@songtotdaily`) ·
 | 08/08 | VD-013 | Mười phút đầu tiên | 🕒 | 🕒 | 🕒 19:30 |
 | **09/08** | **VD-014** | **Những thứ hôm nay không hỏng** | 🕒 | 🕒 | 🕒 19:30 |
 | **10/08** | **VD-015** | **Nói với mình như nói với bạn thân** | 🕒 | 🕒 | 🕒 19:30 |
+| **11/08** | **VD-016** | **Hỏi thêm một câu** | 🕒 | 🕒 | 🕒 19:30 |
 
 **Chú thích:** ⬜ Chưa render · 📝 Có lời đọc, chưa có caption/ảnh quote · 🟡 Đang làm · 🟢 Sẵn sàng / đang đăng · 🕒 Đã tải lên, hẹn giờ · ✅ Đã đăng · ❗ Bị bỏ sót · ❓ Chưa kiểm
 
@@ -45,9 +46,9 @@ Mỗi bài đi lên **ba nơi**: **YouTube tiếng Việt** (`@songtotdaily`) ·
 - Sau khi xếp xong phải đọc lại API, khớp **ngày + giờ + câu đầu caption**, và xóa ngay
   lịch trùng; không chỉ tin dòng báo thành công của script
 
-Đã lên lịch đủ ba nơi tới hết **10/08** (VD-015). Sau đó **hết chữ** — VD-016 trở đi mới chỉ
+Đã lên lịch đủ ba nơi tới hết **11/08** (VD-016). Sau đó **hết chữ** — VD-017 trở đi mới chỉ
 có hồ sơ ý tưởng trong `content/ideas/y-tuong-VD-007-020.md`, chưa viết chữ nào. Muốn giữ
-nhịp mỗi ngày một bài thì phải bắt đầu viết VD-016 trước 10/08.
+nhịp mỗi ngày một bài thì phải bắt đầu viết VD-017 trước 11/08.
 
 ⚠️ **Render lại bản tiếng Việt trước khi đăng nếu file cũ hơn commit sửa giọng gần nhất.**
 File trong `video/exports/` không tự biết nó render bằng thiết lập giọng nào — so ngày sửa
@@ -101,6 +102,35 @@ bài. Tra thẳng `/{video-id}` thì đã `scheduled` đúng mốc; một phút 
 
 ⚠️ Thẻ tiếng Anh của VD-014 lúc đầu có `quiet gratitude` — trái luật "cấm chữ biết ơn" của
 chính bài. Đã đổi trước khi đăng. Bài trụ 3 sau này soi lại thẻ, không chỉ soi lời đọc.
+
+## Đợt đăng 09/08 — VD-016 lên cả ba nơi
+
+Viết mới hoàn toàn trong ngày 09/08 từ hồ sơ ý tưởng (*Hỏi thêm một câu*, trụ 5). Xếp vào
+**19:30 gần nhất còn trống** — 09/08 và 10/08 đã có VD-014 · VD-015 nên rơi vào **11/08**.
+
+| Ngày 19:30 | Mã | YouTube tiếng Việt | YouTube tiếng Anh | Facebook Reels (post id) |
+|---|---|---|---|---|
+| **11/08** | **VD-016** | https://youtu.be/-QPXDUMNjeA | https://youtu.be/JuyV6yuT4O8 | `1597246682117680` (`…_1664407845252952`) |
+
+**Đã đọc lại API cả ba nơi ngay sau khi đăng:** hai kênh YouTube đều **16 video, khớp đủ
+VD-001 → VD-016**, không trùng không thiếu; ba bài chờ đều `private` với `publishAt` đúng
+ngày của nó (09, 10, 11/08 — cùng mốc `12:30Z`). Facebook có **đúng 3 lịch**, mỗi ngày một
+bài từ 09/08 đến 11/08, không trùng giờ; `permalink_url` trả về `/reel/1597246682117680/`
+nên chắc chắn là Reels, `length = 81,076` giây khớp file đã render.
+
+⏳ Lần này `/scheduled_posts` **hiện đủ ngay**, không gặp độ trễ một phút như VD-013 và
+VD-015. Nhưng luật vẫn giữ: chưa thấy trong danh sách thì tra `/{video-id}` trước, đừng đăng lại.
+
+📌 **Đảo thứ tự ảnh để ảnh rơi đúng khối.** Lần lấy đầu (`--lay 4,28,30,16,…`) làm ảnh văn
+phòng rơi trễ một nhịp, khối "người ngồi cách bạn hai mét ở chỗ làm" lại chạy trên ảnh khác.
+Đổi sang `--lay 4,30,28,16,25,27,19,13` rồi render lại là khớp. **Máy vẫn rải ảnh đều theo
+số thẻ, không hiểu nội dung** — nhưng biết số thẻ mỗi ảnh chiếm thì đảo thứ tự tay được.
+Đây là cách vá rẻ nhất cho chỗ lệch cũ, chưa cần gắn từ khoá B-roll vào từng khối.
+
+⚠️ **Bản 13 khối đầu tiên chỉ ước 64 giây** — trên mốc 60 nhưng sát mép, đúng kiểu VD-001
+từng tụt xuống 59s. Thêm hai khối **có việc thật để làm** (khối 4 cảnh cụ thể ở chỗ làm,
+khối 11 chặn cách hiểu "hỏi thêm là đi moi chuyện") thành 15 khối → **81 giây thật**.
+Đừng chèn khối rỗng cho đủ mốc; tìm chỗ bài đang thiếu rồi bù vào đó.
 
 ⏳ **Bài vừa hẹn giờ trên Facebook mất khoảng một phút mới hiện trong `/scheduled_posts`.**
 VD-013 đăng lúc 17:18 ngày 04/08, đọc ngay sau đó thì danh sách chỉ có 4 bài, tưởng hụt.
