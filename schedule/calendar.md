@@ -50,6 +50,9 @@ Mỗi bài đi lên **ba nơi**: **YouTube tiếng Việt** (`@songtotdaily`) ·
 có hồ sơ ý tưởng trong `content/ideas/y-tuong-VD-007-020.md`, chưa viết chữ nào. Muốn giữ
 nhịp mỗi ngày một bài thì phải bắt đầu viết VD-017 trước 11/08.
 
+▶️ **Làm tiếp: VD-017 · *Ngồi im năm phút* · trụ 3 → mốc 19:30 còn trống là ngày 12/08.**
+Bảy bước của một bài ghi trong `STATUS.md`, mục "LẦN SAU VÀO THÌ LÀM TỪ ĐÂY".
+
 ⚠️ **Render lại bản tiếng Việt trước khi đăng nếu file cũ hơn commit sửa giọng gần nhất.**
 File trong `video/exports/` không tự biết nó render bằng thiết lập giọng nào — so ngày sửa
 file với `git log -1 --format=%ci -- scripts/giong_vieneu.py` là ra.

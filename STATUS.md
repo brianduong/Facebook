@@ -71,6 +71,40 @@ ngay khi lướt tới, hiếm ai nhìn bìa. Công cụ `scripts/tao-anh-bia-re
 
 ## 📍 Dừng ở đâu — làm tiếp từ đây
 
+### ▶️ LẦN SAU VÀO THÌ LÀM TỪ ĐÂY — viết VD-017, hẹn 19:30 ngày 12/08
+
+_Chốt lúc cuối ngày 09/08. Đọc `CLAUDE.md` trước để lấy luật đăng, rồi đọc API để lấy
+trạng thái thật — đừng tin bảng dưới đây._
+
+- **Đã xong tới VD-016**, hẹn giờ đủ ba nơi tới hết **11/08**. Không còn việc gì hở ở đó.
+- **Việc kế tiếp: VD-017 · *Ngồi im năm phút* · trụ 3.** Hồ sơ ý tưởng có trong
+  `content/ideas/y-tuong-VD-007-020.md`, **chưa viết chữ nào**. Hết 11/08 là đứt nhịp.
+- **Mốc 19:30 gần nhất còn trống là ngày 12/08** (09, 10, 11/08 đã có VD-014 → VD-016).
+  Nếu để trôi qua 11/08 mới làm thì tính lại mốc, đừng chép cứng ngày 12/08.
+- ⚠️ Hồ sơ đã dặn: **rủi ro lớn nhất của VD-017 là thành khẩu hiệu thiền.** Tránh chữ
+  "chánh niệm", "tĩnh tâm"; chỉ tả hành động thật và **cái ngứa ngáy** lúc mới ngồi im.
+  CTA là kiểu "làm ngay trong lúc xem" — VD-013 vừa dùng kiểu này nên soi lại cho khỏi nhàm.
+- Bài đứng trước VD-017 là VD-016 (trụ 5) nên **không phạm luật hai bài cùng trụ liền nhau**.
+
+**Bảy bước của một bài** (VD-016 đi đúng đường này, mất khoảng một buổi):
+
+```bash
+# 1. Viết content/scripts/VD-017-*.md (có dòng '**Hình ảnh/B-roll:**') + song-ngu/VD-017-song-ngu.md
+python3 scripts/tach-loi-doc.py VD-017 --cu-lam            # rút lời đọc VI
+python3 scripts/tach-loi-doc.py VD-017 --en --cu-lam       # rút lời đọc EN
+# 2. Đo trước khi chấm ảnh — dưới ~70 giây thì thêm khối, đừng chèn khối rỗng
+.venv-tts/bin/python scripts/render-video-v2.py VD-017 --chi-do-dai
+# 3. Chấm ảnh tay từ bảng ứng viên
+python3 scripts/tai-anh-pexels.py VD-017 --chon 6
+python3 scripts/tai-anh-pexels.py VD-017 --lay 4,30,28,...   # đảo thứ tự cho ảnh rơi đúng khối
+# 4. Render hai bản
+.venv-tts/bin/python scripts/render-video-v2.py VD-017 --nhac assets/music/nen-am-ap.m4a
+.venv-tts/bin/python scripts/render-video-v2.py VD-017 --en --nhac assets/music/nen-am-ap.m4a
+# 5. Viết content/captions/VD-017-caption.md và -caption-en.md (chép khuôn VD-016)
+# 6. Chạy thử không có --dang-that trước, rồi đăng thật ba nơi (xem "Ba dòng lệnh của một ngày")
+# 7. Đọc lại API cả ba nơi, khớp ngày + giờ + câu đầu caption, xóa lịch trùng nếu có
+```
+
 ### Đã hẹn giờ tới hết 11/08 lúc 19:30 — đủ cả ba nơi
 
 | Ngày | Bài | YouTube tiếng Việt | YouTube tiếng Anh | Facebook | Trạng thái |
