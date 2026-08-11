@@ -40,6 +40,10 @@ REPO = Path(__file__).resolve().parent.parent
 PHAM_VI = [
     "https://www.googleapis.com/auth/youtube.upload",
     "https://www.googleapis.com/auth/youtube.readonly",
+    # Cần cho lệnh `doi-lich`: sửa `publishAt` của video đã tải lên.
+    # `youtube.upload` chỉ cho tạo mới, gọi videos.update là 403 insufficientPermissions.
+    # Thêm phạm vi này thì token cũ hết dùng được — phải chạy lại `xin-quyen` cả hai kênh.
+    "https://www.googleapis.com/auth/youtube",
 ]
 
 THU_MUC_BI_MAT = "secrets"
@@ -187,6 +191,61 @@ def doc_caption(ma_so: str, ma_kenh: str) -> dict:
     }
 
 
+def tim_video(dich_vu, tieu_de: str) -> str | None:
+    """Tìm video trên kênh theo đúng tiêu đề. Trả về video id, không thấy thì None.
+
+    Dùng cho `doi-lich`: mã bài không nằm trên YouTube, chỉ có tiêu đề trong file caption.
+    Phải duyệt playlist `uploads` chứ không dùng `search.list` — search bỏ qua video riêng tư,
+    mà bài đang hẹn giờ thì luôn riêng tư.
+    """
+    kenh = dich_vu.channels().list(part="contentDetails", mine=True).execute()
+    uploads = kenh["items"][0]["contentDetails"]["relatedPlaylists"]["uploads"]
+
+    ids, trang = [], None
+    while True:
+        r = dich_vu.playlistItems().list(
+            part="contentDetails", playlistId=uploads, maxResults=50, pageToken=trang
+        ).execute()
+        ids += [m["contentDetails"]["videoId"] for m in r["items"]]
+        trang = r.get("nextPageToken")
+        if not trang:
+            break
+
+    for i in range(0, len(ids), 50):
+        r = dich_vu.videos().list(part="snippet", id=",".join(ids[i:i + 50])).execute()
+        for v in r["items"]:
+            if v["snippet"]["title"].strip() == tieu_de.strip():
+                return v["id"]
+    return None
+
+
+def doi_lich(dich_vu, vid: str, hen_gio: str) -> dict:
+    """Dời mốc `publishAt` của một video đã tải lên, giữ nguyên mọi thiết lập khác."""
+    from datetime import datetime, timezone
+
+    cu = dich_vu.videos().list(part="status,snippet", id=vid).execute()["items"][0]
+    if cu["status"]["privacyStatus"] != "private":
+        sys.exit(
+            f"❌ Video {vid} đang ở chế độ '{cu['status']['privacyStatus']}', không phải hẹn giờ nữa.\n"
+            "   Đã công khai rồi thì không dời lịch được — chỉ còn cách gỡ hoặc để nguyên."
+        )
+
+    moc_utc = datetime.fromisoformat(hen_gio).astimezone(timezone.utc)
+    ra = dich_vu.videos().update(part="status", body={
+        "id": vid,
+        "status": {
+            "privacyStatus": "private",
+            "publishAt": moc_utc.strftime("%Y-%m-%dT%H:%M:%SZ"),
+            "selfDeclaredMadeForKids": cu["status"].get("selfDeclaredMadeForKids", False),
+            "license": cu["status"].get("license", "youtube"),
+            "embeddable": cu["status"].get("embeddable", True),
+            "publicStatsViewable": cu["status"].get("publicStatsViewable", True),
+        },
+    }).execute()
+    return {"truoc": cu["status"].get("publishAt"), "sau": ra["status"].get("publishAt"),
+            "tieu_de": cu["snippet"]["title"]}
+
+
 def soi_loi(bai: dict, ma_kenh: str) -> list[str]:
     """Những chỗ YouTube sẽ từ chối hoặc mình sẽ tiếc — soi trước khi gửi."""
     canh_bao = []
@@ -272,7 +331,7 @@ def _bao_loi_http(loi) -> None:
 
 def main() -> int:
     p = argparse.ArgumentParser(description="Đăng video lên YouTube")
-    p.add_argument("viec", choices=["xin-quyen", "kiem-tra", "dang"])
+    p.add_argument("viec", choices=["xin-quyen", "kiem-tra", "dang", "doi-lich"])
     p.add_argument("ma", nargs="?", help="Mã video, vd VD-009")
     p.add_argument("--kenh", choices=["en", "vi"], required=True, help="en = tiếng Anh · vi = tiếng Việt")
     p.add_argument("--video", help="Đường dẫn file video (mặc định lấy theo mã)")
@@ -316,6 +375,38 @@ def main() -> int:
         except HttpError:
             print(f"✅ Quyền dùng được cho kênh {kenh['ten']}.")
             print("   (Không đọc được tên kênh vì script chỉ xin quyền tải lên, không xin quyền đọc.)")
+        return 0
+
+    if a.viec == "doi-lich":
+        if not a.ma:
+            sys.exit("❌ Thiếu mã video. Vd: doi-lich VD-016 --kenh vi --hen-gio 2026-08-12T19:30:00+07:00")
+        if not a.hen_gio:
+            sys.exit("❌ Thiếu --hen-gio. Vd: --hen-gio 2026-08-12T19:30:00+07:00")
+
+        bai = doc_caption(a.ma, a.kenh)
+        dich_vu = lay_dich_vu(a.kenh)
+        vid = a.video or tim_video(dich_vu, bai["tieu_de"])
+        if not vid:
+            sys.exit(
+                f"❌ Không thấy video nào trên kênh {kenh['ten']} có tiêu đề:\n"
+                f"   {bai['tieu_de']}\n"
+                "   Tiêu đề trong file caption phải khớp đúng tiêu đề đã đăng, hoặc\n"
+                "   truyền thẳng mã video bằng --video."
+            )
+
+        print("─" * 68)
+        print(f"Kênh:  {kenh['ten']} ({kenh['handle']})")
+        print(f"Video: {vid} · {bai['tieu_de']}")
+        print(f"Dời:   → {a.hen_gio}")
+        print("─" * 68)
+        if not a.dang_that:
+            print("🟡 Đang chạy thử, chưa sửa gì trên YouTube.")
+            print("   Ưng rồi thì thêm --dang-that.")
+            return 0
+
+        kq = doi_lich(dich_vu, vid, a.hen_gio)
+        print(f"✅ Đã dời: {kq['truoc']} → {kq['sau']}")
+        print("👉 Đọc lại API để khớp ngày giờ, và nhớ sửa schedule/calendar.md")
         return 0
 
     if not a.ma:

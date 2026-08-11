@@ -1,6 +1,6 @@
 # STATUS — Ghi chú tiến độ
 
-_Cập nhật: 2026-08-09_
+_Cập nhật: 2026-08-11_
 
 ## 📍 Ba nơi đăng — tên gọi quy ước
 
@@ -20,19 +20,25 @@ Nên mỗi bài có 2 file video nhưng **3 lượt đăng**.
 Đăng bằng dòng lệnh, chữ bóc thẳng từ file caption nên không phải dán tay ô nào.
 **Đã chạy thật, không còn phải bấm gì trên trình duyệt.**
 
+🔒 **Trừ lúc này (11/08): token YouTube đang hỏng, phải xin lại quyền một lần.** Xem mục
+"LẦN SAU VÀO THÌ LÀM TỪ ĐÂY" ngay dưới — chưa làm việc đó thì **cả `dang` lẫn `doi-lich`
+đều không chạy**.
+
 | Nơi | Script | Chìa khoá |
 |---|---|---|
 | YouTube tiếng Anh · tiếng Việt | `scripts/dang-video-youtube.py` | `secrets/youtube-token-{en,vi}.json` |
 | Facebook | `scripts/dang-video-fb.py reels` | `.env` → `FB_PAGE_TOKEN` |
 
-### Nguyên tắc đăng (anh chốt 02/08)
+### Nguyên tắc đăng (chốt 02/08, đổi nhịp 11/08)
 
-- **Nhiều nhất 1 bài/ngày**
+- **2 ngày 1 bài** — anh đổi ngày 11/08, luật cũ (02/08) là mỗi ngày 1 bài
 - **Đồng bộ cả ba nơi cùng ngày, cùng một bài** — đừng để nơi này đi trước nơi kia
 - **Công khai lúc 19:30** giờ Việt Nam
 - **Luôn đăng trước rồi đặt lịch**, không đăng đúng giờ, không để tự lên ngay
-- Khi có một lô bài: dùng **19:30 gần nhất còn trống** cho bài đầu (tối nay chỉ khi còn
-  ít nhất 10 phút), rồi **19:30 mỗi ngày kế tiếp** cho từng bài còn lại
+- **Neo chuỗi ngày vào bài đã LÊN SÓNG gần nhất**, không phải bài đã xếp lịch gần nhất:
+  lấy ngày đó +2, +4, +6… Ví dụ VD-015 lên 10/08 → chuỗi là 12/08 · 14/08 · 16/08.
+  Mốc đã trôi qua thì lấy **19:30 gần nhất còn ít nhất 10 phút**, rồi lại cách 2 ngày
+- **Đổi nhịp thì dời cả lịch đang chờ** cho khớp chuỗi mới, không chỉ áp cho bài mới
 - Sau khi lên lịch phải đọc lại API, khớp ngày/giờ/câu đầu và xóa lịch trùng nếu có
 
 ### Ba dòng lệnh của một ngày
@@ -71,41 +77,80 @@ ngay khi lướt tới, hiếm ai nhìn bìa. Công cụ `scripts/tao-anh-bia-re
 
 ## 📍 Dừng ở đâu — làm tiếp từ đây
 
-### ▶️ LẦN SAU VÀO THÌ LÀM TỪ ĐÂY — viết VD-017, hẹn 19:30 ngày 12/08
+### ▶️ LẦN SAU VÀO THÌ LÀM TỪ ĐÂY — dời lịch YouTube, rồi viết VD-018 hẹn 19:30 ngày 16/08
 
-_Chốt lúc cuối ngày 09/08. Đọc `CLAUDE.md` trước để lấy luật đăng, rồi đọc API để lấy
+_Chốt lúc ngày 11/08. Đọc `CLAUDE.md` trước để lấy luật đăng, rồi đọc API để lấy
 trạng thái thật — đừng tin bảng dưới đây._
 
-- **Đã xong tới VD-016**, hẹn giờ đủ ba nơi tới hết **11/08**. Không còn việc gì hở ở đó.
-- **Việc kế tiếp: VD-017 · *Ngồi im năm phút* · trụ 3.** Hồ sơ ý tưởng có trong
-  `content/ideas/y-tuong-VD-007-020.md`, **chưa viết chữ nào**. Hết 11/08 là đứt nhịp.
-- **Mốc 19:30 gần nhất còn trống là ngày 12/08** (09, 10, 11/08 đã có VD-014 → VD-016).
-  Nếu để trôi qua 11/08 mới làm thì tính lại mốc, đừng chép cứng ngày 12/08.
-- ⚠️ Hồ sơ đã dặn: **rủi ro lớn nhất của VD-017 là thành khẩu hiệu thiền.** Tránh chữ
-  "chánh niệm", "tĩnh tâm"; chỉ tả hành động thật và **cái ngứa ngáy** lúc mới ngồi im.
-  CTA là kiểu "làm ngay trong lúc xem" — VD-013 vừa dùng kiểu này nên soi lại cho khỏi nhàm.
-- Bài đứng trước VD-017 là VD-016 (trụ 5) nên **không phạm luật hai bài cùng trụ liền nhau**.
+- ⏱️ **Nhịp đã đổi ngày 11/08: 2 ngày 1 bài**, vẫn 19:30. Mọi con số ngày trong các mục
+  cũ bên dưới viết theo nhịp mỗi ngày 1 bài — đọc để hiểu chuyện đã xảy ra, đừng lấy làm
+  mẫu xếp lịch.
+- ❗ **VIỆC GẤP NHẤT, LÀM TRƯỚC MỌI THỨ — xin lại quyền YouTube rồi dời lịch VD-016 · VD-017.**
 
-**Bảy bước của một bài** (VD-016 đi đúng đường này, mất khoảng một buổi):
+  ```bash
+  # 1. Xin lại quyền — mở trình duyệt, chọn ĐÚNG tài khoản của từng kênh
+  .venv-dang/bin/python scripts/dang-video-youtube.py xin-quyen --kenh vi
+  .venv-dang/bin/python scripts/dang-video-youtube.py xin-quyen --kenh en
+  # 2. Dời lịch (bỏ --dang-that để chạy thử trước)
+  .venv-dang/bin/python scripts/dang-video-youtube.py doi-lich VD-016 --kenh vi \
+      --hen-gio 2026-08-12T19:30:00+07:00 --dang-that
+  .venv-dang/bin/python scripts/dang-video-youtube.py doi-lich VD-016 --kenh en \
+      --hen-gio 2026-08-12T19:30:00+07:00 --dang-that
+  .venv-dang/bin/python scripts/dang-video-youtube.py doi-lich VD-017 --kenh vi \
+      --hen-gio 2026-08-14T19:30:00+07:00 --dang-that
+  .venv-dang/bin/python scripts/dang-video-youtube.py doi-lich VD-017 --kenh en \
+      --hen-gio 2026-08-14T19:30:00+07:00 --dang-that
+  # 3. Đọc lại API cả ba nơi cho khớp
+  ```
+
+  Facebook đã dời xong sang 12/08 và 14/08. Hai kênh YouTube thì chưa — token cũ chỉ có
+  phạm vi `youtube.upload`, gọi `videos.update` là **403 insufficientPermissions**.
+  🔒 **Đã thêm phạm vi `youtube` vào `PHAM_VI` nên token cũ hỏng luôn, kể cả lệnh `dang`**
+  — `google-auth` so phạm vi lúc nạp token, lệch là coi như chưa có quyền. Nên bước 1 là
+  bắt buộc trước khi đăng hay dời bất cứ thứ gì.
+
+- ⏳ **Nếu vào sau 19:30 ngày 11/08 thì VD-016 trên hai kênh YouTube đã tự công khai rồi**
+  — `publishAt` cũ là mốc đó, và **công khai rồi thì không dời được nữa**. Khi ấy đừng cố
+  dời VD-016; xử lý thế này:
+  1. **Cứ để VD-016 trên YouTube ở ngày 11/08**, đừng gỡ. Chấp nhận lệch một ngày với
+     Facebook (12/08) — gỡ rồi đăng lại là mất số liệu và ra hai bản trùng.
+  2. **Vẫn dời VD-017 sang 14/08** trên cả hai kênh, việc đó còn kịp.
+  3. Ghi chỗ lệch vào `schedule/calendar.md` rồi báo anh, đừng lặng lẽ bỏ qua.
+- **Đã xong tới VD-017**, hẹn giờ đủ ba nơi tới hết **14/08**. Ngày 11 và 13/08 để trống
+  là **đúng luật mới**, không phải quên.
+- **VD-017 ngày 14/08 là bài sau cùng có lịch** — đọc API ngày 11/08: hai kênh YouTube đều
+  17 video khớp đủ VD-001 → VD-017, cả hai bài chờ đều còn `private`; Facebook đúng 2 lịch
+  chờ 12/08 và 14/08, permalink `/reel/2274455883304906/`. Phía sau trống trơn.
+- **Việc kế tiếp: VD-018 · *Làm dở vẫn tính* · trụ 1.** Hồ sơ ý tưởng có trong
+  `content/ideas/y-tuong-VD-007-020.md`, **chưa viết chữ nào**.
+- **Mốc là 19:30 ngày 16/08** = 14/08 + 2 ngày. Sau đó VD-019 ngày 18/08, VD-020 ngày 20/08.
+  Nếu để trôi qua 16/08 mới làm thì tính lại mốc, đừng chép cứng ngày 16/08.
+- ⚠️ Hồ sơ đã dặn: **CTA của VD-018 là kiểu mới — kênh tự thú trước** ("mình kể trước ở
+  bình luận" rồi ghim lên đầu). Phải viết sẵn câu tự thú đó lúc đăng, không thì CTA rỗng.
+  Khác VD-013: VD-013 gỡ *cửa vào* (mười phút đầu), VD-018 gỡ *nỗi sợ làm ra thứ xấu*.
+- Bài đứng trước VD-018 là VD-017 (trụ 3) nên **không phạm luật hai bài cùng trụ liền nhau**.
+
+**Bảy bước của một bài** (VD-017 đi đúng đường này, mất khoảng một buổi):
 
 ```bash
-# 1. Viết content/scripts/VD-017-*.md (có dòng '**Hình ảnh/B-roll:**') + song-ngu/VD-017-song-ngu.md
-python3 scripts/tach-loi-doc.py VD-017 --cu-lam            # rút lời đọc VI
-python3 scripts/tach-loi-doc.py VD-017 --en --cu-lam       # rút lời đọc EN
+# 1. Viết content/scripts/VD-018-*.md (có dòng '**Hình ảnh/B-roll:**') + song-ngu/VD-018-song-ngu.md
+python3 scripts/tach-loi-doc.py VD-018 --cu-lam            # rút lời đọc VI
+python3 scripts/tach-loi-doc.py VD-018 --en --cu-lam       # rút lời đọc EN
 # 2. Đo trước khi chấm ảnh — dưới ~70 giây thì thêm khối, đừng chèn khối rỗng
-.venv-tts/bin/python scripts/render-video-v2.py VD-017 --chi-do-dai
+.venv-tts/bin/python scripts/render-video-v2.py VD-018 --chi-do-dai
 # 3. Chấm ảnh tay từ bảng ứng viên
-python3 scripts/tai-anh-pexels.py VD-017 --chon 6
-python3 scripts/tai-anh-pexels.py VD-017 --lay 4,30,28,...   # đảo thứ tự cho ảnh rơi đúng khối
+python3 scripts/tai-anh-pexels.py VD-018 --chon 6
+python3 scripts/tai-anh-pexels.py VD-018 --lay 2,7,30,...   # đảo thứ tự cho ảnh rơi đúng khối
 # 4. Render hai bản
-.venv-tts/bin/python scripts/render-video-v2.py VD-017 --nhac assets/music/nen-am-ap.m4a
-.venv-tts/bin/python scripts/render-video-v2.py VD-017 --en --nhac assets/music/nen-am-ap.m4a
-# 5. Viết content/captions/VD-017-caption.md và -caption-en.md (chép khuôn VD-016)
+.venv-tts/bin/python scripts/render-video-v2.py VD-018 --nhac assets/music/nen-am-ap.m4a
+.venv-tts/bin/python scripts/render-video-v2.py VD-018 --en --nhac assets/music/nen-am-ap.m4a
+# 5. Viết content/captions/VD-018-caption.md và -caption-en.md — chép khuôn **VD-017**,
+#    đừng chép VD-016: bản EN cũ còn câu "One video a day", sai nhịp mới
 # 6. Chạy thử không có --dang-that trước, rồi đăng thật ba nơi (xem "Ba dòng lệnh của một ngày")
 # 7. Đọc lại API cả ba nơi, khớp ngày + giờ + câu đầu caption, xóa lịch trùng nếu có
 ```
 
-### Đã hẹn giờ tới hết 11/08 lúc 19:30 — đủ cả ba nơi
+### Đã hẹn giờ tới hết 14/08 lúc 19:30
 
 | Ngày | Bài | YouTube tiếng Việt | YouTube tiếng Anh | Facebook | Trạng thái |
 |---|---|---|---|---|---|
@@ -114,16 +159,27 @@ python3 scripts/tai-anh-pexels.py VD-017 --lay 4,30,28,...   # đảo thứ tự
 | 06/08 | VD-010 | `qUGygq8-qw4` | `MJCbGstdSgQ` | `315460902683557_1660124749014595` | ✅ đã lên |
 | 07/08 | VD-012 | `wECczzrqARA` | `EO_qomjUYPE` | `315460902683557_1660125055681231` | ✅ đã lên |
 | 08/08 | VD-013 | `VrHJoc6XGSg` | `DOYFZXQ_VC0` | Reels `787834854408440` | ✅ đã lên |
-| **09/08** | **VD-014** | `y6FLC-NdpwQ` | `Of0VLegiUvQ` | Reels `944174878692756` | 🕒 19:30 **tối nay** |
-| **10/08** | **VD-015** | `UbdSj9x9bFg` | `aDd1IUzvab0` | Reels `2328234654652391` | 🕒 19:30 |
-| **11/08** | **VD-016** | `-QPXDUMNjeA` | `JuyV6yuT4O8` | Reels `1597246682117680` | 🕒 19:30 |
+| 09/08 | VD-014 | `y6FLC-NdpwQ` | `Of0VLegiUvQ` | Reels `944174878692756` | ✅ đã lên |
+| 10/08 | VD-015 | `UbdSj9x9bFg` | `aDd1IUzvab0` | Reels `2328234654652391` | ✅ đã lên **— bài neo chuỗi mới** |
+| **12/08** | **VD-016** | `-QPXDUMNjeA` | `JuyV6yuT4O8` | Reels `1597246682117680` | 🕒 FB xong · ❗YT còn 11/08 |
+| **14/08** | **VD-017** | `gSRZoHt2Qns` | `xfpddU0eEAI` | Reels `2274455883304906` | 🕒 FB xong · ❗YT còn 13/08 |
 
-**Đã đọc lại API cả ba nơi ngày 09/08 để xác nhận, không tin dòng báo thành công của
-script:** hai kênh YouTube đều **16 video, khớp đủ VD-001 → VD-016**, không trùng không
-thiếu; ba bài đang chờ đều lưu `publishAt = 12:30Z` đúng ngày của nó (09, 10, 11/08).
-Facebook có **đúng 3 lịch** (09/08 → 11/08), mỗi ngày một bài, không trùng giờ, permalink
-trả về `/reel/…` nên chắc chắn là Reels chứ không phải video thường. `12:30Z` = **19:30
-giờ Việt Nam**.
+**Anh dời lịch ngày 11/08:** VD-015 đã lên sóng 10/08, nên chuỗi mới neo vào đó —
+**12/08 · 14/08 · 16/08**. Luật đã sửa: neo vào **bài đã lên sóng gần nhất**, không phải
+bài đã xếp lịch gần nhất; và **đổi nhịp thì dời cả lịch đang chờ**.
+
+**Đã đọc lại API ngày 11/08:** Facebook đã dời xong, đúng 2 lịch chờ 12/08 và 14/08, không
+trùng giờ. Hai kênh YouTube **17 video khớp đủ VD-001 → VD-017** nhưng **`publishAt` vẫn là
+mốc cũ (11 và 13/08)**.
+
+❗ **YouTube chưa dời được — thiếu quyền.** Token chỉ xin `youtube.upload`, gọi
+`videos.update` trả **403 insufficientPermissions**. Đã thêm phạm vi `youtube` vào `PHAM_VI`
+và viết lệnh `doi-lich` trong `scripts/dang-video-youtube.py`, nhưng **phải chạy lại
+`xin-quyen` cả hai kênh** (mở trình duyệt, đăng nhập tay) thì lệnh mới chạy được. Các dòng
+lệnh ghi trong `schedule/calendar.md`.
+
+⏳ **Gấp: VD-016 trên YouTube tự công khai 19:30 ngày 11/08 nếu chưa dời kịp.** Chỉ dời
+được khi video còn `private`.
 
 Chuỗi 04/08 → 08/08 đã tự công khai đúng 19:30 từng ngày, không hụt ngày nào — đọc API
 ngày 09/08 thấy cả năm bài đều `public` với `publishedAt` đúng mốc `12:30Z`.
@@ -135,6 +191,41 @@ biết đủ thiếu thì phải liệt kê `playlistItems` trên playlist `uplo
 
 Hai lịch trùng phát sinh lúc chạy đợt VD-009→012 đã được xóa. VD-003 và VD-007 cũng đã
 xác nhận công khai đúng lịch ngày 02/08.
+
+### VD-017 — viết mới và đăng ngày 11/08 · bài đầu tiên theo nhịp 2 ngày
+
+Xếp lần đầu vào 13/08 (tính từ VD-016 ngày 11/08), rồi anh dời cả hai sang **12/08 và
+14/08** — neo lại vào VD-015 đã lên sóng ngày 10/08.
+
+| Mã | Trụ | Chốt bài | CTA |
+|---|---|---|---|
+| VD-017 | 3 · What you already have | Cái ngứa ngáy lúc mới ngồi im mới là chỗ đáng để ý | Thử luôn trong lúc xem — năm phút, điện thoại úp xuống |
+
+- **Thời lượng:** 94s cả hai bản — dài nhất từ trước tới nay. Tiếng −16,1 và −15,7 LUFS.
+  15 khối, ước 86s, render thật ra 94s nên **không phải thêm khối nào**.
+- **Hook không dùng câu hỏi như hồ sơ ý tưởng.** Hồ sơ chốt hook là *"lần cuối bạn ngồi im
+  là bao giờ?"* — đã đẩy xuống khối 3 và đưa **cảnh chờ thang máy ba mươi giây** lên ba giây
+  đầu. Câu hỏi bắt người xem *nhớ lại*, mà nhớ lại thì mất mấy giây — đúng mấy giây dễ mất
+  người nhất. Cảnh thang máy nhận ra ngay, không phải nghĩ.
+- **Khối 9 đứng riêng thẻ 14** — "Cái ngứa ngáy đó mới là chỗ đáng để ý", đúng công thức
+  VD-005 · VD-009 · VD-016. Viết ngắn 38 ký tự cho chắc chắn không bị cắt đôi.
+- **24 thẻ chia đúng 8 ảnh, mỗi ảnh 3 thẻ** — lần này ảnh rơi đúng nhóm ngay từ lần lấy đầu
+  (`--lay 2,7,30,14,34,39,25,44`), không phải đảo thứ tự như VD-016. Biết trước số thẻ chia
+  chẵn cho số ảnh thì xếp được ảnh theo nhóm ba thẻ ngay lúc chấm.
+- ⚠️ **Chấm ảnh phải né hẳn ô "thiền"**: loại thẳng ảnh ngồi khoanh chân, thảm yoga, nến,
+  nhang; chọn ghế, bàn, cửa sổ, điện thoại úp trên bàn. Cũng loại ảnh đen trắng (ứng viên
+  4 · 11) và ảnh có biển hiệu thương hiệu (ứng viên 8 — `STARBUCKS`).
+- ⚠️ **Hai khối chặn cách hiểu sai, bắt buộc giữ:** khối 7 ("không phải ngồi khoanh chân,
+  không phải đếm hơi thở") chặn bài thành khẩu hiệu thiền — đúng rủi ro vòng chấm đã nêu;
+  khối 13 ("không phải mẹo để xong rồi làm việc hăng hơn") chặn bài thành mẹo năng suất.
+  Bỏ khối 13 là bài quay về coi mình như cái máy, trái hẳn thông điệp.
+- ⚠️ **Cấm chữ "chánh niệm", "tĩnh tâm", "thiền định", "chữa lành"** — cả lời đọc, caption
+  lẫn **thẻ**. Thẻ tiếng Việt các bài trước hay để "chữa lành", bài này đã bỏ.
+- ⚠️ **Caption tiếng Anh bỏ câu "One video a day"**, đổi thành *"A new one every couple of
+  days"* cho khớp nhịp mới. **Bài sau chép khuôn VD-017, đừng chép VD-016.**
+- **Khác VD-013 (mười phút đầu tiên)** — hai bài dễ đụng nhau nhất: VD-013 gỡ cái cửa *bắt
+  đầu* một việc; VD-017 nói về *dừng lại*, và năm phút ở đây không dẫn tới việc gì cả.
+- ⚠️ **Chữ chưa ai đọc lại** — trạng thái duyệt để 🤖, rút lời đọc bằng `--cu-lam`.
 
 ### VD-016 — viết mới và đăng ngày 09/08
 
@@ -207,17 +298,19 @@ có đủ, và kênh tiếng Anh không đăng được. Bài sau cứ chép khu
 
 | Bài | Trạng thái |
 |---|---|
-| **VD-014** | 🕒 chờ công khai **19:30 tối nay 09/08** |
-| **VD-015 · VD-016** | 🕒 chờ công khai 10 → 11/08 |
+| **VD-016** | 🕒 Facebook 19:30 ngày 12/08 · ❗hai kênh YouTube còn mốc cũ **11/08** |
+| **VD-017** | 🕒 Facebook 19:30 ngày 14/08 · ❗hai kênh YouTube còn mốc cũ 13/08 |
 
-**Thứ tự: VD-009 → VD-011 → VD-010 → VD-012 → VD-013 → VD-014 → VD-015 → VD-016**, mỗi
-ngày một bài, hết ngày 11/08. VD-010 không được đứng liền sau VD-009, mà VD-011 · VD-012
-cùng trụ 2 nên cũng không được dính nhau — xếp kiểu này gỡ được cả hai.
+**Thứ tự: VD-009 → VD-011 → VD-010 → VD-012 → VD-013 → VD-014 → VD-015 → VD-016** mỗi
+ngày một bài tới 10/08, rồi **VD-016 ngày 12/08 · VD-017 ngày 14/08** theo nhịp mới. VD-010 không được đứng
+liền sau VD-009, mà VD-011 · VD-012 cùng trụ 2 nên cũng không được dính nhau — xếp kiểu
+này gỡ được cả hai.
 
-🔻 **Hết bài từ 12/08.** VD-017 (*Ngồi im năm phút*, trụ 3) mới có hồ sơ ý tưởng trong
-`content/ideas/y-tuong-VD-007-020.md`, chưa viết chữ nào. Muốn giữ nhịp mỗi ngày một bài
-thì phải bắt đầu viết trước 11/08. Hồ sơ đã dặn sẵn: **rủi ro lớn nhất là thành khẩu hiệu
-thiền** — tránh chữ "chánh niệm", "tĩnh tâm", chỉ tả hành động và cái ngứa ngáy thật.
+🔻 **Hết bài sau 14/08.** VD-018 (*Làm dở vẫn tính*, trụ 1) mới có hồ sơ ý tưởng trong
+`content/ideas/y-tuong-VD-007-020.md`, chưa viết chữ nào. Theo nhịp 2 ngày 1 bài thì mốc
+của nó là **19:30 ngày 16/08** — phải viết xong trước hôm đó. Hồ sơ đã dặn sẵn: CTA của
+bài này là kiểu mới — **kênh tự thú trước** rồi ghim lên đầu, nên phải viết sẵn câu tự thú
+lúc đăng, không thì CTA rỗng.
 
 ### ❗ Bài học 02/08: sổ và trí nhớ đều sai, chỉ API là đúng
 
@@ -273,8 +366,8 @@ về. Phải lấy qua YouTube Analytics API hoặc xem tay trong Studio. Bảng
 `schedule/calendar.md` vẫn đang chờ điền.
 
 **Hết hàng có nháp cũ.** VD-011 và VD-012 là hai bài cuối còn nháp từ pipeline cũ. VD-013
-viết mới ngày 04/08, VD-014 · VD-015 ngày 06/08, VD-016 ngày 09/08. Từ **VD-017 trở đi chỉ
-có hồ sơ ý tưởng, chưa có chữ nào** — mỗi bài phải viết mới từ đầu.
+viết mới ngày 04/08, VD-014 · VD-015 ngày 06/08, VD-016 ngày 09/08, VD-017 ngày 11/08. Từ
+**VD-018 trở đi chỉ có hồ sơ ý tưởng, chưa có chữ nào** — mỗi bài phải viết mới từ đầu.
 
 ### Ba bài mới — làm ngày 31/07
 
@@ -346,13 +439,14 @@ tiếng → chấm ảnh tay từ bảng ứng viên → render VI + EN → capt
 - Chỗ lệch cũ vẫn còn: ảnh rải **đều** trên các thẻ chữ nên "Chỉ ngồi đó tới khuya" đang
   chạy trên ảnh văn phòng, còn ảnh khung cửa đêm thì đến sau một nhịp.
 
-### Làm tiếp theo thứ tự này (viết lại 09/08)
+### Làm tiếp theo thứ tự này (viết lại 11/08)
 
-_(mục "viết VD-016" của bản 06/08 đã xong — VD-016 đăng ngày 09/08, hẹn 11/08)_
+_(mục "viết VD-017" đã xong — VD-017 viết, render và đăng ngày 11/08, hẹn 14/08)_
 
-1. **Viết VD-017 trước 11/08.** Đây là việc gấp nhất: hết 11/08 là đứt nhịp. Ý tưởng
-   *Ngồi im năm phút* (trụ 3) đã có trong `content/ideas/y-tuong-VD-007-020.md`,
-   nhưng chưa có chữ nào. Viết một bài mất khoảng một buổi kể cả render và đăng.
+1. **Viết VD-018 trước 16/08.** 16/08 là mốc kế tiếp theo nhịp
+   2 ngày 1 bài. Ý tưởng *Làm dở vẫn tính* (trụ 1) đã có trong
+   `content/ideas/y-tuong-VD-007-020.md`, nhưng chưa có chữ nào. Viết một bài mất khoảng
+   một buổi kể cả render và đăng. **Nhịp 2 ngày cho thêm một ngày thở** so với trước.
 2. **Vào Studio xem VD-004 tiếng Việt** — chỉ 29 lượt trong khi mọi bài VI khác 500+.
    Nghi bị hạn chế hiển thị. Nhân tiện xem luôn vì sao cả 16 bài đều 0 bình luận.
 3. **Lấy tỉ lệ xem hết.** Số lượt xem đã có (bảng ở mục "Chỗ nghẽn thật"), nhưng tỉ lệ
