@@ -3,7 +3,7 @@
 - **Mã số:** VD-018
 - **File video:** `video/exports/VD-018-reels.mp4` · 1080×1920 · 95 giây
 - **Ngày đăng dự kiến:** 2026-08-16 · 19:30
-- **Trạng thái:** _(điền mã bài sau khi đăng)_
+- **Trạng thái:** 🕒 YouTube tiếng Việt `QkKOTAKB6AI` · 🕒 YouTube tiếng Anh `jME8ehrxkg8` · 🕒 Facebook Reels `1086214770915645` — cả ba hẹn 19:30 ngày 16/08
 
 Mỗi khối dưới đây copy nguyên khối, đừng ngắt dòng giữa câu.
 

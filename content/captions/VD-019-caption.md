@@ -3,7 +3,7 @@
 - **Mã số:** VD-019
 - **File video:** `video/exports/VD-019-reels.mp4` · 1080×1920 · 82 giây
 - **Ngày đăng dự kiến:** 2026-08-18 · 19:30
-- **Trạng thái:** _(điền mã bài sau khi đăng)_
+- **Trạng thái:** 🕒 YouTube tiếng Việt `S_unSrIUQrQ` · 🕒 YouTube tiếng Anh `TVVSGArEhko` · 🕒 Facebook Reels `4372283653084479` — cả ba hẹn 19:30 ngày 18/08
 
 Mỗi khối dưới đây copy nguyên khối, đừng ngắt dòng giữa câu.
 

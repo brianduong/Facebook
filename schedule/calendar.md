@@ -34,41 +34,49 @@ Mỗi bài đi lên **ba nơi**: **YouTube tiếng Việt** (`@songtotdaily`) ·
 | **09/08** | **VD-014** | **Những thứ hôm nay không hỏng** | 🕒 | 🕒 | 🕒 19:30 |
 | **10/08** | **VD-015** | **Nói với mình như nói với bạn thân** | 🕒 | 🕒 | 🕒 19:30 |
 | 11/08 | — | _để trống theo nhịp mới 2 ngày 1 bài_ | — | — | — |
-| **12/08** | **VD-016** | **Hỏi thêm một câu** | ❗ còn 11/08 | ❗ còn 11/08 | 🕒 19:30 |
+| **12/08** | **VD-016** | **Hỏi thêm một câu** | ❗ lên sớm 11/08 | ❗ lên sớm 11/08 | ✅ đã lên 12/08 |
 | 13/08 | — | _để trống theo nhịp mới_ | — | — | — |
-| **14/08** | **VD-017** | **Ngồi im năm phút** | ❓ | ❓ | ✅ đã lên |
+| **14/08** | **VD-017** | **Ngồi im năm phút** | ❗ lên sớm 13/08 | ❗ lên sớm 13/08 | ✅ đã lên 14/08 |
 | 15/08 | — | _để trống theo nhịp 2 ngày_ | — | — | — |
-| **16/08** | **VD-018** | **Làm dở vẫn tính** | ❗ mất quyền | ❗ mất quyền | 🕒 19:30 |
+| **16/08** | **VD-018** | **Làm dở vẫn tính** | 🕒 19:30 | 🕒 19:30 | 🕒 19:30 |
 | 17/08 | — | _để trống theo nhịp 2 ngày_ | — | — | — |
-| **18/08** | **VD-019** | **Mình của ngày trước từng mong điều này** | ❗ mất quyền | ❗ mất quyền | 🕒 19:30 |
+| **18/08** | **VD-019** | **Mình của ngày trước từng mong điều này** | 🕒 19:30 | 🕒 19:30 | 🕒 19:30 |
 | 19/08 | — | _để trống theo nhịp 2 ngày_ | — | — | — |
-| **20/08** | **VD-020** | **Để người khác giúp mình** | ❗ mất quyền | ❗ mất quyền | 🕒 19:30 |
+| **20/08** | **VD-020** | **Để người khác giúp mình** | 🕒 19:30 | 🕒 19:30 | 🕒 19:30 |
 
-## 🔒 Chốt chặn lớn nhất lúc này (15/08) — mất quyền cả hai kênh YouTube
+## 🔑 Mất quyền YouTube ngày 15/08 — đã xin lại xong, và bài học rút ra
 
-**Chưa xin lại quyền thì không đăng được gì lên YouTube, và cũng không đọc được API để
-kiểm tra.** Đọc thử ngày 15/08, cả hai kênh đều trả về *chưa có quyền*:
+Ngày 15/08 cả hai kênh đều mất quyền, hỏng theo **hai kiểu khác nhau**:
 
-- `secrets/youtube-token-vi.json` **không còn trên máy** — kênh tiếng Việt phải xin lại từ đầu.
-- `secrets/youtube-token-en.json` còn đó nhưng lưu ngày 02/08, tức **trước** lúc thêm phạm vi
-  `youtube` vào `PHAM_VI`. `google-auth` so phạm vi lúc nạp token, lệch là coi như chưa có
-  quyền — nên token này cũng hỏng.
+- `youtube-token-vi.json` **tự biến mất**. Không phải ai xoá — chính script xoá
+  ([`dang-video-youtube.py:113-117`](../scripts/dang-video-youtube.py#L113-L117)): làm mới
+  token thất bại thì nó `unlink` file rồi bắt xin lại. Nguyên nhân hay gặp nhất ghi ngay
+  trong comment: **màn hình đồng ý bị về lại "Testing" → Google thu hồi refresh token sau
+  7 ngày.** Token lưu 02/08, hỏng 15/08 — khớp khoảng đó.
+- `youtube-token-en.json` còn nguyên nhưng lưu **trước** lúc thêm phạm vi `youtube` vào
+  `PHAM_VI`. `google-auth` so phạm vi lúc nạp token, lệch là coi như chưa có quyền.
 
-Hai dòng này **phải chạy tay, có mở trình duyệt và chọn đúng tài khoản của từng kênh**:
+⚠️ **BÀI HỌC LỚN NHẤT — xin quyền xong PHẢI chạy `kiem-tra` cả hai kênh trước khi đăng.**
+Lần này hai kênh **bị tráo cho nhau**: token `vi` nối vào *One Small Thing*, token `en` nối
+vào *Sống Tốt*. Đăng luôn là **video tiếng Việt lên kênh tiếng Anh và ngược lại** — hỏng
+thật, phải gỡ, mà gỡ thì mất số liệu. Lệnh `kiem-tra` in ra dòng *"Đang nối vào"* cạnh dòng
+*"Mong đợi"* đúng để bắt chuyện này; đừng bỏ qua nó.
+
+**Sửa chỗ tráo không cần xin quyền lại** — mỗi file token chỉ là chìa khoá của một tài
+khoản Google, nên **tráo tên hai file là xong**:
 
 ```bash
-.venv-dang/bin/python scripts/dang-video-youtube.py xin-quyen --kenh vi
-.venv-dang/bin/python scripts/dang-video-youtube.py xin-quyen --kenh en
+cd secrets && mv youtube-token-vi.json _tam.json \
+  && mv youtube-token-en.json youtube-token-vi.json && mv _tam.json youtube-token-en.json
 ```
 
-Xong rồi mới chạy được sáu dòng đăng ở mục "Đợt đăng 15/08" bên dưới.
+Rồi chạy lại `kiem-tra` cả hai kênh cho chắc.
 
-❗ **VD-016 và VD-017 trên YouTube coi như đã lệch một ngày so với Facebook.** Mốc
-`publishAt` cũ của chúng là 11/08 và 13/08, cả hai đã trôi qua trong lúc còn kẹt quyền, mà
-**công khai rồi thì không dời được nữa**. Theo đúng cách xử lý đã chốt: **để nguyên, đừng
-gỡ** — gỡ rồi đăng lại là mất số liệu và ra hai bản trùng. Facebook giữ 12/08 và 14/08.
-Chỗ lệch này chưa xác nhận lại bằng API được vì chưa có quyền; **xin quyền xong thì đọc
-lại và sửa dấu ❓ ở hai dòng đó trong bảng trên**.
+❗ **VD-016 và VD-017 trên YouTube đã lệch một ngày so với Facebook — chuyện đã rồi.** Đọc
+API ngày 15/08 xác nhận: VD-016 `publishedAt = 2026-08-11T12:30Z`, VD-017
+`2026-08-13T12:30Z` — tức đã tự công khai ở mốc cũ trong lúc còn kẹt quyền, trong khi
+Facebook giữ 12/08 và 14/08. **Công khai rồi thì không dời được nữa; để nguyên, đừng gỡ** —
+gỡ rồi đăng lại là mất số liệu và ra hai bản trùng.
 
 **Chú thích:** ⬜ Chưa render · 📝 Có lời đọc, chưa có caption/ảnh quote · 🟡 Đang làm · 🟢 Sẵn sàng / đang đăng · 🕒 Đã tải lên, hẹn giờ · ✅ Đã đăng · ❗ Bị bỏ sót · ❓ Chưa kiểm
 
@@ -147,38 +155,28 @@ bài. Tra thẳng `/{video-id}` thì đã `scheduled` đúng mốc; một phút 
 ⚠️ Thẻ tiếng Anh của VD-014 lúc đầu có `quiet gratitude` — trái luật "cấm chữ biết ơn" của
 chính bài. Đã đổi trước khi đăng. Bài trụ 3 sau này soi lại thẻ, không chỉ soi lời đọc.
 
-## Đợt đăng 15/08 — VD-018 · VD-019 · VD-020 · **Facebook xong, YouTube còn nợ**
+## Đợt đăng 15/08 — VD-018 · VD-019 · VD-020 lên cả ba nơi ✅
 
 Ba bài viết mới hoàn toàn trong ngày 15/08 từ hồ sơ ý tưởng, đi trọn bảy bước. Neo chuỗi
 vào **VD-017 đã lên sóng 14/08** → 16/08 · 18/08 · 20/08, đúng nhịp 2 ngày.
 
-| Ngày 19:30 | Mã | Trụ | Facebook Reels (post id) | YouTube |
-|---|---|---|---|---|
-| **16/08** | **VD-018** · Làm dở vẫn tính | 1 | `1086214770915645` (`…_1668958004797936`) | ❗ chưa đăng |
-| **18/08** | **VD-019** · Mình của ngày trước từng mong điều này | 3 | `4372283653084479` (`…_1668963278130742`) | ❗ chưa đăng |
-| **20/08** | **VD-020** · Để người khác giúp mình | 2 | `2324658331612348` (`…_1668963804797356`) | ❗ chưa đăng |
+| Ngày 19:30 | Mã | Trụ | YouTube tiếng Việt | YouTube tiếng Anh | Facebook Reels (post id) |
+|---|---|---|---|---|---|
+| **16/08** | **VD-018** · Làm dở vẫn tính | 1 | https://youtu.be/QkKOTAKB6AI | https://youtu.be/jME8ehrxkg8 | `1086214770915645` (`…_1668958004797936`) |
+| **18/08** | **VD-019** · Mình của ngày trước từng mong điều này | 3 | https://youtu.be/S_unSrIUQrQ | https://youtu.be/TVVSGArEhko | `4372283653084479` (`…_1668963278130742`) |
+| **20/08** | **VD-020** · Để người khác giúp mình | 2 | https://youtu.be/GHllc5Y9Dcg | https://youtu.be/Ke8NOUMGFvI | `2324658331612348` (`…_1668963804797356`) |
 
-**Đã đọc lại API Facebook ngay sau khi đăng:** cả ba đều `published = false` với
-`scheduled_publish_time` đúng `12:30Z` ngày của nó (= 19:30 giờ VN), `permalink_url` trả về
-`/reel/…` nên chắc chắn là Reels, `length` khớp file đã render (97,27 · 81,83 · 85,86 giây).
-Edge `/scheduled_posts` có **đúng 3 lịch chờ, không trùng**, ba mốc cách nhau tròn 172.800
-giây = 2 ngày. Lại gặp đúng độ trễ đã ghi: `/video_reels` chưa hiện ba bài mới ngay, tra
+**Đã đọc lại API cả ba nơi sau khi đăng.** Hai kênh YouTube đều **20 video, khớp đủ VD-001 →
+VD-020**, không trùng không thiếu; ba bài mới đều còn `private` với `publishAt = 12:30Z`
+đúng ngày của nó, và **tiêu đề đúng kênh** (kênh Sống Tốt toàn tiêu đề tiếng Việt, kênh One
+Small Thing toàn tiếng Anh) — đây là chỗ phải soi kỹ vì suýt đăng nhầm kênh, xem mục 🔑 trên.
+Facebook: cả ba `published = false`, `scheduled_publish_time` đúng `12:30Z`, `permalink_url`
+trả về `/reel/…` nên chắc chắn là Reels, `length` khớp file render (97,27 · 81,83 · 85,86
+giây); edge `/scheduled_posts` có **đúng 3 lịch chờ, không trùng**, ba mốc cách nhau tròn
+172.800 giây = 2 ngày.
+
+⏳ Lại gặp đúng độ trễ đã ghi: `/video_reels` chưa hiện ba bài mới ngay sau khi đăng, tra
 thẳng `/{video-id}` thì đã `scheduled` đúng mốc — **đừng đăng lại**.
-
-**Sáu dòng còn nợ trên YouTube.** Chạy `xin-quyen` cả hai kênh trước (mục 🔒 ở trên), rồi:
-
-```bash
-.venv-dang/bin/python scripts/dang-video-youtube.py dang VD-018 --kenh vi \
-    --hen-gio 2026-08-16T19:30:00+07:00 --dang-that      # rồi --kenh en
-.venv-dang/bin/python scripts/dang-video-youtube.py dang VD-019 --kenh vi \
-    --hen-gio 2026-08-18T19:30:00+07:00 --dang-that      # rồi --kenh en
-.venv-dang/bin/python scripts/dang-video-youtube.py dang VD-020 --kenh vi \
-    --hen-gio 2026-08-20T19:30:00+07:00 --dang-that      # rồi --kenh en
-```
-
-⚠️ **Nếu để trôi qua 19:30 ngày 16/08 mới xin được quyền** thì đừng chép cứng ba mốc trên.
-Facebook đã lên sóng bài nào rồi thì **để nguyên, chấp nhận lệch** như VD-016 · VD-017; các
-bài còn lại tính lại từ 19:30 gần nhất còn ít nhất 10 phút, rồi cách 2 ngày.
 
 - **Thời lượng:** VD-018 97s (VI) · 104s (EN) — dài nhất từ trước tới nay · VD-019 82s ·
   89s · VD-020 86s · 82s. Cả ba đều 15 khối, không phải thêm khối nào.
