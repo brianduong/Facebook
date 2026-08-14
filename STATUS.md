@@ -82,10 +82,28 @@ ngay khi lướt tới, hiếm ai nhìn bìa. Công cụ `scripts/tao-anh-bia-re
 _Chốt lúc ngày 15/08. Đọc `CLAUDE.md` trước để lấy luật đăng, rồi đọc API để lấy
 trạng thái thật — đừng tin bảng dưới đây._
 
-- ❗ **Ghim bình luận tự thú cho VD-018 ngay khi bài lên sóng 19:30 ngày 16/08**, cả ba nơi.
-  CTA của bài này là kiểu mới — kênh kể trước rồi mới mời người xem kể; không ghim thì khối
-  cuối hứa suông. Câu soạn sẵn nằm trong `content/captions/VD-018-caption.md` (mục "Nhắc
-  khi đăng") và bản EN trong `VD-018-caption-en.md`.
+- ⏰ **VIỆC CHỜ — ghim bình luận tự thú cho VD-018, sau 19:30 ngày 16/08, cả ba nơi.**
+  CTA của bài này là kiểu mới: kênh kể trước rồi mới mời người xem kể. Khối cuối video nói
+  thẳng *"mình kể trước, có sẵn một cái ghim trên đầu bình luận rồi đấy"* — không ghim là
+  bài nói dối người xem.
+
+  | Nơi | Vào đâu |
+  |---|---|
+  | YouTube tiếng Việt | https://studio.youtube.com/video/QkKOTAKB6AI/comments |
+  | YouTube tiếng Anh | https://studio.youtube.com/video/jME8ehrxkg8/comments |
+  | Facebook Reels | `1086214770915645` |
+
+  Câu chữ **đã soạn sẵn, đừng viết lại**: `content/captions/VD-018-caption.md` mục "Nhắc khi
+  đăng" (tiếng Việt) · `VD-018-caption-en.md` mục "Posting notes" (tiếng Anh).
+
+  **Chia việc người/máy — đã kiểm ngày 15/08:**
+  - **Ghim thì phải bấm tay.** YouTube Data API v3 không có thao tác ghim bình luận (chỉ
+    `list` · `insert` · `update` · `delete` · `setModerationStatus`); ghim chỉ có trong
+    Studio. Khoảng hai cú bấm mỗi kênh.
+  - **Viết bình luận thì script làm được**, nhưng chưa viết: Facebook chỉ cần
+    `POST /{post-id}/comments` bằng Page Token sẵn có; YouTube thì `commentThreads.insert`
+    đòi phạm vi `youtube.force-ssl` — thêm vào `PHAM_VI` là **token cũ hỏng ngay, phải
+    `xin-quyen` lại cả hai kênh** rồi `kiem-tra` (xem mục tráo kênh bên dưới).
 
 - ✅ **Đã xong tới VD-020, đủ ba nơi, tới hết 20/08.** Ngày 15, 17, 19/08 để trống là
   **đúng nhịp 2 ngày**, không phải quên.
