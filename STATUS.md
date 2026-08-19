@@ -82,9 +82,9 @@ ngay khi lướt tới, hiếm ai nhìn bìa. Công cụ `scripts/tao-anh-bia-re
 _Chốt lúc ngày 19/08. Đọc `CLAUDE.md` trước để lấy luật đăng, rồi đọc API để lấy
 trạng thái thật — đừng tin bảng dưới đây._
 
-- ⏰ **VIỆC CHỜ, ĐANG TRỄ — ghim bình luận tự thú cho VD-018, cả ba nơi.** Hẹn 19:30 ngày
-  16/08, tới 19/08 vẫn chưa ghim. Bài đã công khai rồi nên càng để lâu càng hụt: khối cuối
-  video hứa thẳng là *có sẵn một cái ghim trên đầu bình luận*.
+- ⏰ **VIỆC NÀY ANH ĐÃ NHẬN, HẸN LÀM NGÀY 20/08 — ghim bình luận tự thú cho VD-018, cả ba
+  nơi.** Chi tiết đầy đủ (đường dẫn từng nơi + chữ dán sẵn hai thứ tiếng) ở mục **"VIỆC ANH
+  LÀM TAY"** ngay dưới đây. Em không đăng hộ, anh chốt tự vào làm.
   CTA của bài này là kiểu mới: kênh kể trước rồi mới mời người xem kể. Khối cuối video nói
   thẳng *"mình kể trước, có sẵn một cái ghim trên đầu bình luận rồi đấy"* — không ghim là
   bài nói dối người xem.
@@ -244,6 +244,41 @@ biết đủ thiếu thì phải liệt kê `playlistItems` trên playlist `uplo
 
 Hai lịch trùng phát sinh lúc chạy đợt VD-009→012 đã được xóa. VD-003 và VD-007 cũng đã
 xác nhận công khai đúng lịch ngày 02/08.
+
+### ⏰ VIỆC ANH LÀM TAY — ghim bình luận VD-018, anh hẹn làm **ngày 20/08/2026**
+
+_Anh chốt 19/08: "phần bình luận ngày mai anh vô làm". Em không đăng hộ, để nguyên cho anh._
+
+**Ba nơi, mỗi nơi hai bước: dán bình luận → ghim.** Cả YouTube lẫn Facebook đều **không cho
+ghim qua API**, nên chỗ này bắt buộc bấm tay.
+
+| Nơi | Vào đâu | Chữ lấy ở đâu |
+|---|---|---|
+| YouTube tiếng Việt | https://studio.youtube.com/video/QkKOTAKB6AI/comments | `content/captions/VD-018-caption.md` → mục "Nhắc khi đăng" |
+| YouTube tiếng Anh | https://studio.youtube.com/video/jME8ehrxkg8/comments | `content/captions/VD-018-caption-en.md` → mục "Posting notes" |
+| Facebook Reels | bài `1086214770915645` (`facebook.com/reel/1086214770915645`) | dùng bản tiếng Việt như trên |
+
+**Bản tiếng Việt — dán nguyên khối:**
+
+```
+Mình kể trước cho công bằng: video đầu tiên của kênh này đọc bằng giọng máy của máy tính, nghe khô như đọc thông báo, chữ thì dịch từ tiếng Anh sang nên nghe không ra tiếng Việt. Xem lại vẫn ngượng. Nhưng nếu hồi đó chờ tới lúc làm được bản tử tế mới đăng thì giờ vẫn chưa có video nào cả. Còn bạn, hôm nay làm dở cái gì?
+```
+
+**Bản tiếng Anh — dán nguyên khối:**
+
+```
+I'll go first, to be fair. This channel's first video was read by my computer's built-in robot voice, dry as a station announcement, and the script was written in English and then bent into shape, so it never sounded like a person talking. I still wince at it. But if I'd waited until I could make a decent one, there'd be no videos at all. What did you make badly today?
+```
+
+**Vì sao không bỏ qua được:** khối cuối VD-018 nói thẳng *"Mình kể trước — có sẵn một cái
+ghim trên đầu bình luận rồi đấy."* Bài đã lên sóng 19:30 ngày 16/08. Không có cái ghim thì
+người xem bấm vào bình luận không thấy gì, thành ra video hứa một đằng thực tế một nẻo.
+
+**Chỉ mỗi VD-018 cần việc này.** Chín bài đang chờ (VD-020 → VD-026) đều up-rồi-hẹn-giờ là
+xong, không bài nào phải làm gì thêm. **Bài sau cũng sẽ không viết CTA kiểu cần ghim nữa** —
+anh chốt 19/08 là quy trình chỉ nên có up và hẹn giờ.
+
+**Ghim xong thì:** đánh dấu xong ở đây và xoá memory `viec-ghim-binh-luan-vd018.md`.
 
 ### VD-024 · VD-025 · VD-026 — viết mới ngày 19/08 · đợt hai trong cùng một ngày
 
