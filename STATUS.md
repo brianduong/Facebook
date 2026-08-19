@@ -77,7 +77,7 @@ ngay khi lướt tới, hiếm ai nhìn bìa. Công cụ `scripts/tao-anh-bia-re
 
 ## 📍 Dừng ở đâu — làm tiếp từ đây
 
-### ▶️ LẦN SAU VÀO THÌ LÀM TỪ ĐÂY — ghim bình luận VD-018 (đang trễ), rồi viết VD-024 trước 28/08
+### ▶️ LẦN SAU VÀO THÌ LÀM TỪ ĐÂY — ghim bình luận VD-018 (đang trễ), rồi viết VD-027 trước 03/09
 
 _Chốt lúc ngày 19/08. Đọc `CLAUDE.md` trước để lấy luật đăng, rồi đọc API để lấy
 trạng thái thật — đừng tin bảng dưới đây._
@@ -107,9 +107,10 @@ trạng thái thật — đừng tin bảng dưới đây._
     đòi phạm vi `youtube.force-ssl` — thêm vào `PHAM_VI` là **token cũ hỏng ngay, phải
     `xin-quyen` lại cả hai kênh** rồi `kiem-tra` (xem mục tráo kênh bên dưới).
 
-- ✅ **Đã xong tới 26/08, đủ ba nơi.** VD-020 (20/08) · VD-022 (22/08) · VD-023 (24/08) ·
-  VD-021 (26/08). Ngày lẻ để trống là **đúng nhịp 2 ngày**, không phải quên.
-  Mốc trống kế tiếp là **28/08**, chưa có bài — viết VD-024 trước ngày đó.
+- ✅ **Đã xong tới 01/09, đủ ba nơi — bảy bài đang chờ.** VD-020 (20/08) · VD-022 (22/08) ·
+  VD-023 (24/08) · VD-021 (26/08) · VD-024 (28/08) · VD-025 (30/08) · VD-026 (01/09).
+  Ngày lẻ để trống là **đúng nhịp 2 ngày**, không phải quên.
+  Mốc trống kế tiếp là **03/09**, chưa có bài — viết VD-027 trước ngày đó.
 
 - ⚠️ **BÀI HỌC 15/08 — xin quyền YouTube xong PHẢI chạy `kiem-tra` cả hai kênh trước khi
   đăng.** Lần xin lại quyền ngày 15/08 **tráo nhầm hai kênh**: token `vi` nối vào *One Small
@@ -141,11 +142,16 @@ trạng thái thật — đừng tin bảng dưới đây._
   **Công khai rồi thì không dời được; để nguyên, đừng gỡ** — gỡ rồi đăng lại là mất số liệu
   và ra hai bản trùng.
 
-- 🔻 **Còn lại VD-024 → VD-030 trong `content/ideas/y-tuong-VD-021-030.md`** — có hồ sơ,
+- 🔻 **Còn lại VD-027 → VD-030 trong `content/ideas/y-tuong-VD-021-030.md`** — có hồ sơ,
   đã qua vòng chấm, chưa viết chữ nào. Hết VD-030 là **tròn 6 bài mỗi trụ**, đủ dựng 5
-  video dài 16:9.
+  video dài 16:9. **Sau VD-030 kho ý tưởng cạn** — dự trữ chỉ còn 2 ý và đều dính chủ đề
+  ngủ, nên đợt VD-031+ phải có một vòng nghĩ ý mới (lấy từ bình luận người xem và từ số
+  liệu 48 giờ, xem mục "Báo cáo vướng mắc" cuối hồ sơ ý tưởng).
   ⚠️ **VD-027 mở bằng cảnh chờ thang máy** — VD-021 (26/08) đã dùng cảnh *cửa thang máy sắp
-  đóng*, nên xếp VD-027 phải để cách VD-021 thật xa.
+  đóng*. Hai bài chỉ cách nhau vài mốc, nên khi viết VD-027 phải **đổi hẳn cảnh mở đầu**
+  (đèn đỏ, xếp hàng) chứ đừng lặp thang máy.
+  ⚠️ **Trụ của bài kế tiếp không được là trụ 4** — VD-026 (01/09) đã là trụ 4. VD-027 trụ 3,
+  hợp lệ.
 
 **Bảy bước của một bài** (VD-018 → VD-020 đi đúng đường này; ba bài một buổi là làm được):
 
@@ -182,7 +188,7 @@ công thức `anh[i * số_ảnh // số_thẻ]`, không hiểu nội dung. Bi�
 VD-020 22 ÷ 8) miễn là tính trước nhóm nào dài mấy thẻ. **Cả ba bài đợt này không phải đảo
 `--lay` như VD-016.**
 
-### Đã hẹn giờ tới hết 26/08 lúc 19:30
+### Đã hẹn giờ tới hết 01/09 lúc 19:30
 
 | Ngày | Bài | YouTube tiếng Việt | YouTube tiếng Anh | Facebook | Trạng thái |
 |---|---|---|---|---|---|
@@ -201,9 +207,12 @@ VD-020 22 ÷ 8) miễn là tính trước nhóm nào dài mấy thẻ. **Cả ba
 | **22/08** | **VD-022** | `0PJEs8MmVhI` | `E_Ptc50eaBY` | Reels `1036926949220060` | 🕒 đủ ba nơi |
 | **24/08** | **VD-023** | `QGTl_N9myyI` | `Jt_KCjctRZU` | Reels `27933369426273284` | 🕒 đủ ba nơi |
 | **26/08** | **VD-021** | `H0FJCtH3mME` | `JR3v7P5wD10` | Reels `28043949088603153` | 🕒 đủ ba nơi |
+| **28/08** | **VD-024** | `LCRzlnuXju4` | `JHDtW3BZVrE` | Reels `1767249877800838` | 🕒 đủ ba nơi |
+| **30/08** | **VD-025** | `PpM9VLQWBqQ` | `W_fRsr5OtaI` | Reels `1684994275905731` | 🕒 đủ ba nơi |
+| **01/09** | **VD-026** | `BVXmB70kgsk` | `Evmi4MDGsiA` | Reels `1692474351855713` | 🕒 đủ ba nơi |
 
-**Chuỗi hiện tại neo vào VD-019 đã lên sóng 18/08** → 20/08 · 22/08 · 24/08 · 26/08. Luật:
-neo vào **bài đã lên sóng gần nhất**, không phải bài đã xếp lịch gần nhất.
+**Chuỗi hiện tại neo vào VD-019 đã lên sóng 18/08** → 20 · 22 · 24 · 26 · 28 · 30/08 ·
+01/09. Luật: neo vào **bài đã lên sóng gần nhất**, không phải bài đã xếp lịch gần nhất.
 
 **Đã đọc lại API cả ba nơi ngày 15/08:** hai kênh YouTube đều **20 video, khớp đủ VD-001 →
 VD-020**, không trùng không thiếu; ba bài mới còn `private` với `publishAt = 12:30Z` đúng
@@ -235,6 +244,40 @@ biết đủ thiếu thì phải liệt kê `playlistItems` trên playlist `uplo
 
 Hai lịch trùng phát sinh lúc chạy đợt VD-009→012 đã được xóa. VD-003 và VD-007 cũng đã
 xác nhận công khai đúng lịch ngày 02/08.
+
+### VD-024 · VD-025 · VD-026 — viết mới ngày 19/08 · đợt hai trong cùng một ngày
+
+Ba bài tiếp theo của hồ sơ `y-tuong-VD-021-030.md`, làm ngay sau đợt VD-022 · VD-023 ·
+VD-021 trong cùng ngày. **Sáu bài một ngày là làm được** — đây là kỷ lục mới của kênh.
+
+| Mã | Trụ | Chốt bài | CTA |
+|---|---|---|---|
+| VD-024 | 5 · Reaching people | Người đang đuối không mở lời xin đâu | Chọn sẵn một việc nhỏ rồi làm cho một người đang khó |
+| VD-025 | 1 · Heavy days | Việc nào cũng có một bản nhỏ hơn | Hạ việc hôm nay xuống một nấc rồi làm bản nhỏ |
+| VD-026 | 4 · Comparison | Tám mươi trang đó, đi tiếp hay bỏ thì cũng mất rồi | Gọi tên ở bình luận thứ mình đang theo vì lỡ rồi |
+
+- **Thời lượng:** VD-024 86s (VI) · 75s (EN) · VD-025 84s · 82s · VD-026 85s · 81s.
+- **Số thẻ ÷ số ảnh chia chẵn cả ba:** 21÷7 · 20÷10 · 18÷6. Ảnh rơi đúng nhóm ngay lần đầu.
+- **Câu chốt đứng riêng một thẻ:** VD-024 thẻ 9 · VD-025 thẻ 7 · VD-026 thẻ 6.
+- ⚠️ **VD-025 là bài dễ đụng VD-018 nhất trong cả kênh.** VD-018 nói *bản dở vẫn tính* —
+  chuyện **chất lượng**; VD-025 nói **cỡ việc**: làm việc nhỏ hơn nhưng làm tử tế. Khối 10
+  ("một vòng đi bộ vẫn là một vòng thật") là khối tách hai bài, bắt buộc giữ. **Cả bài
+  VD-025 không được dùng chữ "bản dở"**, kể cả khi trả lời bình luận.
+- ⚠️ **VD-026 phải giữ nguyên vế rào "chuyện lớn thì chưa bàn ở đây"** (khối 13) và hai
+  khối 9–10 (*có thứ chán vẫn phải làm*). Bỏ đi là bài thành xúi bỏ học, bỏ việc — đúng rủi
+  ro vòng chấm đã nêu. **Trả lời bình luận cũng không khuyên ai bỏ việc, bỏ học, bỏ hôn
+  nhân**, kể cả khi bị hỏi thẳng.
+- ⚠️ **CTA của VD-026 cố ý tránh khuôn "kể mình nghe một lần bạn…"** — VD-022 (22/08) đã
+  dùng đúng khuôn đó và cũng là bài trụ 4. Hai bài cùng trụ mà lặp khuôn CTA thì lộ ngay.
+- ⚠️ **VD-024 khối 2–3 phải đứng liền nhau** (*chính mình cũng đã im*) — thiếu chỗ đó thì
+  khối 5 thành lời chê người xem. Khối 10 chặn cách hiểu "cứ tự tiện tới nhà người ta".
+- ⚠️ **Cấm chữ theo từng bài:** VD-024 cấm "đồng hành · chữa lành · kết nối"; VD-025 cấm
+  "kỷ luật · vượt qua chính mình · không có gì là không thể"; VD-026 cấm "buông bỏ · chữa
+  lành · sống thật với chính mình".
+- **Chấm ảnh — mấy ô phải né lần này:** ảnh shipper đeo khẩu trang (VD-024, nhìn ra dịch vụ
+  giao hàng chứ không ra bạn bè); ảnh phòng gym kiểu quảng cáo (VD-025); ảnh chia tay đôi
+  lứa (VD-026). Cộng thêm luật cũ: không đen trắng, không biển hiệu thương hiệu.
+- ⚠️ **Chữ chưa ai đọc lại** — cả ba để trạng thái duyệt 🤖, rút lời đọc bằng `--cu-lam`.
 
 ### VD-022 · VD-023 · VD-021 — viết mới ngày 19/08 · ba bài trong một buổi
 
@@ -435,6 +478,9 @@ có đủ, và kênh tiếng Anh không đăng được. Bài sau cứ chép khu
 | **VD-022** | 🕒 đủ ba nơi, 19:30 ngày 22/08 |
 | **VD-023** | 🕒 đủ ba nơi, 19:30 ngày 24/08 |
 | **VD-021** | 🕒 đủ ba nơi, 19:30 ngày 26/08 |
+| **VD-024** | 🕒 đủ ba nơi, 19:30 ngày 28/08 |
+| **VD-025** | 🕒 đủ ba nơi, 19:30 ngày 30/08 |
+| **VD-026** | 🕒 đủ ba nơi, 19:30 ngày 01/09 |
 
 VD-018 (16/08) và VD-019 (18/08) đã tự công khai đúng mốc — đọc API ngày 19/08 xác nhận
 `publishedAt = 12:30Z` đúng ngày trên cả hai kênh. **VD-018 vẫn còn nợ cái ghim bình luận.**
