@@ -38,11 +38,17 @@ Mỗi bài đi lên **ba nơi**: **YouTube tiếng Việt** (`@songtotdaily`) ·
 | 13/08 | — | _để trống theo nhịp mới_ | — | — | — |
 | **14/08** | **VD-017** | **Ngồi im năm phút** | ❗ lên sớm 13/08 | ❗ lên sớm 13/08 | ✅ đã lên 14/08 |
 | 15/08 | — | _để trống theo nhịp 2 ngày_ | — | — | — |
-| **16/08** | **VD-018** | **Làm dở vẫn tính** | 🕒 19:30 | 🕒 19:30 | 🕒 19:30 |
+| **16/08** | **VD-018** | **Làm dở vẫn tính** | ✅ | ✅ | ✅ |
 | 17/08 | — | _để trống theo nhịp 2 ngày_ | — | — | — |
-| **18/08** | **VD-019** | **Mình của ngày trước từng mong điều này** | 🕒 19:30 | 🕒 19:30 | 🕒 19:30 |
+| **18/08** | **VD-019** | **Mình của ngày trước từng mong điều này** | ✅ | ✅ | ✅ |
 | 19/08 | — | _để trống theo nhịp 2 ngày_ | — | — | — |
 | **20/08** | **VD-020** | **Để người khác giúp mình** | 🕒 19:30 | 🕒 19:30 | 🕒 19:30 |
+| 21/08 | — | _để trống theo nhịp 2 ngày_ | — | — | — |
+| **22/08** | **VD-022** | **Chậm hơn không phải là hỏng** | 🕒 19:30 | 🕒 19:30 | 🕒 19:30 |
+| 23/08 | — | _để trống theo nhịp 2 ngày_ | — | — | — |
+| **24/08** | **VD-023** | **Ai đó đã làm bữa cơm thành nóng** | 🕒 19:30 | 🕒 19:30 | 🕒 19:30 |
+| 25/08 | — | _để trống theo nhịp 2 ngày_ | — | — | — |
+| **26/08** | **VD-021** | **Tử tế lúc bất tiện** | 🕒 19:30 | 🕒 19:30 | 🕒 19:30 |
 
 ## 🔑 Mất quyền YouTube ngày 15/08 — đã xin lại xong, và bài học rút ra
 
@@ -94,13 +100,12 @@ gỡ rồi đăng lại là mất số liệu và ra hai bản trùng.
 - Sau khi xếp xong phải đọc lại API, khớp **ngày + giờ + câu đầu caption**, và xóa ngay
   lịch trùng; không chỉ tin dòng báo thành công của script
 
-Đã lên lịch tới hết **20/08** (VD-020). VD-018 · VD-019 · VD-020 viết mới, render và đăng
-Facebook trong ngày 15/08; **hai kênh YouTube còn nợ, chờ xin lại quyền** (mục trên).
+Đã lên lịch tới hết **26/08** (VD-021). VD-018 · VD-019 đã lên sóng đúng mốc; VD-020 ·
+VD-022 · VD-023 · VD-021 đang chờ, đủ ba nơi.
 
-🔻 **VD-020 là bài cuối của hồ sơ `y-tuong-VD-007-020.md`.** Sau nó, mốc kế tiếp là **22/08**
-và **chưa có bài nào cho mốc đó**. Hàng đợi tiếp theo là VD-021 → VD-030 trong
-`content/ideas/y-tuong-VD-021-030.md` — có hồ sơ ý tưởng và đã qua vòng chấm, nhưng
-**chưa viết chữ nào**. Bảy bước của một bài ghi trong `STATUS.md`.
+🔻 **Mốc trống kế tiếp là 28/08** — chưa có bài nào cho nó. Hàng đợi còn lại là VD-024 →
+VD-030 trong `content/ideas/y-tuong-VD-021-030.md` — có hồ sơ ý tưởng và đã qua vòng chấm,
+nhưng **chưa viết chữ nào**. Bảy bước của một bài ghi trong `STATUS.md`.
 
 ⚠️ **Render lại bản tiếng Việt trước khi đăng nếu file cũ hơn commit sửa giọng gần nhất.**
 File trong `video/exports/` không tự biết nó render bằng thiết lập giọng nào — so ngày sửa
@@ -154,6 +159,62 @@ bài. Tra thẳng `/{video-id}` thì đã `scheduled` đúng mốc; một phút 
 
 ⚠️ Thẻ tiếng Anh của VD-014 lúc đầu có `quiet gratitude` — trái luật "cấm chữ biết ơn" của
 chính bài. Đã đổi trước khi đăng. Bài trụ 3 sau này soi lại thẻ, không chỉ soi lời đọc.
+
+## Đợt đăng 19/08 — VD-022 · VD-023 · VD-021 lên cả ba nơi ✅
+
+Ba bài viết mới hoàn toàn trong ngày 19/08, ba bài đầu của hồ sơ `y-tuong-VD-021-030.md`,
+đi trọn bảy bước. Neo chuỗi vào **VD-019 đã lên sóng 18/08** → 20/08 (VD-020 đã xếp sẵn) ·
+22/08 · 24/08 · 26/08, đúng nhịp 2 ngày.
+
+❗ **Thứ tự đăng đảo so với số hiệu bài, và đó là cố ý.** VD-020 (20/08) là trụ 2, mà VD-021
+cũng trụ 2 — để liền nhau là phạm luật "không hai bài cùng trụ đứng cạnh nhau". Nên xếp
+VD-022 (trụ 4) và VD-023 (trụ 3) lên trước, đẩy VD-021 xuống 26/08. Chuỗi trụ thành
+2 → 4 → 3 → 2. Cùng kiểu với đợt VD-009 → VD-011 → VD-010 hồi 04/08.
+
+| Ngày 19:30 | Mã | Trụ | YouTube tiếng Việt | YouTube tiếng Anh | Facebook Reels (post id) |
+|---|---|---|---|---|---|
+| **22/08** | **VD-022** · Chậm hơn không phải là hỏng | 4 | https://youtu.be/0PJEs8MmVhI | https://youtu.be/E_Ptc50eaBY | `1036926949220060` (`…_1673627080997695`) |
+| **24/08** | **VD-023** · Ai đó đã làm bữa cơm thành nóng | 3 | https://youtu.be/QGTl_N9myyI | https://youtu.be/Jt_KCjctRZU | `27933369426273284` (`…_1673630334330703`) |
+| **26/08** | **VD-021** · Tử tế lúc bất tiện | 2 | https://youtu.be/H0FJCtH3mME | https://youtu.be/JR3v7P5wD10 | `28043949088603153` (`…_1673632197663850`) |
+
+**Đã đọc lại API cả ba nơi sau khi đăng.** Hai kênh YouTube đều **23 video, khớp đủ VD-001 →
+VD-023**, không trùng không thiếu; bốn bài đang chờ (VD-020 · 022 · 023 · 021) đều còn
+`private` với `publishAt = 12:30Z` đúng ngày của nó, và **tiêu đề đúng kênh** — kênh Sống Tốt
+toàn tiêu đề tiếng Việt, kênh One Small Thing toàn tiếng Anh. Facebook: cả ba
+`published = false`, giờ hẹn đúng 19:30 giờ Việt, `permalink_url` trả về `/reel/…` nên chắc
+chắn vào Reels, `length` khớp file render (101,39 · 81,76 · 85,63 giây), câu đầu caption
+đúng bài; edge `/scheduled_posts` có **đúng 4 lịch chờ, không trùng**, cách nhau tròn 2 ngày.
+
+✅ **Xin quyền không phải làm lại lần này.** Chạy `kiem-tra` trước khi đăng: token `vi` nối
+đúng *Sống Tốt*, token `en` nối đúng *One Small Thing* — không tráo như hôm 15/08.
+
+- **Thời lượng:** VD-022 101s cả hai bản — **dài nhất từ trước tới nay** · VD-023 82s ·
+  VD-021 86s (VI) · 87s (EN). Cả ba đều 15 khối, không phải thêm khối nào.
+- ✅ **Ảnh rơi đúng nhóm ngay từ lần lấy đầu cả ba bài**, không phải đảo `--lay`. Lần này
+  **không cần chạy `--chi-do-dai`** (mất ~5 phút mỗi bài vì nó đọc TTS thật): gọi thẳng
+  `tach_the()` của `render-video-v2.py` trong một script nhỏ là ra số thẻ trong một giây,
+  rồi chọn số ảnh chia chẵn cho nó — VD-021 21 thẻ ÷ 7 ảnh · VD-022 24 ÷ 8 · VD-023 20 ÷ 10.
+- **Câu chốt của cả ba bài đứng riêng một thẻ** — kiểm bằng log render: VD-021 thẻ 9 ·
+  VD-022 thẻ 14 · VD-023 thẻ 8.
+- **Nhịp CTA không lặp bài liền trước:** VD-020 hành động lần tới → VD-022 kể ở bình luận →
+  VD-023 nói một câu ngay tối nay → VD-021 làm trong hôm nay rồi kể lại.
+- ⚠️ **Mỗi bài có một khối chặn cách hiểu sai, bắt buộc giữ:** VD-022 khối 9 (không phải rủ
+  buông xuôi — việc vẫn làm, chỉ bỏ đồng hồ của người khác); VD-023 khối 9–10 (không phải
+  trách người ăn vô tâm); VD-021 khối 9 (không phải đòi lúc nào cũng sẵn sàng với mọi người).
+- ⚠️ **Cấm chữ theo từng bài:** VD-022 cấm "thành công · chạm đỉnh · phiên bản tốt nhất của
+  chính mình"; VD-023 cấm "biết ơn · trân trọng · biết đủ" (luật trụ 3, như VD-014 · VD-019);
+  VD-021 cấm "lan toả · năng lượng tích cực · cho đi là còn mãi". Đã soi cả lời đọc, caption
+  và **thẻ**.
+- ⚠️ **VD-021 chỉ dùng thang máy ở hai khối, và luôn là *cửa sắp đóng*** — VD-017 đã dùng
+  cảnh *đứng chờ* thang máy. VD-027 trong hồ sơ cũng mở bằng cảnh chờ thang máy, nên khi
+  xếp lịch cho VD-027 phải để cách VD-021 thật xa.
+- **Tách khỏi bài cũ dễ đụng:** VD-022 khác VD-006 (VD-006 so *thành tích*, VD-022 gỡ *mốc
+  thời gian*, cả bài không có câu "đừng so với người khác"); VD-023 khác VD-004 (một câu
+  khen tại mâm, không có chữ "cảm ơn", không dùng khung "…, vì…") và khác VD-014 · VD-019
+  (hai bài kia nhìn *đồ vật*, bài này nhìn *con người* đứng sau); VD-021 khác VD-002 ·
+  VD-011 · VD-012 · VD-020 — chiếm góc **thời điểm** của trụ 2.
+- ⚠️ **Chữ chưa ai đọc lại** — cả ba để trạng thái duyệt 🤖, rút lời đọc bằng `--cu-lam`.
+  Anh đọc phần "Từng khối" trong ba file `song-ngu/`, chưa ưng chỗ nào thì sửa, em render lại.
 
 ## Đợt đăng 15/08 — VD-018 · VD-019 · VD-020 lên cả ba nơi ✅
 

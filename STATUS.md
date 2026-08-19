@@ -1,6 +1,6 @@
 # STATUS — Ghi chú tiến độ
 
-_Cập nhật: 2026-08-15_
+_Cập nhật: 2026-08-19_
 
 ## 📍 Ba nơi đăng — tên gọi quy ước
 
@@ -77,12 +77,14 @@ ngay khi lướt tới, hiếm ai nhìn bìa. Công cụ `scripts/tao-anh-bia-re
 
 ## 📍 Dừng ở đâu — làm tiếp từ đây
 
-### ▶️ LẦN SAU VÀO THÌ LÀM TỪ ĐÂY — ghim bình luận VD-018, rồi viết VD-021 trước 22/08
+### ▶️ LẦN SAU VÀO THÌ LÀM TỪ ĐÂY — ghim bình luận VD-018 (đang trễ), rồi viết VD-024 trước 28/08
 
-_Chốt lúc ngày 15/08. Đọc `CLAUDE.md` trước để lấy luật đăng, rồi đọc API để lấy
+_Chốt lúc ngày 19/08. Đọc `CLAUDE.md` trước để lấy luật đăng, rồi đọc API để lấy
 trạng thái thật — đừng tin bảng dưới đây._
 
-- ⏰ **VIỆC CHỜ — ghim bình luận tự thú cho VD-018, sau 19:30 ngày 16/08, cả ba nơi.**
+- ⏰ **VIỆC CHỜ, ĐANG TRỄ — ghim bình luận tự thú cho VD-018, cả ba nơi.** Hẹn 19:30 ngày
+  16/08, tới 19/08 vẫn chưa ghim. Bài đã công khai rồi nên càng để lâu càng hụt: khối cuối
+  video hứa thẳng là *có sẵn một cái ghim trên đầu bình luận*.
   CTA của bài này là kiểu mới: kênh kể trước rồi mới mời người xem kể. Khối cuối video nói
   thẳng *"mình kể trước, có sẵn một cái ghim trên đầu bình luận rồi đấy"* — không ghim là
   bài nói dối người xem.
@@ -105,8 +107,9 @@ trạng thái thật — đừng tin bảng dưới đây._
     đòi phạm vi `youtube.force-ssl` — thêm vào `PHAM_VI` là **token cũ hỏng ngay, phải
     `xin-quyen` lại cả hai kênh** rồi `kiem-tra` (xem mục tráo kênh bên dưới).
 
-- ✅ **Đã xong tới VD-020, đủ ba nơi, tới hết 20/08.** Ngày 15, 17, 19/08 để trống là
-  **đúng nhịp 2 ngày**, không phải quên.
+- ✅ **Đã xong tới 26/08, đủ ba nơi.** VD-020 (20/08) · VD-022 (22/08) · VD-023 (24/08) ·
+  VD-021 (26/08). Ngày lẻ để trống là **đúng nhịp 2 ngày**, không phải quên.
+  Mốc trống kế tiếp là **28/08**, chưa có bài — viết VD-024 trước ngày đó.
 
 - ⚠️ **BÀI HỌC 15/08 — xin quyền YouTube xong PHẢI chạy `kiem-tra` cả hai kênh trước khi
   đăng.** Lần xin lại quyền ngày 15/08 **tráo nhầm hai kênh**: token `vi` nối vào *One Small
@@ -138,10 +141,11 @@ trạng thái thật — đừng tin bảng dưới đây._
   **Công khai rồi thì không dời được; để nguyên, đừng gỡ** — gỡ rồi đăng lại là mất số liệu
   và ra hai bản trùng.
 
-- 🔻 **VD-020 là bài cuối của hồ sơ `y-tuong-VD-007-020.md`.** Mốc kế tiếp là **22/08** và
-  **chưa có bài nào cho nó**. Hàng đợi tiếp theo là VD-021 → VD-030 trong
-  `content/ideas/y-tuong-VD-021-030.md` — đã có hồ sơ và đã qua vòng chấm, nhưng chưa viết
-  chữ nào. Hết VD-030 là **tròn 6 bài mỗi trụ**, đủ dựng 5 video dài 16:9.
+- 🔻 **Còn lại VD-024 → VD-030 trong `content/ideas/y-tuong-VD-021-030.md`** — có hồ sơ,
+  đã qua vòng chấm, chưa viết chữ nào. Hết VD-030 là **tròn 6 bài mỗi trụ**, đủ dựng 5
+  video dài 16:9.
+  ⚠️ **VD-027 mở bằng cảnh chờ thang máy** — VD-021 (26/08) đã dùng cảnh *cửa thang máy sắp
+  đóng*, nên xếp VD-027 phải để cách VD-021 thật xa.
 
 **Bảy bước của một bài** (VD-018 → VD-020 đi đúng đường này; ba bài một buổi là làm được):
 
@@ -151,8 +155,9 @@ python3 scripts/tach-loi-doc.py VD-0XX --dong-bo           # dựng lại phần
 python3 scripts/tach-loi-doc.py VD-0XX --cu-lam            # rút lời đọc VI
 python3 scripts/tach-loi-doc.py VD-0XX --en --cu-lam       # rút lời đọc EN
 # 2. Đo trước khi chấm ảnh — dưới ~70 giây thì thêm khối, đừng chèn khối rỗng.
-#    Bước này CÒN CHO BIẾT SỐ THẺ, dùng ngay ở bước 3 để chọn số ảnh.
-.venv-tts/bin/python scripts/render-video-v2.py VD-0XX --chi-do-dai
+#    Con số ước ngay ở bước 1 là đủ để quyết có thêm khối hay không.
+#    SỐ THẺ (để chọn số ảnh ở bước 3) thì gọi thẳng tach_the() cho nhanh — xem ghi chú dưới:
+.venv-tts/bin/python scripts/render-video-v2.py VD-0XX --chi-do-dai   # chỉ khi cần đo thật
 # 3. Chấm ảnh tay từ bảng ứng viên — chọn số ảnh CHIA CHẴN cho số thẻ nếu được
 python3 scripts/tai-anh-pexels.py VD-0XX --chon 6
 python3 scripts/tai-anh-pexels.py VD-0XX --lay 1,12,39,...
@@ -165,6 +170,11 @@ python3 scripts/tai-anh-pexels.py VD-0XX --lay 1,12,39,...
 # 7. Đọc lại API cả ba nơi, khớp ngày + giờ + câu đầu caption, xóa lịch trùng nếu có
 ```
 
+📌 **Lấy số thẻ đừng chạy `--chi-do-dai` nữa — nó đọc TTS thật, mất ~5 phút một bài.**
+Import `render-video-v2.py` rồi gọi `tach_the(loi_doc)` là ra danh sách thẻ trong một giây,
+đủ để chọn số ảnh. Chỉ chạy `--chi-do-dai` khi thật sự cần thời lượng từng thẻ. Đợt
+VD-021→023 làm theo cách này, ảnh vẫn rơi đúng nhóm cả ba bài.
+
 📌 **Chọn số ảnh theo số thẻ là cách rẻ nhất để ảnh rơi đúng khối.** Máy rải ảnh đều theo
 công thức `anh[i * số_ảnh // số_thẻ]`, không hiểu nội dung. Biết trước số thẻ thì chọn số
 ảnh chia chẵn cho nó là mỗi ảnh ôm gọn một nhóm khối — VD-019 có 18 thẻ, lấy 6 ảnh, ra
@@ -172,7 +182,7 @@ công thức `anh[i * số_ảnh // số_thẻ]`, không hiểu nội dung. Bi�
 VD-020 22 ÷ 8) miễn là tính trước nhóm nào dài mấy thẻ. **Cả ba bài đợt này không phải đảo
 `--lay` như VD-016.**
 
-### Đã hẹn giờ tới hết 20/08 lúc 19:30
+### Đã hẹn giờ tới hết 26/08 lúc 19:30
 
 | Ngày | Bài | YouTube tiếng Việt | YouTube tiếng Anh | Facebook | Trạng thái |
 |---|---|---|---|---|---|
@@ -185,12 +195,15 @@ VD-020 22 ÷ 8) miễn là tính trước nhóm nào dài mấy thẻ. **Cả ba
 | 10/08 | VD-015 | `UbdSj9x9bFg` | `aDd1IUzvab0` | Reels `2328234654652391` | ✅ đã lên **— bài neo chuỗi mới** |
 | **12/08** | **VD-016** | `-QPXDUMNjeA` | `JuyV6yuT4O8` | Reels `1597246682117680` | ✅ FB 12/08 · ❗YT lên sớm 11/08 |
 | **14/08** | **VD-017** | `gSRZoHt2Qns` | `xfpddU0eEAI` | Reels `2274455883304906` | ✅ FB 14/08 · ❗YT lên sớm 13/08 **— bài neo chuỗi mới** |
-| **16/08** | **VD-018** | `QkKOTAKB6AI` | `jME8ehrxkg8` | Reels `1086214770915645` | 🕒 đủ ba nơi |
-| **18/08** | **VD-019** | `S_unSrIUQrQ` | `TVVSGArEhko` | Reels `4372283653084479` | 🕒 đủ ba nơi |
+| **16/08** | **VD-018** | `QkKOTAKB6AI` | `jME8ehrxkg8` | Reels `1086214770915645` | ✅ đã lên — **còn nợ ghim bình luận** |
+| **18/08** | **VD-019** | `S_unSrIUQrQ` | `TVVSGArEhko` | Reels `4372283653084479` | ✅ đã lên |
 | **20/08** | **VD-020** | `GHllc5Y9Dcg` | `Ke8NOUMGFvI` | Reels `2324658331612348` | 🕒 đủ ba nơi |
+| **22/08** | **VD-022** | `0PJEs8MmVhI` | `E_Ptc50eaBY` | Reels `1036926949220060` | 🕒 đủ ba nơi |
+| **24/08** | **VD-023** | `QGTl_N9myyI` | `Jt_KCjctRZU` | Reels `27933369426273284` | 🕒 đủ ba nơi |
+| **26/08** | **VD-021** | `H0FJCtH3mME` | `JR3v7P5wD10` | Reels `28043949088603153` | 🕒 đủ ba nơi |
 
-**Chuỗi hiện tại neo vào VD-017 đã lên sóng 14/08** → 16/08 · 18/08 · 20/08. Luật: neo vào
-**bài đã lên sóng gần nhất**, không phải bài đã xếp lịch gần nhất.
+**Chuỗi hiện tại neo vào VD-019 đã lên sóng 18/08** → 20/08 · 22/08 · 24/08 · 26/08. Luật:
+neo vào **bài đã lên sóng gần nhất**, không phải bài đã xếp lịch gần nhất.
 
 **Đã đọc lại API cả ba nơi ngày 15/08:** hai kênh YouTube đều **20 video, khớp đủ VD-001 →
 VD-020**, không trùng không thiếu; ba bài mới còn `private` với `publishAt = 12:30Z` đúng
@@ -222,6 +235,53 @@ biết đủ thiếu thì phải liệt kê `playlistItems` trên playlist `uplo
 
 Hai lịch trùng phát sinh lúc chạy đợt VD-009→012 đã được xóa. VD-003 và VD-007 cũng đã
 xác nhận công khai đúng lịch ngày 02/08.
+
+### VD-022 · VD-023 · VD-021 — viết mới ngày 19/08 · ba bài trong một buổi
+
+Ba bài đầu của hồ sơ `y-tuong-VD-021-030.md`. Viết mới hoàn toàn, đi trọn bảy bước, đăng
+đủ **cả ba nơi**, không vướng gì về quyền.
+
+| Mã | Trụ | Chốt bài | CTA |
+|---|---|---|---|
+| VD-022 | 4 · Comparison | Tới muộn hơn người ta không phải là không tới | Kể ở bình luận một việc làm muộn mà giờ thấy may là đã làm |
+| VD-023 | 3 · What you already have | Cái gì thành hiển nhiên là do có người làm nó thành hiển nhiên | Nói với người nấu đúng một câu ngay tối nay |
+| VD-021 | 2 · Small kindness | Tử tế lúc rảnh thì ai chả tử tế được | Làm một lần trong hôm nay vào lúc bất tiện nhất, rồi kể lại |
+
+- ❗ **Thứ tự đăng đảo so với số hiệu, cố ý.** VD-020 (20/08) trụ 2, VD-021 cũng trụ 2 — để
+  liền nhau là phạm luật trụ. Nên 22/08 là VD-022 (trụ 4), 24/08 là VD-023 (trụ 3), VD-021
+  đẩy xuống 26/08. Chuỗi trụ: 2 → 4 → 3 → 2. Cùng cách xử lý như đợt VD-009 → VD-011 → VD-010.
+- **Thời lượng:** VD-022 101s cả hai bản — **dài nhất từ trước tới nay** · VD-023 82s cả hai
+  bản · VD-021 86s (VI) · 87s (EN). Cả ba đều 15 khối, không phải thêm khối nào.
+- 📌 **Lấy số thẻ bằng `tach_the()` thay vì `--chi-do-dai`** — nhanh hơn ~5 phút mỗi bài, xem
+  mục "Bảy bước". Chọn số ảnh chia chẵn cho số thẻ: VD-021 21÷7 · VD-022 24÷8 · VD-023 20÷10.
+  **Ảnh rơi đúng nhóm cả ba bài ngay từ lần lấy đầu**, không phải đảo `--lay`.
+- **Câu chốt đứng riêng một thẻ ở cả ba bài** — kiểm bằng log render: VD-021 thẻ 9 ·
+  VD-022 thẻ 14 · VD-023 thẻ 8.
+- **Nhịp CTA không lặp bài liền trước:** VD-020 hành động lần tới → VD-022 kể ở bình luận →
+  VD-023 nói một câu ngay tối nay → VD-021 làm trong hôm nay rồi kể lại.
+- ⚠️ **Mỗi bài có một khối chặn cách hiểu sai, bắt buộc giữ:** VD-022 khối 9 (không rủ buông
+  xuôi — việc vẫn làm, chỉ bỏ đồng hồ của người khác); VD-023 khối 9–10 (không trách người
+  ăn vô tâm); VD-021 khối 9 (không đòi lúc nào cũng sẵn sàng với mọi người).
+- ⚠️ **VD-022 khối 12 phải đứng ngay sau khối 11** ("bốn năm đó" trỏ về bốn năm đại học);
+  **VD-021 khối 7 chỉ chạy được nếu khối 8 đứng ngay sau** (một mình khối 7 nghe ra chê
+  người xem).
+- ⚠️ **Cấm chữ theo từng bài:** VD-022 cấm "thành công · chạm đỉnh · phiên bản tốt nhất của
+  chính mình"; VD-023 cấm "biết ơn · trân trọng · biết đủ" (luật trụ 3, như VD-014 · VD-019);
+  VD-021 cấm "lan toả · năng lượng tích cực · cho đi là còn mãi". Soi cả lời đọc, caption
+  và **thẻ**.
+- ⚠️ **VD-021 chỉ dùng thang máy ở khối 4 và 13, luôn là *cửa sắp đóng*** — VD-017 đã dùng
+  cảnh *đứng chờ* thang máy. VD-027 trong hồ sơ cũng mở bằng cảnh chờ thang máy → xếp lịch
+  phải để cách VD-021 thật xa.
+- **Tách khỏi bài cũ dễ đụng:** VD-022 khác VD-006 (VD-006 so *thành tích*, VD-022 gỡ *mốc
+  thời gian*; cả bài không có câu "đừng so với người khác"). VD-023 khác VD-004 (một câu
+  khen tại mâm, không có chữ "cảm ơn", không dùng khung "…, vì…") và khác VD-014 · VD-019
+  (hai bài kia nhìn *đồ vật*, bài này nhìn *con người* đứng sau). VD-021 khác VD-002 ·
+  VD-011 · VD-012 · VD-020 — chiếm góc **thời điểm** của trụ 2.
+- **Chấm ảnh:** loại thẳng ảnh đen trắng, ảnh đeo khẩu trang (làm bài dính mốc thời gian),
+  ảnh có biển hiệu thương hiệu (`SUSHI TEI`, `TRAM Coffee & Tea`) và ảnh đồ ăn kiểu tạp chí
+  bày trên nền trơn. Ảnh quán `XÔI CHÈ` thì giữ — chữ Việt, đúng chỗ muốn có.
+- ⚠️ **Chữ chưa ai đọc lại** — cả ba để trạng thái duyệt 🤖, rút lời đọc bằng `--cu-lam`.
+  Anh đọc phần "Từng khối" trong ba file `song-ngu/`, chưa ưng chỗ nào thì sửa, em render lại.
 
 ### VD-018 · VD-019 · VD-020 — viết mới ngày 15/08 · ba bài trong một buổi
 
@@ -371,9 +431,13 @@ có đủ, và kênh tiếng Anh không đăng được. Bài sau cứ chép khu
 
 | Bài | Trạng thái |
 |---|---|
-| **VD-018** | 🕒 đủ ba nơi, 19:30 ngày 16/08 — **nhớ ghim bình luận tự thú lúc lên sóng** |
-| **VD-019** | 🕒 đủ ba nơi, 19:30 ngày 18/08 |
 | **VD-020** | 🕒 đủ ba nơi, 19:30 ngày 20/08 |
+| **VD-022** | 🕒 đủ ba nơi, 19:30 ngày 22/08 |
+| **VD-023** | 🕒 đủ ba nơi, 19:30 ngày 24/08 |
+| **VD-021** | 🕒 đủ ba nơi, 19:30 ngày 26/08 |
+
+VD-018 (16/08) và VD-019 (18/08) đã tự công khai đúng mốc — đọc API ngày 19/08 xác nhận
+`publishedAt = 12:30Z` đúng ngày trên cả hai kênh. **VD-018 vẫn còn nợ cái ghim bình luận.**
 
 **Thứ tự: VD-009 → VD-011 → VD-010 → VD-012 → VD-013 → VD-014 → VD-015** mỗi ngày một bài
 tới 10/08, rồi theo nhịp 2 ngày: **VD-016 12/08 · VD-017 14/08 · VD-018 16/08 · VD-019
