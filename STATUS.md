@@ -106,9 +106,8 @@ trạng thái thật — đừng tin bảng dưới đây._
     đúng danh nghĩa kênh — `Ugx1ZvPTLNps9wWjuQd4AaABAg` (VI) · `Ugzmv4IBxZs5_zf4ZHJ4AaABAg` (EN).
     📌 **Mỗi video hiện chỉ có đúng một luồng bình luận, là của chính kênh** — nên dù chưa
     ghim, nó vẫn nằm một mình trên đầu; lời hứa trong khối cuối video coi như đã có thật.
-  - 🔻 **Facebook: chưa dán được.** Page Token thiếu `pages_manage_engagement`, gọi
-    `POST /{post-id}/comments` trả lỗi `(#200)`. Cần anh sinh lại token — xem mục
-    "VIỆC ANH LÀM TAY" bên dưới.
+  - ✅ **Facebook: xong.** Anh sinh lại Page Token ngày 03/09 với 6 quyền, bình luận đã đăng
+    dưới danh nghĩa Page — `1086214770915645_2284425752403691`, đọc API xác nhận đúng chữ.
   - 🔻 **Ghim thì vẫn phải bấm tay cả ba nơi** — không API nào cho ghim, đây là tường thật.
 
 - ⏰ **VIỆC NÀY ANH ĐÃ NHẬN, HẸN LÀM NGÀY 20/08 — ghim bình luận tự thú cho VD-018, cả ba
@@ -308,20 +307,23 @@ xác nhận công khai đúng lịch ngày 02/08.
 _Anh chốt 03/09: cho làm tự động hết. Phần dán bình luận nay máy làm được — đã dán xong
 hai kênh YouTube. Còn lại đúng hai việc dưới đây, cả hai đều bắt buộc bấm tay._
 
-#### ① Sinh lại Page Token Facebook — thêm 2 quyền
+#### ✅ ① Sinh lại Page Token Facebook — XONG ngày 03/09
 
-Không phải xin App Review, chỉ là token cũ sinh ra lúc chưa tích hai quyền này:
+Token mới đủ **6 quyền**, loại PAGE, `expires_at = 0` (không hết hạn). Cách làm đã ghi đầy
+đủ trong `docs/huong-dan-dang-tu-dong.md` mục B — **hai chỗ bẫy, ghi lại kẻo lần sau vấp
+tiếp**:
 
-1. Vào https://developers.facebook.com/tools/explorer/ → app **Song Tot Poster**
-2. **User or Page** → **Get Page Access Token** → chọn Trang **Sống Tốt**
-3. **Add a Permission** → nhóm **Pages** → tích thêm **`pages_manage_engagement`** và
-   **`pages_read_user_content`** (giữ nguyên 3 quyền cũ)
-4. Bấm **Generate Access Token** lần nữa — không bấm lại thì vẫn ra token cũ
-5. Copy token, rồi chạy `python3 scripts/lay-token-dai-han.py` để đổi sang token dài hạn
-6. Dán token dài hạn vào `.env`, dòng `FB_PAGE_TOKEN=` — **đừng dán token vào chat hay Git**
+1. **Ô "User or Page" phải chọn `User Token`, không phải Trang.** Đang ở chế độ Page thì
+   Explorer khoá danh sách quyền lại đúng những cái token hiện có, bấm "Add a Permission"
+   không ra gì. Mà `lay-token-dai-han.py` cũng cần **token người dùng** để đổi — nó tự đi
+   lấy token Page ở bước sau.
+2. **Quyền phải bật ở cấp app trước.** Explorer chỉ liệt kê quyền đã bật trong
+   **Dashboard → Use cases → "Manage everything on your Page" → Customize**. Chưa Add ở đó
+   thì bên Explorer không bao giờ hiện ra. App đang **Development** (mục Publish ghi
+   *Unpublished*) nên **không cần App Review**.
 
-Xong thì báo em, em chạy:
-`python3 scripts/dang-video-fb.py binh-luan --ma VD-018 --bai 1086214770915645 --dang-that`
+📌 **Được thêm quyền đọc bình luận Facebook** (`pages_read_user_content`) — dùng cho vòng
+nghĩ ý VD-037+, Facebook là nơi đông người theo dõi nhất nên nhiều nguyên liệu nhất.
 
 #### ② Ghim bình luận — ba nơi, mỗi nơi hai cú bấm
 
@@ -332,10 +334,10 @@ lách được bằng code. Chữ đã nằm sẵn trên đó rồi, anh chỉ v
 |---|---|---|
 | YouTube tiếng Việt | https://studio.youtube.com/video/QkKOTAKB6AI/comments | ✅ đã có bình luận `Ugx1ZvPTLNps9wWjuQd4AaABAg`, chỉ còn ghim |
 | YouTube tiếng Anh | https://studio.youtube.com/video/jME8ehrxkg8/comments | ✅ đã có bình luận `Ugzmv4IBxZs5_zf4ZHJ4AaABAg`, chỉ còn ghim |
-| Facebook Reels | `facebook.com/reel/1086214770915645` | 🔻 chưa có bình luận, chờ việc ① |
+| Facebook Reels | `facebook.com/reel/1086214770915645` | ✅ đã có bình luận `…_2284425752403691`, chỉ còn ghim |
 
-📌 **Hai video YouTube hiện chỉ có đúng một luồng bình luận, là của chính kênh** — nên dù
-chưa ghim nó vẫn nằm một mình trên đầu. Việc ghim giờ là cho chắc về sau, không còn gấp.
+📌 **Cả ba nơi hiện chỉ có đúng một bình luận, là của chính kênh** — nên dù chưa ghim nó
+vẫn nằm một mình trên đầu. Việc ghim giờ là cho chắc về sau, không còn gấp.
 
 **Bản tiếng Việt — dán nguyên khối:**
 

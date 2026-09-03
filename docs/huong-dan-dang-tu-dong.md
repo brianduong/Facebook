@@ -27,8 +27,19 @@ App ID và App Secret nằm ở **Settings → Basic** (App Secret phải bấm 
 
 1. Vào **https://developers.facebook.com/tools/explorer/**
 2. Ô **Meta App** (bên phải): chọn **Song Tot Poster**
-3. Ô **User or Page**: bấm vào → chọn **Get Page Access Token**
-   → Facebook mở hộp thoại → chọn Trang **Sống Tốt** → **Continue** → **Save**
+3. Ô **User or Page**: chọn **User Token**
+
+   ⚠️ **Đừng chọn "Get Page Access Token" như bản hướng dẫn cũ.** Hai lẽ, đã trả giá ngày
+   03/09: (a) khi Explorer đang ở chế độ Page, nó **khoá danh sách quyền** lại đúng những
+   cái token hiện có — bấm "Add a Permission" mãi không ra gì; (b) `lay-token-dai-han.py`
+   cần **token người dùng** để đổi sang loại không hết hạn, rồi **tự đi lấy token Page** ở
+   bước sau.
+
+   ⚠️ **Quyền phải bật ở cấp app TRƯỚC.** Explorer chỉ liệt kê quyền đã bật trong
+   **Dashboard → Use cases → "Manage everything on your Page" → Customize**. Chưa Add ở đó
+   thì bên Explorer không bao giờ hiện ra, dù có làm đúng hết mọi bước khác.
+   App đang ở chế độ **Development** (mục Publish ghi *Unpublished*) nên **không cần App
+   Review** — đừng thấy chữ "App Review" trong lời báo lỗi mà tưởng bị chặn.
 4. Mục **Permissions**: bấm **Add a Permission**, mở nhóm **Pages**, tích đủ 5 quyền:
    - `pages_show_list`
    - `pages_read_engagement`
