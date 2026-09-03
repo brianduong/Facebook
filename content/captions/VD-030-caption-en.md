@@ -3,7 +3,7 @@
 - **Video:** `video/exports/VD-030-reels-en.mp4` · 1080×1920
 - **Channel:** One Small Thing (`@onesmallthingdaily`)
 - **Planned publish time:** 2026-09-21 · 19:30 Vietnam time
-- **Status:** ⬜ not uploaded yet
+- **Status:** 🕒 uploaded and scheduled — `gFirKzP_wC4`, private until 2026-09-21 19:30 Vietnam time
 
 ---
 

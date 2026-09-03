@@ -77,19 +77,21 @@ ngay khi lướt tới, hiếm ai nhìn bìa. Công cụ `scripts/tao-anh-bia-re
 
 ## 📍 Dừng ở đâu — làm tiếp từ đây
 
-### ▶️ LẦN SAU VÀO THÌ LÀM TỪ ĐÂY — viết caption VD-034 rồi đăng cho mốc 13/09
+### ▶️ LẦN SAU VÀO THÌ LÀM TỪ ĐÂY — nghĩ ý mới cho VD-037+, kho đã cạn sạch
 
 _Chốt lúc ngày 03/09. Đọc `CLAUDE.md` trước để lấy luật đăng, rồi đọc API để lấy
 trạng thái thật — đừng tin bảng dưới đây._
 
-- 🔻 **Mốc trống kế tiếp là 13/09.** Năm bài cuối đều đã viết chữ, rút lời đọc và **render
-  xong cả hai bản** — bước 1 → 4 của "Bảy bước" xong sẵn. Thứ tự đã chốt trong hồ sơ, đừng
-  xếp lại: VD-034 (13/09) · VD-036 (15/09) · VD-035 (17/09) · VD-033 (19/09) · VD-030 (21/09).
-  - **VD-030 đã có đủ hai file caption** (viết 26/08) — chỉ việc chạy ba dòng lệnh đăng.
-    ⚠️ Nhưng **phải đợi đúng mốc 21/09**, đừng kéo lên sớm: nó với VD-027 là hai bài duy
-    nhất còn cụm "điện thoại", hồ sơ cố ý để cách nhau 9 mốc.
-  - **Bốn bài VD-033 · VD-034 · VD-035 · VD-036 còn thiếu caption** — viết hai file caption
-    mỗi bài (chép khuôn VD-032) rồi đăng.
+- 🔻 **VIỆC LỚN DUY NHẤT CÒN LẠI: nghĩ ý mới cho VD-037 trở đi. Kho bằng KHÔNG.** Hai hồ
+  sơ ý tưởng đã dùng hết sạch — VD-030 là bài cuối của `y-tuong-VD-021-030.md`, VD-036 là
+  bài cuối của `y-tuong-VD-031-036.md`. **Trong `content/` không còn kịch bản nào chưa đăng.**
+  - **Mốc trống kế tiếp là 23/09** — còn 18 ngày lịch chạy sẵn, **đừng để nước tới chân**.
+  - Nguồn nghĩ ý đã định sẵn: **bình luận người xem** và **số liệu 48 giờ**. Nhưng **tới
+    03/09 vẫn chưa bài nào có số** — bảng "Ghi nhận hiệu quả" trong `schedule/calendar.md`
+    còn trống trơn. **Đây mới là chỗ nghẽn thật của dự án, không phải chuyện thiếu ý.**
+  - 📌 **Từ 03/09 đã có quyền đọc bình luận** (`youtube.force-ssl` + Facebook sau khi anh
+    sinh lại token) — dùng nó để gom nguyên liệu, đừng nghĩ chay như hai đợt trước.
+  - ⚠️ **Đợt VD-037+ nên tránh trụ 2** — trụ 2 đang 8 bài, các trụ khác 7.
 
 - ❗ **ĐỌC API TRƯỚC KHI ĐĂNG, ĐỪNG TIN DÒNG "Trạng thái" TRONG FILE.** Buổi 26/08 viết
   VD-027 → VD-036 và render đủ, nhưng chỉ tải lên YouTube được ba bài rồi dừng giữa chừng,
@@ -134,10 +136,12 @@ trạng thái thật — đừng tin bảng dưới đây._
     đòi phạm vi `youtube.force-ssl` — thêm vào `PHAM_VI` là **token cũ hỏng ngay, phải
     `xin-quyen` lại cả hai kênh** rồi `kiem-tra` (xem mục tráo kênh bên dưới).
 
-- ✅ **Đã xong tới 11/09, đủ ba nơi — năm bài đang chờ.** VD-027 (03/09) · VD-031 (05/09) ·
-  VD-029 (07/09) · VD-028 (09/09) · VD-032 (11/09). Ngày lẻ để trống là **đúng nhịp 2 ngày**,
+- ✅ **Đã xong tới 21/09, đủ ba nơi — mười bài đang chờ.** VD-027 (03/09) · VD-031 (05/09) ·
+  VD-029 (07/09) · VD-028 (09/09) · VD-032 (11/09) · VD-034 (13/09) · VD-036 (15/09) ·
+  VD-035 (17/09) · VD-033 (19/09) · VD-030 (21/09). Ngày lẻ để trống là **đúng nhịp 2 ngày**,
   không phải quên. Bảy bài của tháng 8 (VD-020 → VD-026) đã lên sóng hết, đọc API 03/09 xác
-  nhận cả bảy đều `public`.
+  nhận cả bảy đều `public`. Trụ chạy 3 → 2 → 1 → 5 → 4 → 3 → 2 → 1 → 5 → 4, không hai bài
+  liền nhau cùng trụ.
 
 - ⚠️ **BÀI HỌC 15/08 — xin quyền YouTube xong PHẢI chạy `kiem-tra` cả hai kênh trước khi
   đăng.** Lần xin lại quyền ngày 15/08 **tráo nhầm hai kênh**: token `vi` nối vào *One Small
@@ -231,7 +235,7 @@ công thức `anh[i * số_ảnh // số_thẻ]`, không hiểu nội dung. Bi�
 VD-020 22 ÷ 8) miễn là tính trước nhóm nào dài mấy thẻ. **Cả ba bài đợt này không phải đảo
 `--lay` như VD-016.**
 
-### Đã hẹn giờ tới hết 11/09 lúc 19:30
+### Đã hẹn giờ tới hết 21/09 lúc 19:30
 
 | Ngày | Bài | YouTube tiếng Việt | YouTube tiếng Anh | Facebook | Trạng thái |
 |---|---|---|---|---|---|
@@ -258,9 +262,15 @@ VD-020 22 ÷ 8) miễn là tính trước nhóm nào dài mấy thẻ. **Cả ba
 | **07/09** | **VD-029** | `7wFKSLZ7ZwE` | `lPE-hMKpJLo` | Reels `1085978193966779` | 🕒 đủ ba nơi |
 | **09/09** | **VD-028** | `KYEzI7vps2w` | `-0SCUsETzk8` | Reels `2383898525714770` | 🕒 đủ ba nơi |
 | **11/09** | **VD-032** | `SbX-vsIxYR4` | `0jigTwF63Es` | Reels `1573943180937288` | 🕒 đủ ba nơi |
+| **13/09** | **VD-034** | `27J9F8AWP1w` | `nDVcpvSMGG0` | Reels `1819852699373451` | 🕒 đủ ba nơi |
+| **15/09** | **VD-036** | `OMvOZf6Jd5M` | `UrBf9DYuU_U` | Reels `1393312985462763` | 🕒 đủ ba nơi |
+| **17/09** | **VD-035** | `2Hv5vE-m4XE` | `fzbLmPXGY8A` | Reels `1595435931958209` | 🕒 đủ ba nơi |
+| **19/09** | **VD-033** | `kdqTVPn2044` | `qxrH3HZKOvM` | Reels `2732816340446930` | 🕒 đủ ba nơi |
+| **21/09** | **VD-030** | `O0nyOaII2gc` | `gFirKzP_wC4` | Reels `1660203235526975` | 🕒 đủ ba nơi |
 
-**Chuỗi hiện tại neo vào VD-026 đã lên sóng 01/09** → 03 · 05 · 07 · 09 · 11/09. Luật: neo
-vào **bài đã lên sóng gần nhất**, không phải bài đã xếp lịch gần nhất.
+**Chuỗi hiện tại neo vào VD-026 đã lên sóng 01/09** → 03 · 05 · 07 · 09 · 11 · 13 · 15 ·
+17 · 19 · 21/09. Luật: neo vào **bài đã lên sóng gần nhất**, không phải bài đã xếp lịch gần
+nhất. Mốc kế tiếp sau chuỗi này là **23/09**, chưa có bài.
 
 **Đã đọc lại API cả ba nơi ngày 15/08:** hai kênh YouTube đều **20 video, khớp đủ VD-001 →
 VD-020**, không trùng không thiếu; ba bài mới còn `private` với `publishAt = 12:30Z` đúng

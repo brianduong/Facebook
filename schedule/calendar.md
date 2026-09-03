@@ -65,6 +65,16 @@ Mỗi bài đi lên **ba nơi**: **YouTube tiếng Việt** (`@songtotdaily`) ·
 | **09/09** | **VD-028** | **Khen đúng cái người ta đã làm** | 🕒 19:30 | 🕒 19:30 | 🕒 19:30 |
 | 10/09 | — | _để trống theo nhịp 2 ngày_ | — | — | — |
 | **11/09** | **VD-032** | **Chỉ mình bạn còn nhớ chuyện đó** | 🕒 19:30 | 🕒 19:30 | 🕒 19:30 |
+| 12/09 | — | _để trống theo nhịp 2 ngày_ | — | — | — |
+| **13/09** | **VD-034** | **Việc giờ bạn làm không cần nghĩ** | 🕒 19:30 | 🕒 19:30 | 🕒 19:30 |
+| 14/09 | — | _để trống theo nhịp 2 ngày_ | — | — | — |
+| **15/09** | **VD-036** | **Lúc người ta vừa làm hỏng việc của bạn** | 🕒 19:30 | 🕒 19:30 | 🕒 19:30 |
+| 16/09 | — | _để trống theo nhịp 2 ngày_ | — | — | — |
+| **17/09** | **VD-035** | **Có loại mệt ngủ không chữa được** | 🕒 19:30 | 🕒 19:30 | 🕒 19:30 |
+| 18/09 | — | _để trống theo nhịp 2 ngày_ | — | — | — |
+| **19/09** | **VD-033** | **Nghe hết đã, đừng vội chữa** | 🕒 19:30 | 🕒 19:30 | 🕒 19:30 |
+| 20/09 | — | _để trống theo nhịp 2 ngày_ | — | — | — |
+| **21/09** | **VD-030** | **Chính bạn cũng chỉ đăng bản đã cắt** | 🕒 19:30 | 🕒 19:30 | 🕒 19:30 |
 
 ## 🔑 Mất quyền YouTube ngày 15/08 — đã xin lại xong, và bài học rút ra
 
@@ -116,16 +126,21 @@ gỡ rồi đăng lại là mất số liệu và ra hai bản trùng.
 - Sau khi xếp xong phải đọc lại API, khớp **ngày + giờ + câu đầu caption**, và xóa ngay
   lịch trùng; không chỉ tin dòng báo thành công của script
 
-Đã lên lịch tới hết **11/09**. Bảy bài của hai đợt tháng 8 (VD-020 → VD-026) **đã lên
-sóng hết**, mốc cuối là VD-026 ngày 01/09 — đọc API ngày 03/09 xác nhận cả bảy đều `public`.
-Năm bài đang chờ, đủ ba nơi: VD-027 (03/09) · VD-031 (05/09) · VD-029 (07/09) ·
-VD-028 (09/09) · VD-032 (11/09).
+Đã lên lịch tới hết **21/09 — mười bài đang chờ, đủ ba nơi**: VD-027 (03/09) ·
+VD-031 (05/09) · VD-029 (07/09) · VD-028 (09/09) · VD-032 (11/09) · VD-034 (13/09) ·
+VD-036 (15/09) · VD-035 (17/09) · VD-033 (19/09) · VD-030 (21/09). Bảy bài của hai đợt
+tháng 8 (VD-020 → VD-026) **đã lên sóng hết**, mốc cuối là VD-026 ngày 01/09 — đọc API
+ngày 03/09 xác nhận cả bảy đều `public`.
 
-🔻 **Mốc trống kế tiếp là 13/09.** Năm bài còn lại đều đã viết chữ và render xong cả hai bản:
-VD-034 (13/09) · VD-036 (15/09) · VD-035 (17/09) · VD-033 (19/09) · VD-030 (21/09).
-**VD-030 đã có sẵn cả hai file caption** — bài này chỉ việc chạy ba dòng lệnh đăng, nhưng
-phải đợi đúng mốc 21/09 chứ đừng kéo lên sớm. **Bốn bài kia còn thiếu caption**: viết hai
-file caption (chép khuôn VD-032) rồi đăng. Bảy bước của một bài ghi trong `STATUS.md`.
+🔻 **Hết hàng từ mốc 23/09.** Toàn bộ hai hồ sơ ý tưởng đã dùng xong: VD-030 là bài cuối của
+`y-tuong-VD-021-030.md`, VD-036 là bài cuối của `y-tuong-VD-031-036.md`. Trong `content/`
+**không còn kịch bản nào chưa đăng**.
+
+🔻 **Từ VD-037 trở đi kho ý tưởng bằng KHÔNG** — phải có một vòng nghĩ ý mới hoàn toàn.
+Nguồn đã định sẵn là **bình luận người xem** và **số liệu 48 giờ**, mà tới 03/09 **vẫn chưa
+bài nào có số** (bảng "Ghi nhận hiệu quả" dưới đây còn trống trơn). Đây là chỗ nghẽn thật,
+không phải chuyện thiếu ý. **Có 18 ngày lịch chạy sẵn để làm vòng đó — đừng để nước tới
+chân.**
 
 🔻 **Từ VD-037 trở đi kho ý tưởng bằng không** — phải có một vòng nghĩ ý mới hoàn toàn.
 
@@ -181,6 +196,45 @@ bài. Tra thẳng `/{video-id}` thì đã `scheduled` đúng mốc; một phút 
 
 ⚠️ Thẻ tiếng Anh của VD-014 lúc đầu có `quiet gratitude` — trái luật "cấm chữ biết ơn" của
 chính bài. Đã đổi trước khi đăng. Bài trụ 3 sau này soi lại thẻ, không chỉ soi lời đọc.
+
+## Đợt đăng 03/09 (đợt hai cùng ngày) — VD-034 · VD-036 · VD-035 · VD-033 · VD-030 ✅
+
+Năm bài cuối, đăng ngay sau đợt một trong cùng ngày. Chữ và hai bản render đều làm sẵn
+26/08; hôm nay viết bốn caption còn thiếu (VD-034 · VD-036 · VD-035 · VD-033 — VD-030 đã
+có sẵn từ 26/08) rồi đăng. Chuỗi đi tiếp cách 2 ngày: 13 · 15 · 17 · 19 · 21/09.
+
+| Ngày 19:30 | Mã | Trụ | YouTube tiếng Việt | YouTube tiếng Anh | Facebook Reels (post id) |
+|---|---|---|---|---|---|
+| **13/09** | **VD-034** · Việc giờ bạn làm không cần nghĩ | 3 | https://youtu.be/27J9F8AWP1w | https://youtu.be/nDVcpvSMGG0 | `1819852699373451` (`…_1686409023052834`) |
+| **15/09** | **VD-036** · Lúc người ta vừa làm hỏng việc của bạn | 2 | https://youtu.be/OMvOZf6Jd5M | https://youtu.be/UrBf9DYuU_U | `1393312985462763` (`…_1686409119719491`) |
+| **17/09** | **VD-035** · Có loại mệt ngủ không chữa được | 1 | https://youtu.be/2Hv5vE-m4XE | https://youtu.be/fzbLmPXGY8A | `1595435931958209` (`…_1686409219719481`) |
+| **19/09** | **VD-033** · Nghe hết đã, đừng vội chữa | 5 | https://youtu.be/kdqTVPn2044 | https://youtu.be/qxrH3HZKOvM | `2732816340446930` (`…_1686409569719446`) |
+| **21/09** | **VD-030** · Chính bạn cũng chỉ đăng bản đã cắt | 4 | https://youtu.be/O0nyOaII2gc | https://youtu.be/gFirKzP_wC4 | `1660203235526975` (`…_1686409699719433`) |
+
+**Đã đọc lại API cả ba nơi sau khi đăng.** Hai kênh YouTube đều **36 video** trên playlist
+`uploads`, **mười bài chờ** đều còn `private` với `publishAt = 12:30Z` đúng ngày của nó
+(03 → 21/09) và **tiêu đề đúng kênh**. Facebook: cả năm `published = false`, giờ hẹn đúng
+19:30 giờ Việt, `permalink_url` trả về `/reel/…`, `length` khớp file render (91,2 · 94,2 ·
+88,3 · 91,3 · 82,7 giây), câu đầu caption đúng bài; edge `/scheduled_posts` có **đúng 10
+lịch chờ, không trùng**, cách nhau tròn 2 ngày từ 03/09 tới 21/09.
+
+⏳ **Lại gặp đúng độ trễ đã ghi từ đợt VD-015:** đăng xong thì `/scheduled_posts` mới hiện 8
+bài, thiếu VD-033 và VD-030. Tra thẳng `/{video-id}` thì cả hai đã `scheduled` đúng mốc; lát
+sau danh sách hiện đủ 10. **Đừng đăng lại khi chưa thấy trong danh sách.**
+
+- **Trụ chạy 3 → 2 → 1 → 5 → 4**, nối sau VD-032 (trụ 4) — không có hai bài liền nhau cùng
+  trụ. Cả 10 mốc từ 03/09 tới 21/09 chạy đúng bảng "Thứ tự lên sóng" đã chốt trong hồ sơ.
+- **Thời lượng bản Việt:** VD-034 91s · VD-036 94s — **dài nhất từ trước tới nay** ·
+  VD-035 88s · VD-033 91s · VD-030 83s.
+- ⚠️ **Bốn bài đợt này đều là bài phải rào**, cấm chữ riêng từng bài, ghi đủ trong mục
+  "Nhắc khi đăng" của từng caption: VD-034 cấm "phiên bản tốt hơn · phát triển bản thân ·
+  hành trình" và **không được hứa gì về tương lai**; VD-036 cấm "kiềm chế cảm xúc · làm chủ
+  bản thân · bao dung · vị tha" và **không được thành bài bắt nhịn**; VD-035 cấm "kiệt sức ·
+  burn out · chữa lành" và **không chạm vùng y tế**; VD-033 cấm "lắng nghe thấu cảm · kết
+  nối · năng lượng" và **không được chê người hay khuyên**.
+- ⚠️ **VD-035 không thuộc cụm "nới tay với mình"** (VD-003 · 013 · 018 · 025 · 029) và
+  **không phủ định VD-008** — hai chỗ này soi cả khi trả lời bình luận.
+- ⚠️ **Chữ chưa ai đọc lại** — cả năm để trạng thái duyệt 🤖, lời đọc rút bằng `--cu-lam`.
 
 ## Đợt đăng 03/09 — VD-027 · VD-031 · VD-029 · VD-028 · VD-032 lên cả ba nơi ✅
 

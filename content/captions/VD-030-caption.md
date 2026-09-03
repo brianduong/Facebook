@@ -3,7 +3,7 @@
 - **Mã số:** VD-030
 - **File video:** `video/exports/VD-030-reels.mp4` · 1080×1920
 - **Ngày đăng dự kiến:** 2026-09-21 · 19:30
-- **Trạng thái:** ⬜ chưa đăng
+- **Trạng thái:** 🕒 YouTube tiếng Việt `O0nyOaII2gc` · 🕒 YouTube tiếng Anh `gFirKzP_wC4` · 🕒 Facebook Reels `1660203235526975` — cả ba hẹn 19:30 ngày 21/09
 
 Mỗi khối dưới đây copy nguyên khối, đừng ngắt dòng giữa câu.
 

@@ -6,7 +6,7 @@
 - **Trụ nội dung:** 3 — nhìn ra thứ đang có (kênh EN: *What you already have*)
 - **Thời lượng dự kiến:** ~86s (VI) · ~84s (EN)
 - **Định dạng:** Reels dọc 9:16 (1080×1920)
-- **Trạng thái:** ⬜ chưa render
+- **Trạng thái:** Đã render hai bản · hẹn 13/09 19:30
 
 ---
 

@@ -6,7 +6,7 @@
 - **Trụ nội dung:** 2 — tử tế nhỏ (kênh EN: *Small kindness*)
 - **Thời lượng dự kiến:** ~88s (VI) · ~86s (EN)
 - **Định dạng:** Reels dọc 9:16 (1080×1920)
-- **Trạng thái:** ⬜ chưa render
+- **Trạng thái:** Đã render hai bản · hẹn 15/09 19:30
 
 ---
 

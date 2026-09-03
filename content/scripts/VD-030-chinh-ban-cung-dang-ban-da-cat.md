@@ -6,7 +6,7 @@
 - **Trụ nội dung:** 4 — giọng nói trong đầu (kênh EN: *The voice in your head*)
 - **Thời lượng dự kiến:** ~84s (VI) · ~86s (EN)
 - **Định dạng:** Reels dọc 9:16 (1080×1920)
-- **Trạng thái:** ⬜ chưa render
+- **Trạng thái:** Đã render hai bản · hẹn 21/09 19:30
 
 ---
 

@@ -6,7 +6,7 @@
 - **Trụ nội dung:** 1 — ngày không đủ sức (kênh EN: *Heavy days*)
 - **Thời lượng dự kiến:** ~86s (VI) · ~86s (EN)
 - **Định dạng:** Reels dọc 9:16 (1080×1920)
-- **Trạng thái:** ⬜ chưa render
+- **Trạng thái:** Đã render hai bản · hẹn 17/09 19:30
 
 ---
 

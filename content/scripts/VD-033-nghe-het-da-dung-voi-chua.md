@@ -6,7 +6,7 @@
 - **Trụ nội dung:** 5 — với tới người khác (kênh EN: *Reaching people*)
 - **Thời lượng dự kiến:** ~86s (VI) · ~86s (EN)
 - **Định dạng:** Reels dọc 9:16 (1080×1920)
-- **Trạng thái:** ⬜ chưa render
+- **Trạng thái:** Đã render hai bản · hẹn 19/09 19:30
 
 ---
 
