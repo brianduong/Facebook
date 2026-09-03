@@ -1,6 +1,6 @@
 # STATUS — Ghi chú tiến độ
 
-_Cập nhật: 2026-08-19_
+_Cập nhật: 2026-09-03_
 
 ## 📍 Ba nơi đăng — tên gọi quy ước
 
@@ -77,10 +77,27 @@ ngay khi lướt tới, hiếm ai nhìn bìa. Công cụ `scripts/tao-anh-bia-re
 
 ## 📍 Dừng ở đâu — làm tiếp từ đây
 
-### ▶️ LẦN SAU VÀO THÌ LÀM TỪ ĐÂY — ghim bình luận VD-018 (đang trễ), rồi viết VD-027 trước 03/09
+### ▶️ LẦN SAU VÀO THÌ LÀM TỪ ĐÂY — viết caption VD-034 rồi đăng cho mốc 13/09
 
-_Chốt lúc ngày 19/08. Đọc `CLAUDE.md` trước để lấy luật đăng, rồi đọc API để lấy
+_Chốt lúc ngày 03/09. Đọc `CLAUDE.md` trước để lấy luật đăng, rồi đọc API để lấy
 trạng thái thật — đừng tin bảng dưới đây._
+
+- 🔻 **Mốc trống kế tiếp là 13/09.** Năm bài cuối của hồ sơ `y-tuong-VD-031-036.md` đã viết
+  chữ, rút lời đọc và **render xong cả hai bản**, chỉ **thiếu caption**. Thứ tự đã chốt trong
+  hồ sơ, đừng xếp lại: VD-034 (13/09) · VD-036 (15/09) · VD-035 (17/09) · VD-033 (19/09) ·
+  VD-030 (21/09). Làm tiếp chỉ còn hai việc mỗi bài: **viết hai file caption** (chép khuôn
+  VD-032) rồi **chạy ba dòng lệnh đăng**. Bước 1 → 4 của "Bảy bước" đã xong sẵn.
+
+- ❗ **ĐỌC API TRƯỚC KHI ĐĂNG, ĐỪNG TIN DÒNG "Trạng thái" TRONG FILE.** Buổi 26/08 viết
+  VD-027 → VD-036 và render đủ, nhưng chỉ tải lên YouTube được ba bài rồi dừng giữa chừng,
+  không đăng Facebook bài nào và **không commit gì cả**. Cả năm file caption viết hôm đó vẫn
+  ghi `⬜ chưa đăng`, trong khi ba bài trong số đó đã nằm sẵn trên YouTube — tin dòng ấy là
+  **đăng chồng lần thứ hai**.
+  Ngày 03/09 đã vá xong chỗ thiếu, xem mục "Đợt đăng 03/09" trong `schedule/calendar.md`.
+
+- ⏰ **Việc anh nhận từ 20/08 vẫn chưa thấy đánh dấu xong: ghim bình luận tự thú VD-018,
+  cả ba nơi.** Chi tiết ở mục "VIỆC ANH LÀM TAY" bên dưới. **Mở project là hỏi anh một câu
+  xem xong chưa** — xong thì đánh dấu ở đây và xoá memory `viec-ghim-binh-luan-vd018.md`.
 
 - ⏰ **VIỆC NÀY ANH ĐÃ NHẬN, HẸN LÀM NGÀY 20/08 — ghim bình luận tự thú cho VD-018, cả ba
   nơi.** Chi tiết đầy đủ (đường dẫn từng nơi + chữ dán sẵn hai thứ tiếng) ở mục **"VIỆC ANH
@@ -107,10 +124,10 @@ trạng thái thật — đừng tin bảng dưới đây._
     đòi phạm vi `youtube.force-ssl` — thêm vào `PHAM_VI` là **token cũ hỏng ngay, phải
     `xin-quyen` lại cả hai kênh** rồi `kiem-tra` (xem mục tráo kênh bên dưới).
 
-- ✅ **Đã xong tới 01/09, đủ ba nơi — bảy bài đang chờ.** VD-020 (20/08) · VD-022 (22/08) ·
-  VD-023 (24/08) · VD-021 (26/08) · VD-024 (28/08) · VD-025 (30/08) · VD-026 (01/09).
-  Ngày lẻ để trống là **đúng nhịp 2 ngày**, không phải quên.
-  Mốc trống kế tiếp là **03/09**, chưa có bài — viết VD-027 trước ngày đó.
+- ✅ **Đã xong tới 11/09, đủ ba nơi — năm bài đang chờ.** VD-027 (03/09) · VD-031 (05/09) ·
+  VD-029 (07/09) · VD-028 (09/09) · VD-032 (11/09). Ngày lẻ để trống là **đúng nhịp 2 ngày**,
+  không phải quên. Bảy bài của tháng 8 (VD-020 → VD-026) đã lên sóng hết, đọc API 03/09 xác
+  nhận cả bảy đều `public`.
 
 - ⚠️ **BÀI HỌC 15/08 — xin quyền YouTube xong PHẢI chạy `kiem-tra` cả hai kênh trước khi
   đăng.** Lần xin lại quyền ngày 15/08 **tráo nhầm hai kênh**: token `vi` nối vào *One Small
@@ -142,16 +159,17 @@ trạng thái thật — đừng tin bảng dưới đây._
   **Công khai rồi thì không dời được; để nguyên, đừng gỡ** — gỡ rồi đăng lại là mất số liệu
   và ra hai bản trùng.
 
-- 🔻 **Còn lại VD-027 → VD-030 trong `content/ideas/y-tuong-VD-021-030.md`** — có hồ sơ,
-  đã qua vòng chấm, chưa viết chữ nào. Hết VD-030 là **tròn 6 bài mỗi trụ**, đủ dựng 5
-  video dài 16:9. **Sau VD-030 kho ý tưởng cạn** — dự trữ chỉ còn 2 ý và đều dính chủ đề
-  ngủ, nên đợt VD-031+ phải có một vòng nghĩ ý mới (lấy từ bình luận người xem và từ số
-  liệu 48 giờ, xem mục "Báo cáo vướng mắc" cuối hồ sơ ý tưởng).
-  ⚠️ **VD-027 mở bằng cảnh chờ thang máy** — VD-021 (26/08) đã dùng cảnh *cửa thang máy sắp
-  đóng*. Hai bài chỉ cách nhau vài mốc, nên khi viết VD-027 phải **đổi hẳn cảnh mở đầu**
-  (đèn đỏ, xếp hàng) chứ đừng lặp thang máy.
-  ⚠️ **Trụ của bài kế tiếp không được là trụ 4** — VD-026 (01/09) đã là trụ 4. VD-027 trụ 3,
-  hợp lệ.
+- 🔻 **Còn lại năm bài đã render, chỉ thiếu caption** — VD-034 · VD-036 · VD-035 · VD-033 ·
+  VD-030, hồ sơ `content/ideas/y-tuong-VD-031-036.md` (VD-030 thuộc hồ sơ cũ
+  `y-tuong-VD-021-030.md`). Thứ tự lên sóng đã chốt trong bảng "Thứ tự lên sóng" của hồ sơ.
+  ⚠️ **Đừng kéo VD-030 lên sớm** — nó với VD-027 (03/09) là hai bài duy nhất còn cụm
+  "điện thoại", hồ sơ cố ý đẩy nó xuống tận 21/09, cách 9 mốc.
+  ⚠️ **VD-029 (07/09) và VD-035 cùng vùng nghỉ–ngủ** nên VD-035 phải ở 17/09, cách 5 mốc;
+  **VD-031 (05/09) và VD-036 cùng trụ 2** nên VD-036 ở 15/09, cũng cách 5 mốc.
+
+- 🔻 **Từ VD-037 trở đi kho ý tưởng bằng KHÔNG** — hết sạch, phải có một vòng nghĩ ý mới
+  hoàn toàn. Nguồn đã định sẵn là **bình luận người xem** và **số liệu 48 giờ**, mà số liệu
+  thì tới giờ vẫn chưa có bài nào — xem "Báo cáo vướng mắc" cuối hồ sơ ý tưởng.
 
 **Bảy bước của một bài** (VD-018 → VD-020 đi đúng đường này; ba bài một buổi là làm được):
 
@@ -188,7 +206,7 @@ công thức `anh[i * số_ảnh // số_thẻ]`, không hiểu nội dung. Bi�
 VD-020 22 ÷ 8) miễn là tính trước nhóm nào dài mấy thẻ. **Cả ba bài đợt này không phải đảo
 `--lay` như VD-016.**
 
-### Đã hẹn giờ tới hết 01/09 lúc 19:30
+### Đã hẹn giờ tới hết 11/09 lúc 19:30
 
 | Ngày | Bài | YouTube tiếng Việt | YouTube tiếng Anh | Facebook | Trạng thái |
 |---|---|---|---|---|---|
@@ -203,16 +221,21 @@ VD-020 22 ÷ 8) miễn là tính trước nhóm nào dài mấy thẻ. **Cả ba
 | **14/08** | **VD-017** | `gSRZoHt2Qns` | `xfpddU0eEAI` | Reels `2274455883304906` | ✅ FB 14/08 · ❗YT lên sớm 13/08 **— bài neo chuỗi mới** |
 | **16/08** | **VD-018** | `QkKOTAKB6AI` | `jME8ehrxkg8` | Reels `1086214770915645` | ✅ đã lên — **còn nợ ghim bình luận** |
 | **18/08** | **VD-019** | `S_unSrIUQrQ` | `TVVSGArEhko` | Reels `4372283653084479` | ✅ đã lên |
-| **20/08** | **VD-020** | `GHllc5Y9Dcg` | `Ke8NOUMGFvI` | Reels `2324658331612348` | 🕒 đủ ba nơi |
-| **22/08** | **VD-022** | `0PJEs8MmVhI` | `E_Ptc50eaBY` | Reels `1036926949220060` | 🕒 đủ ba nơi |
-| **24/08** | **VD-023** | `QGTl_N9myyI` | `Jt_KCjctRZU` | Reels `27933369426273284` | 🕒 đủ ba nơi |
-| **26/08** | **VD-021** | `H0FJCtH3mME` | `JR3v7P5wD10` | Reels `28043949088603153` | 🕒 đủ ba nơi |
-| **28/08** | **VD-024** | `LCRzlnuXju4` | `JHDtW3BZVrE` | Reels `1767249877800838` | 🕒 đủ ba nơi |
-| **30/08** | **VD-025** | `PpM9VLQWBqQ` | `W_fRsr5OtaI` | Reels `1684994275905731` | 🕒 đủ ba nơi |
-| **01/09** | **VD-026** | `BVXmB70kgsk` | `Evmi4MDGsiA` | Reels `1692474351855713` | 🕒 đủ ba nơi |
+| **20/08** | **VD-020** | `GHllc5Y9Dcg` | `Ke8NOUMGFvI` | Reels `2324658331612348` | ✅ đã lên |
+| **22/08** | **VD-022** | `0PJEs8MmVhI` | `E_Ptc50eaBY` | Reels `1036926949220060` | ✅ đã lên |
+| **24/08** | **VD-023** | `QGTl_N9myyI` | `Jt_KCjctRZU` | Reels `27933369426273284` | ✅ đã lên |
+| **26/08** | **VD-021** | `H0FJCtH3mME` | `JR3v7P5wD10` | Reels `28043949088603153` | ✅ đã lên |
+| **28/08** | **VD-024** | `LCRzlnuXju4` | `JHDtW3BZVrE` | Reels `1767249877800838` | ✅ đã lên |
+| **30/08** | **VD-025** | `PpM9VLQWBqQ` | `W_fRsr5OtaI` | Reels `1684994275905731` | ✅ đã lên |
+| **01/09** | **VD-026** | `BVXmB70kgsk` | `Evmi4MDGsiA` | Reels `1692474351855713` | ✅ đã lên |
+| **03/09** | **VD-027** | `IMr5WMp2xy4` | `z0qmgNeD6K8` | Reels `3883429851798543` | 🕒 đủ ba nơi |
+| **05/09** | **VD-031** | `cJWq5JxXqak` | `_NtHlCcROZA` | Reels `2432029520623702` | 🕒 đủ ba nơi |
+| **07/09** | **VD-029** | `7wFKSLZ7ZwE` | `lPE-hMKpJLo` | Reels `1085978193966779` | 🕒 đủ ba nơi |
+| **09/09** | **VD-028** | `KYEzI7vps2w` | `-0SCUsETzk8` | Reels `2383898525714770` | 🕒 đủ ba nơi |
+| **11/09** | **VD-032** | `SbX-vsIxYR4` | `0jigTwF63Es` | Reels `1573943180937288` | 🕒 đủ ba nơi |
 
-**Chuỗi hiện tại neo vào VD-019 đã lên sóng 18/08** → 20 · 22 · 24 · 26 · 28 · 30/08 ·
-01/09. Luật: neo vào **bài đã lên sóng gần nhất**, không phải bài đã xếp lịch gần nhất.
+**Chuỗi hiện tại neo vào VD-026 đã lên sóng 01/09** → 03 · 05 · 07 · 09 · 11/09. Luật: neo
+vào **bài đã lên sóng gần nhất**, không phải bài đã xếp lịch gần nhất.
 
 **Đã đọc lại API cả ba nơi ngày 15/08:** hai kênh YouTube đều **20 video, khớp đủ VD-001 →
 VD-020**, không trùng không thiếu; ba bài mới còn `private` với `publishAt = 12:30Z` đúng

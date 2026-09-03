@@ -68,14 +68,32 @@ từ file nháp.
 | VD-029 | Nghỉ không cần xứng đáng | Nghỉ không phải phần thưởng phải đạt điểm mới được lĩnh | 1 | ⬜ |
 | VD-030 | Chính bạn cũng chỉ đăng bản đã cắt | Mười tấm chụp một tấm đăng — của ai cũng vậy | 4 | ⬜ |
 
-## Ý chưa xếp hàng — VD-031 trở đi lấy ở đây
+## Xếp hàng đợt ba — VD-031 → VD-036 (chốt 26/08/2026)
 
-⚠️ Kho gần cạn (còn 2 ý, đều trụ 1, đều dính chủ đề ngủ). Đợt VD-031+ cần vòng nghĩ ý
-mới — nguồn nên đổi: **bình luận người xem** (CTA các bài đều xin chuyện thật) và
-**số liệu 48 giờ** (trụ nào giữ chân tốt thì đào tiếp). Hai cụm đã chật, đừng thêm:
-cụm "điện thoại" (006·008·027·030) và cụm "nới tay với mình" trụ 1 (003·013·018·025·029).
+**→ Hồ sơ chi tiết + vòng chấm + thứ tự lên sóng: `y-tuong-VD-031-036.md`.**
+Năm ý nghĩ mới, một ý rút từ kho dự trữ (VD-035). Không ý nào rơi vào hai cụm đang cấm.
+
+| Mã | Ý tưởng / Chủ đề | Thông điệp | Trụ | TT |
+|---|---|---|---|---|
+| VD-031 | Người tới sau mình | Có loại tử tế dành cho người mình không bao giờ gặp | 2 | ⬜ |
+| VD-032 | Chỉ mình bạn còn nhớ chuyện đó | Mình lưu bản đầy đủ, người ta lưu bản đã xoá | 4 | ⬜ |
+| VD-033 | Nghe hết đã, đừng vội chữa | Người kể chuyện khó cần kể hết, chưa cần lối ra | 5 | ⬜ |
+| VD-034 | Việc giờ bạn làm không cần nghĩ | Mình giỏi lên mà chẳng ai báo cho mình biết | 3 | ⬜ |
+| VD-035 | Có loại mệt ngủ không chữa được | Ngủ đủ vẫn nặng người thì cái mệt không nằm ở giấc ngủ | 1 | ⬜ |
+| VD-036 | Lúc người ta vừa làm hỏng việc của bạn | Tử tế lúc đang bực mới là chỗ khó nhất | 2 | ⬜ |
+
+## Ý chưa xếp hàng — VD-037 trở đi lấy ở đây
+
+🔴 **Kho bằng không.** Đợt VD-031→036 đã dùng nốt ý dự trữ dùng được; ý còn lại
+(*bỏ điện thoại 30 phút trước khi ngủ*) đã loại hẳn vì thuộc cụm "điện thoại" đang cấm.
+Đợt VD-037+ **phải nghĩ mới hoàn toàn** — nguồn nên đổi: **bình luận người xem** (CTA các
+bài đều xin chuyện thật) và **số liệu 48 giờ** (trụ nào giữ chân tốt thì đào tiếp), nhưng
+tới 26/08 vẫn chưa bài nào có số nên chỗ này còn nghẽn.
+
+**Hai cụm đã chật, đừng thêm bài:** cụm "điện thoại" (006·008·027·030) và cụm "nới tay
+với mình" trụ 1 (003·013·018·025·029). **Trụ 2 đang 8 bài, các trụ khác 7** — đợt sau nên
+tránh trụ 2 cho về lại thế cân.
 
 | Ý tưởng / Chủ đề | Thông điệp | Trụ |
 |---|---|---|
-| Bỏ điện thoại 30 phút trước khi ngủ | Giấc ngủ là việc tử tế với chính mình (trùng hướng VD-008 — chỉ làm nếu VD-008 chạy tốt) | 1 |
-| Mệt mà ngủ không hết mệt | Có loại mệt không phải do thiếu ngủ — do làm việc mình không tin | 1 |
+| _(trống — chờ vòng nghĩ ý mới)_ | | |

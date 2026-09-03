@@ -28,11 +28,11 @@ Mỗi bài đi lên **ba nơi**: **YouTube tiếng Việt** (`@songtotdaily`) ·
 | 03/08 | — | _lỡ nhịp, không đăng gì_ | — | — | — |
 | **04/08** | **VD-009** | **Để mình nghĩ đã** | ✅ | ✅ | ✅ |
 | 05/08 | VD-011 | Một việc tốt không ai biết | ✅ | ✅ | ✅ |
-| 06/08 | VD-010 | Tha thứ không phải cho người kia | 🕒 | 🕒 | 🕒 19:30 |
-| 07/08 | VD-012 | Người phục vụ mình cũng có tên | 🕒 | 🕒 | 🕒 19:30 |
-| 08/08 | VD-013 | Mười phút đầu tiên | 🕒 | 🕒 | 🕒 19:30 |
-| **09/08** | **VD-014** | **Những thứ hôm nay không hỏng** | 🕒 | 🕒 | 🕒 19:30 |
-| **10/08** | **VD-015** | **Nói với mình như nói với bạn thân** | 🕒 | 🕒 | 🕒 19:30 |
+| 06/08 | VD-010 | Tha thứ không phải cho người kia | ✅ | ✅ | ✅ |
+| 07/08 | VD-012 | Người phục vụ mình cũng có tên | ✅ | ✅ | ✅ |
+| 08/08 | VD-013 | Mười phút đầu tiên | ✅ | ✅ | ✅ |
+| **09/08** | **VD-014** | **Những thứ hôm nay không hỏng** | ✅ | ✅ | ✅ |
+| **10/08** | **VD-015** | **Nói với mình như nói với bạn thân** | ✅ | ✅ | ✅ |
 | 11/08 | — | _để trống theo nhịp mới 2 ngày 1 bài_ | — | — | — |
 | **12/08** | **VD-016** | **Hỏi thêm một câu** | ❗ lên sớm 11/08 | ❗ lên sớm 11/08 | ✅ đã lên 12/08 |
 | 13/08 | — | _để trống theo nhịp mới_ | — | — | — |
@@ -42,19 +42,29 @@ Mỗi bài đi lên **ba nơi**: **YouTube tiếng Việt** (`@songtotdaily`) ·
 | 17/08 | — | _để trống theo nhịp 2 ngày_ | — | — | — |
 | **18/08** | **VD-019** | **Mình của ngày trước từng mong điều này** | ✅ | ✅ | ✅ |
 | 19/08 | — | _để trống theo nhịp 2 ngày_ | — | — | — |
-| **20/08** | **VD-020** | **Để người khác giúp mình** | 🕒 19:30 | 🕒 19:30 | 🕒 19:30 |
+| **20/08** | **VD-020** | **Để người khác giúp mình** | ✅ | ✅ | ✅ |
 | 21/08 | — | _để trống theo nhịp 2 ngày_ | — | — | — |
-| **22/08** | **VD-022** | **Chậm hơn không phải là hỏng** | 🕒 19:30 | 🕒 19:30 | 🕒 19:30 |
+| **22/08** | **VD-022** | **Chậm hơn không phải là hỏng** | ✅ | ✅ | ✅ |
 | 23/08 | — | _để trống theo nhịp 2 ngày_ | — | — | — |
-| **24/08** | **VD-023** | **Ai đó đã làm bữa cơm thành nóng** | 🕒 19:30 | 🕒 19:30 | 🕒 19:30 |
+| **24/08** | **VD-023** | **Ai đó đã làm bữa cơm thành nóng** | ✅ | ✅ | ✅ |
 | 25/08 | — | _để trống theo nhịp 2 ngày_ | — | — | — |
-| **26/08** | **VD-021** | **Tử tế lúc bất tiện** | 🕒 19:30 | 🕒 19:30 | 🕒 19:30 |
+| **26/08** | **VD-021** | **Tử tế lúc bất tiện** | ✅ | ✅ | ✅ |
 | 27/08 | — | _để trống theo nhịp 2 ngày_ | — | — | — |
-| **28/08** | **VD-024** | **Có mặt lúc chưa ai gọi** | 🕒 19:30 | 🕒 19:30 | 🕒 19:30 |
+| **28/08** | **VD-024** | **Có mặt lúc chưa ai gọi** | ✅ | ✅ | ✅ |
 | 29/08 | — | _để trống theo nhịp 2 ngày_ | — | — | — |
-| **30/08** | **VD-025** | **Hạ chuẩn một hôm, giữ lấy cả ngày** | 🕒 19:30 | 🕒 19:30 | 🕒 19:30 |
+| **30/08** | **VD-025** | **Hạ chuẩn một hôm, giữ lấy cả ngày** | ✅ | ✅ | ✅ |
 | 31/08 | — | _để trống theo nhịp 2 ngày_ | — | — | — |
-| **01/09** | **VD-026** | **Được phép đổi ý** | 🕒 19:30 | 🕒 19:30 | 🕒 19:30 |
+| **01/09** | **VD-026** | **Được phép đổi ý** | ✅ | ✅ | ✅ |
+| 02/09 | — | _để trống theo nhịp 2 ngày_ | — | — | — |
+| **03/09** | **VD-027** | **Ngẩng mặt lúc đang chờ** | 🕒 19:30 | 🕒 19:30 | 🕒 19:30 |
+| 04/09 | — | _để trống theo nhịp 2 ngày_ | — | — | — |
+| **05/09** | **VD-031** | **Người tới sau mình** | 🕒 19:30 | 🕒 19:30 | 🕒 19:30 |
+| 06/09 | — | _để trống theo nhịp 2 ngày_ | — | — | — |
+| **07/09** | **VD-029** | **Nghỉ không cần xứng đáng** | 🕒 19:30 | 🕒 19:30 | 🕒 19:30 |
+| 08/09 | — | _để trống theo nhịp 2 ngày_ | — | — | — |
+| **09/09** | **VD-028** | **Khen đúng cái người ta đã làm** | 🕒 19:30 | 🕒 19:30 | 🕒 19:30 |
+| 10/09 | — | _để trống theo nhịp 2 ngày_ | — | — | — |
+| **11/09** | **VD-032** | **Chỉ mình bạn còn nhớ chuyện đó** | 🕒 19:30 | 🕒 19:30 | 🕒 19:30 |
 
 ## 🔑 Mất quyền YouTube ngày 15/08 — đã xin lại xong, và bài học rút ra
 
@@ -106,13 +116,17 @@ gỡ rồi đăng lại là mất số liệu và ra hai bản trùng.
 - Sau khi xếp xong phải đọc lại API, khớp **ngày + giờ + câu đầu caption**, và xóa ngay
   lịch trùng; không chỉ tin dòng báo thành công của script
 
-Đã lên lịch tới hết **01/09** (VD-026). VD-018 · VD-019 đã lên sóng đúng mốc; bảy bài
-VD-020 · VD-022 · VD-023 · VD-021 · VD-024 · VD-025 · VD-026 đang chờ, đủ ba nơi.
+Đã lên lịch tới hết **11/09**. Bảy bài của hai đợt tháng 8 (VD-020 → VD-026) **đã lên
+sóng hết**, mốc cuối là VD-026 ngày 01/09 — đọc API ngày 03/09 xác nhận cả bảy đều `public`.
+Năm bài đang chờ, đủ ba nơi: VD-027 (03/09) · VD-031 (05/09) · VD-029 (07/09) ·
+VD-028 (09/09) · VD-032 (11/09).
 
-🔻 **Mốc trống kế tiếp là 03/09** — chưa có bài nào cho nó. Hàng đợi còn lại là VD-027 →
-VD-030 trong `content/ideas/y-tuong-VD-021-030.md` — có hồ sơ ý tưởng và đã qua vòng chấm,
-nhưng **chưa viết chữ nào**. Hết VD-030 là tròn 6 bài mỗi trụ; sau đó **kho cạn**, cần một
-vòng nghĩ ý mới. Bảy bước của một bài ghi trong `STATUS.md`.
+🔻 **Mốc trống kế tiếp là 13/09.** Năm bài còn lại của hồ sơ `y-tuong-VD-031-036.md` đã viết
+chữ và render xong cả hai bản, chỉ **thiếu caption**: VD-034 (13/09) · VD-036 (15/09) ·
+VD-035 (17/09) · VD-033 (19/09) · VD-030 (21/09). Làm tiếp chỉ còn hai việc: viết caption
+rồi chạy ba dòng lệnh đăng. Bảy bước của một bài ghi trong `STATUS.md`.
+
+🔻 **Từ VD-037 trở đi kho ý tưởng bằng không** — phải có một vòng nghĩ ý mới hoàn toàn.
 
 ⚠️ **Render lại bản tiếng Việt trước khi đăng nếu file cũ hơn commit sửa giọng gần nhất.**
 File trong `video/exports/` không tự biết nó render bằng thiết lập giọng nào — so ngày sửa
@@ -166,6 +180,46 @@ bài. Tra thẳng `/{video-id}` thì đã `scheduled` đúng mốc; một phút 
 
 ⚠️ Thẻ tiếng Anh của VD-014 lúc đầu có `quiet gratitude` — trái luật "cấm chữ biết ơn" của
 chính bài. Đã đổi trước khi đăng. Bài trụ 3 sau này soi lại thẻ, không chỉ soi lời đọc.
+
+## Đợt đăng 03/09 — VD-027 · VD-031 · VD-029 · VD-028 · VD-032 lên cả ba nơi ✅
+
+Năm bài đầu của hồ sơ `y-tuong-VD-031-036.md`. Chữ, lời đọc và hai bản render đều làm sẵn
+ngày 26/08; hôm nay chỉ còn viết caption VD-032 rồi đăng. Chuỗi neo vào **VD-026 đã lên sóng
+01/09**, đi tiếp cách 2 ngày: 03/09 · 05/09 · 07/09 · 09/09 · 11/09.
+
+| Ngày 19:30 | Mã | Trụ | YouTube tiếng Việt | YouTube tiếng Anh | Facebook Reels (post id) |
+|---|---|---|---|---|---|
+| **03/09** | **VD-027** · Ngẩng mặt lúc đang chờ | 3 | https://youtu.be/IMr5WMp2xy4 | https://youtu.be/z0qmgNeD6K8 | `3883429851798543` (`…_1686370096390060`) |
+| **05/09** | **VD-031** · Người tới sau mình | 2 | https://youtu.be/cJWq5JxXqak | https://youtu.be/_NtHlCcROZA | `2432029520623702` (`…_1686370229723380`) |
+| **07/09** | **VD-029** · Nghỉ không cần xứng đáng | 1 | https://youtu.be/7wFKSLZ7ZwE | https://youtu.be/lPE-hMKpJLo | `1085978193966779` (`…_1686370726389997`) |
+| **09/09** | **VD-028** · Khen đúng cái người ta đã làm | 5 | https://youtu.be/KYEzI7vps2w | https://youtu.be/-0SCUsETzk8 | `2383898525714770` (`…_1686370903056646`) |
+| **11/09** | **VD-032** · Chỉ mình bạn còn nhớ chuyện đó | 4 | https://youtu.be/SbX-vsIxYR4 | https://youtu.be/0jigTwF63Es | `1573943180937288` (`…_1686371059723297`) |
+
+❗ **Đợt 26/08 làm dở dang, hôm nay mới vá xong.** Buổi đó viết VD-027 → VD-036, render đủ
+20 file, nhưng chỉ **tải lên YouTube ba bài** (VD-027 · VD-031 · VD-029) và **không đăng
+Facebook bài nào**, rồi dừng — không commit. Đọc API ngày 03/09 mới thấy: hai kênh YouTube
+có 3 bài `private` đúng mốc, Facebook thì `/scheduled_posts` **rỗng**. Hôm nay bù đúng chỗ
+thiếu: thêm VD-028 · VD-032 lên hai kênh YouTube, và đăng cả năm bài lên Facebook.
+📌 **Bài học: đọc API trước khi làm tiếp, đừng tin trạng thái ghi trong file.** Nếu tin
+`⬜ chưa đăng` trong caption thì đã đăng chồng VD-027 · VD-031 · VD-029 lần thứ hai.
+
+**Đã đọc lại API cả ba nơi sau khi đăng.** Hai kênh YouTube đều **31 video** trên playlist
+`uploads`, năm bài chờ đều còn `private` với `publishAt = 12:30Z` đúng ngày của nó (03 · 05 ·
+07 · 09 · 11/09) và **tiêu đề đúng kênh**. Facebook: cả năm `published = false`, giờ hẹn đúng
+19:30 giờ Việt, `permalink_url` trả về `/reel/…`, `length` khớp file render (86,3 · 91,4 ·
+85,6 · 83,9 · 88,3 giây), câu đầu caption đúng bài; edge `/scheduled_posts` có **đúng 5 lịch
+chờ, không trùng**, cách nhau tròn 2 ngày.
+
+- **Trụ chạy 3 → 2 → 1 → 5 → 4**, nối sau VD-026 (trụ 4) — không có hai bài liền nhau cùng
+  trụ. Thứ tự này là bảng "Thứ tự lên sóng" đã chốt trong hồ sơ ý tưởng, không xếp lại.
+- ⚠️ **VD-027 và VD-030 là hai bài duy nhất còn cụm "điện thoại"** nên hồ sơ xếp chúng ở hai
+  đầu chuỗi — VD-030 nằm mãi 21/09. **Đừng kéo VD-030 lên sớm.**
+- ⚠️ **VD-029 và VD-035 cùng vùng nghỉ–ngủ**, hồ sơ để cách nhau 5 mốc (07/09 và 17/09).
+- ⚠️ **VD-031 và VD-036 cùng trụ 2**, cách nhau 5 mốc (05/09 và 15/09).
+- **Sửa ba hashtag hỏng trước khi đăng Facebook:** `#dengdo` → `#dendo` và
+  `#denduhaimuoigiay` → `#dendoconhaimuoigiay` (VD-027), `#nguoitoisaumnh` →
+  `#nguoitoisauminh` (VD-031). Chữ trên YouTube không đụng tới, ba bài đó đã tải lên từ 26/08.
+- ⚠️ **Chữ chưa ai đọc lại** — cả năm để trạng thái duyệt 🤖, lời đọc rút bằng `--cu-lam`.
 
 ## Đợt đăng 19/08 (đợt hai) — VD-024 · VD-025 · VD-026 lên cả ba nơi ✅
 
