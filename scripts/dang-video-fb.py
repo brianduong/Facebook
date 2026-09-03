@@ -117,6 +117,48 @@ def lay_caption(ma_so: str) -> str:
     return text.strip()
 
 
+def lay_binh_luan_ghim(ma_so: str) -> str:
+    """Bóc câu bình luận soạn sẵn ở mục "## Nhắc khi đăng" cuối file caption tiếng Việt.
+
+    Chỉ bài nào cố ý cần bình luận mở hàng mới có khối này — không có thì báo lỗi chứ
+    đừng tự nghĩ chữ thay.
+    """
+    f = REPO / "content" / "captions" / f"{ma_so}-caption.md"
+    if not f.exists():
+        sys.exit(f"❌ Không thấy {f.relative_to(REPO)}")
+    noi_dung = f.read_text(encoding="utf-8")
+
+    moc = re.search(r"^##\s*Nhắc khi đăng\b", noi_dung, re.M)
+    if not moc:
+        sys.exit(f"❌ {f.name} không có mục '## Nhắc khi đăng'.")
+
+    phan = noi_dung[moc.end():]
+    het = re.search(r"^##\s", phan, re.M)
+    if het:
+        phan = phan[: het.start()]
+
+    # Khối này nằm lồng trong một gạch đầu dòng nên thụt lề — phải bắt lấy phần thụt
+    # rồi gỡ ra, không thì chữ đăng lên kèm hai dấu cách đầu dòng.
+    khoi = re.search(r"^([ \t]*)```[a-z]*\n(.*?)\n\1```", phan, re.S | re.M)
+    if not khoi:
+        sys.exit(
+            f"❌ {f.name} mục '## Nhắc khi đăng' không có khối ``` nào.\n"
+            "   Bài này không soạn sẵn bình luận mở hàng — viết câu vào file caption trước."
+        )
+    thut = khoi.group(1)
+    dong = [d[len(thut):] if d.startswith(thut) else d for d in khoi.group(2).splitlines()]
+    return "\n".join(dong).strip()
+
+
+def dang_binh_luan(bai_id: str, token: str, chu: str) -> str:
+    """Đăng bình luận lên một bài của Page. Trả về id bình luận.
+
+    ⚠️ Graph API **không có thao tác ghim bình luận** — ghim vẫn phải bấm tay trên Facebook.
+    """
+    kq = goi_api(["-F", f"message={chu}", "-F", f"access_token={token}", f"{API}/{bai_id}/comments"])
+    return kq["id"]
+
+
 def dang_reels(page_id: str, token: str, f: Path, caption: str, hen_gio: str | None) -> str:
     """Đăng Reels — luồng ba bước riêng của Facebook, không dùng chung với /videos.
 
@@ -171,8 +213,9 @@ def dang_reels(page_id: str, token: str, f: Path, caption: str, hen_gio: str | N
 
 def main() -> int:
     p = argparse.ArgumentParser(description="Đăng bài lên Page Sống Tốt")
-    p.add_argument("loai", choices=["kiem-tra", "video", "reels", "anh"])
+    p.add_argument("loai", choices=["kiem-tra", "video", "reels", "anh", "binh-luan"])
     p.add_argument("file", nargs="?", help="Đường dẫn file video/ảnh")
+    p.add_argument("--bai", help="ID bài đã đăng, dùng cho binh-luan")
     p.add_argument("--ma", help="Mã video để lấy caption, vd VD-001")
     p.add_argument("--caption", help="Caption gõ trực tiếp (thay cho --ma)")
     p.add_argument("--thumb", help="Ảnh thumbnail cho video (chỉ dùng với loại video)")
@@ -190,6 +233,26 @@ def main() -> int:
         print(f"   Page: {me.get('name')} (id {me.get('id', page_id)})")
         if me.get("followers_count"):
             print(f"   Followers: {me['followers_count']:,}")
+        return 0
+
+    if a.loai == "binh-luan":
+        if not a.bai:
+            sys.exit("❌ Thiếu --bai <id bài>. Vd: binh-luan --ma VD-018 --bai 1086214770915645")
+        chu = a.caption or (lay_binh_luan_ghim(a.ma) if a.ma else None)
+        if not chu:
+            sys.exit("❌ Cần --ma VD-0XX hoặc --caption \"...\"")
+        print("─" * 60)
+        print(f"Sẽ bình luận vào bài {a.bai}  →  Page Sống Tốt")
+        print("─" * 60)
+        print(chu)
+        print("─" * 60)
+        if not a.dang_that:
+            print("🟡 Đang chạy thử. Thêm --dang-that để đăng lên Page thật.")
+            return 0
+        ma_bl = dang_binh_luan(a.bai, token, chu)
+        print(f"✅ Đã đăng bình luận. id: {ma_bl}")
+        print("\n⚠️ GHIM THÌ PHẢI BẤM TAY — Graph API không có thao tác ghim bình luận.")
+        print(f"   Vào: https://www.facebook.com/reel/{a.bai}")
         return 0
 
     if not a.file:

@@ -29,10 +29,18 @@ App ID và App Secret nằm ở **Settings → Basic** (App Secret phải bấm 
 2. Ô **Meta App** (bên phải): chọn **Song Tot Poster**
 3. Ô **User or Page**: bấm vào → chọn **Get Page Access Token**
    → Facebook mở hộp thoại → chọn Trang **Sống Tốt** → **Continue** → **Save**
-4. Mục **Permissions**: bấm **Add a Permission**, mở nhóm **Pages**, tích đủ 3 quyền:
+4. Mục **Permissions**: bấm **Add a Permission**, mở nhóm **Pages**, tích đủ 5 quyền:
    - `pages_show_list`
    - `pages_read_engagement`
    - `pages_manage_posts`
+   - `pages_manage_engagement` — **để Page tự dán bình luận** (thêm 03/09)
+   - `pages_read_user_content` — **để đọc bình luận người xem** (thêm 03/09)
+
+   ⚠️ Thiếu `pages_manage_engagement` thì đăng bài vẫn chạy ngon, chỉ **bình luận** là hỏng,
+   mà Facebook trả lời rất dễ gây hiểu nhầm: *"(#200) The permission(s)
+   pages_read_user_content, pages_manage_engagement are not available… need to be approved
+   by App Review"*. Nghe như bị Facebook chặn, thật ra chỉ là **token sinh ra lúc chưa tích
+   hai quyền đó** — tích thêm rồi Generate lại là xong, không phải xin App Review.
 5. Bấm nút xanh **Generate Access Token** — **phải bấm lại sau khi tích quyền**, không thì token vẫn là token cũ thiếu quyền
 6. Hộp thoại cấp quyền hiện ra → **Continue as …** → tích Trang **Sống Tốt** → **Done**
 7. Ô **Access Token** phía trên có một chuỗi rất dài → bấm **icon copy** bên phải ô đó

@@ -28,7 +28,19 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import nhan_dien as nd  # noqa: E402
 
 API = "https://graph.facebook.com/v21.0"
-QUYEN_CAN = ("pages_manage_posts", "pages_read_engagement", "pages_show_list")
+# Ba quyền đầu là để đăng bài. Hai quyền sau thêm ngày 03/09 cho việc bình luận:
+# `pages_manage_engagement` để Page tự dán bình luận, `pages_read_user_content` để đọc
+# bình luận người xem (nguyên liệu nghĩ ý mới, kho ý tưởng cạn từ VD-037).
+# ⚠️ Thiếu `pages_manage_engagement` thì POST /{post-id}/comments trả lỗi (#200), mà lời
+# lỗi lại đổ cho App Review nên rất dễ tưởng là bị Facebook chặn — thật ra chỉ là token
+# sinh ra lúc chưa tích quyền đó.
+QUYEN_CAN = (
+    "pages_manage_posts",
+    "pages_read_engagement",
+    "pages_show_list",
+    "pages_manage_engagement",
+    "pages_read_user_content",
+)
 
 
 def goi(duong_dan: str, token: str) -> dict:
@@ -133,8 +145,9 @@ def main() -> int:
             if thieu:
                 sys.exit(
                     "❌ Token thiếu quyền: " + ", ".join(thieu) + "\n"
-                    "   Về Graph API Explorer → Add a Permission → tích đủ 3 quyền:\n"
+                    "   Về Graph API Explorer → Add a Permission → tích đủ 5 quyền:\n"
                     "     pages_show_list · pages_read_engagement · pages_manage_posts\n"
+                    "     pages_manage_engagement · pages_read_user_content\n"
                     "   → bấm Generate Access Token LẦN NỮA → copy token mới → chạy lại script này.\n"
                     "   (Nếu Facebook báo 'Invalid Scopes' thì app đang dùng không phải loại Business —\n"
                     "    tạo app mới: My Apps → Create App → Other → Business.)"

@@ -95,9 +95,16 @@ trạng thái thật — đừng tin bảng dưới đây._
   **đăng chồng lần thứ hai**.
   Ngày 03/09 đã vá xong chỗ thiếu, xem mục "Đợt đăng 03/09" trong `schedule/calendar.md`.
 
-- ⏰ **Việc anh nhận từ 20/08 vẫn chưa thấy đánh dấu xong: ghim bình luận tự thú VD-018,
-  cả ba nơi.** Chi tiết ở mục "VIỆC ANH LÀM TAY" bên dưới. **Mở project là hỏi anh một câu
-  xem xong chưa** — xong thì đánh dấu ở đây và xoá memory `viec-ghim-binh-luan-vd018.md`.
+- ⏰ **VD-018 — bình luận đã dán tự động 03/09, còn hai việc.** Anh chốt 03/09 là cho làm
+  tự động hết, nên đã thêm phạm vi và viết lệnh `binh-luan` cho cả hai script.
+  - ✅ **Hai kênh YouTube: xong.** Bình luận tự thú đã đăng, đọc API xác nhận đúng chữ và
+    đúng danh nghĩa kênh — `Ugx1ZvPTLNps9wWjuQd4AaABAg` (VI) · `Ugzmv4IBxZs5_zf4ZHJ4AaABAg` (EN).
+    📌 **Mỗi video hiện chỉ có đúng một luồng bình luận, là của chính kênh** — nên dù chưa
+    ghim, nó vẫn nằm một mình trên đầu; lời hứa trong khối cuối video coi như đã có thật.
+  - 🔻 **Facebook: chưa dán được.** Page Token thiếu `pages_manage_engagement`, gọi
+    `POST /{post-id}/comments` trả lỗi `(#200)`. Cần anh sinh lại token — xem mục
+    "VIỆC ANH LÀM TAY" bên dưới.
+  - 🔻 **Ghim thì vẫn phải bấm tay cả ba nơi** — không API nào cho ghim, đây là tường thật.
 
 - ⏰ **VIỆC NÀY ANH ĐÃ NHẬN, HẸN LÀM NGÀY 20/08 — ghim bình luận tự thú cho VD-018, cả ba
   nơi.** Chi tiết đầy đủ (đường dẫn từng nơi + chữ dán sẵn hai thứ tiếng) ở mục **"VIỆC ANH
@@ -134,6 +141,21 @@ trạng thái thật — đừng tin bảng dưới đây._
   Thing*, token `en` nối vào *Sống Tốt*. Đăng luôn là video tiếng Việt lên kênh tiếng Anh và
   ngược lại — hỏng thật, phải gỡ, mà gỡ thì mất số liệu. Lệnh `kiem-tra` in dòng *"Đang nối
   vào"* cạnh dòng *"Mong đợi"* đúng để bắt chuyện này.
+
+  🔑 **NGUYÊN NHÂN GỐC, tìm ra 03/09 — không phải anh chọn nhầm, mà script hỏng hai chỗ.**
+  Cả hai đã sửa, nhưng phải biết để đừng đổ oan cho người bấm:
+  - **`xin-quyen` chạy suông khi token cũ còn hạn.** `lay_dich_vu()` thấy token dùng được là
+    trả về luôn, **không mở trình duyệt** — lệnh chỉ in "✅ Xong" rồi thoát, token nhầm kênh
+    vẫn y nguyên. Ngày 03/09 chạy ba lần, chỉ lần đầu là thật. Đã sửa: `xin-quyen` **xoá
+    token cũ trước** rồi mới xin.
+  - **`prompt="consent"` không bắt chọn lại kênh.** Hai kênh nằm CHUNG một tài khoản Google,
+    nên khâu quyết định token thuộc kênh nào là khâu **chọn kênh** — mà `consent` chỉ hiện
+    lại màn hình đồng ý, vẫn dùng kênh đã chọn lần trước. Đã đổi thành
+    `prompt="select_account consent"`.
+
+  Vụ 15/08 chữa bằng cách tráo tên hai file token, tức là chữa triệu chứng. Cách đó **chỉ
+  chạy khi hai token đúng là tráo cho nhau**; ngày 03/09 cả hai cùng trỏ vào One Small Thing
+  nên vô dụng, phải xin lại thật.
 
   **Sửa không cần xin lại quyền** — mỗi file token chỉ là chìa khoá của một tài khoản, nên
   tráo tên hai file là xong, rồi chạy lại `kiem-tra`:
@@ -268,18 +290,39 @@ biết đủ thiếu thì phải liệt kê `playlistItems` trên playlist `uplo
 Hai lịch trùng phát sinh lúc chạy đợt VD-009→012 đã được xóa. VD-003 và VD-007 cũng đã
 xác nhận công khai đúng lịch ngày 02/08.
 
-### ⏰ VIỆC ANH LÀM TAY — ghim bình luận VD-018, anh hẹn làm **ngày 20/08/2026**
+### ⏰ VIỆC ANH LÀM TAY — sinh lại Page Token, rồi ghim bình luận VD-018
 
-_Anh chốt 19/08: "phần bình luận ngày mai anh vô làm". Em không đăng hộ, để nguyên cho anh._
+_Anh chốt 03/09: cho làm tự động hết. Phần dán bình luận nay máy làm được — đã dán xong
+hai kênh YouTube. Còn lại đúng hai việc dưới đây, cả hai đều bắt buộc bấm tay._
 
-**Ba nơi, mỗi nơi hai bước: dán bình luận → ghim.** Cả YouTube lẫn Facebook đều **không cho
-ghim qua API**, nên chỗ này bắt buộc bấm tay.
+#### ① Sinh lại Page Token Facebook — thêm 2 quyền
 
-| Nơi | Vào đâu | Chữ lấy ở đâu |
+Không phải xin App Review, chỉ là token cũ sinh ra lúc chưa tích hai quyền này:
+
+1. Vào https://developers.facebook.com/tools/explorer/ → app **Song Tot Poster**
+2. **User or Page** → **Get Page Access Token** → chọn Trang **Sống Tốt**
+3. **Add a Permission** → nhóm **Pages** → tích thêm **`pages_manage_engagement`** và
+   **`pages_read_user_content`** (giữ nguyên 3 quyền cũ)
+4. Bấm **Generate Access Token** lần nữa — không bấm lại thì vẫn ra token cũ
+5. Copy token, rồi chạy `python3 scripts/lay-token-dai-han.py` để đổi sang token dài hạn
+6. Dán token dài hạn vào `.env`, dòng `FB_PAGE_TOKEN=` — **đừng dán token vào chat hay Git**
+
+Xong thì báo em, em chạy:
+`python3 scripts/dang-video-fb.py binh-luan --ma VD-018 --bai 1086214770915645 --dang-that`
+
+#### ② Ghim bình luận — ba nơi, mỗi nơi hai cú bấm
+
+**Không API nào cho ghim bình luận**, cả YouTube lẫn Facebook — đây là tường thật, không
+lách được bằng code. Chữ đã nằm sẵn trên đó rồi, anh chỉ việc ghim:
+
+| Nơi | Vào đâu | Tình trạng |
 |---|---|---|
-| YouTube tiếng Việt | https://studio.youtube.com/video/QkKOTAKB6AI/comments | `content/captions/VD-018-caption.md` → mục "Nhắc khi đăng" |
-| YouTube tiếng Anh | https://studio.youtube.com/video/jME8ehrxkg8/comments | `content/captions/VD-018-caption-en.md` → mục "Posting notes" |
-| Facebook Reels | bài `1086214770915645` (`facebook.com/reel/1086214770915645`) | dùng bản tiếng Việt như trên |
+| YouTube tiếng Việt | https://studio.youtube.com/video/QkKOTAKB6AI/comments | ✅ đã có bình luận `Ugx1ZvPTLNps9wWjuQd4AaABAg`, chỉ còn ghim |
+| YouTube tiếng Anh | https://studio.youtube.com/video/jME8ehrxkg8/comments | ✅ đã có bình luận `Ugzmv4IBxZs5_zf4ZHJ4AaABAg`, chỉ còn ghim |
+| Facebook Reels | `facebook.com/reel/1086214770915645` | 🔻 chưa có bình luận, chờ việc ① |
+
+📌 **Hai video YouTube hiện chỉ có đúng một luồng bình luận, là của chính kênh** — nên dù
+chưa ghim nó vẫn nằm một mình trên đầu. Việc ghim giờ là cho chắc về sau, không còn gấp.
 
 **Bản tiếng Việt — dán nguyên khối:**
 

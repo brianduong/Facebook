@@ -44,6 +44,14 @@ PHAM_VI = [
     # `youtube.upload` chỉ cho tạo mới, gọi videos.update là 403 insufficientPermissions.
     # Thêm phạm vi này thì token cũ hết dùng được — phải chạy lại `xin-quyen` cả hai kênh.
     "https://www.googleapis.com/auth/youtube",
+    # Cần cho lệnh `binh-luan`. Mọi thao tác bình luận của YouTube đều đòi phạm vi này,
+    # kể cả chỉ ĐỌC: đã đo ngày 03/09 với token có đủ upload + readonly + youtube, gọi
+    # `commentThreads.list` vẫn trả 403 insufficient scopes.
+    # ⚠️ Phạm vi này **kèm cả quyền xoá video**. Dự án cố ý né nó tới 03/09 mới thêm, vì
+    # hai lẽ: dán bình luận tự thú cho VD-018, và đọc bình luận người xem làm nguyên liệu
+    # nghĩ ý mới (kho ý tưởng cạn từ VD-037). Anh chốt 03/09.
+    # ⚠️ Script này KHÔNG bao giờ gọi videos.delete — đừng thêm lệnh xoá vào đây.
+    "https://www.googleapis.com/auth/youtube.force-ssl",
 ]
 
 THU_MUC_BI_MAT = "secrets"
@@ -131,7 +139,12 @@ def lay_dich_vu(ma_kenh: str, cho_dang_nhap: bool = False):
         luong = InstalledAppFlow.from_client_secrets_file(str(f_secret), PHAM_VI)
         print(f"🌐 Đang mở trình duyệt để xin quyền cho: {KENH[ma_kenh]['ten']}")
         print(f"   ⚠️ Nhớ chọn đúng tài khoản đang quản lý kênh {KENH[ma_kenh]['handle']}")
-        quyen = luong.run_local_server(port=0, prompt="consent")
+        # `select_account` là chỗ mấu chốt, đừng bỏ. Hai kênh Sống Tốt và One Small Thing
+        # nằm CHUNG một tài khoản Google, nên khâu chọn kênh mới là khâu quyết định token
+        # này thuộc kênh nào. Chỉ `prompt="consent"` thì Google hiện lại màn hình đồng ý
+        # nhưng **dùng lại kênh đã chọn lần trước, không hỏi lại** — đó là cách token `vi`
+        # nối nhầm vào One Small Thing hai lần: 15/08 và 03/09.
+        quyen = luong.run_local_server(port=0, prompt="select_account consent")
         thu_muc.mkdir(mode=0o700, exist_ok=True)
         f_token.write_text(quyen.to_json(), encoding="utf-8")
         f_token.chmod(0o600)
@@ -189,6 +202,61 @@ def doc_caption(ma_so: str, ma_kenh: str) -> dict:
         "the": [t.strip() for t in the.split(",") if t.strip()],
         "nguon": f.relative_to(REPO),
     }
+
+
+def doc_binh_luan_ghim(ma_so: str, ma_kenh: str) -> str:
+    """Bóc câu bình luận soạn sẵn trong mục nhắc cuối file caption.
+
+    Khuôn: mục "## Nhắc khi đăng" (bản Việt) hoặc "## Posting notes" (bản Anh), khối ```
+    đầu tiên nằm trong đó. Chỉ bài nào cố ý cần bình luận mở hàng mới có khối này —
+    không có thì báo lỗi chứ đừng tự nghĩ chữ thay.
+    """
+    f = REPO / "content" / "captions" / KENH[ma_kenh]["caption"].format(ma=ma_so)
+    if not f.exists():
+        sys.exit(f"❌ Không thấy file caption {f.relative_to(REPO)}")
+    noi_dung = f.read_text(encoding="utf-8")
+
+    ten_muc = "Nhắc khi đăng" if ma_kenh == "vi" else "Posting notes"
+    moc = re.search(rf"^##\s*{ten_muc}\b", noi_dung, re.M)
+    if not moc:
+        sys.exit(f"❌ {f.name} không có mục '## {ten_muc}'.")
+
+    # Chặn ở mục kế tiếp: "Tiêu đề dự phòng" / "Alternate titles" cũng có khối ```.
+    phan = noi_dung[moc.end():]
+    het = re.search(r"^##\s", phan, re.M)
+    if het:
+        phan = phan[: het.start()]
+
+    # Khối này nằm lồng trong một gạch đầu dòng nên thụt lề — phải bắt lấy phần thụt
+    # rồi gỡ ra, không thì chữ đăng lên kèm hai dấu cách đầu dòng.
+    khoi = re.search(r"^([ \t]*)```[a-z]*\n(.*?)\n\1```", phan, re.S | re.M)
+    if not khoi:
+        sys.exit(
+            f"❌ {f.name} mục '## {ten_muc}' không có khối ``` nào.\n"
+            "   Bài này không soạn sẵn bình luận mở hàng — viết câu vào file caption trước,\n"
+            "   đừng để script tự nghĩ chữ."
+        )
+    thut = khoi.group(1)
+    dong = [d[len(thut):] if d.startswith(thut) else d for d in khoi.group(2).splitlines()]
+    return "\n".join(dong).strip()
+
+
+def dang_binh_luan(dich_vu, video_id: str, chu: str) -> str:
+    """Đăng một bình luận gốc lên video. Trả về id của bình luận."""
+    kq = (
+        dich_vu.commentThreads()
+        .insert(
+            part="snippet",
+            body={
+                "snippet": {
+                    "videoId": video_id,
+                    "topLevelComment": {"snippet": {"textOriginal": chu}},
+                }
+            },
+        )
+        .execute()
+    )
+    return kq["id"]
 
 
 def tim_video(dich_vu, tieu_de: str) -> str | None:
@@ -331,7 +399,7 @@ def _bao_loi_http(loi) -> None:
 
 def main() -> int:
     p = argparse.ArgumentParser(description="Đăng video lên YouTube")
-    p.add_argument("viec", choices=["xin-quyen", "kiem-tra", "dang", "doi-lich"])
+    p.add_argument("viec", choices=["xin-quyen", "kiem-tra", "dang", "doi-lich", "binh-luan"])
     p.add_argument("ma", nargs="?", help="Mã video, vd VD-009")
     p.add_argument("--kenh", choices=["en", "vi"], required=True, help="en = tiếng Anh · vi = tiếng Việt")
     p.add_argument("--video", help="Đường dẫn file video (mặc định lấy theo mã)")
@@ -348,6 +416,14 @@ def main() -> int:
     kenh = KENH[a.kenh]
 
     if a.viec == "xin-quyen":
+        # Phải xoá token cũ trước. `lay_dich_vu` thấy token còn hạn là dùng lại ngay,
+        # nên nếu không xoá thì `xin-quyen` chạy suông: in "✅ Xong" mà không mở trình
+        # duyệt, token nhầm kênh vẫn y nguyên. Đúng lỗi làm mất buổi 03/09 — chạy ba lần
+        # tưởng đã xin lại, thật ra chỉ lần đầu là thật.
+        f_token = REPO / THU_MUC_BI_MAT / KENH[a.kenh]["token"]
+        if f_token.exists():
+            f_token.unlink()
+            print(f"🗑️  Đã xoá token cũ {THU_MUC_BI_MAT}/{f_token.name} để xin lại từ đầu.")
         lay_dich_vu(a.kenh, cho_dang_nhap=True)
         print("✅ Xong. Giờ chạy `kiem-tra` để chắc là đã nối đúng kênh.")
         return 0
@@ -407,6 +483,41 @@ def main() -> int:
         kq = doi_lich(dich_vu, vid, a.hen_gio)
         print(f"✅ Đã dời: {kq['truoc']} → {kq['sau']}")
         print("👉 Đọc lại API để khớp ngày giờ, và nhớ sửa schedule/calendar.md")
+        return 0
+
+    if a.viec == "binh-luan":
+        if not a.ma:
+            sys.exit("❌ Thiếu mã video. Vd: binh-luan VD-018 --kenh vi")
+
+        chu = doc_binh_luan_ghim(a.ma, a.kenh)
+        bai = doc_caption(a.ma, a.kenh)
+        dich_vu = lay_dich_vu(a.kenh)
+        vid = a.video or tim_video(dich_vu, bai["tieu_de"])
+        if not vid:
+            sys.exit(
+                f"❌ Không thấy video nào trên kênh {kenh['ten']} có tiêu đề:\n"
+                f"   {bai['tieu_de']}\n"
+                "   Truyền thẳng mã video bằng --video nếu tiêu đề đã sửa trên YouTube."
+            )
+
+        print("─" * 68)
+        print(f"Kênh:  {kenh['ten']} ({kenh['handle']})")
+        print(f"Video: {vid} · {bai['tieu_de']}")
+        print(f"Chữ lấy: {bai['nguon']} → mục nhắc cuối file")
+        print("─" * 68)
+        for dong in chu.splitlines():
+            print(f"  {dong}")
+        print("─" * 68)
+        if not a.dang_that:
+            print("🟡 Đang chạy thử, chưa gửi gì lên YouTube.")
+            print("   Ưng rồi thì thêm --dang-that.")
+            return 0
+
+        ma_bl = dang_binh_luan(dich_vu, vid, chu)
+        print(f"✅ Đã đăng bình luận. id: {ma_bl}")
+        print("\n⚠️ GHIM THÌ PHẢI BẤM TAY — YouTube Data API không có thao tác ghim.")
+        print(f"   Vào: https://studio.youtube.com/video/{vid}/comments")
+        print("   Bấm ba chấm cạnh bình luận vừa đăng → Ghim.")
         return 0
 
     if not a.ma:
