@@ -121,10 +121,11 @@ sóng hết**, mốc cuối là VD-026 ngày 01/09 — đọc API ngày 03/09 x�
 Năm bài đang chờ, đủ ba nơi: VD-027 (03/09) · VD-031 (05/09) · VD-029 (07/09) ·
 VD-028 (09/09) · VD-032 (11/09).
 
-🔻 **Mốc trống kế tiếp là 13/09.** Năm bài còn lại của hồ sơ `y-tuong-VD-031-036.md` đã viết
-chữ và render xong cả hai bản, chỉ **thiếu caption**: VD-034 (13/09) · VD-036 (15/09) ·
-VD-035 (17/09) · VD-033 (19/09) · VD-030 (21/09). Làm tiếp chỉ còn hai việc: viết caption
-rồi chạy ba dòng lệnh đăng. Bảy bước của một bài ghi trong `STATUS.md`.
+🔻 **Mốc trống kế tiếp là 13/09.** Năm bài còn lại đều đã viết chữ và render xong cả hai bản:
+VD-034 (13/09) · VD-036 (15/09) · VD-035 (17/09) · VD-033 (19/09) · VD-030 (21/09).
+**VD-030 đã có sẵn cả hai file caption** — bài này chỉ việc chạy ba dòng lệnh đăng, nhưng
+phải đợi đúng mốc 21/09 chứ đừng kéo lên sớm. **Bốn bài kia còn thiếu caption**: viết hai
+file caption (chép khuôn VD-032) rồi đăng. Bảy bước của một bài ghi trong `STATUS.md`.
 
 🔻 **Từ VD-037 trở đi kho ý tưởng bằng không** — phải có một vòng nghĩ ý mới hoàn toàn.
 

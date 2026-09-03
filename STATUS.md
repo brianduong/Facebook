@@ -82,11 +82,14 @@ ngay khi lướt tới, hiếm ai nhìn bìa. Công cụ `scripts/tao-anh-bia-re
 _Chốt lúc ngày 03/09. Đọc `CLAUDE.md` trước để lấy luật đăng, rồi đọc API để lấy
 trạng thái thật — đừng tin bảng dưới đây._
 
-- 🔻 **Mốc trống kế tiếp là 13/09.** Năm bài cuối của hồ sơ `y-tuong-VD-031-036.md` đã viết
-  chữ, rút lời đọc và **render xong cả hai bản**, chỉ **thiếu caption**. Thứ tự đã chốt trong
-  hồ sơ, đừng xếp lại: VD-034 (13/09) · VD-036 (15/09) · VD-035 (17/09) · VD-033 (19/09) ·
-  VD-030 (21/09). Làm tiếp chỉ còn hai việc mỗi bài: **viết hai file caption** (chép khuôn
-  VD-032) rồi **chạy ba dòng lệnh đăng**. Bước 1 → 4 của "Bảy bước" đã xong sẵn.
+- 🔻 **Mốc trống kế tiếp là 13/09.** Năm bài cuối đều đã viết chữ, rút lời đọc và **render
+  xong cả hai bản** — bước 1 → 4 của "Bảy bước" xong sẵn. Thứ tự đã chốt trong hồ sơ, đừng
+  xếp lại: VD-034 (13/09) · VD-036 (15/09) · VD-035 (17/09) · VD-033 (19/09) · VD-030 (21/09).
+  - **VD-030 đã có đủ hai file caption** (viết 26/08) — chỉ việc chạy ba dòng lệnh đăng.
+    ⚠️ Nhưng **phải đợi đúng mốc 21/09**, đừng kéo lên sớm: nó với VD-027 là hai bài duy
+    nhất còn cụm "điện thoại", hồ sơ cố ý để cách nhau 9 mốc.
+  - **Bốn bài VD-033 · VD-034 · VD-035 · VD-036 còn thiếu caption** — viết hai file caption
+    mỗi bài (chép khuôn VD-032) rồi đăng.
 
 - ❗ **ĐỌC API TRƯỚC KHI ĐĂNG, ĐỪNG TIN DÒNG "Trạng thái" TRONG FILE.** Buổi 26/08 viết
   VD-027 → VD-036 và render đủ, nhưng chỉ tải lên YouTube được ba bài rồi dừng giữa chừng,
