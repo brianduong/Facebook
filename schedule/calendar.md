@@ -612,6 +612,75 @@ lượt lưu và tỉ lệ xem hết, đừng đo bằng bình luận, và đừ
 
 _Render khi anh yêu cầu (anh đã chốt như vậy ngày 25/07), không tự render trước._
 
+## Tuyến ẢNH CHỮ Facebook — lô 1 (AC-01 → AC-10), dựng 18/09/2026
+
+**Vì sao có tuyến này.** Số đo 18/09 cho thấy Page thời 2019 đăng **ảnh chữ** được
+419 thích/bài, còn video dọc từ 2026 chỉ được 1,5. Tuyến này thử lại đúng định dạng đã
+từng chạy với chính tệp người theo dõi đó. ⚠️ **Video giữ nguyên, không đụng gì** — reel
+VD vẫn 19:30 cách 2 ngày, reel QuayXe vẫn 21:30 mỗi ngày.
+
+**Khung giờ: 12:00, cách 2 ngày, rơi vào NGÀY CHẴN** — cố ý lệch khỏi reel VD (ngày lẻ,
+19:30) để mỗi ngày Page có đúng 2 bài chứ không dồn 3.
+
+| Ngày 12:00 | Mã | Lấy câu từ | Nền | Facebook post id |
+|---|---|---|---|---|
+| **18/09** | AC-01 | VD-019 · Mình của ngày trước từng mong điều này | kem | `1698799771813759` |
+| **20/09** | AC-02 | VD-018 · Làm dở vẫn tính | hong | `1698800918480311` |
+| **22/09** | AC-03 | VD-034 · Việc giờ bạn làm không cần nghĩ | xanh | `1698801221813614` |
+| **24/09** | AC-04 | VD-022 · Chậm hơn không phải là hỏng | bac_ha | `1698801285146941` |
+| **26/09** | AC-05 | VD-029 · Nghỉ không cần xứng đáng | kem | `1698801355146934` |
+| **28/09** | AC-06 | VD-024 · Có mặt lúc chưa ai gọi | hong | `1698801451813591` |
+| **30/09** | AC-07 | VD-035 · Có loại mệt ngủ không chữa được | xanh | `1698801518480251` |
+| **02/10** | AC-08 | VD-021 · Tử tế lúc bất tiện | bac_ha | `1698801618480241` |
+| **04/10** | AC-09 | VD-023 · Ai đó đã làm bữa cơm thành nóng | kem | `1698801661813570` |
+| **06/10** | AC-10 | VD-015 · Nói với mình như nói với bạn thân | hong | `1698801715146898` |
+
+**Đã đọc lại API sau khi đăng.** Edge `/scheduled_posts` có **35 bài chờ, không mốc nào
+trùng**: 10 ảnh chữ 12:00 · 5 reel VD 19:30 · 20 reel QuayXe 21:30.
+
+### Cách làm một bài ảnh chữ
+
+```bash
+# 1. Viết content/captions/AC-XX-caption.md — trong đó có sẵn mục '## Chữ trên ảnh'
+# 2. Dựng ảnh (đọc thẳng chữ + màu nền từ file caption)
+python3 scripts/tao-anh-chu-fb.py AC-XX          # hoặc --tat-ca
+# 3. Chạy thử rồi đăng thật
+python3 scripts/dang-video-fb.py anh assets/templates/quotes/AC-XX-fb.png --ma AC-XX \
+    --hen-gio 2026-09-18T12:00:00+07:00 --dang-that
+```
+
+- **Chữ trên ảnh nằm trong file caption**, không nằm trong code. Sửa chữ thì sửa ở đó rồi
+  chạy lại `tao-anh-chu-fb.py`, đừng sửa tay file SVG/PNG.
+- **Đánh dấu từ khoá bằng dấu sao**: `thường là cái *bạn sợ nhất*` → phần trong sao được tô
+  màu nhấn. Lối này chép từ ảnh 2019 của Page — mắt bắt được ý chính trong một giây khi lướt.
+- Bốn nền sáng: `kem` · `hong` (nhấn đỏ) · `xanh` (nhấn xanh dương) · `bac_ha` (nhấn xanh lá).
+  Lô 1 xoay vòng bốn nền để dòng thời gian không đơn điệu.
+- ⚠️ **Ảnh hẹn giờ đi đường khác Reels:** `/photos` đòi cặp `published=false` +
+  `scheduled_publish_time`, **không có** `video_state`. Đã đo 18/09, chạy được.
+- ⚠️ **Không có dòng `Ảnh: Pexels.com`** — ảnh tự dựng, không lấy của Pexels.
+- Câu chữ **chỉ lấy từ bài đã lên sóng**, để không lộ bài đang chờ.
+
+### Hai lỗi đã vấp khi dựng, đừng vấp lại
+
+1. **Mất dấu cách trước từ tô màu** — SVG nuốt khoảng trắng đứng ngay trước `<tspan>`,
+   ra `cáibạn sợ nhất`. Đã vá bằng `xml:space="preserve"` trong `nhan_dien.tao_svg_sang`.
+2. **Cỡ chữ tính cả dấu sao** — câu nhiều từ tô màu bị co chữ nhỏ vô cớ (AC-07 lúc đầu nhỏ
+   hơn hẳn chín ảnh kia). Đã vá: đo cỡ chữ trên chuỗi đã bỏ dấu sao.
+
+### Đây cũng là phép thử — đọc số sau 48 giờ
+
+Lô này đăng **hết qua API**, cùng đường với reel. Nên khi có số thì đọc như sau:
+
+| Ảnh chữ được | Kết luận |
+|---|---|
+| **vài trăm lượt** | **Định dạng** là thứ quyết định. Reel dọc không hợp tệp người theo dõi này → đẩy mạnh tuyến ảnh, giảm kỳ vọng ở reel. |
+| **vẫn một chữ số** | Định dạng **không** phải nguyên nhân. Lỗi nằm ở **đường API** hoặc ở **Page**. Khi đó mới cần phép thử đăng tay. |
+
+📌 Đo bằng `python3 scripts/dang-video-fb.py so-lieu` (reel) và bảng dưới (ảnh — lượt xem
+ảnh không có trong edge `video_reels`, phải đọc `reactions`/`shares` trên từng bài).
+
+---
+
 ## Ghi nhận hiệu quả — ĐÃ CÓ SỐ, đọc API 17/09/2026
 
 ✅ **Bảng này trống từ đầu dự án tới 17/09. Nay đã điền bằng số đọc thẳng từ API**, không

@@ -23,15 +23,28 @@ def main() -> int:
     p = argparse.ArgumentParser(description="Tạo ảnh quote 1:1 cho kênh Sống Tốt")
     p.add_argument("ma_so", help="Mã video, vd VD-007")
     p.add_argument("dong", nargs="+", help="Mỗi tham số là một dòng chữ trên ảnh")
-    p.add_argument("--tone", choices=sorted(nd.TONES), default="vua", help="Sắc nền (mặc định: vua)")
-    p.add_argument("--kicker", help="Chữ vàng cỡ lớn phía trên, vd MỘT VIỆC")
+    p.add_argument("--tone", default="vua",
+                   help="Sắc nền. Nền tối: " + " · ".join(sorted(nd.TONES))
+                        + " — Nền sáng (--sang): " + " · ".join(sorted(nd.TONES_SANG)))
+    p.add_argument("--kicker", help="Chữ cỡ lớn phía trên, vd MỘT VIỆC")
+    p.add_argument("--sang", action="store_true",
+                   help="Nền sáng, chữ đen, từ khoá tô màu — bản dành cho Facebook. "
+                        "Đánh dấu từ khoá bằng dấu sao: \"cái bạn *sợ nhất*\"")
+    p.add_argument("--hau-to", default="quote",
+                   help="Hậu tố tên file (mặc định quote → VD-007-quote.png)")
     a = p.parse_args()
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    svg = OUT_DIR / f"{a.ma_so}-quote.svg"
-    png = OUT_DIR / f"{a.ma_so}-quote.png"
+    svg = OUT_DIR / f"{a.ma_so}-{a.hau_to}.svg"
+    png = OUT_DIR / f"{a.ma_so}-{a.hau_to}.png"
 
-    svg.write_text(nd.tao_svg(a.dong, tone=a.tone, kicker=a.kicker), encoding="utf-8")
+    if a.sang:
+        tone = a.tone if a.tone in nd.TONES_SANG else "kem"
+        noi_dung = nd.tao_svg_sang(a.dong, tone=tone, kicker=a.kicker)
+    else:
+        tone = a.tone if a.tone in nd.TONES else "vua"
+        noi_dung = nd.tao_svg(a.dong, tone=tone, kicker=a.kicker)
+    svg.write_text(noi_dung, encoding="utf-8")
     print(f"✅ {svg.relative_to(nd.REPO)}")
 
     if nd.xuat_png(svg, png):

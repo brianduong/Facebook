@@ -115,6 +115,27 @@ trạng thái thật — đừng tin bảng dưới đây._
   *rải đều 5 trụ* và *không hai bài liền nhau cùng trụ*. VD-030 (21/09) cũng trụ 4, nên
   thực tế là **bốn mốc trụ 4 liền nhau: 21 · 23 · 25 · 27/09**.
 
+- 🆕 **TUYẾN ẢNH CHỮ FACEBOOK — lô 1 đã xếp lịch xong 18/09.** Mười bài AC-01 → AC-10,
+  **12:00, cách 2 ngày, ngày chẵn** (18 · 20 · 22 · 24 · 26 · 28 · 30/09 · 02 · 04 · 06/10).
+  Cố ý lệch khỏi reel VD (ngày lẻ 19:30) để mỗi ngày Page có 2 bài chứ không dồn 3.
+  ⚠️ **Video giữ nguyên, không đụng gì.** Bảng đầy đủ + cách làm một bài ở mục
+  **"Tuyến ẢNH CHỮ Facebook"** trong `schedule/calendar.md`.
+
+  ```bash
+  python3 scripts/tao-anh-chu-fb.py AC-XX      # dựng ảnh, đọc chữ từ file caption
+  python3 scripts/dang-video-fb.py anh assets/templates/quotes/AC-XX-fb.png --ma AC-XX \
+      --hen-gio 2026-09-18T12:00:00+07:00 --dang-that
+  ```
+
+  **Đây cũng là phép thử.** Lô này đăng hết qua API, cùng đường với reel:
+  ảnh được **vài trăm lượt** → định dạng là thứ quyết định, reel dọc không hợp tệp người
+  theo dõi này. Ảnh **vẫn một chữ số** → định dạng không phải nguyên nhân, lỗi nằm ở đường
+  API hoặc ở Page, khi đó mới cần phép thử đăng tay.
+
+  🔺 **Việc lần sau: đọc số AC-01 → AC-03 sau 48 giờ** (20 · 22 · 24/09) rồi mới quyết có
+  làm lô 2 không. Kho câu còn dư: **39 kịch bản đều có sẵn mục "Quote cho ảnh 1:1"**, lô 1
+  mới dùng 10.
+
 - 🔴 **VIỆC LỚN NHẤT — FACEBOOK GẦN NHƯ KHÔNG AI XEM, VÀ MỐC HỎNG LÀ NGÀY 02/08.**
   Đọc API 18/09 (anh bảo soi vì thấy 0 view). Chi tiết đầy đủ + bảng từng bài ở mục
   **"Facebook (page Sống Tốt)"** cuối `schedule/calendar.md`.

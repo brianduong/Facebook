@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCF7EC"/>
+      <stop offset="100%" stop-color="#F4E9D4"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="44" y="44" width="992" height="992" fill="none" stroke="#C0392B" stroke-opacity="0.28" stroke-width="3" rx="10"/>
+
+  <g transform="translate(60 70)">
+    <g transform="scale(0.28)">
+      <path d="M0,60 C -48,30 -48,-75 -7,-116 C -3,-95 -9,-35 0,60 Z" fill="#1E5140" transform="rotate(-16)"/>
+      <path d="M0,60 C 48,30 48,-75 7,-116 C 3,-95 9,-35 0,60 Z" fill="#6FA97F" transform="rotate(16)"/>
+    </g>
+    <text x="52" y="18" font-family="'Be Vietnam Pro','Montserrat',Arial,sans-serif" font-size="42" font-weight="800" fill="#2B2B2B">Sống Tốt</text>
+  </g>
+
+
+
+  <text x="540" y="539" text-anchor="middle" xml:space="preserve" font-family="'Be Vietnam Pro','Montserrat',Arial,sans-serif" font-size="76" font-weight="600" fill="#2B2B2B"><tspan fill="#2B2B2B">Cái bạn đang chán,</tspan></text>
+  <text x="540" y="646" text-anchor="middle" xml:space="preserve" font-family="'Be Vietnam Pro','Montserrat',Arial,sans-serif" font-size="76" font-weight="600" fill="#2B2B2B"><tspan fill="#2B2B2B">từng là </tspan><tspan fill="#C0392B" font-weight="800">cái bạn mơ</tspan><tspan fill="#2B2B2B">.</tspan></text>
+
+  <rect x="495" y="725" width="90" height="6" rx="3" fill="#C0392B" opacity="0.75"/>
+
+  <text x="540" y="1004" text-anchor="middle" font-family="'Be Vietnam Pro','Montserrat',Arial,sans-serif" font-size="32" font-weight="600" fill="#2B2B2B" opacity="0.55" letter-spacing="3">theo dõi để sống tốt mỗi ngày</text>
+</svg>

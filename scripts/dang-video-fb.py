@@ -256,7 +256,7 @@ def main() -> int:
     p.add_argument("--caption", help="Caption gõ trực tiếp (thay cho --ma)")
     p.add_argument("--thumb", help="Ảnh thumbnail cho video (chỉ dùng với loại video)")
     p.add_argument("--tieu-de", help="Tiêu đề video")
-    p.add_argument("--hen-gio", help="Hẹn giờ cho Reels, vd 2026-08-03T19:30:00+07:00")
+    p.add_argument("--hen-gio", help="Hẹn giờ cho Reels hoặc ảnh, vd 2026-08-03T19:30:00+07:00")
     p.add_argument("--dang-that", action="store_true", help="Đăng thật lên Page")
     a = p.parse_args()
 
@@ -361,9 +361,21 @@ def main() -> int:
     else:
         endpoint = f"{API}/{page_id}/photos"
         form = ["-F", f"source=@{f}", "-F", f"message={caption}"]
+        if a.hen_gio:
+            # Ảnh hẹn giờ đi đường khác Reels: /photos đòi cặp
+            # published=false + scheduled_publish_time, không có video_state.
+            moc = datetime.fromisoformat(a.hen_gio)
+            giay = int(moc.timestamp())
+            con = giay - int(datetime.now(moc.tzinfo).timestamp())
+            if con < 600:
+                sys.exit(f"❌ Facebook đòi hẹn giờ cách hiện tại ít nhất 10 phút "
+                         f"(đang còn {con // 60} phút).")
+            form += ["-F", "published=false", "-F", f"scheduled_publish_time={giay}"]
 
     print("─" * 60)
     print(f"Sẽ đăng: {f.name}  →  {endpoint}")
+    if a.hen_gio:
+        print(f"Hẹn giờ: {a.hen_gio}")
     print("─" * 60)
     print(caption)
     print("─" * 60)
@@ -376,7 +388,10 @@ def main() -> int:
     kq = goi_api([*form, "-F", f"access_token={token}", endpoint])
     bai_id = kq.get("id") or kq.get("post_id")
     print(f"✅ Đã đăng. ID: {bai_id}")
-    print(f"   Xem: https://www.facebook.com/{bai_id}")
+    if a.hen_gio:
+        print("   Đang hẹn giờ — xem ở Meta Business Suite → Nội dung → Đã lên lịch")
+    else:
+        print(f"   Xem: https://www.facebook.com/{bai_id}")
     print("👉 Nhớ cập nhật trạng thái ✅ trong schedule/calendar.md")
     return 0
 
