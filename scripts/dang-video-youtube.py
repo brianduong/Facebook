@@ -201,6 +201,8 @@ def doc_caption(ma_so: str, ma_kenh: str) -> dict:
         "mo_ta": mo_ta,
         "the": [t.strip() for t in the.split(",") if t.strip()],
         "nguon": f.relative_to(REPO),
+        # Bai VD-xxx dung anh Pexels, bai QX-xxx (QuayXe) dung art tu ve.
+        "dung_pexels": ma_so.upper().startswith("VD-"),
     }
 
 
@@ -314,6 +316,51 @@ def doi_lich(dich_vu, vid: str, hen_gio: str) -> dict:
             "tieu_de": cu["snippet"]["title"]}
 
 
+def tim_hoac_tao_playlist(dich_vu, ten: str, mo_ta: str = "") -> str:
+    """Tra ve id playlist ten `ten`, tao moi neu chua co. Khong bao gio tao trung.
+
+    Playlist de gom video QuayXe mot cho, khong tron voi 33 bai cu cua kenh.
+    Luu y: nguoi xem Shorts luot trong luong doc, khong mo playlist - cai nay
+    chi giup trang kenh gon gang.
+    """
+    trang = None
+    while True:
+        r = dich_vu.playlists().list(part="snippet", mine=True, maxResults=50,
+                                     pageToken=trang).execute()
+        for x in r["items"]:
+            if x["snippet"]["title"].strip().lower() == ten.strip().lower():
+                return x["id"]
+        trang = r.get("nextPageToken")
+        if not trang:
+            break
+    r = dich_vu.playlists().insert(
+        part="snippet,status",
+        body={"snippet": {"title": ten, "description": mo_ta},
+              "status": {"privacyStatus": "public"}},
+    ).execute()
+    return r["id"]
+
+
+def them_vao_playlist(dich_vu, playlist_id: str, video_id: str) -> None:
+    dich_vu.playlistItems().insert(
+        part="snippet",
+        body={"snippet": {"playlistId": playlist_id,
+                          "resourceId": {"kind": "youtube#video", "videoId": video_id}}},
+    ).execute()
+
+
+def duong_dan_gon(f: Path) -> str:
+    """Duong dan de doc. File video co the nam NGOAI repo nay.
+
+    Du an QuayXe (/Users/mac/Miganet/QuayXe) dung chung script nay va tro
+    `--video` thang sang thu muc cua no, nen relative_to(REPO) se nem ValueError.
+    """
+    try:
+        return str(f.relative_to(REPO))
+    except ValueError:
+        return str(f)
+
+
 def soi_loi(bai: dict, ma_kenh: str) -> list[str]:
     """Những chỗ YouTube sẽ từ chối hoặc mình sẽ tiếc — soi trước khi gửi."""
     canh_bao = []
@@ -328,7 +375,9 @@ def soi_loi(bai: dict, ma_kenh: str) -> list[str]:
         canh_bao.append("Mô tả có dấu < hoặc > — YouTube cấm, sẽ từ chối cả bài")
     if "#Shorts" not in bai["tieu_de"] and "#shorts" not in bai["tieu_de"].lower():
         canh_bao.append("Tiêu đề không có #Shorts — YouTube dễ xếp nhầm sang video thường")
-    if "Pexels" not in bai["mo_ta"]:
+    # Chi bai dung anh Pexels moi phai ghi nguon. Bai QuayXe dung art tu ve nen
+    # khong rang buoc - truoc day rang buoc chung nen moi bai QuayXe deu bao nham.
+    if bai.get("dung_pexels", True) and "Pexels" not in bai["mo_ta"]:
         canh_bao.append("Mô tả thiếu dòng ghi nguồn Pexels — điều khoản API Pexels bắt buộc")
     return canh_bao
 
@@ -411,6 +460,8 @@ def main() -> int:
     )
     p.add_argument("--hen-gio", help="Hẹn giờ công khai, dạng 2026-08-03T20:00:00+07:00")
     p.add_argument("--dang-that", action="store_true", help="Đăng thật (mặc định chỉ chạy thử)")
+    p.add_argument("--playlist", help="Tên playlist để nhét video vào sau khi đăng. "
+                                      "Chưa có thì tạo mới, có rồi thì dùng lại.")
     a = p.parse_args()
 
     kenh = KENH[a.kenh]
@@ -534,7 +585,7 @@ def main() -> int:
 
     print("─" * 68)
     print(f"Kênh:     {kenh['ten']} ({kenh['handle']})")
-    print(f"Video:    {f_video.relative_to(REPO)} · {f_video.stat().st_size / 1e6:.1f} MB")
+    print(f"Video:    {duong_dan_gon(f_video)} · {f_video.stat().st_size / 1e6:.1f} MB")
     print(f"Chữ lấy:  {bai['nguon']}")
     print("─" * 68)
     print(f"TIÊU ĐỀ ({len(bai['tieu_de'])}/{MAX_TIEU_DE})")
@@ -572,6 +623,17 @@ def main() -> int:
 
     print(f"\n✅ Đã đăng. https://youtu.be/{vid}")
     print(f"   Sửa trong Studio: https://studio.youtube.com/video/{vid}/edit")
+
+    if a.playlist:
+        try:
+            pl = tim_hoac_tao_playlist(dich_vu, a.playlist)
+            them_vao_playlist(dich_vu, pl, vid)
+            print(f"   Đã cho vào playlist '{a.playlist}': "
+                  f"https://www.youtube.com/playlist?list={pl}")
+        except Exception as loi:
+            # Khong lam hong ca lenh dang chi vi playlist - video da len roi.
+            print(f"   ⚠️ Không cho vào playlist được: {type(loi).__name__}: {loi}")
+            print(f"      Thêm tay trong Studio nếu cần.")
 
     if che_do_that != a.che_do:
         print(
