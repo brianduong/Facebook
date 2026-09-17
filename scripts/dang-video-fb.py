@@ -211,9 +211,45 @@ def dang_reels(page_id: str, token: str, f: Path, caption: str, hen_gio: str | N
     return vid
 
 
+def lay_so_lieu(page_id: str, token: str) -> list[dict]:
+    """Lượt xem từng Reel trên Page, đọc bằng quyền sẵn có.
+
+    ⚠️ **Đừng dùng `/{video-id}/video_insights`** — nó đòi phạm vi `read_insights`, mà token
+    của dự án không có (đo ngày 18/09: trả 403 `read_insights permission missing`). Xin thêm
+    phạm vi đó thì phải qua vòng App Review của Meta.
+
+    Edge `/{page-id}/video_reels` **có sẵn `views` và `post_views`**, đọc được bằng
+    `pages_read_engagement` đang có. Đây là đường lấy số Facebook của dự án.
+
+    `views` là lượt xem; `post_views` thấp hơn nhiều và là lượt xem tính theo bài đăng.
+    """
+    ra: list[dict] = []
+    url = (f"{API}/{page_id}/video_reels"
+           f"?fields=id,created_time,views,post_views,length&limit=100&access_token={token}")
+    while url and len(ra) < 500:
+        d = goi_api([url])
+        ra += d.get("data", [])
+        url = d.get("paging", {}).get("next")
+    return ra
+
+
+def ma_theo_reel() -> dict[str, str]:
+    """Tra mã bài (VD-0XX) theo id Reel, bóc từ bảng trong schedule/calendar.md."""
+    f = REPO / "schedule" / "calendar.md"
+    if not f.exists():
+        return {}
+    ra = {}
+    for dong in f.read_text(encoding="utf-8").splitlines():
+        ma = re.search(r"\*\*(VD-\d{3})\*\*", dong)
+        rid = re.search(r"`(\d{15,17})`", dong)
+        if ma and rid:
+            ra.setdefault(rid.group(1), ma.group(1))
+    return ra
+
+
 def main() -> int:
     p = argparse.ArgumentParser(description="Đăng bài lên Page Sống Tốt")
-    p.add_argument("loai", choices=["kiem-tra", "video", "reels", "anh", "binh-luan"])
+    p.add_argument("loai", choices=["kiem-tra", "video", "reels", "anh", "binh-luan", "so-lieu"])
     p.add_argument("file", nargs="?", help="Đường dẫn file video/ảnh")
     p.add_argument("--bai", help="ID bài đã đăng, dùng cho binh-luan")
     p.add_argument("--ma", help="Mã video để lấy caption, vd VD-001")
@@ -233,6 +269,26 @@ def main() -> int:
         print(f"   Page: {me.get('name')} (id {me.get('id', page_id)})")
         if me.get("followers_count"):
             print(f"   Followers: {me['followers_count']:,}")
+        return 0
+
+    if a.loai == "so-lieu":
+        rows = lay_so_lieu(page_id, token)
+        ten = ma_theo_reel()
+        rows.sort(key=lambda x: x.get("created_time", ""))
+        print(f"{'mã':<9}{'ngày':<12}{'lượt xem':>9}{'post_views':>12}")
+        print("─" * 42)
+        for x in rows:
+            ma = ten.get(x["id"], "—")
+            print(f"{ma:<9}{x.get('created_time', '')[:10]:<12}"
+                  f"{x.get('views', 0):>9}{x.get('post_views', 0):>12}")
+        # Mốc 02/08 là ngày dựng tự động hoá — chia hai nhóm để thấy ngay chênh lệch.
+        tay = [x for x in rows if x.get("created_time", "") < "2026-08-02"]
+        app = [x for x in rows if x.get("created_time", "") >= "2026-08-02"]
+        print("─" * 42)
+        for nhan, nhom in (("đăng tay (trước 02/08)", tay), ("đăng bằng app (từ 02/08)", app)):
+            if nhom:
+                tong = sum(x.get("views", 0) for x in nhom)
+                print(f"{nhan:<26} {len(nhom):>3} bài · {tong:>6} lượt · TB {tong / len(nhom):.1f}")
         return 0
 
     if a.loai == "binh-luan":

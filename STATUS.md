@@ -115,6 +115,46 @@ trạng thái thật — đừng tin bảng dưới đây._
   *rải đều 5 trụ* và *không hai bài liền nhau cùng trụ*. VD-030 (21/09) cũng trụ 4, nên
   thực tế là **bốn mốc trụ 4 liền nhau: 21 · 23 · 25 · 27/09**.
 
+- 🔴 **VIỆC LỚN NHẤT — FACEBOOK GẦN NHƯ KHÔNG AI XEM, VÀ MỐC HỎNG LÀ NGÀY 02/08.**
+  Đọc API 18/09 (anh bảo soi vì thấy 0 view). Chi tiết đầy đủ + bảng từng bài ở mục
+  **"Facebook (page Sống Tốt)"** cuối `schedule/calendar.md`.
+
+  | Cách đăng | Số bài | Lượt xem trung bình |
+  |---|---|---|
+  | **Đăng tay** (27–31/07) | 6 | **543** |
+  | **App `Song Tot Poster`** (02/08 → 17/09) | 29 | **3,2** |
+
+  **Chênh 170 lần, ranh giới trùng khít ngày dựng tự động hoá, không bài nào lẫn sang phía
+  kia.** Kiểm bằng trường `application` trên từng bài: 6 bài đầu trống (đăng tay), 29 bài
+  sau đều ghi `Song Tot Poster`.
+
+  ⚠️ **Nội dung đã bị loại trừ làm nguyên nhân:** cùng những video đó trên YouTube tiếng Việt
+  được 900–1.700 lượt và **số còn tăng** trong đúng giai đoạn Facebook về 0; **QX-01 của
+  QuayXe** (thể loại hài, khác hẳn) đăng 17/09 cũng chỉ **5 lượt**.
+
+  🔺 **VIỆC ĐẦU TIÊN PHẢI LÀM — phép thử một bài:** lấy một video đã render, **đăng tay** bằng
+  app Facebook trên điện thoại, cùng caption cùng khung giờ, đợi 48 giờ rồi so. Ra vài trăm
+  lượt → lỗi ở đường API, phải đổi cách đăng. Vẫn một chữ số → lỗi ở Page, đăng tay cũng vô
+  ích. **Đừng đổi gì khác trước khi có câu trả lời này.**
+
+  📌 **Đường lấy số Facebook (không cần `read_insights`) — đã viết thành lệnh:**
+
+  ```bash
+  python3 scripts/dang-video-fb.py so-lieu
+  ```
+
+  In lượt xem từng Reel kèm mã bài, và tự chia hai nhóm trước/sau mốc 02/08 để thấy ngay
+  chênh lệch. ⚠️ **Đừng dùng `/{video-id}/video_insights`** — nó đòi phạm vi `read_insights`
+  mà token dự án không có (đo 18/09: trả 403), xin thêm thì phải qua App Review của Meta.
+  Edge **`/{page-id}/video_reels` có sẵn `views` và `post_views`**, đọc được bằng
+  `pages_read_engagement` đang có.
+
+  📌 **Page có hai thời kỳ tách hẳn:** 2019 đăng ảnh chữ được **419 thích/bài** (≈4% người
+  theo dõi), 2020 được 145; rồi **ngủ 4 năm**; 2026 đổi sang video dọc, còn **1,5 thích/bài**
+  (0,015%). Nếu phép thử cho thấy lỗi nằm ở Page chứ không ở API thì nên thử **quay lại ảnh
+  chữ** — định dạng đã từng chạy với chính tệp người theo dõi này. Công cụ sẵn có
+  (`scripts/tao-anh-quote.py`), và mỗi kịch bản đều đã có mục "Quote cho ảnh 1:1".
+
 - 🔻 **VIỆC LỚN CHƯA AI ĐỘNG: kênh tiếng Anh gần như không chạy.** Đọc API 17/09: phần lớn
   video EN dưới 50 lượt xem, cao nhất 316, trong khi **bản Việt cùng bài được 1500**. Kênh
   EN có 3 người đăng ký, kênh VI có 27. Anh chốt 17/09 **vẫn đăng đủ ba nơi như cũ** và ghi

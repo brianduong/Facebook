@@ -699,8 +699,101 @@ là phép thử thật cho kết luận "trụ 4 thắng".
 1500 lượt thì bản Anh được vài chục. Đây **không phải** chuyện nội dung, vì nội dung là một.
 Anh chốt 17/09 vẫn đăng đủ ba nơi và để vấn đề này quyết riêng.
 
-### Facebook (page Sống Tốt) — ~9,9K người theo dõi
+### Facebook (page Sống Tốt) — 9.880 người theo dõi
 
-⬜ **Chưa lấy số.** Page có lượng theo dõi lớn gấp 350 lần kênh YouTube Việt nhưng chưa bài
-nào được đo. Lấy bằng `/{video-id}/video_insights` với Page Token sẵn có — **việc này nên
-làm ngay lần sau**, vì đây có thể là nơi đông người xem nhất mà dự án đang mù hoàn toàn.
+🔴 **ĐÃ LẤY ĐƯỢC SỐ NGÀY 18/09 — VÀ NÓ LÀ VẤN ĐỀ LỚN NHẤT CỦA DỰ ÁN.**
+
+**Cách lấy (không cần `read_insights`):** token hiện tại **thiếu** quyền `read_insights` nên
+`/{video-id}/video_insights` trả 403. Nhưng edge **`/{page-id}/video_reels` có sẵn hai trường
+`views` và `post_views`**, đọc được bằng quyền đang có. Đây là đường lấy số Facebook, dùng nó.
+
+#### Vách đá ngày 02/08 — đăng tay 543 lượt/bài, đăng bằng app 3,2 lượt/bài
+
+| Cách đăng | Số bài | Tổng lượt xem | Trung bình |
+|---|---|---|---|
+| **Đăng tay** (27–31/07) | 6 | 3.257 | **543** |
+| **App `Song Tot Poster`** (02/08 → 17/09) | 29 | 93 | **3,2** |
+
+**Chênh 170 lần.** Ranh giới trùng khít ngày dựng tự động hoá (02/08), **không một bài nào
+lẫn sang phía kia**. Kiểm bằng trường `application` trên từng bài: 6 bài đầu không có app
+(đăng tay), 29 bài sau đều ghi `Song Tot Poster`.
+
+| Mã | Ngày | Lượt xem | post_views |
+|---|---|---|---|
+| _(bài cũ / QuayXe)_ | 2026-07-27 | **263** | 99 |
+| _(bài cũ / QuayXe)_ | 2026-07-27 | **725** | 266 |
+| _(bài cũ / QuayXe)_ | 2026-07-27 | **347** | 128 |
+| _(bài cũ / QuayXe)_ | 2026-07-28 | **1269** | 631 |
+| _(bài cũ / QuayXe)_ | 2026-07-29 | **330** | 122 |
+| _(bài cũ / QuayXe)_ | 2026-07-31 | **323** | 141 |
+
+↑ **Sáu bài đăng tay.** ↓ **Từ đây đăng bằng app.**
+
+| Mã | Ngày | Lượt xem | post_views |
+|---|---|---|---|
+| _(bài cũ / QuayXe)_ | 2026-08-02 | **9** | 1 |
+| _(bài cũ / QuayXe)_ | 2026-08-02 | **8** | 1 |
+| _(bài cũ / QuayXe)_ | 2026-08-04 | **11** | 3 |
+| _(bài cũ / QuayXe)_ | 2026-08-04 | **5** | 2 |
+| _(bài cũ / QuayXe)_ | 2026-08-04 | **6** | 2 |
+| _(bài cũ / QuayXe)_ | 2026-08-04 | **4** | 1 |
+| VD-013 | 2026-08-04 | **4** | 1 |
+| VD-014 | 2026-08-06 | **5** | 0 |
+| VD-015 | 2026-08-06 | **4** | 2 |
+| VD-016 | 2026-08-09 | **2** | 1 |
+| VD-017 | 2026-08-10 | **2** | 0 |
+| VD-018 | 2026-08-14 | **3** | 0 |
+| VD-019 | 2026-08-14 | **3** | 1 |
+| VD-020 | 2026-08-14 | **3** | 1 |
+| VD-022 | 2026-08-19 | **2** | 1 |
+| VD-023 | 2026-08-19 | **2** | 1 |
+| VD-021 | 2026-08-19 | **1** | 0 |
+| VD-024 | 2026-08-19 | **1** | 0 |
+| VD-025 | 2026-08-19 | **1** | 0 |
+| VD-026 | 2026-08-19 | **1** | 0 |
+| VD-027 | 2026-09-03 | **1** | 0 |
+| VD-031 | 2026-09-03 | **1** | 0 |
+| VD-029 | 2026-09-03 | **1** | 0 |
+| VD-028 | 2026-09-03 | **1** | 0 |
+| VD-032 | 2026-09-03 | **1** | 0 |
+| VD-034 | 2026-09-03 | **1** | 0 |
+| VD-036 | 2026-09-03 | **2** | 0 |
+| VD-035 | 2026-09-03 | **3** | 1 |
+| _(bài cũ / QuayXe)_ | 2026-09-17 | **5** | 1 |
+
+#### Ba giả thiết, và phép thử để phân biệt
+
+1. **Facebook bóp phân phối Reels đăng qua API** của app chưa qua review. Khớp ranh giới
+   hoàn hảo.
+2. **Hết "tuần trăng mật"** — Page ngủ 4 năm (bài cuối 2022), Facebook đẩy mạnh đợt đầu khi
+   sống lại rồi thôi. Cũng khớp về thời gian (đúng tuần đầu).
+3. **Người theo dõi đã chết** — 9.880 người có từ 2019–2020, xem mục dưới.
+
+⚠️ **Nội dung KHÔNG phải nguyên nhân, đã loại trừ:** (a) cùng những video đó trên YouTube
+tiếng Việt được 900–1.700 lượt, và **số còn tăng** trong đúng giai đoạn Facebook về 0;
+(b) **QX-01 của dự án QuayXe** — thể loại hài, khác hẳn — đăng 17/09 cũng chỉ **5 lượt**.
+
+🔺 **PHÉP THỬ RẺ NHẤT, LÀM TRƯỚC KHI ĐỔI BẤT CỨ THỨ GÌ:** lấy **một** video đã render, **đăng
+tay** bằng app Facebook trên điện thoại, cùng caption, cùng khung giờ. Đợi 48 giờ rồi so.
+- Ra vài trăm lượt → giả thiết 1 đúng, **vấn đề nằm ở đường API**, phải đổi cách đăng.
+- Vẫn một chữ số → giả thiết 2 hoặc 3, **vấn đề nằm ở Page**, đăng tay cũng vô ích.
+
+**Đừng render thêm, đừng viết thêm bài cho Facebook trước khi biết câu trả lời này.**
+
+#### Page có hai thời kỳ tách hẳn nhau
+
+| Năm | Số bài | Tổng thích | Thích/bài |
+|---|---|---|---|
+| 2019 | 153 | 64.150 | **419,3** |
+| 2020 | 103 | 14.951 | **145,2** |
+| 2022 | 1 | 193 | 193,0 |
+| _(ngủ 4 năm)_ | | | |
+| 2026 | 35 | 53 | **1,5** |
+
+Thời 2019–2020 Page đăng **ảnh chữ** (`added_photos`), tương tác 419 thích/bài — tức khoảng
+**4% người theo dõi**, rất khoẻ. Từ 27/07/2026 đổi sang **video dọc** và tương tác còn
+**0,015%**. Hai thay đổi chồng lên nhau: ngủ 4 năm, và đổi hẳn định dạng.
+
+📌 **Việc nên làm sau phép thử:** nếu vấn đề nằm ở Page chứ không ở API, cân nhắc đăng **lại
+ảnh chữ** — định dạng đã từng chạy với chính tệp người theo dõi này. Công cụ có sẵn:
+`scripts/tao-anh-quote.py`, và mỗi kịch bản đều đã có sẵn mục **"Quote cho ảnh 1:1"**.
