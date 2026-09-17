@@ -101,6 +101,22 @@ còn EN-001 và ý "phone before bed" (đều trụ 1): đợt VD-031+ cần vò
 | VD-024 | Show up before you're asked | Chọn một việc nhỏ rồi làm, thay vì hỏi "cần gì không" | ⬜ |
 | VD-028 | Say what they did right | Lời khen cụ thể chứng minh mình đã thật sự nhìn | ⬜ |
 
+
+### Trụ 4 — bổ sung đợt VD-037 → VD-039 (chốt 17/09/2026)
+
+Ba bài dưới đây **đều trụ 4**, xếp vào đây cho đủ bảng. Trụ 4 sau đợt này có **10 bài**.
+
+| Mã | Tiêu đề tiếng Anh (nháp) | Thông điệp | TT |
+|---|---|---|---|
+| VD-037 | You knew less than you remember | Xử một người bằng hồ sơ họ chưa hề được đọc | ✅ |
+| VD-038 | What you're sure they're thinking | Cái mình chắc người ta nghĩ, thường là cái mình sợ | ✅ |
+| VD-039 | You only file the evidence against | Hai cái cân, mà chỉ một cái được phép nhúc nhích | ✅ |
+
+⚠️ **Đọc API 17/09 — kênh EN gần như không có người xem.** Phần lớn video dưới 50 lượt,
+cao nhất 316 (*Rest isn't the reward*), trong khi bản Việt cùng bài được 1500. Anh chốt
+17/09 **vẫn đăng đủ ba nơi**, và ghi vấn đề lại để quyết riêng — **đây là việc lớn chưa ai
+động tới**, không phải chuyện thiếu nội dung.
+
 > 🟡 = VD-007 → VD-012 có lời đọc nháp tiếng Việt từ pipeline cũ (chưa duyệt, chưa có
 > khối EN). Khi làm sẽ viết lại thành file song ngữ như VD-004 → VD-006.
 

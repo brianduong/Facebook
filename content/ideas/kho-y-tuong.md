@@ -82,18 +82,39 @@ Năm ý nghĩ mới, một ý rút từ kho dự trữ (VD-035). Không ý nào 
 | VD-035 | Có loại mệt ngủ không chữa được | Ngủ đủ vẫn nặng người thì cái mệt không nằm ở giấc ngủ | 1 | ⬜ |
 | VD-036 | Lúc người ta vừa làm hỏng việc của bạn | Tử tế lúc đang bực mới là chỗ khó nhất | 2 | ⬜ |
 
-## Ý chưa xếp hàng — VD-037 trở đi lấy ở đây
+## Xếp hàng đợt bốn — VD-037 → VD-039 (chốt 17/09/2026)
 
-🔴 **Kho bằng không.** Đợt VD-031→036 đã dùng nốt ý dự trữ dùng được; ý còn lại
-(*bỏ điện thoại 30 phút trước khi ngủ*) đã loại hẳn vì thuộc cụm "điện thoại" đang cấm.
-Đợt VD-037+ **phải nghĩ mới hoàn toàn** — nguồn nên đổi: **bình luận người xem** (CTA các
-bài đều xin chuyện thật) và **số liệu 48 giờ** (trụ nào giữ chân tốt thì đào tiếp), nhưng
-tới 26/08 vẫn chưa bài nào có số nên chỗ này còn nghẽn.
+**→ Hồ sơ chi tiết + vòng chấm + thứ tự lên sóng: `y-tuong-VD-037-039.md`.**
+Đợt đầu tiên **nghĩ bằng số liệu thật**, không nghĩ chay. Cả ba bài đều **trụ 4**.
 
-**Hai cụm đã chật, đừng thêm bài:** cụm "điện thoại" (006·008·027·030) và cụm "nới tay
-với mình" trụ 1 (003·013·018·025·029). **Trụ 2 đang 8 bài, các trụ khác 7** — đợt sau nên
-tránh trụ 2 cho về lại thế cân.
+| Mã | Ý tưởng / Chủ đề | Thông điệp | Trụ | TT |
+|---|---|---|---|---|
+| VD-037 | Đáng lẽ lúc đó mình phải biết | Xử một người bằng hồ sơ họ chưa hề được đọc | 4 | ✅ |
+| VD-038 | Cái bạn chắc người ta đang nghĩ | Cái mình chắc người ta nghĩ, thường là cái mình sợ | 4 | ✅ |
+| VD-039 | Ai khen thì mình trừ đi | Hai cái cân, mà chỉ một cái được phép nhúc nhích | 4 | ✅ |
+
+⚠️ **Ba bài cùng trụ là cố ý, anh chốt 17/09.** Đọc API 17/09 cho số đầu tiên của dự án:
+trụ 4 xem trung bình **1195**, trung vị **1368**, và là **trụ duy nhất không có bài nào dưới
+900 xem**. Trụ 3 thấp nhất (624) và ôm trọn ba bài đáy bảng. Anh chốt đi theo số, chấp nhận
+miễn hai luật cũ cho đợt này: *rải đều 5 trụ* và *không hai bài liền nhau cùng trụ*.
+**VD-030 (21/09) cũng trụ 4**, nên thực tế là bốn mốc trụ 4 liền nhau: 21 · 23 · 25 · 27/09.
+
+🔴 **Nguồn "bình luận người xem" đã bị gạch khỏi kế hoạch.** Đọc API 17/09: **68 video công
+khai, không một bình luận nào của người xem** — hai bình luận duy nhất là của chính kênh
+(VD-018). Ba hồ sơ liền đã hứa "đợt sau lấy ý từ bình luận"; cả ba lần đều không dùng được.
+Đừng viết lại lời hứa đó cho tới khi có bình luận thật.
+
+## Ý chưa xếp hàng — VD-040 trở đi lấy ở đây
+
+🔴 **Kho lại bằng không.** Đợt VD-037→039 chỉ nghĩ đúng 3 ý, không dư ý nào. Mốc trống kế
+tiếp là **29/09**. Nguồn nghĩ ý bây giờ chỉ còn **số liệu**, vì nguồn bình luận đã chứng minh
+là không có. Trước khi nghĩ đợt sau, **đọc số 48 giờ của VD-037 → VD-039** để biết cái thắng
+của trụ 4 là do trụ hay do từng bài — xem "Báo cáo vướng mắc" trong `y-tuong-VD-037-039.md`.
+
+**Hai cụm vẫn chật, đừng thêm bài:** cụm "điện thoại" (006·008·027·030) và cụm "nới tay
+với mình" trụ 1 (003·013·018·025·029). **Sau đợt này trụ 4 có 10 bài**, trụ 2 có 8, trụ 3
+có 6, trụ 1 và trụ 5 mỗi trụ 6 — thế cân đã lệch hẳn, đợt sau phải tính lại từ số.
 
 | Ý tưởng / Chủ đề | Thông điệp | Trụ |
 |---|---|---|
-| _(trống — chờ vòng nghĩ ý mới)_ | | |
+| _(trống — chờ vòng nghĩ ý mới, sau khi có số 48 giờ của VD-037→039)_ | | |

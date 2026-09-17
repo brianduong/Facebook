@@ -18,7 +18,7 @@ che mất bao nhiêu phần khung**:
 
 | | đáy che | phải che | đỉnh che | Dài tối đa |
 |---|---|---|---|---|
-| Facebook Reels | ~320px | ~120px | ~110px | 90 giây |
+| Facebook Reels | ~320px | ~120px | ~110px | **3 phút** (đã đo, xem ghi chú dưới) |
 | Instagram Reels | ~400px | ~120px | ~110px | 90 giây (có nơi 3 phút) |
 | YouTube Shorts | ~330px | ~140px | ~130px | **3 phút** |
 
@@ -27,6 +27,11 @@ che mất bao nhiêu phần khung**:
 
 > Video 63 giây của mình lọt cả ba. YouTube tự xếp mọi video dọc ≤3 phút vào Shorts,
 > không phải làm gì thêm.
+
+⚠️ **Dòng "90 giây" của Facebook Reels đã lỗi thời, sửa 17/09/2026.** Meta đã nới lên 3 phút.
+Đọc API xác nhận ba bài dài hơn 90 giây đều `published = true` trên Page: VD-036 (94,2s) ·
+VD-018 (97,3s) · VD-022 (101,4s). **Mốc dài nhất đã chứng minh là 101 giây.** VD-037 (107s)
+là bài đầu vượt mốc đó — đọc lại API sau khi đăng để xác nhận, rồi cập nhật con số này.
 
 **Không có watermark của nền tảng nào trong video** — chỉ có logo Sống Tốt. Đây là
 điểm quan trọng: cả ba nền tảng đều dìm video có watermark của đối thủ (logo TikTok,

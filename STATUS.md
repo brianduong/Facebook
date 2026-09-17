@@ -77,21 +77,60 @@ ngay khi lướt tới, hiếm ai nhìn bìa. Công cụ `scripts/tao-anh-bia-re
 
 ## 📍 Dừng ở đâu — làm tiếp từ đây
 
-### ▶️ LẦN SAU VÀO THÌ LÀM TỪ ĐÂY — nghĩ ý mới cho VD-037+, kho đã cạn sạch
+### ▶️ LẦN SAU VÀO THÌ LÀM TỪ ĐÂY — nghĩ ý mới cho VD-040+, và quyết chuyện kênh EN
 
-_Chốt lúc ngày 03/09. Đọc `CLAUDE.md` trước để lấy luật đăng, rồi đọc API để lấy
+_Chốt lúc ngày 17/09. Đọc `CLAUDE.md` trước để lấy luật đăng, rồi đọc API để lấy
 trạng thái thật — đừng tin bảng dưới đây._
 
-- 🔻 **VIỆC LỚN DUY NHẤT CÒN LẠI: nghĩ ý mới cho VD-037 trở đi. Kho bằng KHÔNG.** Hai hồ
-  sơ ý tưởng đã dùng hết sạch — VD-030 là bài cuối của `y-tuong-VD-021-030.md`, VD-036 là
-  bài cuối của `y-tuong-VD-031-036.md`. **Trong `content/` không còn kịch bản nào chưa đăng.**
-  - **Mốc trống kế tiếp là 23/09** — còn 18 ngày lịch chạy sẵn, **đừng để nước tới chân**.
-  - Nguồn nghĩ ý đã định sẵn: **bình luận người xem** và **số liệu 48 giờ**. Nhưng **tới
-    03/09 vẫn chưa bài nào có số** — bảng "Ghi nhận hiệu quả" trong `schedule/calendar.md`
-    còn trống trơn. **Đây mới là chỗ nghẽn thật của dự án, không phải chuyện thiếu ý.**
-  - 📌 **Từ 03/09 đã có quyền đọc bình luận** (`youtube.force-ssl` + Facebook sau khi anh
-    sinh lại token) — dùng nó để gom nguyên liệu, đừng nghĩ chay như hai đợt trước.
-  - ⚠️ **Đợt VD-037+ nên tránh trụ 2** — trụ 2 đang 8 bài, các trụ khác 7.
+- ✅ **VD-037 · VD-038 · VD-039 đã xong đủ ba nơi ngày 17/09**, hẹn 23 · 25 · 27/09 lúc 19:30.
+  Đọc lại API cả ba nơi ngay sau khi đăng: 6 video YouTube đều `private` với `publishAt`
+  đúng `12:30Z`, tiêu đề đúng ngôn ngữ từng kênh; 3 Reels đều `published = false`, giờ hẹn
+  đúng, `length` khớp file render tới từng phần trăm giây. Không mốc nào trùng.
+
+- 🔴 **KHO Ý TƯỞNG LẠI BẰNG KHÔNG. Mốc trống kế tiếp là 29/09** — chỉ còn 12 ngày, mỏng hơn
+  mọi đợt trước. Hồ sơ đợt vừa rồi: `content/ideas/y-tuong-VD-037-039.md`.
+
+- 🔻 **PHÁT HIỆN 17/09 — NGUỒN "BÌNH LUẬN NGƯỜI XEM" KHÔNG TỒN TẠI, ĐÃ GẠCH KHỎI KẾ HOẠCH.**
+  Đọc API cả hai kênh: **68 video công khai, không một bình luận nào của người xem.** Hai
+  bình luận duy nhất là của chính kênh (bài tự thú VD-018). CTA "kể ở bình luận" của 36 bài
+  chưa kéo được một người nào nói. **Ba hồ sơ ý tưởng liền đã hứa "đợt sau lấy ý từ bình
+  luận"; cả ba lần đều không dùng được — đừng viết lại lời hứa đó.**
+
+- 📊 **NHƯNG SỐ LIỆU THÌ ĐÃ CÓ — lần đầu tiên của dự án.** Trung bình lượt xem theo trụ,
+  kênh Sống Tốt, đọc API 17/09 (chỉ tính bài đã công khai):
+
+  | Trụ | Bài | Xem TB | Trung vị | like/xem |
+  |---|---|---|---|---|
+  | **4 — The voice in your head** | 4 | **1195** | **1368** | 0,69% |
+  | 2 — Small kindness | 4 | 839 | 1096 | 0,39% |
+  | 1 — Heavy days | 5 | 682 | 672 | 0,82% |
+  | 5 — Reaching people | 3 | 653 | 458 | 0,66% |
+  | 3 — What you already have | 6 | 624 | 704 | 0,35% |
+
+  **Trụ 4 là trụ duy nhất không có bài nào dưới 900 xem.** Trụ 3 ôm trọn ba bài đáy bảng
+  (VD-017 19 xem · VD-027 70 · VD-014 217). Bài có tỉ lệ thích cao nhất kênh là **VD-035
+  (2,1%)**, gấp đôi mọi bài khác.
+
+  ⚠️ **Anh chốt 17/09: đi theo số — cả ba bài VD-037→039 đều trụ 4**, miễn hai luật cũ
+  *rải đều 5 trụ* và *không hai bài liền nhau cùng trụ*. VD-030 (21/09) cũng trụ 4, nên
+  thực tế là **bốn mốc trụ 4 liền nhau: 21 · 23 · 25 · 27/09**.
+
+- 🔻 **VIỆC LỚN CHƯA AI ĐỘNG: kênh tiếng Anh gần như không chạy.** Đọc API 17/09: phần lớn
+  video EN dưới 50 lượt xem, cao nhất 316, trong khi **bản Việt cùng bài được 1500**. Kênh
+  EN có 3 người đăng ký, kênh VI có 27. Anh chốt 17/09 **vẫn đăng đủ ba nơi như cũ** và ghi
+  vấn đề lại để quyết riêng — đây **không phải** chuyện thiếu nội dung, nội dung là một.
+
+- 🔺 **VIỆC ĐẦU TIÊN CỦA LẦN SAU: đọc số 48 giờ của VD-037 → VD-039 rồi mới nghĩ ý mới.**
+  Nếu ba bài giữ được mức 1200–1500 xem thì kết luận "trụ 4 thắng" đứng vững, đợt sau đào
+  tiếp. Nếu tụt dần thì cái thắng của trụ 4 là do **từng bài**, không phải do trụ — và luật
+  rải đều phải quay lại. 📌 **Bảng "Ghi nhận hiệu quả" ở cuối `schedule/calendar.md` tới nay
+  vẫn trống trơn. Đợt này là lần đầu có số thật để điền — điền vào.**
+
+- ⏰ **VD-018 — bình luận đã dán đủ ba nơi 03/09. Còn đúng một việc: ghim tay.**
+  Hai kênh YouTube (`Ugx1ZvPTLNps9wWjuQd4AaABAg` VI · `Ugzmv4IBxZs5_zf4ZHJ4AaABAg` EN) và
+  Facebook (`1086214770915645_2284425752403691`) đều đã có bình luận tự thú, đọc API xác
+  nhận đúng chữ. 🔻 **Ghim thì phải bấm tay cả ba nơi** — không API nào cho ghim, đây là
+  tường thật. Đường dẫn từng nơi ở mục "VIỆC ANH LÀM TAY" bên dưới.
 
 - ❗ **ĐỌC API TRƯỚC KHI ĐĂNG, ĐỪNG TIN DÒNG "Trạng thái" TRONG FILE.** Buổi 26/08 viết
   VD-027 → VD-036 và render đủ, nhưng chỉ tải lên YouTube được ba bài rồi dừng giữa chừng,
@@ -266,10 +305,19 @@ VD-020 22 ÷ 8) miễn là tính trước nhóm nào dài mấy thẻ. **Cả ba
 | **17/09** | **VD-035** | `2Hv5vE-m4XE` | `fzbLmPXGY8A` | Reels `1595435931958209` | 🕒 đủ ba nơi |
 | **19/09** | **VD-033** | `kdqTVPn2044` | `qxrH3HZKOvM` | Reels `2732816340446930` | 🕒 đủ ba nơi |
 | **21/09** | **VD-030** | `O0nyOaII2gc` | `gFirKzP_wC4` | Reels `1660203235526975` | 🕒 đủ ba nơi |
+| **23/09** | **VD-037** | `hP79i3m9tuM` | `_IIdnmjuh1I` | Reels `2392584418144584` | 🕒 đủ ba nơi |
+| **25/09** | **VD-038** | `YBf61cE9btw` | `3yib8BP2Kl0` | Reels `1732432044539939` | 🕒 đủ ba nơi |
+| **27/09** | **VD-039** | `TTL8DUObJeg` | `nIvyJrp1nsU` | Reels `2705510043220663` | 🕒 đủ ba nơi |
 
-**Chuỗi hiện tại neo vào VD-026 đã lên sóng 01/09** → 03 · 05 · 07 · 09 · 11 · 13 · 15 ·
-17 · 19 · 21/09. Luật: neo vào **bài đã lên sóng gần nhất**, không phải bài đã xếp lịch gần
-nhất. Mốc kế tiếp sau chuỗi này là **23/09**, chưa có bài.
+**Chuỗi hiện tại neo vào VD-035 đã lên sóng 17/09 19:30** (đọc API 17/09 xác nhận `public`,
+`publishedAt = 2026-09-17T12:30:34Z`) → 19 · 21 · 23 · 25 · 27/09. Luật: neo vào **bài đã lên
+sóng gần nhất**, không phải bài đã xếp lịch gần nhất. Mốc kế tiếp sau chuỗi này là **29/09**,
+chưa có bài.
+
+⚠️ **Khung 19:30 giờ dùng chung Page với dự án QuayXe, khung 21:30.** Đọc
+`/{page}/scheduled_posts` ngày 17/09: **25 bài đang chờ** — 5 bài VD lúc 19:30 (19 · 21 · 23 ·
+25 · 27/09) và 20 tập QX lúc 21:30 (18/09 → 07/10). Hai tuyến khác giờ nên không đụng nhau,
+**không mốc nào trùng**. Xếp lịch VD lần sau phải đọc lại edge này, đừng chỉ đếm bài VD.
 
 **Đã đọc lại API cả ba nơi ngày 15/08:** hai kênh YouTube đều **20 video, khớp đủ VD-001 →
 VD-020**, không trùng không thiếu; ba bài mới còn `private` với `publishAt = 12:30Z` đúng

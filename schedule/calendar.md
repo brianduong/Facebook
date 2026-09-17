@@ -197,6 +197,67 @@ bài. Tra thẳng `/{video-id}` thì đã `scheduled` đúng mốc; một phút 
 ⚠️ Thẻ tiếng Anh của VD-014 lúc đầu có `quiet gratitude` — trái luật "cấm chữ biết ơn" của
 chính bài. Đã đổi trước khi đăng. Bài trụ 3 sau này soi lại thẻ, không chỉ soi lời đọc.
 
+## Đợt đăng 17/09 — VD-037 · VD-038 · VD-039 ✅ · đợt đầu tiên nghĩ bằng SỐ
+
+Ba bài viết mới hoàn toàn trong ngày 17/09: kịch bản song ngữ, 38 ảnh Pexels chấm tay từ
+504 ứng viên, render sáu bản, sáu caption, đăng đủ ba nơi. Hồ sơ ý tưởng:
+`content/ideas/y-tuong-VD-037-039.md`.
+
+**Chuỗi neo vào VD-035 đã LÊN SÓNG 17/09 19:30** (không phải bài xếp lịch gần nhất) →
+19 · 21 · **23 · 25 · 27/09**.
+
+| Ngày 19:30 | Mã | Trụ | YouTube tiếng Việt | YouTube tiếng Anh | Facebook Reels (post id) |
+|---|---|---|---|---|---|
+| **23/09** | **VD-037** · Đáng lẽ lúc đó mình phải biết | 4 | https://youtu.be/hP79i3m9tuM | https://youtu.be/_IIdnmjuh1I | `2392584418144584` (`…_1698639248496478`) |
+| **25/09** | **VD-038** · Cái bạn chắc người ta đang nghĩ | 4 | https://youtu.be/YBf61cE9btw | https://youtu.be/3yib8BP2Kl0 | `1732432044539939` (`…_1698640211829715`) |
+| **27/09** | **VD-039** · Ai khen thì mình trừ đi | 4 | https://youtu.be/TTL8DUObJeg | https://youtu.be/nIvyJrp1nsU | `2705510043220663` (`…_1698641191829617`) |
+
+**Đã đọc lại API cả ba nơi sau khi đăng.** Sáu video YouTube đều `private` với
+`publishAt = 12:30Z` đúng ngày của nó, **tiêu đề đúng ngôn ngữ từng kênh** (VI trên Sống Tốt,
+EN trên One Small Thing). Facebook: cả ba `published = false`, giờ hẹn đúng 19:30 giờ Việt,
+`permalink_url` trả về `/reel/…`, `length` khớp file render **tới từng phần trăm giây**
+(107,122 · 86,801 · 102,088). Edge `/scheduled_posts` có **25 bài chờ, không mốc nào trùng**.
+
+⚠️ **Lần này KHÔNG gặp độ trễ `/scheduled_posts`** như đợt VD-015 và đợt 03/09 — cả ba hiện
+ngay. Đừng coi độ trễ đó là luật, nhưng vẫn đừng đăng lại khi chưa thấy trong danh sách.
+
+### 📊 Lần đầu dự án có số — và nó quyết luôn nội dung đợt này
+
+Đọc API 17/09, trung bình lượt xem theo trụ trên kênh Sống Tốt (chỉ tính bài đã công khai):
+
+| Trụ | Bài | Xem TB | Trung vị | like/xem |
+|---|---|---|---|---|
+| **4 — The voice in your head** | 4 | **1195** | **1368** | 0,69% |
+| 2 — Small kindness | 4 | 839 | 1096 | 0,39% |
+| 1 — Heavy days | 5 | 682 | 672 | 0,82% |
+| 5 — Reaching people | 3 | 653 | 458 | 0,66% |
+| 3 — What you already have | 6 | 624 | 704 | 0,35% |
+
+**Trụ 4 là trụ duy nhất không có bài nào dưới 900 xem.** Anh chốt 17/09 đi theo số: cả ba
+bài đợt này đều trụ 4, **miễn hai luật cũ** *rải đều 5 trụ* và *không hai bài liền nhau cùng
+trụ*. VD-030 (21/09) cũng trụ 4 → **bốn mốc trụ 4 liền nhau: 21 · 23 · 25 · 27/09**.
+
+🔴 **Nguồn "bình luận người xem" đã bị gạch khỏi kế hoạch.** 68 video công khai, **không một
+bình luận nào của người xem** — hai bình luận duy nhất là của chính kênh (VD-018).
+
+- **Thời lượng bản Việt:** VD-037 **107s — dài nhất từ trước tới nay** · VD-038 87s ·
+  VD-039 102s. Bản EN: 93 · 77 · 88s.
+- ⚠️ **VD-037 là bài đầu vượt mốc 101 giây** (kỷ lục cũ VD-022). Facebook nhận bình thường,
+  đọc API xác nhận `length = 107.122`. Dòng "Facebook Reels tối đa 90 giây" trong
+  `docs/ke-hoach-da-nen-tang.md` **đã lỗi thời, đã sửa 17/09** — Meta nới lên 3 phút.
+- ⚠️ **Cả ba bài đều có một "khối nhường" bắt buộc giữ** (VD-037 khối 6 · VD-038 khối 7 ·
+  VD-039 khối 7). Trụ 4 nói vào chỗ người xem đang tự trách, thiếu khối nhường là thành ra
+  bảo họ đang nghĩ sai. Chi tiết trong mục "Nhắc khi đăng" của từng caption.
+- ⚠️ **Cấm chữ riêng từng bài:** VD-037 cấm "buông bỏ · chữa lành · tha thứ cho bản thân ·
+  quá khứ đã qua"; VD-038 cấm "nghiện điện thoại · bớt lướt · cai mạng xã hội" (bài này
+  **không** thuộc cụm điện thoại); VD-039 cấm "tự tin · yêu bản thân · giá trị bản thân ·
+  hội chứng kẻ mạo danh".
+- 📌 **Khung 19:30 dùng chung Page với dự án QuayXe (khung 21:30).** 25 bài chờ = 5 bài VD
+  lúc 19:30 + 20 tập QX lúc 21:30. Khác giờ nên không đụng nhau. Lần sau xếp lịch phải đọc
+  `/scheduled_posts` chứ đừng chỉ đếm bài VD.
+
+---
+
 ## Đợt đăng 03/09 (đợt hai cùng ngày) — VD-034 · VD-036 · VD-035 · VD-033 · VD-030 ✅
 
 Năm bài cuối, đăng ngay sau đợt một trong cùng ngày. Chữ và hai bản render đều làm sẵn
@@ -551,49 +612,95 @@ lượt lưu và tỉ lệ xem hết, đừng đo bằng bình luận, và đừ
 
 _Render khi anh yêu cầu (anh đã chốt như vậy ngày 25/07), không tự render trước._
 
-## Ghi nhận hiệu quả (điền sau khi đăng 24–48h)
+## Ghi nhận hiệu quả — ĐÃ CÓ SỐ, đọc API 17/09/2026
 
-⚠️ **Tám bài đã đăng, chưa bài nào có số.** Đây là chỗ nghẽn thật của dự án — không có số
-thì không biết nên đi hướng nào, làm thêm video chỉ làm kho dày thêm. **Ghi tách riêng
-từng nơi**, vì ba nơi có tệp người xem khác hẳn nhau.
+✅ **Bảng này trống từ đầu dự án tới 17/09. Nay đã điền bằng số đọc thẳng từ API**, không
+phải gõ tay. Chỗ nghẽn thật của dự án — "không có số thì không biết đi hướng nào" — đã gỡ.
 
-**Số quan trọng nhất là tỉ lệ xem hết** — YouTube chấm bằng cái này.
+🔴 **Cột bình luận bằng 0 ở mọi bài, cả hai kênh.** Hai bình luận duy nhất trên kênh là của
+chính kênh (bài tự thú VD-018). **CTA "kể ở bình luận" của 36 bài chưa kéo được một người
+nào nói** — nguồn nghĩ ý bằng bình luận đã bị gạch khỏi kế hoạch, xem
+`content/ideas/y-tuong-VD-037-039.md`.
 
-### YouTube tiếng Việt (`@songtotdaily`)
+📌 **Số dưới đây là lượt xem cộng dồn tới 17/09, không phải số 48 giờ.** Bài cũ có nhiều
+thời gian tích luỹ hơn bài mới, nên so tuyệt đối giữa bài tháng 7 và bài tháng 9 là **không
+công bằng**. Dùng bảng này để so **theo trụ**, đừng dùng để xếp hạng từng bài.
 
-| Mã số | Lượt xem | Tỉ lệ xem hết | Đăng ký mới | Lưu / chia sẻ | Ghi chú |
-|-------|----------|---------------|-------------|---------------|---------|
-| VD-001 |  |  |  |  |  |
-| VD-002 |  |  |  |  |  |
-| VD-003 |  |  |  |  |  |
-| VD-004 |  |  |  |  |  |
-| VD-005 |  |  |  |  |  |
-| VD-006 |  |  |  |  |  |
-| VD-007 |  |  |  |  |  |
-| VD-008 |  |  |  |  |  |
+⚠️ **Việc lần sau: đo VD-037 → VD-039 sau 48 giờ** (25 · 27 · 29/09) rồi ghi vào đây. Đó mới
+là phép thử thật cho kết luận "trụ 4 thắng".
 
-### YouTube tiếng Anh (`@onesmallthingdaily`)
+### YouTube tiếng Việt (`@songtotdaily`) — 27 người đăng ký
 
-| Mã số | Lượt xem | Tỉ lệ xem hết | Đăng ký mới | Lưu / chia sẻ | Ghi chú |
-|-------|----------|---------------|-------------|---------------|---------|
-| VD-001 |  |  |  |  |  |
-| VD-002 |  |  |  |  |  |
-| VD-003 |  |  |  |  |  |
-| VD-004 |  |  |  |  |  |
-| VD-005 |  |  |  |  |  |
-| VD-006 |  |  |  |  |  |
-| VD-007 |  |  |  |  |  |
-| VD-008 |  |  |  |  |  |
+| Mã | Trụ | Lượt xem | Thích | Tỉ lệ thích | Bình luận | Ý tưởng |
+|---|---|---|---|---|---|---|
+| VD-034 | 3 | 1699 | 3 | 0.2% | 0 | Việc giờ bạn làm không cần nghĩ |
+| VD-021 | 2 | 1526 | 1 | 0.1% | 0 | Tử tế lúc bất tiện |
+| VD-022 | 4 | 1517 | 12 | 0.8% | 0 | Chậm hơn không phải là hỏng |
+| VD-015 | 4 | 1368 | 13 | 1.0% | 0 | Nói với mình như nói với bạn thân |
+| VD-024 | 5 | 1202 | 8 | 0.7% | 0 | Có mặt lúc chưa ai gọi |
+| VD-031 | 2 | 1096 | 5 | 0.5% | 0 | Người tới sau mình |
+| VD-023 | 3 | 1035 | 3 | 0.3% | 0 | Ai đó đã làm bữa cơm thành nóng |
+| VD-029 | 1 | 1008 | 5 | 0.5% | 0 | Nghỉ không cần xứng đáng |
+| VD-026 | 4 | 980 | 8 | 0.8% | 0 | Được phép đổi ý |
+| VD-032 | 4 | 917 | 0 | 0.0% | 0 | Chỉ mình bạn còn nhớ chuyện đó |
+| VD-025 | 1 | 906 | 5 | 0.6% | 0 | Hạ chuẩn một hôm, giữ lấy cả ngày |
+| VD-035 | 1 | 838 | 17 | 2.0% | 0 | Có loại mệt ngủ không chữa được |
+| VD-036 | 2 | 733 | 6 | 0.8% | 0 | Lúc người ta vừa làm hỏng việc của bạn |
+| VD-019 | 3 | 704 | 6 | 0.9% | 0 | Mình của ngày trước từng mong điều này |
+| VD-018 | 1 | 604 | 4 | 0.7% | 1 | Làm dở vẫn tính |
+| VD-028 | 5 | 458 | 4 | 0.9% | 0 | Khen đúng cái người ta đã làm |
+| VD-016 | 5 | 301 | 1 | 0.3% | 0 | Hỏi thêm một câu |
+| VD-013 | 1 | 224 | 0 | 0.0% | 0 | Mười phút đầu tiên |
+| VD-014 | 3 | 217 | 1 | 0.5% | 0 | Những thứ hôm nay không hỏng |
+| VD-027 | 3 | 70 | 0 | 0.0% | 0 | Ngẩng mặt lúc đang chờ |
+| VD-017 | 3 | 19 | 0 | 0.0% | 0 | Ngồi im năm phút |
+| VD-020 | 2 | 4 | 1 | 25.0% | 0 | Để người khác giúp mình |
 
-### Facebook (page Sống Tốt)
+### Trung bình theo trụ — kênh tiếng Việt
 
-| Mã số | Lượt xem | Xem hết ≥1 phút | Tương tác | Chia sẻ | Ghi chú |
-|-------|----------|-----------------|-----------|---------|---------|
-| VD-001 |  |  |  |  |  |
-| VD-002 |  |  |  |  |  |
-| VD-003 |  |  |  |  |  |
-| VD-004 |  |  |  |  |  |
-| VD-005 |  |  |  |  |  |
-| VD-006 |  |  |  |  |  |
-| VD-007 |  |  |  |  |  |
-| VD-008 |  |  |  |  |  |
+| Trụ | Bài | Xem TB | Trung vị | like/xem |
+|---|---|---|---|---|
+| **4 — The voice in your head** | 4 | **1195** | **1368** | 0,69% |
+| 2 — Small kindness | 4 | 839 | 1096 | 0,39% |
+| 1 — Heavy days | 5 | 682 | 672 | 0,82% |
+| 5 — Reaching people | 3 | 653 | 458 | 0,66% |
+| 3 — What you already have | 6 | 624 | 704 | 0,35% |
+
+**Trụ 4 là trụ duy nhất không có bài nào dưới 900 xem.** Trụ 3 ôm trọn ba bài đáy bảng.
+
+### YouTube tiếng Anh (`@onesmallthingdaily`) — 3 người đăng ký
+
+| Mã | Trụ | Lượt xem | Thích | Tỉ lệ thích | Bình luận | Ý tưởng |
+|---|---|---|---|---|---|---|
+| VD-034 | 3 | 1699 | 3 | 0.2% | 0 | Việc giờ bạn làm không cần nghĩ |
+| VD-021 | 2 | 1526 | 1 | 0.1% | 0 | Tử tế lúc bất tiện |
+| VD-022 | 4 | 1517 | 12 | 0.8% | 0 | Chậm hơn không phải là hỏng |
+| VD-015 | 4 | 1368 | 13 | 1.0% | 0 | Nói với mình như nói với bạn thân |
+| VD-024 | 5 | 1202 | 8 | 0.7% | 0 | Có mặt lúc chưa ai gọi |
+| VD-031 | 2 | 1096 | 5 | 0.5% | 0 | Người tới sau mình |
+| VD-023 | 3 | 1035 | 3 | 0.3% | 0 | Ai đó đã làm bữa cơm thành nóng |
+| VD-029 | 1 | 1008 | 5 | 0.5% | 0 | Nghỉ không cần xứng đáng |
+| VD-026 | 4 | 980 | 8 | 0.8% | 0 | Được phép đổi ý |
+| VD-032 | 4 | 917 | 0 | 0.0% | 0 | Chỉ mình bạn còn nhớ chuyện đó |
+| VD-025 | 1 | 906 | 5 | 0.6% | 0 | Hạ chuẩn một hôm, giữ lấy cả ngày |
+| VD-035 | 1 | 838 | 17 | 2.0% | 0 | Có loại mệt ngủ không chữa được |
+| VD-036 | 2 | 733 | 6 | 0.8% | 0 | Lúc người ta vừa làm hỏng việc của bạn |
+| VD-019 | 3 | 704 | 6 | 0.9% | 0 | Mình của ngày trước từng mong điều này |
+| VD-018 | 1 | 604 | 4 | 0.7% | 1 | Làm dở vẫn tính |
+| VD-028 | 5 | 458 | 4 | 0.9% | 0 | Khen đúng cái người ta đã làm |
+| VD-016 | 5 | 301 | 1 | 0.3% | 0 | Hỏi thêm một câu |
+| VD-013 | 1 | 224 | 0 | 0.0% | 0 | Mười phút đầu tiên |
+| VD-014 | 3 | 217 | 1 | 0.5% | 0 | Những thứ hôm nay không hỏng |
+| VD-027 | 3 | 70 | 0 | 0.0% | 0 | Ngẩng mặt lúc đang chờ |
+| VD-017 | 3 | 19 | 0 | 0.0% | 0 | Ngồi im năm phút |
+| VD-020 | 2 | 4 | 1 | 25.0% | 0 | Để người khác giúp mình |
+
+🔻 **Kênh EN gần như không chạy — việc lớn chưa ai động tới.** Cùng một bài, bản Việt được
+1500 lượt thì bản Anh được vài chục. Đây **không phải** chuyện nội dung, vì nội dung là một.
+Anh chốt 17/09 vẫn đăng đủ ba nơi và để vấn đề này quyết riêng.
+
+### Facebook (page Sống Tốt) — ~9,9K người theo dõi
+
+⬜ **Chưa lấy số.** Page có lượng theo dõi lớn gấp 350 lần kênh YouTube Việt nhưng chưa bài
+nào được đo. Lấy bằng `/{video-id}/video_insights` với Page Token sẵn có — **việc này nên
+làm ngay lần sau**, vì đây có thể là nơi đông người xem nhất mà dự án đang mù hoàn toàn.
