@@ -1,6 +1,6 @@
 # STATUS — Ghi chú tiến độ
 
-_Cập nhật: 2026-09-03_
+_Cập nhật: 2026-09-21_
 
 ## 📍 Ba nơi đăng — tên gọi quy ước
 
@@ -295,9 +295,17 @@ trạng thái thật — đừng tin bảng dưới đây._
   ⚠️ **VD-029 (07/09) và VD-035 cùng vùng nghỉ–ngủ** nên VD-035 phải ở 17/09, cách 5 mốc;
   **VD-031 (05/09) và VD-036 cùng trụ 2** nên VD-036 ở 15/09, cũng cách 5 mốc.
 
-- 🔻 **Từ VD-037 trở đi kho ý tưởng bằng KHÔNG** — hết sạch, phải có một vòng nghĩ ý mới
-  hoàn toàn. Nguồn đã định sẵn là **bình luận người xem** và **số liệu 48 giờ**, mà số liệu
-  thì tới giờ vẫn chưa có bài nào — xem "Báo cáo vướng mắc" cuối hồ sơ ý tưởng.
+- 🔻 **Kho ý tưởng lại bằng KHÔNG sau VD-042** (đã dùng hết `y-tuong-VD-037-039.md` và
+  `y-tuong-VD-040-042.md`). Mốc trống kế tiếp là **05/10**. Nguồn **bình luận người xem** đã
+  bị gạch khỏi kế hoạch từ 17/09 — 68 video công khai, không một bình luận nào của người xem.
+  Nguồn còn lại là **số liệu 48 giờ**, đọc bằng API.
+  📌 **Việc bắt buộc trước đợt VD-043: đọc số 48 giờ của VD-037 → VD-040** (mốc 25 · 27 ·
+  29/09 và 01/10). Đang có **bảy mốc trụ 4 liền nhau** (21/09 → 03/10) — nếu bốn bài đó không
+  giữ được mức 1200-1500 xem thì luật *rải đều 5 trụ* phải quay lại ngay từ VD-043. Chi tiết
+  trong mục "Đợt đăng 21/09" của `schedule/calendar.md`.
+- ⚠️ **Ba bài đợt 21/09 dài hơn mọi bài trước:** 124 · 117 · 110 giây bản Việt (VD-040 là kỷ
+  lục mới, vượt VD-037 107s). Đây là **biến số thứ hai chồng lên biến số trụ** — lúc đọc số
+  48 giờ phải tách hai cái ra, đừng gán hết cho trụ.
 
 **Bảy bước của một bài** (VD-018 → VD-020 đi đúng đường này; ba bài một buổi là làm được):
 
@@ -334,7 +342,7 @@ công thức `anh[i * số_ảnh // số_thẻ]`, không hiểu nội dung. Bi�
 VD-020 22 ÷ 8) miễn là tính trước nhóm nào dài mấy thẻ. **Cả ba bài đợt này không phải đảo
 `--lay` như VD-016.**
 
-### Đã hẹn giờ tới hết 21/09 lúc 19:30
+### Đã hẹn giờ tới hết 03/10 lúc 19:30
 
 | Ngày | Bài | YouTube tiếng Việt | YouTube tiếng Anh | Facebook | Trạng thái |
 |---|---|---|---|---|---|
@@ -369,11 +377,19 @@ VD-020 22 ÷ 8) miễn là tính trước nhóm nào dài mấy thẻ. **Cả ba
 | **23/09** | **VD-037** | `hP79i3m9tuM` | `_IIdnmjuh1I` | Reels `2392584418144584` | 🕒 đủ ba nơi |
 | **25/09** | **VD-038** | `YBf61cE9btw` | `3yib8BP2Kl0` | Reels `1732432044539939` | 🕒 đủ ba nơi |
 | **27/09** | **VD-039** | `TTL8DUObJeg` | `nIvyJrp1nsU` | Reels `2705510043220663` | 🕒 đủ ba nơi |
+| **29/09** | **VD-040** | `MChkYwJzNGU` | `tOmit7SGwSI` | Reels `1526289009516974` | 🕒 đủ ba nơi |
+| **01/10** | **VD-041** | `jUkJ2NdkCbE` | `oDN0_3CICR4` | Reels `1331685325518225` | 🕒 đủ ba nơi |
+| **03/10** | **VD-042** | `elX8llUruUQ` | `befj7VoryZA` | Reels `1481353377210592` | 🕒 đủ ba nơi |
 
-**Chuỗi hiện tại neo vào VD-035 đã lên sóng 17/09 19:30** (đọc API 17/09 xác nhận `public`,
-`publishedAt = 2026-09-17T12:30:34Z`) → 19 · 21 · 23 · 25 · 27/09. Luật: neo vào **bài đã lên
-sóng gần nhất**, không phải bài đã xếp lịch gần nhất. Mốc kế tiếp sau chuỗi này là **29/09**,
-chưa có bài.
+**Chuỗi hiện tại neo vào VD-033 đã lên sóng 19/09 19:30** (đọc API 21/09 xác nhận `public`,
+1017 xem) → 21 · 23 · 25 · 27 · 29/09 · 01 · 03/10. Luật: neo vào **bài đã lên sóng gần
+nhất**, không phải bài đã xếp lịch gần nhất. Mốc kế tiếp sau chuỗi này là **05/10**, chưa có
+bài.
+
+⚠️ **Page Facebook còn hai tuyến khác chạy song song** — QuayXe lúc 21:30 mỗi ngày (tới
+07/10) và ảnh chữ lúc 12:00 cách 2 ngày (tới 06/10). Tổng `/scheduled_posts` ngày 21/09 là
+**32 bài chờ**. Khác giờ nên không đụng tuyến VD, nhưng **xếp lịch phải đọc
+`/scheduled_posts` chứ đừng đếm riêng bài VD**.
 
 ⚠️ **Khung 19:30 giờ dùng chung Page với dự án QuayXe, khung 21:30.** Đọc
 `/{page}/scheduled_posts` ngày 17/09: **25 bài đang chờ** — 5 bài VD lúc 19:30 (19 · 21 · 23 ·

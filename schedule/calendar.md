@@ -132,17 +132,17 @@ VD-036 (15/09) · VD-035 (17/09) · VD-033 (19/09) · VD-030 (21/09). Bảy bài
 tháng 8 (VD-020 → VD-026) **đã lên sóng hết**, mốc cuối là VD-026 ngày 01/09 — đọc API
 ngày 03/09 xác nhận cả bảy đều `public`.
 
-🔻 **Hết hàng từ mốc 23/09.** Toàn bộ hai hồ sơ ý tưởng đã dùng xong: VD-030 là bài cuối của
-`y-tuong-VD-021-030.md`, VD-036 là bài cuối của `y-tuong-VD-031-036.md`. Trong `content/`
-**không còn kịch bản nào chưa đăng**.
+_(Mục "hết hàng từ 23/09" viết ngày 03/09 đã xử lý xong: đợt 17/09 làm VD-037 → VD-039, đợt
+21/09 làm VD-040 → VD-042. Lịch nay chạy tới hết 03/10.)_
 
-🔻 **Từ VD-037 trở đi kho ý tưởng bằng KHÔNG** — phải có một vòng nghĩ ý mới hoàn toàn.
-Nguồn đã định sẵn là **bình luận người xem** và **số liệu 48 giờ**, mà tới 03/09 **vẫn chưa
-bài nào có số** (bảng "Ghi nhận hiệu quả" dưới đây còn trống trơn). Đây là chỗ nghẽn thật,
-không phải chuyện thiếu ý. **Có 18 ngày lịch chạy sẵn để làm vòng đó — đừng để nước tới
-chân.**
+🔻 **Hết hàng từ mốc 05/10** — kho ý tưởng lại bằng không sau VD-042. Hai đợt gần nhất đều chỉ
+nghĩ đúng 3 ý, không dư ý nào. **Nguồn "bình luận người xem" đã bị gạch khỏi kế hoạch từ
+17/09** (68 video công khai, không một bình luận nào của người xem) — nguồn còn lại là **số
+liệu 48 giờ**, đọc bằng API.
 
-🔻 **Từ VD-037 trở đi kho ý tưởng bằng không** — phải có một vòng nghĩ ý mới hoàn toàn.
+📌 **Việc bắt buộc trước khi nghĩ đợt VD-043: đọc số 48 giờ của VD-037 → VD-040** (mốc 25 · 27
+· 29/09 và 01/10) rồi mới quyết trụ. Bảy mốc trụ 4 liền nhau đang chạy — xem mục "Đợt đăng
+21/09" ở trên.
 
 ⚠️ **Render lại bản tiếng Việt trước khi đăng nếu file cũ hơn commit sửa giọng gần nhất.**
 File trong `video/exports/` không tự biết nó render bằng thiết lập giọng nào — so ngày sửa
@@ -196,6 +196,91 @@ bài. Tra thẳng `/{video-id}` thì đã `scheduled` đúng mốc; một phút 
 
 ⚠️ Thẻ tiếng Anh của VD-014 lúc đầu có `quiet gratitude` — trái luật "cấm chữ biết ơn" của
 chính bài. Đã đổi trước khi đăng. Bài trụ 3 sau này soi lại thẻ, không chỉ soi lời đọc.
+
+## Đợt đăng 21/09 — VD-040 · VD-041 · VD-042 ✅ · đợt thứ hai đi theo SỐ
+
+Ba bài viết mới hoàn toàn trong ngày 21/09: hồ sơ ý tưởng, kịch bản song ngữ 15 khối, 27 ảnh
+Pexels chấm tay từ 178 ứng viên, render sáu bản, sáu caption, đăng đủ ba nơi. Hồ sơ ý tưởng:
+`content/ideas/y-tuong-VD-040-042.md`.
+
+**Chuỗi neo vào VD-033 đã LÊN SÓNG 19/09 19:30** (đọc API 21/09 xác nhận `public`, 1017 xem) →
+21 · 23 · 25 · 27/09 đã xếp từ trước, rồi **29/09 · 01/10 · 03/10**.
+
+| Ngày 19:30 | Mã | Trụ | YouTube tiếng Việt | YouTube tiếng Anh | Facebook Reels (post id) |
+|---|---|---|---|---|---|
+| **29/09** | **VD-040** · Cái bạn gọi là lười | 4 | https://youtu.be/MChkYwJzNGU | https://youtu.be/tOmit7SGwSI | `1526289009516974` (`…_1701821201511616`) |
+| **01/10** | **VD-041** · Cái sổ chỉ có một cột | 4 | https://youtu.be/jUkJ2NdkCbE | https://youtu.be/oDN0_3CICR4 | `1331685325518225` (`…_1701821468178256`) |
+| **03/10** | **VD-042** · Câu đó không phải chữ của bạn | 4 | https://youtu.be/elX8llUruUQ | https://youtu.be/befj7VoryZA | `1481353377210592` (`…_1701821618178241`) |
+
+**Đã đọc lại API cả ba nơi sau khi đăng.** Sáu video YouTube đều `private` với
+`publishAt = 12:30Z` đúng ngày của nó, **tiêu đề đúng ngôn ngữ từng kênh**; mỗi kênh giờ có
+**24 bài chờ**. Facebook: cả ba `published = false`, giờ hẹn đúng 19:30 giờ Việt,
+`permalink_url` trả về `/reel/…`, `length` khớp file render **tới từng phần nghìn giây**
+(124,361 · 116,800 · 109,847). Edge `/scheduled_posts` có **32 bài chờ, không mốc nào trùng**.
+
+⚠️ **Lại gặp độ trễ `/scheduled_posts`** như đợt VD-015 và đợt 03/09: đọc lần đầu chỉ thấy 31
+bài, thiếu đúng VD-042. Tra thẳng `/{video-id}` thì đã `scheduled` đúng 03/10 19:30; đọc lại
+danh sách một lúc sau là đủ 32. **Đừng đăng lại khi chưa thấy trong danh sách.**
+
+### 📊 Số đọc lại ngày 21/09 — trụ 4 vẫn dẫn, nhưng có hai chỗ cãi lại
+
+Trung bình lượt xem theo trụ trên kênh Sống Tốt (39 video công khai, khớp được 27 bài có mã):
+
+| Trụ | Bài | Xem TB | Trung vị | like/xem | Thấp nhất |
+|---|---|---|---|---|---|
+| **4 — Giọng nói trong đầu** | 5 | **1211** | **1271** | 0,50% | **VD-032 · 918** |
+| 2 — Tử tế nhỏ | 6 | 807 | 918 | 0,47% | VD-020 · 5 |
+| 1 — Ngày nặng | 5 | 786 | 908 | 0,71% | VD-013 · 226 |
+| 5 — Chạm tới người khác | 5 | 767 | 853 | 0,65% | VD-016 · 302 |
+| 3 — Cái mình đang có | 6 | 626 | 462 | 0,32% | VD-017 · 20 |
+
+Trụ 4 **vẫn là trụ duy nhất không có bài nào dưới 900 xem**, và khoảng cách với trụ nhì còn
+giãn ra (1211 so với 807). Nên anh chốt 21/09: **đi tiếp trụ 4**.
+
+⚠️ **Hai chỗ số liệu cãi lại, ghi ra để đợt sau không quên:**
+- **VD-034 (13/09, trụ 3) được 1701 — cao nhất cả kênh.** Trụ 3 vẫn bét bảng trung bình nhưng
+  vừa đẻ ra bài khoẻ nhất. Nhiều khả năng trụ 3 **lệch rất mạnh** chứ không phải thấp đều.
+- **Trụ 1 đang lên đều:** VD-029 1010 · VD-035 1183. Đáy 226 của trụ 1 là VD-013 từ 08/08.
+
+🔴 **Vẫn chưa có số của VD-037 → VD-039** (lên sóng 23 · 25 · 27/09, mốc 48 giờ là 25 · 27 ·
+29/09). Đợt này vì thế nghĩ trên **cùng bộ số của đợt trước**, chỉ cộng thêm bốn bài mới.
+
+### 🔺 Bảy mốc trụ 4 liền nhau — rủi ro lớn nhất của đợt này
+
+| 21/09 | 23/09 | 25/09 | 27/09 | 29/09 | 01/10 | 03/10 |
+|---|---|---|---|---|---|---|
+| VD-030 | VD-037 | VD-038 | VD-039 | VD-040 | VD-041 | VD-042 |
+
+Hồ sơ trước gọi bốn mốc liền là "chuyện chưa từng làm". Bảy mốc thì rủi ro là **người xem
+thấy kênh chỉ còn một giọng**. Đã trừ bằng ba hình dạng khác hẳn nhau: VD-040 nói về **một
+chữ** mình dán lên mình · VD-041 nói về **cách mình chấm công** cho mình · VD-042 nói về **ai
+là chủ** câu mình tự mắng. Không bài nào mở bằng cảnh đêm (VD-037 đã lấy), bằng tin nhắn
+(VD-038) hay bằng lời khen (VD-039).
+
+📌 **Việc bắt buộc trước VD-043: đọc số 48 giờ của VD-037 → VD-040 rồi mới quyết trụ.** Nếu
+bốn bài đó không giữ được mức 1200-1500 thì cái thắng của trụ 4 là do **từng bài** chứ không
+do trụ, và luật *rải đều 5 trụ* phải quay lại ngay.
+
+### Ghi chú kỹ thuật của đợt
+
+- ⚠️ **VD-040 bản Việt dài 124 giây — kỷ lục mới của dự án**, vượt VD-037 (107s). Cả ba bài
+  đợt này đều dài hơn mọi bài trước: 124 · 117 · 110 giây (bản EN 108 · 102 · 105). Facebook
+  nhận bình thường, đọc API xác nhận `length` khớp từng phần nghìn giây. **Đây là biến số mới
+  chồng lên biến số trụ — lúc đọc số 48 giờ phải tách hai cái đó ra**, đừng gán hết cho trụ.
+- ⚠️ **Cả ba bài đều có một "khối nhường" bắt buộc giữ** (VD-040 khối 6 · VD-041 khối 6 ·
+  VD-042 khối 6) và **khối ranh giới** (VD-040 khối 11 · VD-041 khối 7-8 · VD-042 khối 7).
+  Chi tiết trong mục "Nhắc khi đăng" của từng caption.
+- ⚠️ **Cấm chữ riêng từng bài:** VD-040 cấm "trì hoãn · kỷ luật bản thân · vùng an toàn ·
+  vượt qua chính mình"; VD-041 cấm "biết ơn · năng suất · sống chậm · to-do list"; VD-042 cấm
+  "chữa lành · tổn thương · đứa trẻ bên trong · gia đình độc hại".
+- 🔺 **VD-042 là bài dễ trượt nhất cả đợt** — hai hướng trượt (thành bài trách bố mẹ, và thành
+  "mọi câu tự trách đều sai") đã ghi cách chặn trong caption. Đọc trước khi trả lời bình luận.
+- 📌 **Page vẫn dùng chung với hai tuyến khác:** QuayXe lúc 21:30 mỗi ngày và ảnh chữ lúc 12:00
+  cách 2 ngày. 32 bài chờ = 7 bài VD lúc 19:30 + 17 tập QX lúc 21:30 + 8 ảnh chữ lúc 12:00.
+  Khác giờ nên không đụng nhau, nhưng **xếp lịch phải đọc `/scheduled_posts` chứ đừng đếm
+  riêng bài VD**.
+
+---
 
 ## Đợt đăng 17/09 — VD-037 · VD-038 · VD-039 ✅ · đợt đầu tiên nghĩ bằng SỐ
 
