@@ -135,6 +135,9 @@ ngày 03/09 xác nhận cả bảy đều `public`.
 _(Mục "hết hàng từ 23/09" viết ngày 03/09 đã xử lý xong: đợt 17/09 làm VD-037 → VD-039, đợt
 21/09 làm VD-040 → VD-042. Lịch nay chạy tới hết 03/10.)_
 
+_(Mục "hết hàng từ 05/10" bên dưới đã xử lý xong 24/09: làm VD-043 → VD-045, lịch nay chạy
+tới hết **09/10**. **Mốc trống kế tiếp là 11/10.**)_
+
 🔻 **Hết hàng từ mốc 05/10** — kho ý tưởng lại bằng không sau VD-042. Hai đợt gần nhất đều chỉ
 nghĩ đúng 3 ý, không dư ý nào. **Nguồn "bình luận người xem" đã bị gạch khỏi kế hoạch từ
 17/09** (68 video công khai, không một bình luận nào của người xem) — nguồn còn lại là **số
@@ -196,6 +199,35 @@ bài. Tra thẳng `/{video-id}` thì đã `scheduled` đúng mốc; một phút 
 
 ⚠️ Thẻ tiếng Anh của VD-014 lúc đầu có `quiet gratitude` — trái luật "cấm chữ biết ơn" của
 chính bài. Đã đổi trước khi đăng. Bài trụ 3 sau này soi lại thẻ, không chỉ soi lời đọc.
+
+## Đợt đăng 24/09 — VD-043 · VD-044 · VD-045 ✅ · rời chuỗi trụ 4
+
+Anh bảo làm đủ hạn mức đăng trong ngày (6 lượt tải lên YouTube = 3 bài). Ba bài viết mới hoàn
+toàn trong ngày 24/09: hồ sơ ý tưởng, song ngữ 12-13 khối, 27 ảnh Pexels chấm tay từ 177 ứng
+viên, render sáu bản, sáu caption, đăng đủ ba nơi. Hồ sơ: `content/ideas/y-tuong-VD-043-045.md`.
+
+**Chuỗi neo vào VD-037 đã LÊN SÓNG 23/09 19:30** (đọc API 24/09: `public`, 813 xem) → 25 · 27 ·
+29/09 · 01 · 03/10 đã xếp từ trước, rồi **05 · 07 · 09/10**.
+
+| Ngày 19:30 | Mã | Trụ | Dài VI | YouTube tiếng Việt | YouTube tiếng Anh | Facebook Reels |
+|---|---|---|---|---|---|---|
+| **05/10** | **VD-043** · Việc chưa quyết không nằm yên | 1 | 89s | https://youtu.be/SrToudzHfHU | https://youtu.be/ptxM1-XMwgg | `1418201906934263` |
+| **07/10** | **VD-044** · Chúc thì ai cũng chúc, hỏi lại thì không | 5 | 78s | https://youtu.be/Jn3CoMv1DdM | https://youtu.be/wr3CaYKF0UY | `2537953290035381` |
+| **09/10** | **VD-045** · Người duy nhất không được nói câu nào | 2 | 82s | https://youtu.be/AcJn-E8ybLc | https://youtu.be/rZyO_ilUWME | `1361900043671527` |
+
+**Đã đọc lại API cả ba nơi sau khi đăng.** Sáu video YouTube đều `private`, `publishAt = 12:30Z`
+đúng ngày, tiêu đề đúng ngôn ngữ từng kênh; mỗi kênh **22 bài chờ, không mốc nào trùng**.
+Facebook: cả ba `published = false`, hẹn đúng 19:30 giờ Việt, `permalink_url` là `/reel/…`,
+`length` khớp file render (89,197 · 78,088 · 82,293), câu đầu caption đúng.
+
+🔀 **Rời chuỗi trụ 4 có chủ ý.** Bảy mốc trụ 4 (21/09 → 03/10) dừng ở VD-042. Ba bài này đi ba
+trụ **1 · 5 · 2** và kéo độ dài về **78-89 giây** (đợt 21/09 là 110-124 giây), để lúc đọc số
+tách được *trụ* với *độ dài*. Lý do: VD-030 (trụ 4, 21/09) chỉ 408 xem sau 67 giờ — bài trụ 4
+đầu tiên dưới 900.
+
+⚠️ **VD-043 phải render lại một lần:** ảnh đầu tiên có **logo Apple trên laptop**, soi khung hình
+mới thấy. Đã thay bằng ảnh giấy note trên bàn trắng rồi mới đăng. **Soi khung hình trước khi
+đăng, đừng chỉ tin bảng chọn ảnh** — ảnh nhỏ trong bảng không thấy logo.
 
 ## Đợt đăng 21/09 — VD-040 · VD-041 · VD-042 ✅ · đợt thứ hai đi theo SỐ
 

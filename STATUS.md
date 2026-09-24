@@ -1,6 +1,6 @@
 # STATUS — Ghi chú tiến độ
 
-_Cập nhật: 2026-09-21_
+_Cập nhật: 2026-09-24_
 
 ## 📍 Ba nơi đăng — tên gọi quy ước
 
@@ -77,10 +77,40 @@ ngay khi lướt tới, hiếm ai nhìn bìa. Công cụ `scripts/tao-anh-bia-re
 
 ## 📍 Dừng ở đâu — làm tiếp từ đây
 
-### ▶️ LẦN SAU VÀO THÌ LÀM TỪ ĐÂY — nghĩ ý mới cho VD-040+, và quyết chuyện kênh EN
+### ▶️ LẦN SAU VÀO THÌ LÀM TỪ ĐÂY — đọc số 48 giờ, rồi nghĩ ý cho VD-046+ (mốc trống 11/10)
 
-_Chốt lúc ngày 17/09. Đọc `CLAUDE.md` trước để lấy luật đăng, rồi đọc API để lấy
+_Chốt lúc ngày 24/09. Đọc `CLAUDE.md` trước để lấy luật đăng, rồi đọc API để lấy
 trạng thái thật — đừng tin bảng dưới đây._
+
+- ✅ **VD-043 · VD-044 · VD-045 đã xong đủ ba nơi ngày 24/09**, hẹn **05 · 07 · 09/10** lúc 19:30.
+  Đã đọc lại API: 6 video YouTube `private` đúng `12:30Z`, 3 Reels `published = false` đúng
+  giờ, `length` khớp file render. Chi tiết và link ở `schedule/calendar.md`, mục "Đợt đăng 24/09".
+- 🔀 **Đợt này cố ý rời chuỗi trụ 4:** ba bài đi trụ **1 · 5 · 2**, dài **89 · 78 · 82 giây**.
+  Đây là phép thử: đọc số 48 giờ của ba bài này (07 · 09 · 11/10) đặt cạnh VD-037 → VD-042
+  (trụ 4, dài) là tách được trụ với độ dài. Hồ sơ: `content/ideas/y-tuong-VD-043-045.md`.
+- 🔴 **Kho lại bằng không sau VD-045. Mốc trống kế tiếp là 11/10.**
+- 🎯 **Hạn mức đăng: 6 lượt tải lên YouTube mỗi ngày cho cả hai kênh = 3 bài/ngày.** Reset
+  khoảng 14-15h giờ Việt. Đợt 24/09 đã dùng hết hạn mức của ngày hôm đó.
+
+- 📊 **ĐỌC SỐ 24/09 (khoảng 14:00) — mốc để so khi đọc số 48 giờ.** Có lệnh mới:
+  `.venv-dang/bin/python scripts/dang-video-youtube.py so-lieu --kenh vi`. Lệnh in từng
+  video kèm **mã bài và tuổi** tính từ lúc công khai. Tiêu đề trên YouTube không có mã bài,
+  nên lệnh tự khớp từ file caption.
+
+  | Bài | Trụ | Lên sóng | Tuổi lúc đọc | Dài | Xem VI | Xem EN |
+  |---|---|---|---|---|---|---|
+  | VD-030 | 4 | 21/09 | 67h | 83s | **408** 🔻 | 16 |
+  | VD-037 | 4 | 23/09 | 19h | 108s | **813** | 7 |
+
+  - 🔻 **VD-030 là tín hiệu xấu đầu tiên của chuỗi trụ 4 liền nhau.** Sau gần 3 ngày chỉ
+    được 408 lượt, bằng chưa tới một phần ba trung vị trụ 4 (1368). Đây mới là một bài
+    nên chưa kết luận được, nhưng đừng bỏ qua.
+  - ✅ **VD-037 mới 19 giờ đã được 813 lượt, dù dài 108 giây.** Tức là độ dài chưa kéo số
+    xuống. 19:30 ngày 25/09 chạy lại `so-lieu` để đọc số 48 giờ thật.
+  - Facebook `so-lieu`: 38 bài đăng bằng app, trung bình **2,4 lượt/bài**, VD-027 → VD-036
+    mỗi bài 0 đến 3 lượt. Vẫn y như vạch đá 02/08, chưa đổi gì.
+  - QuayXe (QX-01 → QX-07) đi chung kênh Sống Tốt lúc 21:30, mỗi clip 300 đến 1100 lượt.
+    Khi đọc số của kênh thì tách riêng tuyến này ra.
 
 - ✅ **VD-037 · VD-038 · VD-039 đã xong đủ ba nơi ngày 17/09**, hẹn 23 · 25 · 27/09 lúc 19:30.
   Đọc lại API cả ba nơi ngay sau khi đăng: 6 video YouTube đều `private` với `publishAt`

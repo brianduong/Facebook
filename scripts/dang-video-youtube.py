@@ -18,6 +18,9 @@ Cần chạy bằng Python của môi trường `.venv-dang`, KHÔNG phải `pyt
     # 3. Đăng thật
     .venv-dang/bin/python scripts/dang-video-youtube.py dang VD-009 --kenh en --dang-that
 
+    # 4. Đọc lượt xem từng video, kèm tuổi (để đọc số 48 giờ)
+    .venv-dang/bin/python scripts/dang-video-youtube.py so-lieu --kenh vi
+
 Mặc định là **chạy thử** — chỉ in ra những gì sẽ gửi. Phải thêm `--dang-that` mới đăng.
 
 ⚠️ Video đăng qua API từ project chưa qua vòng audit của Google sẽ **bị khoá ở chế độ
@@ -427,6 +430,91 @@ def tai_len(dich_vu, f_video: Path, bai: dict, ma_kenh: str, che_do: str, hen_gi
     return phan_hoi
 
 
+def ban_do_tieu_de(ma_kenh: str) -> dict[str, str]:
+    """Tiêu đề → mã bài, bóc từ mọi file caption của kênh. Tiêu đề trên YouTube không
+    mang mã bài, nên muốn biết video nào là VD-0xx thì phải đi ngược từ caption."""
+    ban_do = {}
+    duoi = KENH[ma_kenh]["caption"].format(ma="")
+    for f in sorted((REPO / "content" / "captions").glob(f"*{duoi}")):
+        ma = f.name[: -len(duoi)]
+        if not re.fullmatch(r"[A-Z]+-\d+", ma):
+            continue
+        noi_dung = f.read_text(encoding="utf-8")
+        if ma_kenh == "vi":
+            moc = re.search(r"^#\s*Đăng YouTube", noi_dung, re.M)
+            if not moc:
+                continue
+            noi_dung = noi_dung[moc.start():]
+        tieu_de = _boc_khoi(noi_dung, "Tiêu đề")
+        if tieu_de:
+            ban_do[tieu_de.strip()] = ma
+    return ban_do
+
+
+def so_lieu(dich_vu, ma_kenh: str) -> None:
+    """In lượt xem từng video trên kênh, kèm tuổi tính từ lúc công khai.
+
+    Tuổi là cột quan trọng nhất: so bài 3 ngày tuổi với bài 1 ngày tuổi là so lệch.
+    Đọc số 48 giờ thì nhìn các dòng có tuổi quanh 48h.
+    """
+    from datetime import datetime, timedelta, timezone
+
+    vn = timezone(timedelta(hours=7))
+    bay_gio = datetime.now(vn)
+    kenh = dich_vu.channels().list(part="contentDetails,statistics", mine=True).execute()["items"][0]
+    ds_tai_len = kenh["contentDetails"]["relatedPlaylists"]["uploads"]
+
+    ids, trang = [], None
+    while True:
+        kq = dich_vu.playlistItems().list(
+            part="contentDetails", playlistId=ds_tai_len, maxResults=50, pageToken=trang
+        ).execute()
+        ids += [x["contentDetails"]["videoId"] for x in kq["items"]]
+        trang = kq.get("nextPageToken")
+        if not trang:
+            break
+
+    ban_do = ban_do_tieu_de(ma_kenh)
+    dong = []
+    for i in range(0, len(ids), 50):
+        kq = dich_vu.videos().list(
+            part="snippet,statistics,status,contentDetails", id=",".join(ids[i:i + 50])
+        ).execute()
+        for v in kq["items"]:
+            tt = v["status"]
+            moc = tt.get("publishAt") or v["snippet"]["publishedAt"]
+            luc = datetime.fromisoformat(moc.replace("Z", "+00:00")).astimezone(vn)
+            tieu_de = v["snippet"]["title"]
+            giay = re.fullmatch(r"PT(?:(\d+)M)?(?:(\d+)S)?", v["contentDetails"]["duration"])
+            dai = int(giay.group(1) or 0) * 60 + int(giay.group(2) or 0) if giay else 0
+            dong.append({
+                "luc": luc,
+                "ma": ban_do.get(tieu_de.strip(), "—"),
+                "cong_khai": tt["privacyStatus"] == "public",
+                "xem": int(v["statistics"].get("viewCount", 0)),
+                "thich": int(v["statistics"].get("likeCount", 0)),
+                "dai": dai,
+                "tieu_de": tieu_de,
+            })
+    dong.sort(key=lambda x: x["luc"])
+
+    so_sub = kenh["statistics"].get("subscriberCount", "?")
+    print(f"{KENH[ma_kenh]['ten']} · {so_sub} người đăng ký · {len(dong)} video")
+    print(f"{'lên sóng':<13}{'mã':<8}{'tuổi':>6}{'dài':>6}{'xem':>7}{'thích':>7}  tiêu đề")
+    print("─" * 90)
+    cho = 0
+    for x in dong:
+        if not x["cong_khai"]:
+            cho += 1
+            continue
+        gio = (bay_gio - x["luc"]).total_seconds() / 3600
+        tuoi = f"{gio:.0f}h" if gio < 72 else f"{gio / 24:.0f}d"
+        print(f"{x['luc']:%d/%m %H:%M}  {x['ma']:<8}{tuoi:>6}{x['dai']:>5}s{x['xem']:>7}{x['thich']:>7}"
+              f"  {x['tieu_de'][:40]}")
+    print("─" * 90)
+    print(f"Còn {cho} video riêng tư đang chờ lên sóng (không in).")
+
+
 def _bao_loi_http(loi) -> None:
     """Dịch mấy lỗi hay gặp sang tiếng người."""
     text = str(loi)
@@ -448,7 +536,7 @@ def _bao_loi_http(loi) -> None:
 
 def main() -> int:
     p = argparse.ArgumentParser(description="Đăng video lên YouTube")
-    p.add_argument("viec", choices=["xin-quyen", "kiem-tra", "dang", "doi-lich", "binh-luan"])
+    p.add_argument("viec", choices=["xin-quyen", "kiem-tra", "dang", "doi-lich", "binh-luan", "so-lieu"])
     p.add_argument("ma", nargs="?", help="Mã video, vd VD-009")
     p.add_argument("--kenh", choices=["en", "vi"], required=True, help="en = tiếng Anh · vi = tiếng Việt")
     p.add_argument("--video", help="Đường dẫn file video (mặc định lấy theo mã)")
@@ -502,6 +590,10 @@ def main() -> int:
         except HttpError:
             print(f"✅ Quyền dùng được cho kênh {kenh['ten']}.")
             print("   (Không đọc được tên kênh vì script chỉ xin quyền tải lên, không xin quyền đọc.)")
+        return 0
+
+    if a.viec == "so-lieu":
+        so_lieu(lay_dich_vu(a.kenh), a.kenh)
         return 0
 
     if a.viec == "doi-lich":

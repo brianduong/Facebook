@@ -104,6 +104,19 @@ khai, không một bình luận nào của người xem** — hai bình luận d
 (VD-018). Ba hồ sơ liền đã hứa "đợt sau lấy ý từ bình luận"; cả ba lần đều không dùng được.
 Đừng viết lại lời hứa đó cho tới khi có bình luận thật.
 
+## Đợt 24/09 — VD-043 → VD-045 (chốt 24/09/2026)
+
+Rời chuỗi trụ 4, ba bài ba trụ. Hồ sơ đầy đủ: `y-tuong-VD-043-045.md`.
+
+| Mã | Ý tưởng | Trụ | Lên sóng |
+|---|---|---|---|
+| VD-043 | Việc chưa quyết không nằm yên | 1 | 05/10 |
+| VD-044 | Chúc thì ai cũng chúc, hỏi lại thì không | 5 | 07/10 |
+| VD-045 | Người duy nhất không được nói câu nào | 2 | 09/10 |
+
+🔴 **Kho lại bằng không sau VD-045.** Mốc trống kế tiếp là **11/10**. Đợt sau quyết trụ bằng
+số 48 giờ của VD-037 → VD-042 (trụ 4) so với VD-043 → VD-045 (ba trụ khác, độ dài 78-89 giây).
+
 ## Ý chưa xếp hàng — VD-040 trở đi lấy ở đây
 
 🔴 **Kho lại bằng không.** Đợt VD-037→039 chỉ nghĩ đúng 3 ý, không dư ý nào. Mốc trống kế
