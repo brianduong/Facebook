@@ -117,6 +117,49 @@ Rời chuỗi trụ 4, ba bài ba trụ. Hồ sơ đầy đủ: `y-tuong-VD-043-
 🔴 **Kho lại bằng không sau VD-045.** Mốc trống kế tiếp là **11/10**. Đợt sau quyết trụ bằng
 số 48 giờ của VD-037 → VD-042 (trụ 4) so với VD-043 → VD-045 (ba trụ khác, độ dài 78-89 giây).
 
+## Đợt 09/10 — VD-046 → VD-050 (chốt 09/10/2026)
+
+Tiếp tục rải trụ, không trụ 4 (chuỗi trụ 4 tụt dần 832 → 430 xem). Hồ sơ: `y-tuong-VD-046-048.md`.
+**Đã render, để trên máy, chưa đăng.**
+
+| Mã | Ý tưởng | Trụ | Lên sóng dự kiến |
+|---|---|---|---|
+| VD-046 | Người lo cho cả nhóm thì ai lo | 5 | 11/10 |
+| VD-047 | Người khỏi phải kể lại từ đầu | 3 | 13/10 |
+| VD-048 | Câu "cứ từ từ" | 2 | 15/10 |
+| VD-049 | Bạn xin lỗi nhiều quá rồi | 4 | 17/10 |
+| VD-050 | Câu "không sao" quen miệng | 1 | 19/10 |
+
+🔴 **Kho lại bằng không sau VD-050.**
+
+## Đợt 15/10 — VD-051 → VD-055 (chốt 15/10/2026)
+
+Rải đủ năm trụ, mỗi trụ một bài. Hồ sơ: `y-tuong-VD-051-055.md`.
+
+| Mã | Ý tưởng | Trụ | Lên sóng dự kiến |
+|---|---|---|---|
+| VD-051 | Có người nhớ bạn không ăn hành | 3 | 21/10 |
+| VD-052 | "Hôm nào cà phê nhé" | 5 | 23/10 |
+| VD-053 | Chỉ đường thêm một đoạn | 2 | 25/10 |
+| VD-054 | "Lát qua phòng anh chút" | 4 | 27/10 |
+| VD-055 | Bữa cơm ăn đứng | 1 | 29/10 |
+
+🔴 **Kho lại bằng không sau VD-055.**
+
+## Đợt 15/10 chiều — VD-056 → VD-060 (chốt 15/10/2026)
+
+Vòng rải năm trụ thứ hai, cùng thứ tự 3 · 5 · 2 · 4 · 1. Hồ sơ: `y-tuong-VD-056-060.md`.
+
+| Mã | Ý tưởng | Trụ | Lên sóng dự kiến |
+|---|---|---|---|
+| VD-056 | Tiếng nhà mình | 3 | 31/10 |
+| VD-057 | Không biết nói gì thì cứ đến | 5 | 02/11 |
+| VD-058 | Nửa cái ô | 2 | 04/11 |
+| VD-059 | Đợi tự tin rồi mới làm | 4 | 06/11 |
+| VD-060 | Một ngày tệ | 1 | 08/11 |
+
+🔴 **Kho lại bằng không sau VD-060.**
+
 ## Ý chưa xếp hàng — VD-040 trở đi lấy ở đây
 
 🔴 **Kho lại bằng không.** Đợt VD-037→039 chỉ nghĩ đúng 3 ý, không dư ý nào. Mốc trống kế

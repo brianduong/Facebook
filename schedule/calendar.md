@@ -200,6 +200,53 @@ bài. Tra thẳng `/{video-id}` thì đã `scheduled` đúng mốc; một phút 
 ⚠️ Thẻ tiếng Anh của VD-014 lúc đầu có `quiet gratitude` — trái luật "cấm chữ biết ơn" của
 chính bài. Đã đổi trước khi đăng. Bài trụ 3 sau này soi lại thẻ, không chỉ soi lời đọc.
 
+## Lô VD-056 → VD-060 — đã render 15/10, CHƯA tải lên
+
+Nối sau VD-055 (29/10) → **31/10 · 02/11 · 04/11 · 06/11 · 08/11**, 19:30.
+
+| Ngày 19:30 | Mã | Trụ |
+|---|---|---|
+| 31/10 | **VD-056** · Tiếng nhà mình | 3 |
+| 02/11 | **VD-057** · Không biết nói gì thì cứ đến | 5 |
+| 04/11 | **VD-058** · Nửa cái ô | 2 |
+| 06/11 | **VD-059** · Đợi tự tin rồi mới làm | 4 |
+| 08/11 | **VD-060** · Một ngày tệ | 1 |
+
+## Lô VD-051 → VD-055 — đã render 15/10, CHƯA tải lên
+
+Neo vào chuỗi đang chạy: VD-050 hẹn 19/10 19:30 → **21 · 23 · 25 · 27 · 29/10**.
+
+| Ngày 19:30 | Mã | Trụ | Dài VI / EN |
+|---|---|---|---|
+| 21/10 | **VD-051** · Có người nhớ bạn không ăn hành | 3 | 73s / 67s |
+| 23/10 | **VD-052** · "Hôm nào cà phê nhé" | 5 | 73s / 63s |
+| 25/10 | **VD-053** · Chỉ đường thêm một đoạn | 2 | 75s / 73s |
+| 27/10 | **VD-054** · "Lát qua phòng anh chút" | 4 | 78s / 70s |
+| 29/10 | **VD-055** · Bữa cơm ăn đứng | 1 | 78s / 79s |
+
+Lúc đăng mà mốc 21/10 19:30 đã trôi thì tính lại theo `CLAUDE.md`.
+
+## Đợt đăng 10/10 + 13/10 — VD-046 → VD-050 ✅
+
+Năm bài viết và render 09/10, để trên máy theo lời anh; 10/10 anh bảo đăng. Hạn mức YouTube 3
+bài/ngày nên chia hai ngày. **Chuỗi neo vào VD-045 đã LÊN SÓNG 09/10 19:30** → 11 · 13 · 15 · 17 · 19/10.
+
+| Ngày 19:30 | Mã | YouTube tiếng Việt | YouTube tiếng Anh | Facebook Reels |
+|---|---|---|---|---|
+| **11/10** | **VD-046** · Người lo cho cả nhóm thì ai lo | https://youtu.be/FCg9WOoWbug | https://youtu.be/3-5sBYvppr4 | `3088199564856557` |
+| **13/10** | **VD-047** · Người khỏi phải kể lại từ đầu | https://youtu.be/qfmhTTQK9oc | https://youtu.be/FrIK-RslnVA | `1099470279470291` |
+| **15/10** | **VD-048** · Câu "cứ từ từ" | https://youtu.be/iKShVzFOPzg | https://youtu.be/24GiIeQArMM | `1416706087312877` |
+| **17/10** | **VD-049** · Bạn xin lỗi nhiều quá rồi | https://youtu.be/umA3aEGWdbI | https://youtu.be/0uV4vs03-9o | `2046866252662473` |
+| **19/10** | **VD-050** · Câu "không sao" quen miệng | https://youtu.be/Nkj-uyySSO0 | https://youtu.be/t9GFPQ-1_to | `986166407101832` |
+
+**Đã đọc lại API sau khi đăng.** Sáu video YouTube `private`, `publishAt = 12:30Z` đúng ngày,
+tiêu đề đúng ngôn ngữ; không tiêu đề nào trùng trên kênh. Facebook: ba Reels `scheduled` đúng
+19:30, câu đầu caption khớp, `scheduled_posts` không trùng (VD-048 mất ~1 phút xử lý mới hiện).
+
+VD-049 · 050 đăng muộn hai ngày so với dự kiến (13/10 thay vì 11/10), mốc 17 · 19/10 không đổi.
+Đã đọc lại API 13/10: bốn video YouTube `private` `publishAt = 12:30Z` đúng ngày, hai Reels
+`scheduled` 19:30, câu đầu caption khớp, không trùng.
+
 ## Đợt đăng 24/09 — VD-043 · VD-044 · VD-045 ✅ · rời chuỗi trụ 4
 
 Anh bảo làm đủ hạn mức đăng trong ngày (6 lượt tải lên YouTube = 3 bài). Ba bài viết mới hoàn

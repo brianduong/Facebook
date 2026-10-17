@@ -1,6 +1,6 @@
 # STATUS — Ghi chú tiến độ
 
-_Cập nhật: 2026-09-24_
+_Cập nhật: 2026-10-15_
 
 ## 📍 Ba nơi đăng — tên gọi quy ước
 
@@ -77,10 +77,47 @@ ngay khi lướt tới, hiếm ai nhìn bìa. Công cụ `scripts/tao-anh-bia-re
 
 ## 📍 Dừng ở đâu — làm tiếp từ đây
 
-### ▶️ LẦN SAU VÀO THÌ LÀM TỪ ĐÂY — đọc số 48 giờ, rồi nghĩ ý cho VD-046+ (mốc trống 11/10)
+### ▶️ LẦN SAU VÀO THÌ LÀM TỪ ĐÂY — VD-051 → VD-060 (mười bài) đã render, CHƯA tải lên nơi nào
 
-_Chốt lúc ngày 24/09. Đọc `CLAUDE.md` trước để lấy luật đăng, rồi đọc API để lấy
-trạng thái thật — đừng tin bảng dưới đây._
+_Viết và render 15/10. Đọc `CLAUDE.md` trước để lấy luật đăng, rồi đọc API để lấy trạng thái thật._
+
+- 🎬 **Năm bài, rải đủ năm trụ 3 · 5 · 2 · 4 · 1**: Có người nhớ bạn không ăn hành · "Hôm nào cà
+  phê nhé" · Chỉ đường thêm một đoạn · "Lát qua phòng anh chút" · Bữa cơm ăn đứng.
+  Bản Việt dài 73 · 73 · 75 · 78 · 78 giây; bản Anh 67 · 63 · 73 · 70 · 79 giây.
+  File ở `video/exports/VD-05{1..5}-reels{,-en}.mp4`, caption ở `content/captions/`.
+  Hồ sơ: `content/ideas/y-tuong-VD-051-055.md`.
+- 📅 **Lịch dự kiến 21 · 23 · 25 · 27 · 29/10 lúc 19:30**, nối sau VD-050 (19/10). Năm bài vượt
+  hạn mức 3 bài/ngày, nên phải đăng trong hai ngày.
+- 🟡 Cả năm bài **em tự duyệt**, chưa ai đọc lại chữ.
+- 🎬 **Lô thứ hai cùng ngày, VD-056 → VD-060**, trụ 3 · 5 · 2 · 4 · 1: Tiếng nhà mình · Không biết
+  nói gì thì cứ đến · Nửa cái ô · Đợi tự tin rồi mới làm · Một ngày tệ. Dự kiến **31/10 · 02 · 04 ·
+  06 · 08/11**. Hồ sơ: `content/ideas/y-tuong-VD-056-060.md`.
+- 📌 **Anh bảo "đăng sau"** — chưa đăng lô nào. Mười bài = bốn ngày đăng (3 bài/ngày). Muốn kịp
+  mốc 21/10 thì muộn nhất 20/10 phải đăng VD-051.
+- 🟡 Nên đọc số 48 giờ của VD-051 · 052 (23 · 25/10) trước khi đăng lô VD-056 → 060.
+- 🔻 **VD-046 chỉ được 16 lượt sau 4 ngày** (đọc `so-lieu` 15/10), bị chìm giống VD-004 · 011 · 020.
+  VD-047 thì 417 lượt sau 38 giờ. Chưa rõ vì sao.
+- VD-053 đã render lại một lần: ảnh cuối lúc đầu là biển tiệm thuốc chữ Pháp có tên riêng.
+
+### ✅ Đợt trước — VD-046 → VD-050 đã đăng đủ ba nơi (hẹn 11 → 19/10)
+
+_Chốt tối 09/10. Đọc `CLAUDE.md` trước để lấy luật đăng, rồi đọc API để lấy trạng thái thật._
+
+- ✅ **10/10 anh bảo đăng. VD-046 · 047 · 048 đã lên đủ ba nơi, hẹn 11 · 13 · 15/10** 19:30,
+  đã đọc lại API (6 video `private` đúng `12:30Z`, 3 Reels `scheduled`, không trùng).
+  Link ở `schedule/calendar.md`, mục "Đợt đăng 10/10".
+- ✅ **VD-049 · VD-050 đăng đủ ba nơi ngày 13/10**, hẹn **17 · 19/10**, đã đọc lại API.
+- 🎬 VD-046 → VD-050 viết và render ngày 09/10. File ở `video/exports/VD-0{46..50}-reels{,-en}.mp4`,
+  caption ở `content/captions/`. Hồ sơ: `content/ideas/y-tuong-VD-046-048.md`.
+- 📅 **Lịch dự kiến 11 · 13 · 15 · 17 · 19/10 lúc 19:30** (trụ 5 · 3 · 2 · 4 · 1) (neo vào VD-045 lên sóng 09/10). Lúc đăng mà
+  11/10 19:30 đã trôi thì tính lại theo `CLAUDE.md`.
+- 🔴 **Từ 09/10 tối, tuyến VD và tuyến ảnh chữ AC trên Facebook đều trống.** Chỉ còn 21 bài
+  QuayXe (21:30) tới 30/10.
+- 📊 **Số công khai 09/10 (tab Shorts kênh Sống Tốt):** chuỗi trụ 4 tụt dần VD-037 832 → VD-042
+  430; VD-044 (trụ 5) 520, VD-045 (trụ 2) 386 sau nửa ngày, VD-043 (trụ 1) 280. Bảng ở hồ sơ ý
+  tưởng. Ngày 09/10 API YouTube hết hạn mức nên chưa chạy được `so-lieu`.
+- 🔴 **Kho lại bằng không sau VD-050** (mốc trống kế tiếp 21/10).
+- 🌐 Đăng một ngày tối đa 3 bài (hạn mức YouTube 6 lượt tải) → năm bài phải chia hai ngày.
 
 - ✅ **VD-043 · VD-044 · VD-045 đã xong đủ ba nơi ngày 24/09**, hẹn **05 · 07 · 09/10** lúc 19:30.
   Đã đọc lại API: 6 video YouTube `private` đúng `12:30Z`, 3 Reels `published = false` đúng
