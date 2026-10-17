@@ -77,9 +77,18 @@ ngay khi lướt tới, hiếm ai nhìn bìa. Công cụ `scripts/tao-anh-bia-re
 
 ## 📍 Dừng ở đâu — làm tiếp từ đây
 
-### ▶️ LẦN SAU VÀO THÌ LÀM TỪ ĐÂY — VD-051 → VD-060 (mười bài) đã render, CHƯA tải lên nơi nào
+### ▶️ LẦN SAU VÀO THÌ LÀM TỪ ĐÂY — VD-051 → 059 đã lên lịch (21/10 → 06/11), VD-060 chưa render
 
-_Viết và render 15/10. Đọc `CLAUDE.md` trước để lấy luật đăng, rồi đọc API để lấy trạng thái thật._
+_Chốt 18/10 00:30. Đọc `CLAUDE.md` trước, rồi đọc API để lấy trạng thái thật._
+
+- ✅ **Facebook: đủ chín Reels VD-051 → 059**, hẹn 21/10 → 06/11 lúc 19:30, đã đọc lại API.
+- ✅ **YouTube VD-051 · 052 · 053** lên đủ hai kênh, hẹn 21 · 23 · 25/10.
+- ⏳ **YouTube VD-054 → 056 đăng chiều 18/10, VD-057 → 059 chiều 19/10** (hạn mức mở lại 14:00).
+  Có lịch tự chạy trong phiên Claude — nếu phiên đã tắt thì phải chạy tay, kiểm tra bằng API.
+- 🔴 **VD-060 chưa render** (sổ cũ ghi sai). Anh bảo để sau. Mốc của nó là 08/11.
+- Link đầy đủ ở `schedule/calendar.md`, mục "Đợt đăng 18/10".
+
+#### Ghi chú cũ lúc viết lô (15/10)
 
 - 🎬 **Năm bài, rải đủ năm trụ 3 · 5 · 2 · 4 · 1**: Có người nhớ bạn không ăn hành · "Hôm nào cà
   phê nhé" · Chỉ đường thêm một đoạn · "Lát qua phòng anh chút" · Bữa cơm ăn đứng.

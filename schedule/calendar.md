@@ -200,31 +200,31 @@ bài. Tra thẳng `/{video-id}` thì đã `scheduled` đúng mốc; một phút 
 ⚠️ Thẻ tiếng Anh của VD-014 lúc đầu có `quiet gratitude` — trái luật "cấm chữ biết ơn" của
 chính bài. Đã đổi trước khi đăng. Bài trụ 3 sau này soi lại thẻ, không chỉ soi lời đọc.
 
-## Lô VD-056 → VD-060 — đã render 15/10, CHƯA tải lên
+## Đợt đăng 18/10 — VD-051 → VD-059 (đêm 17 rạng 18/10)
 
-Nối sau VD-055 (29/10) → **31/10 · 02/11 · 04/11 · 06/11 · 08/11**, 19:30.
+Neo vào chuỗi đang chạy: VD-049 lên sóng 17/10, VD-050 hẹn 19/10 → 21/10 trở đi, cách 2 ngày.
+Facebook đăng đủ chín bài qua API. YouTube bị hạn mức 3 bài/ngày nên chia làm ba ngày.
+Chrome không thay được vì công cụ chỉ tải được file < 10 MB, mà video nặng 10–12 MB.
 
-| Ngày 19:30 | Mã | Trụ |
-|---|---|---|
-| 31/10 | **VD-056** · Tiếng nhà mình | 3 |
-| 02/11 | **VD-057** · Không biết nói gì thì cứ đến | 5 |
-| 04/11 | **VD-058** · Nửa cái ô | 2 |
-| 06/11 | **VD-059** · Đợi tự tin rồi mới làm | 4 |
-| 08/11 | **VD-060** · Một ngày tệ | 1 |
+| Ngày 19:30 | Mã · Trụ | YouTube tiếng Việt | YouTube tiếng Anh | Facebook Reels |
+|---|---|---|---|---|
+| **21/10** | **VD-051** · Có người nhớ bạn không ăn hành · 3 | https://youtu.be/nPVionQNYm0 | https://youtu.be/vdO4GCRrRWk | `1658969845782747` |
+| **23/10** | **VD-052** · "Hôm nào cà phê nhé" · 5 | https://youtu.be/wEgnVwkHhmU | https://youtu.be/CDOLP9upPms | `1640714727797460` |
+| **25/10** | **VD-053** · Chỉ đường thêm một đoạn · 2 | https://youtu.be/hYdXLf6ZoiA | https://youtu.be/IBFcyWNXvWg | `2334311837315968` |
+| **27/10** | **VD-054** · "Lát qua phòng anh chút" · 4 | ⏳ 18/10 chiều | ⏳ 18/10 chiều | `2997256877318207` |
+| **29/10** | **VD-055** · Bữa cơm ăn đứng · 1 | ⏳ 18/10 chiều | ⏳ 18/10 chiều | `1834129887599051` |
+| **31/10** | **VD-056** · Tiếng nhà mình · 3 | ⏳ 18/10 chiều | ⏳ 18/10 chiều | `953166594533618` |
+| **02/11** | **VD-057** · Không biết nói gì thì cứ đến · 5 | ⏳ 19/10 chiều | ⏳ 19/10 chiều | `963593700152349` |
+| **04/11** | **VD-058** · Nửa cái ô · 2 | ⏳ 19/10 chiều | ⏳ 19/10 chiều | `4271210366505044` |
+| **06/11** | **VD-059** · Đợi tự tin rồi mới làm · 4 | ⏳ 19/10 chiều | ⏳ 19/10 chiều | `1468943191960953` |
+| 08/11 | VD-060 · Một ngày tệ · 1 | 🔴 **chưa render** | | |
 
-## Lô VD-051 → VD-055 — đã render 15/10, CHƯA tải lên
+**Đã đọc lại API 18/10 00:20.** Sáu video YouTube `private`, `publishAt = 12:30Z` đúng ngày,
+không tiêu đề trùng. Facebook `scheduled_posts` có đủ chín Reels 19:30, câu đầu caption khớp,
+không trùng (VD-059 mất ~1 phút mới hiện).
 
-Neo vào chuỗi đang chạy: VD-050 hẹn 19/10 19:30 → **21 · 23 · 25 · 27 · 29/10**.
-
-| Ngày 19:30 | Mã | Trụ | Dài VI / EN |
-|---|---|---|---|
-| 21/10 | **VD-051** · Có người nhớ bạn không ăn hành | 3 | 73s / 67s |
-| 23/10 | **VD-052** · "Hôm nào cà phê nhé" | 5 | 73s / 63s |
-| 25/10 | **VD-053** · Chỉ đường thêm một đoạn | 2 | 75s / 73s |
-| 27/10 | **VD-054** · "Lát qua phòng anh chút" | 4 | 78s / 70s |
-| 29/10 | **VD-055** · Bữa cơm ăn đứng | 1 | 78s / 79s |
-
-Lúc đăng mà mốc 21/10 19:30 đã trôi thì tính lại theo `CLAUDE.md`.
+🔴 **VD-060 chưa render xong** — sổ cũ ghi "đã render" là sai: không có file trong
+`video/exports/`, chỉ có thư mục dựng `video/edit/VD-060-reels`. Anh bảo để sau.
 
 ## Đợt đăng 10/10 + 13/10 — VD-046 → VD-050 ✅
 
